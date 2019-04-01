@@ -1,0 +1,126 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - HappyDNS (0.3.15)
+  - IQKeyboardManager (4.0.8)
+  - JCore (1.2.6)
+  - JPush (3.1.0):
+    - JCore (~> 1.2.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.3)
+  - PYSearch (0.9.0)
+  - Qiniu (7.2.5):
+    - HappyDNS (~> 0.3)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - TZImagePickerController (3.2.0)
+  - UMCAnalytics (6.0.2):
+    - UMCCommon
+  - UMCCommon (2.0.0)
+  - UMCShare/Core (6.9.5):
+    - UMCCommon
+  - UMCShare/Social/ReducedWeChat (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/WeChat (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - YBImageBrowser (2.1.4):
+    - SDWebImage
+    - YYImage
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (= 3.2.1)
+  - FMDB (= 2.7.2)
+  - IQKeyboardManager (= 4.0.8)
+  - JPush (= 3.1.0)
+  - Masonry (= 1.1.0)
+  - MBProgressHUD (= 1.1.0)
+  - MJExtension (= 3.0.15.1)
+  - MJRefresh (= 3.1.15.3)
+  - PYSearch (= 0.9.0)
+  - Qiniu
+  - SDCycleScrollView (= 1.75)
+  - TZImagePickerController
+  - UMCAnalytics
+  - UMCCommon
+  - UMCShare/Social/WeChat
+  - UMCShare/UI
+  - YBImageBrowser
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FMDB
+    - HappyDNS
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - PYSearch
+    - Qiniu
+    - SDCycleScrollView
+    - SDWebImage
+    - TZImagePickerController
+    - UMCAnalytics
+    - UMCCommon
+    - UMCShare
+    - YBImageBrowser
+    - YYImage
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  HappyDNS: 00c15e651a347206e58a20503a32a5564589b56a
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: 5921e25ad13e0386351079217b009f2039084eac
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  PYSearch: 55175e6046e2e1b5236a90c780351988e914a015
+  Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  TZImagePickerController: 7850b158d025065b162a1a963d445040b828abc9
+  UMCAnalytics: 901960ede5a8a85f208bd37689ad3e607b433930
+  UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
+  UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
+  YBImageBrowser: e3c514dd3bdc6efef379eabd57988eae3c109e38
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+
+PODFILE CHECKSUM: 8722ac87b8c4007d38a22c9473eaf748c61aacb0
+
+COCOAPODS: 1.5.3
