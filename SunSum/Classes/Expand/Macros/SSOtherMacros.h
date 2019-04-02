@@ -13,16 +13,16 @@
 
 #define  AppstorePhone @"18823365313"
 
-//腾讯云IM
+//腾讯云IM 修改
 #define sdkAppid          1400196446
 #define sdkAccountType    @"36862"
 
-//友盟统计
-#define  MobAppkey @"5b8f50fb8f4a9d76a70000b3"
+//友盟统计 修改
+#define  MobAppkey @"5ca2cb2961f564172f001150"
 
-//注册友盟分享微信//微信支付
-#define  UMWXAppId @"wxf4247352608aec94"
-#define  UMWXAppSecret @"3176b0da6bc0df175019308533e7ef44"
+//注册友盟分享微信//微信支付 修改
+#define  UMWXAppId @"wx1d0d6c9d70256ba2"
+#define  UMWXAppSecret @"9fa5bc19e35e34f6aef57d422ce97943"
 
 //百度
 #define BAIDUAK @""

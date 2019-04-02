@@ -8,8 +8,9 @@
 
 #import "SSTabBarVC.h"
 #import "SSNavigationVC.h"
-//#import "SSHomePageVC.h"
-#import "SSThridHomeVC.h"
+#import "SSHomePageVC.h"
+//#import "SSThridHomeVC.h"
+#import "SSSNewHomePageVC.h"
 #import "SSStoreHomeVC.h"
 #import "SSMemberHomeVC.h"
 #import "SSShoppingCartVC.h"
@@ -41,7 +42,7 @@
     self.tabBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     // 1.初始化子控制器
-    SSThridHomeVC *home = [[SSThridHomeVC alloc] init];
+    SSSNewHomePageVC *home = [[SSSNewHomePageVC alloc] init];
     [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
     
     SSStoreHomeVC *store = [[SSStoreHomeVC alloc] init];
