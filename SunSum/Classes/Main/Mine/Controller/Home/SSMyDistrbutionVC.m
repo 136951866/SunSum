@@ -114,7 +114,7 @@
             //订单总额
             CGFloat allMoney = strongSelf->_bModel.use_money + strongSelf->_bModel.ratio_money;
             strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyClerk),@(SSMyAppintMannger),@(SSMyDataDeal),@(SSMyCash),@(SSMyCouponMoney),@(SSMyStoreMannager),@(SSMySelfExtractionOrder),@(SSGoodMannager)];
-            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@"",@"",@"",@"",@""];
+            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@"",@"",@"",@"",@"",@""];
 //            [self.view addSubview:self.collectionView];
             strongSelf->_levStr = [NSString stringWithFormat:@"当前等级:%@",kMeUnNilStr(strongSelf->_bModel.level)];
             [strongSelf.collectionView reloadData];
