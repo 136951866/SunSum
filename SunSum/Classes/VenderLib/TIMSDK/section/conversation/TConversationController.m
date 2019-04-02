@@ -38,7 +38,7 @@
 - (void)setupNavigation
 {
     _titleView = [[TNaviBarIndicatorView alloc] init];
-    [_titleView setTitle:@"SS聊"];
+    [_titleView setTitle:@"聊天"];
     self.navigationItem.titleView = _titleView;
     self.parentViewController.navigationItem.titleView = _titleView;
 //    UIButton *moreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
