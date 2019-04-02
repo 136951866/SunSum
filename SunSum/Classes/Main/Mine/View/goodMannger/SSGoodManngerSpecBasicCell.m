@@ -38,7 +38,7 @@
     _model = model;
     if(kMeUnNilStr(model.sepc_img).length){
         _btnGoodDel.hidden = NO;
-        kSDLoadImg(_imgGood, SSLoadQiniuImagesWithUrl(kMeUnNilStr(model.sepc_img)));
+        kSDLoadImg(_imgGood, SSLoadAddQiniuImagesWithUrl(kMeUnNilStr(model.sepc_img)));
     }else{
         _btnGoodDel.hidden = YES;
         _imgGood.image = [UIImage imageNamed:@"icon_bynamicAdd"];

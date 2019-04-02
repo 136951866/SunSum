@@ -333,7 +333,7 @@
                     kMeSTRONGSELF
                     NSString *key = kMeUnNilStr(object[@"key"]);
                     [self.webView inserImage:UIImageJPEGRepresentation(image, 0.2) key:key];
-                    [strongSelf.webView inserSuccessImageKey:key imgUrl:SSLoadQiniuImagesWithUrl(key)];
+                    [strongSelf.webView inserSuccessImageKey:key imgUrl:SSLoadQiniuImagesWithUrl(kMeUnNilStr(key))];
                     [HUD hideAnimated:YES];
                 } failure:^(id object) {
                     [SSShowViewTool SHOWHUDWITHHUD:HUD test:@"上传失败"];

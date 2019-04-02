@@ -49,7 +49,6 @@
             NSLog(@"fial");
         }];
     }
-    
     //    [[TIMFriendshipManager sharedInstance] GetSelfProfile:^(TIMUserProfile * profile) {
     //        NSLog(@"GetSelfProfile identifier=%@ nickname=%@ allowType=%d", profile.identifier, profile.nickname, profile.allowType);
     //    } fail:^(int code, NSString * err) {

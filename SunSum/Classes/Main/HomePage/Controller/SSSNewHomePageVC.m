@@ -34,6 +34,10 @@
 #pragma mark - 2.0.5
 #import "SSCoupleHomeVC.h"
 //#import "SSCoupleFilterVC.h"
+#import "SSClerkManngerVC.h"
+#import "SSMyDistrbutionVC.h"
+#import "SSBynamicPublishVC.h"
+#import "SSNoticeVC.h"
 
 @interface SSSNewHomePageVC ()<UIScrollViewDelegate,SSSNewHomePageViewDelegate>{
     CGFloat _allHeight;
@@ -133,19 +137,30 @@
     });
     
     dispatch_group_async(group, queue, ^{
-        [SSPublicNetWorkTool getUserHomeUnreadNoticeWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+        [SSPublicNetWorkTool getUserCountListWithSuccessBlock:^(ZLRequestResponse *responseObject) {
             kMeSTRONGSELF
             if([responseObject.data isKindOfClass:[NSDictionary class]]){
-                NSNumber *notice = responseObject.data[@"notice"];
-                NSNumber *order = responseObject.data[@"order"];
-                NSNumber *versions = responseObject.data[@"versions"];
-                NSInteger unread = [notice integerValue] + [order integerValue] +[versions integerValue];
+                NSInteger unread = [responseObject.data integerValue];
                 strongSelf->_noticeStr =  @(unread).description;
             }
             dispatch_semaphore_signal(semaphore);
         } failure:^(id object) {
             dispatch_semaphore_signal(semaphore);
         }];
+        
+//        [SSPublicNetWorkTool getUserHomeUnreadNoticeWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+//            kMeSTRONGSELF
+//            if([responseObject.data isKindOfClass:[NSDictionary class]]){
+//                NSNumber *notice = responseObject.data[@"notice"];
+//                NSNumber *order = responseObject.data[@"order"];
+//                NSNumber *versions = responseObject.data[@"versions"];
+//                NSInteger unread = [notice integerValue] + [order integerValue] +[versions integerValue];
+//                strongSelf->_noticeStr =  @(unread).description;
+//            }
+//            dispatch_semaphore_signal(semaphore);
+//        } failure:^(id object) {
+//            dispatch_semaphore_signal(semaphore);
+//        }];
     });
     
     dispatch_group_async(group, queue, ^{
@@ -184,15 +199,26 @@
         _sContenView.lblArticle.text = [NSString stringWithFormat:@"分享:%@ 阅读:%@",kMeUnNilStr(self.countArticelModel.share),kMeUnNilStr(self.countArticelModel.read)];
         _sContenView.lblPoster.text = [NSString stringWithFormat:@"分享:%@",kMeUnNilStr(self.countArticelModel.share_posters)];
         _sContenView.lblVistor.text = kMeUnNilStr(self.countArticelModel.share_article);
+        
+        
+        //总背景
         [_sContenView.imgBackground sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.activeModel.background.img)] placeholderImage: [UIImage imageNamed:@"homeb"]];
+        
+#warning --
+        //未读数背景
         [_sContenView.imgTop sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.top_style.img)] placeholderImage: [UIImage imageNamed:@"talt"]];
-//        [_sContenView.imgAdv sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.top_style.img)] placeholderImage: [UIImage imageNamed:@"talt"]];
-        [_sContenView.imgShop sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.shop_style.img)] placeholderImage:[UIImage imageNamed:@"umkkumfd"]];
-        [_sContenView.imgStore sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.store_style.img)] placeholderImage:[UIImage imageNamed:@"uyyhebtl"]];
+        //商城->动态 kMeUnNilStr(self.styleModel.shop_style.img)
+        [_sContenView.imgShop sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"home_dynal"]];
+        //服务->店铺中心 kMeUnNilStr(self.styleModel.store_style.img)
+        [_sContenView.imgStore sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"home_center"]];
+        //海报
         [_sContenView.imgPoster sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.posters_style.img)] placeholderImage:[UIImage imageNamed:@"tgdmitrb"]];
+        //文章
         [_sContenView.imgArticle sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.article_style.img)] placeholderImage:[UIImage imageNamed:@"SSyyuj"]];
-        [_sContenView.imgCouple sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.taobao_coupon_style.img)] placeholderImage:[UIImage imageNamed:@"couplehome"]];
-        [_sContenView.imgGift sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.gift_style.img)] placeholderImage:[UIImage imageNamed:@"gifthome"]];
+        //s优惠卷->商城 kMeUnNilStr(self.styleModel.taobao_coupon_style.img)
+        [_sContenView.imgCouple sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"home_mail"]];
+        //许愿屋->员工管理 kMeUnNilStr(self.styleModel.gift_style.img)
+        [_sContenView.imgGift sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"home_clerk"]];
     }
 }
 
@@ -260,73 +286,175 @@
 }
 
 - (void)toNotice{
-    if([kCurrentUser.mobile isEqualToString:AppstorePhone]){
-        SSRCConversationListVC *svc = [[SSRCConversationListVC alloc]init];
-        [self.navigationController pushViewController:svc animated:YES];
-    }else{
-        SSNoticeTypeVC *svc = [[SSNoticeTypeVC alloc]init];
-        [self.navigationController pushViewController:svc animated:YES];
-    }
+    SSNoticeVC *svc = [[SSNoticeVC alloc]init];
+    [self.navigationController pushViewController:svc animated:YES];
+//    if([kCurrentUser.mobile isEqualToString:AppstorePhone]){
+//        SSRCConversationListVC *svc = [[SSRCConversationListVC alloc]init];
+//        [self.navigationController pushViewController:svc animated:YES];
+//    }else{
+//        SSNoticeTypeVC *svc = [[SSNoticeTypeVC alloc]init];
+//        [self.navigationController pushViewController:svc animated:YES];
+//    }
 }
 
 - (void)toVisterVC{
     if([SSUserInfoModel isLogin]){
-        SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
-        [self.navigationController pushViewController:svc animated:YES];
+        if(kCurrentUser.user_type == 3){
+            SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
-            [strongSelf.navigationController pushViewController:svc animated:YES];
+            if(kCurrentUser.user_type == 3){
+                SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
         } failHandler:nil];
     }
 }
 
 - (void)toProdectVC{
-    SSShoppingMallVC *svc = [[SSShoppingMallVC alloc]init];
-    [self.navigationController pushViewController:svc animated:YES];
-}
-
-- (void)toServiceVC{
-    SSProductListVC *productList = [[SSProductListVC alloc]initWithType:SSGoodsTypeNetServiceStyle];
-    [self.navigationController pushViewController:productList animated:YES];
-}
-
-- (void)toCoupleVC{
-    SSCoupleHomeVC *coupleVC = [[SSCoupleHomeVC alloc]init];
-    [self.navigationController pushViewController:coupleVC animated:YES];
-}
-
-- (void)toGiftVC{
-    SSGiftVC *coupleVC = [[SSGiftVC alloc]init];
-    [self.navigationController pushViewController:coupleVC animated:YES];
-}
-
-- (void)toPosterVC{
     if([SSUserInfoModel isLogin]){
-        SSPosterListVC *svc = [[SSPosterListVC alloc]init];
-        [self.navigationController pushViewController:svc animated:YES];
+        if(kCurrentUser.user_type == 3){
+            SSBynamicPublishVC *svc = [[SSBynamicPublishVC alloc]init];
+            kMeWEAKSELF
+            svc.publishSucessBlock = ^{
+                kMeSTRONGSELF
+                strongSelf.tabBarController.selectedIndex = 2;
+            };
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
+            if(kCurrentUser.user_type == 3){
+                SSBynamicPublishVC *svc = [[SSBynamicPublishVC alloc]init];
+                svc.publishSucessBlock = ^{
+                    strongSelf.tabBarController.selectedIndex = 2;
+                };
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
+        } failHandler:nil];
+    }
+
+    //s店铺动态
+//    SSShoppingMallVC *svc = [[SSShoppingMallVC alloc]init];
+//    [self.navigationController pushViewController:svc animated:YES];
+}
+
+- (void)toServiceVC{
+    if([SSUserInfoModel isLogin]){
+        if(kCurrentUser.user_type == 3){
+            SSMyDistrbutionVC *svc = [[SSMyDistrbutionVC alloc]init];
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
+    }else{
+        kMeWEAKSELF
+        [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
+            kMeSTRONGSELF
+            if(kCurrentUser.user_type == 3){
+                SSMyDistrbutionVC *svc = [[SSMyDistrbutionVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
+        } failHandler:nil];
+    }
+
+    //s商户中心
+//    SSProductListVC *productList = [[SSProductListVC alloc]initWithType:SSGoodsTypeNetServiceStyle];
+//    [self.navigationController pushViewController:productList animated:YES];
+}
+
+- (void)toCoupleVC{
+    //s商城
+    SSShoppingMallVC *svc = [[SSShoppingMallVC alloc]init];
+    [self.navigationController pushViewController:svc animated:YES];
+//    SSCoupleHomeVC *coupleVC = [[SSCoupleHomeVC alloc]init];
+//    [self.navigationController pushViewController:coupleVC animated:YES];
+}
+
+- (void)toGiftVC{
+    //s员工管理
+    if([SSUserInfoModel isLogin]){
+        if(kCurrentUser.user_type == 3){
+            SSClerkManngerVC *svc = [[SSClerkManngerVC alloc]init];
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
+    }else{
+        kMeWEAKSELF
+        [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
+            kMeSTRONGSELF
+            if(kCurrentUser.user_type == 3){
+                SSClerkManngerVC *svc = [[SSClerkManngerVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
+        } failHandler:nil];
+    }
+    
+ 
+    
+//    SSGiftVC *coupleVC = [[SSGiftVC alloc]init];
+//    [self.navigationController pushViewController:coupleVC animated:YES];
+}
+
+- (void)toPosterVC{
+    if([SSUserInfoModel isLogin]){
+        if(kCurrentUser.user_type == 3){
             SSPosterListVC *svc = [[SSPosterListVC alloc]init];
-            [strongSelf.navigationController pushViewController:svc animated:YES];
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
+    }else{
+        kMeWEAKSELF
+        [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
+            kMeSTRONGSELF
+            if(kCurrentUser.user_type == 3){
+                SSPosterListVC *svc = [[SSPosterListVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
         } failHandler:nil];
     }
 }
 
 - (void)toArticelVC{
     if([SSUserInfoModel isLogin]){
-        SSArticelVC *svc = [[SSArticelVC alloc]init];
-        [self.navigationController pushViewController:svc animated:YES];
+        if(kCurrentUser.user_type == 3){
+            SSArticelVC *svc = [[SSArticelVC alloc]init];
+            [self.navigationController pushViewController:svc animated:YES];
+        }else{
+            kMeAlter(@"", @"您还不是店铺");
+        }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            SSArticelVC *svc = [[SSArticelVC alloc]init];
-            [strongSelf.navigationController pushViewController:svc animated:YES];
+            if(kCurrentUser.user_type == 3){
+                SSArticelVC *svc = [[SSArticelVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
+            }else{
+                kMeAlter(@"", @"您还不是店铺");
+            }
         } failHandler:nil];
     }
 }

@@ -460,20 +460,20 @@
     YBImageBrowseCellData *model = [YBImageBrowseCellData new];
     switch (_type) {
         case 0:{
-            NSString *imgStr = SSLoadQiniuImagesWithUrl(self.addModel.images);
+            NSString *imgStr = SSLoadAddQiniuImagesWithUrl(kMeUnNilStr(self.addModel.images));
             model.url = [NSURL URLWithString:imgStr];
             model.sourceObject = _cell.imgGood;
         }
             break;
         case 1:{
-            NSString *imgHotStr = SSLoadQiniuImagesWithUrl(self.addModel.images_hot);
+            NSString *imgHotStr = SSLoadAddQiniuImagesWithUrl(kMeUnNilStr(self.addModel.images_hot));
             model.url = [NSURL URLWithString:imgHotStr];
             model.sourceObject = _cell.imgGoodHot;
 
         }
             break;
         case 2:{
-            NSString *imgRecStr = SSLoadQiniuImagesWithUrl(self.addModel.image_rec);
+            NSString *imgRecStr = SSLoadAddQiniuImagesWithUrl(kMeUnNilStr(self.addModel.image_rec));
             model.url = [NSURL URLWithString:imgRecStr];
             model.sourceObject = _cell.imgRecommend;
         }

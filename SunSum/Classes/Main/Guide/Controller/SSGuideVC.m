@@ -109,6 +109,8 @@
         [_btnInApp setTitle:@"立即体验" forState:UIControlStateNormal];
         [_btnInApp setBackgroundColor:kSSPink];
         [_btnInApp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _btnInApp.borderColor = [UIColor whiteColor];
+        _btnInApp.borderWidth = 1;
         _btnInApp.cornerRadius = 45/2;
         _btnInApp.clipsToBounds = YES;
         _btnInApp.titleLabel.font = kMeFont(17);

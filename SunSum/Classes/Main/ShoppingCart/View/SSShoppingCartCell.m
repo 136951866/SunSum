@@ -94,7 +94,7 @@
 
 - (void)setGoodsModel:(SSShoppingCartModel *)goodsModel {
     _goodsModel = goodsModel;
-    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:SSLoadQiniuImagesWithUrl(kMeUnNilStr(goodsModel.images))] placeholderImage:kImgPlaceholder];
+    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:SSLoadQiniuImagesWithUrl(kMeUnNilStr(goodsModel.images_url))] placeholderImage:kImgPlaceholder];
     self.clickBtn.selected = goodsModel.isSelect;
     if (goodsModel.isSelect) {
         [self.clickBtn setImage:[UIImage imageNamed:@"inc-gg"] forState:(UIControlStateNormal)];

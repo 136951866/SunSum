@@ -221,7 +221,9 @@ NS_INLINE NSString *kMeFilePathAtDocumentWithName(NSString *fileNAme){
 
 
 //load qiniu image
-#define SSLoadQiniuImagesWithUrl(Url) [NSString stringWithFormat:@"http://images.sunsumstore.com/%@",Url]
+#define SSLoadQiniuImagesWithUrl(Url) Url
+#define SSLoadAddQiniuImagesWithUrl(Url) [NSString stringWithFormat:@"http://images.sunsumstore.com/%@",Url]
+//#define SSLoadQiniuImagesWithUrl(Url) ([Url containsString:@"http://images.sunsumstore.com/"])?Url:[NSString stringWithFormat:@"http://images.sunsumstore.com/%@",Url]
 
 
 #pragma mark -

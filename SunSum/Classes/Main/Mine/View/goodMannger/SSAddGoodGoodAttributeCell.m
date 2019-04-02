@@ -70,7 +70,7 @@
     NSString *strImg = kMeUnNilStr(_model.images);
     if(strImg.length){
         _btnGoodDel.hidden = NO;
-        kSDLoadImg(_imgGood, SSLoadQiniuImagesWithUrl(strImg));
+        kSDLoadImg(_imgGood, SSLoadAddQiniuImagesWithUrl(strImg));
     }else{
         _btnGoodDel.hidden = YES;
         _imgGood.image = [UIImage imageNamed:@"icon_bynamicAdd"];
@@ -80,7 +80,7 @@
     NSString *strImgHot = kMeUnNilStr(_model.images_hot);
     if(strImgHot.length){
         _btnGoodHotDel.hidden = NO;
-        kSDLoadImg(_imgGoodHot, SSLoadQiniuImagesWithUrl(strImgHot));
+        kSDLoadImg(_imgGoodHot, SSLoadAddQiniuImagesWithUrl(strImgHot));
 
     }else{
         _btnGoodHotDel.hidden = YES;
@@ -90,7 +90,7 @@
     NSString *strImgRec = kMeUnNilStr(_model.image_rec);
     if(strImgRec.length){
         _btnGoodRecommendDel.hidden = NO;
-        kSDLoadImg(_imgRecommend, SSLoadQiniuImagesWithUrl(strImgRec));
+        kSDLoadImg(_imgRecommend, SSLoadAddQiniuImagesWithUrl(strImgRec));
     }else{
         _btnGoodRecommendDel.hidden = YES;
         _imgRecommend.image = [UIImage imageNamed:@"icon_bynamicAdd"];

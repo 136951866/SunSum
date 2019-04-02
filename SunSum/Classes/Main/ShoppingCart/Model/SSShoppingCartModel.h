@@ -33,6 +33,7 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *money;
 @property (nonatomic, copy) NSString *images;
+@property (nonatomic, copy) NSString *images_url;
 @property (nonatomic, copy) NSString *spec_name;
 //9 秒杀 1 普通
 @property (nonatomic, assign) NSUInteger product_type;
