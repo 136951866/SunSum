@@ -109,12 +109,14 @@
     
     if(_type == SSClientBTypeStyle){
         [SSPublicNetWorkTool getAdminDistributionWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+#warning -- 优惠卷佣金去掉
+//            ,@(SSMyCash),@(SSMyCouponMoney)
             kMeSTRONGSELF
             strongSelf->_bModel = [SSadminDistributionModel mj_objectWithKeyValues:responseObject.data];
             //订单总额
             CGFloat allMoney = strongSelf->_bModel.use_money + strongSelf->_bModel.ratio_money;
-            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyClerk),@(SSMyAppintMannger),@(SSMyDataDeal),@(SSMyCash),@(SSMyCouponMoney),@(SSMyStoreMannager),@(SSMySelfExtractionOrder),@(SSGoodMannager)];
-            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@"",@"",@"",@"",@"",@""];
+            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyClerk),@(SSMyAppintMannger),@(SSMyDataDeal),@(SSMyCash),@(SSMyStoreMannager),@(SSMySelfExtractionOrder),@(SSGoodMannager)];
+            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@"",@"",@"",@"",@""];
 //            [self.view addSubview:self.collectionView];
             strongSelf->_levStr = [NSString stringWithFormat:@"当前等级:%@",kMeUnNilStr(strongSelf->_bModel.level)];
             [strongSelf.collectionView reloadData];
@@ -128,10 +130,10 @@
         [SSPublicNetWorkTool getAdminDistributionWithSuccessBlock:^(ZLRequestResponse *responseObject) {
             kMeSTRONGSELF
             strongSelf->_bModel = [SSadminDistributionModel mj_objectWithKeyValues:responseObject.data];
-            //订单总额
+            //订单总额 @(SSMyCash),@(SSMyCouponMoney)
             CGFloat allMoney = strongSelf->_bModel.use_money + strongSelf->_bModel.ratio_money;
-            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyDataDeal),@(SSMyCash),@(SSMyCouponMoney)];
-            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@""];
+            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyDataDeal),@(SSMyCash)];
+            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@""];
             //            [self.view addSubview:self.collectionView];
             strongSelf->_levStr = [NSString stringWithFormat:@"当前等级:%@",kMeUnNilStr(strongSelf->_bModel.level)];
             [strongSelf.collectionView reloadData];
@@ -145,10 +147,10 @@
         [SSPublicNetWorkTool getAdminDistributionWithSuccessBlock:^(ZLRequestResponse *responseObject) {
             kMeSTRONGSELF
             strongSelf->_bModel = [SSadminDistributionModel mj_objectWithKeyValues:responseObject.data];
-            //订单总额
+            //订单总额 @(SSMyCash),@(SSMyCouponMoney)
             CGFloat allMoney = strongSelf->_bModel.use_money + strongSelf->_bModel.ratio_money;
-            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyDataDeal),@(SSMyCash),@(SSMyCouponMoney),@(SSBrandMannager)];
-            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@"",@""];
+            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyTeam),@(SSMyLeave),@(SSMySuperior),@(SSMyCode),@(SSMyDataDeal),@(SSMyCash),@(SSBrandMannager)];
+            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],[NSString stringWithFormat:@"%@",@(strongSelf->_bModel.admin_team)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@""];
             //            [self.view addSubview:self.collectionView];
             strongSelf->_levStr = [NSString stringWithFormat:@"当前等级:%@",kMeUnNilStr(strongSelf->_bModel.level)];
             [strongSelf.collectionView reloadData];
@@ -162,10 +164,10 @@
         [SSPublicNetWorkTool getAdminDistributionWithSuccessBlock:^(ZLRequestResponse *responseObject) {
             kMeSTRONGSELF
             strongSelf->_bModel = [SSadminDistributionModel mj_objectWithKeyValues:responseObject.data];
-            //订单总额
+            //订单总额 @(SSMyMoneyDeal),@(SSMyCouponMoney)
             CGFloat allMoney = strongSelf->_bModel.use_money + strongSelf->_bModel.ratio_money;
-            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyAppintMannger),@(SSMyLeave),@(SSMyBelongStore),@(SSMyCode),@(SSMyCash),@(SSMyMoneyDeal),@(SSMyCouponMoney)];
-            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],@"",[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@"",@""];
+            strongSelf->_arrData = @[@(SSMyMoney),@(SSMyAppintMannger),@(SSMyLeave),@(SSMyBelongStore),@(SSMyCode),@(SSMyCash),@(SSMyMoneyDeal)];
+            strongSelf->_arrDataStr = @[[NSString stringWithFormat:@"%.2f",allMoney],@"",[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.level)],[NSString stringWithFormat:@"%@",kMeUnNilStr(strongSelf->_bModel.superior)],@"",@"",@""];
             //            [self.view addSubview:self.collectionView];
             strongSelf->_levStr = [NSString stringWithFormat:@"当前等级:%@",kMeUnNilStr(strongSelf->_bModel.level)];
             [strongSelf.collectionView reloadData];
@@ -177,11 +179,12 @@
         }];
     }else if(_type == SSClientCTypeStyle){
         [SSPublicNetWorkTool getUserDistributionWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+            //,@(SSMyCode),@(SSMyCouponMoney)
             kMeSTRONGSELF
             strongSelf->_cModel = [SSDistributionCentreModel mj_objectWithKeyValues:responseObject.data];
             CGFloat allBean = strongSelf->_cModel.wait_integral +  strongSelf->_cModel.integral;
-            strongSelf.arrData = @[@(SSDistributionMoney),@(SSDistributionOrder),@(SSMyTeam),@(SSMyCode),@(SSMyCouponMoney)];
-            strongSelf.arrDataStr = @[[NSString stringWithFormat:@"%@",@(allBean)],[NSString stringWithFormat:@"%@单",@(strongSelf->_cModel.count_order)],[NSString stringWithFormat:@"%@人",@(strongSelf->_cModel.count_user)],@"",@""];
+            strongSelf.arrData = @[@(SSDistributionMoney),@(SSDistributionOrder),@(SSMyTeam),@(SSMyCode)];
+            strongSelf.arrDataStr = @[[NSString stringWithFormat:@"%@",@(allBean)],[NSString stringWithFormat:@"%@单",@(strongSelf->_cModel.count_order)],[NSString stringWithFormat:@"%@人",@(strongSelf->_cModel.count_user)],@""];
 //            [strongSelf.view addSubview:self.collectionView];
             [strongSelf.collectionView reloadData];
              [strongSelf.collectionView.mj_header endRefreshing];

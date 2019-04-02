@@ -299,21 +299,20 @@
 
 - (void)toVisterVC{
     if([SSUserInfoModel isLogin]){
-        if(kCurrentUser.user_type == 3){
+        if(kCurrentUser.user_type == 4){
+            kMeAlter(@"", @"您还不是店铺");
+        }else{
             SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
             [self.navigationController pushViewController:svc animated:YES];
-        }else{
-            kMeAlter(@"", @"您还不是店铺");
         }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            if(kCurrentUser.user_type == 3){
-                SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
-                [strongSelf.navigationController pushViewController:svc animated:YES];
-            }else{
+            if(kCurrentUser.user_type == 4){
                 kMeAlter(@"", @"您还不是店铺");
+            }else{
+                
             }
         } failHandler:nil];
     }
@@ -321,7 +320,7 @@
 
 - (void)toProdectVC{
     if([SSUserInfoModel isLogin]){
-        if(kCurrentUser.user_type == 3){
+        if(kCurrentUser.user_type == 3 || kCurrentUser.user_type == 5){
             SSBynamicPublishVC *svc = [[SSBynamicPublishVC alloc]init];
             kMeWEAKSELF
             svc.publishSucessBlock = ^{
@@ -330,20 +329,20 @@
             };
             [self.navigationController pushViewController:svc animated:YES];
         }else{
-            kMeAlter(@"", @"您还不是店铺");
+            kMeAlter(@"", @"您没有发表动态的权限");
         }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            if(kCurrentUser.user_type == 3){
+            if(kCurrentUser.user_type == 3 || kCurrentUser.user_type == 5){
                 SSBynamicPublishVC *svc = [[SSBynamicPublishVC alloc]init];
                 svc.publishSucessBlock = ^{
                     strongSelf.tabBarController.selectedIndex = 2;
                 };
                 [strongSelf.navigationController pushViewController:svc animated:YES];
             }else{
-                kMeAlter(@"", @"您还不是店铺");
+                kMeAlter(@"", @"您没有发表动态的权限");
             }
         } failHandler:nil];
     }
@@ -355,21 +354,21 @@
 
 - (void)toServiceVC{
     if([SSUserInfoModel isLogin]){
-        if(kCurrentUser.user_type == 3){
+        if(kCurrentUser.user_type == 4){
+            kMeAlter(@"", @"您还不是店铺");
+        }else{
             SSMyDistrbutionVC *svc = [[SSMyDistrbutionVC alloc]init];
             [self.navigationController pushViewController:svc animated:YES];
-        }else{
-            kMeAlter(@"", @"您还不是店铺");
         }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            if(kCurrentUser.user_type == 3){
+            if(kCurrentUser.user_type == 4){
+                kMeAlter(@"", @"您还不是店铺");
+            }else{
                 SSMyDistrbutionVC *svc = [[SSMyDistrbutionVC alloc]init];
                 [strongSelf.navigationController pushViewController:svc animated:YES];
-            }else{
-                kMeAlter(@"", @"您还不是店铺");
             }
         } failHandler:nil];
     }
@@ -394,7 +393,7 @@
             SSClerkManngerVC *svc = [[SSClerkManngerVC alloc]init];
             [self.navigationController pushViewController:svc animated:YES];
         }else{
-            kMeAlter(@"", @"您还不是店铺");
+            kMeAlter(@"", @"您不是店铺");
         }
     }else{
         kMeWEAKSELF
@@ -404,7 +403,7 @@
                 SSClerkManngerVC *svc = [[SSClerkManngerVC alloc]init];
                 [strongSelf.navigationController pushViewController:svc animated:YES];
             }else{
-                kMeAlter(@"", @"您还不是店铺");
+                kMeAlter(@"", @"您不是店铺");
             }
         } failHandler:nil];
     }
@@ -417,21 +416,21 @@
 
 - (void)toPosterVC{
     if([SSUserInfoModel isLogin]){
-        if(kCurrentUser.user_type == 3){
+        if(kCurrentUser.user_type == 4){
+            kMeAlter(@"", @"您还不是店铺");
+        }else{
             SSPosterListVC *svc = [[SSPosterListVC alloc]init];
             [self.navigationController pushViewController:svc animated:YES];
-        }else{
-            kMeAlter(@"", @"您还不是店铺");
         }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            if(kCurrentUser.user_type == 3){
+            if(kCurrentUser.user_type == 4){
+                kMeAlter(@"", @"您还不是店铺");
+            }else{
                 SSPosterListVC *svc = [[SSPosterListVC alloc]init];
                 [strongSelf.navigationController pushViewController:svc animated:YES];
-            }else{
-                kMeAlter(@"", @"您还不是店铺");
             }
         } failHandler:nil];
     }
@@ -439,21 +438,21 @@
 
 - (void)toArticelVC{
     if([SSUserInfoModel isLogin]){
-        if(kCurrentUser.user_type == 3){
+        if(kCurrentUser.user_type == 4){
+            kMeAlter(@"", @"您还不是店铺");
+        }else{
             SSArticelVC *svc = [[SSArticelVC alloc]init];
             [self.navigationController pushViewController:svc animated:YES];
-        }else{
-            kMeAlter(@"", @"您还不是店铺");
         }
     }else{
         kMeWEAKSELF
         [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
             kMeSTRONGSELF
-            if(kCurrentUser.user_type == 3){
+            if(kCurrentUser.user_type == 4){
+                kMeAlter(@"", @"您还不是店铺");
+            }else{
                 SSArticelVC *svc = [[SSArticelVC alloc]init];
                 [strongSelf.navigationController pushViewController:svc animated:YES];
-            }else{
-                kMeAlter(@"", @"您还不是店铺");
             }
         } failHandler:nil];
     }
