@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -154,16 +153,16 @@
                         <constraint firstItem="Utn-cx-brV" firstAttribute="top" secondItem="OzG-DS-S4t" secondAttribute="top" id="wcN-iE-Erx"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uyyhebtl" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-TS-DU1">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_center" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-TS-DU1">
                     <rect key="frame" x="214" y="290" width="169.5" height="111"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couplehome" translatesAutoresizingMaskIntoConstraints="NO" id="0Ik-H5-ptG">
-                    <rect key="frame" x="8" y="532" width="169.5" height="111"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_mail" translatesAutoresizingMaskIntoConstraints="NO" id="0Ik-H5-ptG">
+                    <rect key="frame" x="8.5" y="532" width="169.5" height="111"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gifthome" translatesAutoresizingMaskIntoConstraints="NO" id="ZGN-n3-GyD">
-                    <rect key="frame" x="215" y="532" width="169" height="111"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_clerk" translatesAutoresizingMaskIntoConstraints="NO" id="ZGN-n3-GyD">
+                    <rect key="frame" x="214" y="532" width="169.5" height="111"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umkkumfd" translatesAutoresizingMaskIntoConstraints="NO" id="6Gr-eh-ZMX">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_dynal" translatesAutoresizingMaskIntoConstraints="NO" id="6Gr-eh-ZMX">
                     <rect key="frame" x="8.5" y="290" width="169.5" height="111"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="111" id="KRl-B2-P4b"/>
@@ -195,43 +194,43 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRF-qF-EX7">
-                    <rect key="frame" x="8" y="532" width="169.5" height="111"/>
+                    <rect key="frame" x="8.5" y="532" width="169.5" height="111"/>
                     <connections>
                         <action selector="posterAction:" destination="H1r-ZB-l36" eventType="touchUpInside" id="Klc-EU-wtO"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzI-Xa-VwG">
-                    <rect key="frame" x="215" y="532" width="169" height="111"/>
+                    <rect key="frame" x="214" y="532" width="169.5" height="111"/>
                     <connections>
                         <action selector="articelAction:" destination="H1r-ZB-l36" eventType="touchUpInside" id="b1m-tw-PkC"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tgdmitrb" translatesAutoresizingMaskIntoConstraints="NO" id="poQ-K3-Mn3">
-                    <rect key="frame" x="8" y="411" width="169.5" height="111"/>
+                    <rect key="frame" x="8.5" y="411" width="169.5" height="111"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SSyyuj" translatesAutoresizingMaskIntoConstraints="NO" id="od1-ic-bDm">
-                    <rect key="frame" x="215" y="411" width="169" height="111"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_article" translatesAutoresizingMaskIntoConstraints="NO" id="od1-ic-bDm">
+                    <rect key="frame" x="214" y="411" width="169.5" height="111"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP1-dN-nGs">
-                    <rect key="frame" x="231" y="492" width="152.5" height="0.0"/>
+                    <rect key="frame" x="230.5" y="492" width="153" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt0-w0-VqO">
-                    <rect key="frame" x="25" y="491.5" width="153" height="0.0"/>
+                    <rect key="frame" x="25" y="492" width="153" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZc-Tm-QIo">
-                    <rect key="frame" x="8" y="411" width="169.5" height="111"/>
+                    <rect key="frame" x="8.5" y="411" width="169.5" height="111"/>
                     <connections>
                         <action selector="posterNewAction:" destination="H1r-ZB-l36" eventType="touchUpInside" id="oSV-Ns-4UU"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaG-A0-g9v">
-                    <rect key="frame" x="215" y="411" width="169" height="111"/>
+                    <rect key="frame" x="214" y="411" width="169.5" height="111"/>
                     <connections>
                         <action selector="articelNewAction:" destination="H1r-ZB-l36" eventType="touchUpInside" id="DqB-1h-WRz"/>
                     </connections>
@@ -346,14 +345,14 @@
         </view>
     </objects>
     <resources>
-        <image name="SSyyuj" width="355" height="239"/>
-        <image name="couplehome" width="355" height="239"/>
-        <image name="gifthome" width="355" height="239"/>
+        <image name="home_article" width="355" height="239"/>
+        <image name="home_center" width="355" height="239"/>
+        <image name="home_clerk" width="355" height="239"/>
+        <image name="home_dynal" width="355" height="239"/>
+        <image name="home_mail" width="355" height="239"/>
         <image name="homeb" width="750" height="1334"/>
         <image name="qwqi" width="17" height="16"/>
         <image name="talt" width="702" height="180"/>
         <image name="tgdmitrb" width="355" height="239"/>
-        <image name="umkkumfd" width="355" height="239"/>
-        <image name="uyyhebtl" width="355" height="239"/>
     </resources>
 </document>
