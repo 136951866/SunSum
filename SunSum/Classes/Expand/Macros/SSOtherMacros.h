@@ -47,9 +47,9 @@
 #define JpushType 1
 #endif
 
-//极光
-#define JpushAppKey @"ea6dae8f5bf6015308432a99"
-#define JpushMasterSecret @"5028fa44645cd9dd1f691b2c"
+//极光 修改
+#define JpushAppKey @"47ccc33f34cadee184e1b319"
+#define JpushMasterSecret @"8c075447c791797a394d57f7"
 
 
 #endif /* SSOtherMacros_h */

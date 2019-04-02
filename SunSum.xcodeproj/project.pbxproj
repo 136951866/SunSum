@@ -6580,7 +6580,7 @@
 				CODE_SIGN_ENTITLEMENTS = SunSum/SunSum.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6R2B565B5;
+				DEVELOPMENT_TEAM = F8948WXJ47;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6620,7 +6620,7 @@
 					"$(PROJECT_DIR)/SunSum/Classes/VenderLib/TIMSDK/third/voiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/SunSum/Classes/VenderLib/TIMSDK/third/voiceConvert/opencore-amrnb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sunsum.client;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsum.sunsum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -6637,7 +6637,7 @@
 				CODE_SIGN_ENTITLEMENTS = SunSum/SunSum.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6R2B565B5;
+				DEVELOPMENT_TEAM = F8948WXJ47;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6677,7 +6677,7 @@
 					"$(PROJECT_DIR)/SunSum/Classes/VenderLib/TIMSDK/third/voiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/SunSum/Classes/VenderLib/TIMSDK/third/voiceConvert/opencore-amrnb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sunsum.client;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsum.sunsum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

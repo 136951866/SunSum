@@ -247,9 +247,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //    [[TIMManager sharedInstance] log:TIM_LOG_INFO tag:@"SetToken" msg:[NSString stringWithFormat:@"My Token is :%@", token]];
     TIMTokenParam *param = [[TIMTokenParam alloc] init];
 #ifdef TestVersion
-    param.busiId = 12831;
+    param.busiId = 13223;
 #else
-    param.busiId = 12832;
+    param.busiId = 13222;
 #endif
     [param setToken:deviceToken];
     //    [[TIMManager sharedInstance] setToken:param];
