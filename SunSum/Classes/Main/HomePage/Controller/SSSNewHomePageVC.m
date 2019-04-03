@@ -312,7 +312,8 @@
             if(kCurrentUser.user_type == 4){
                 kMeAlter(@"", @"您还不是店铺");
             }else{
-                
+                SSVisiterHomeVC *svc = [[SSVisiterHomeVC alloc]init];
+                [strongSelf.navigationController pushViewController:svc animated:YES];
             }
         } failHandler:nil];
     }
