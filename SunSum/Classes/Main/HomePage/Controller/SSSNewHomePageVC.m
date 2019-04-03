@@ -214,7 +214,7 @@
         //海报
         [_sContenView.imgPoster sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.posters_style.img)] placeholderImage:[UIImage imageNamed:@"tgdmitrb"]];
         //文章
-        [_sContenView.imgArticle sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.article_style.img)] placeholderImage:[UIImage imageNamed:@"SSyyuj"]];
+        [_sContenView.imgArticle sd_setImageWithURL:[NSURL URLWithString:kMeUnNilStr(self.styleModel.article_style.img)] placeholderImage:[UIImage imageNamed:@"home_article"]];
         //s优惠卷->商城 kMeUnNilStr(self.styleModel.taobao_coupon_style.img)
         [_sContenView.imgCouple sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"home_mail"]];
         //许愿屋->员工管理 kMeUnNilStr(self.styleModel.gift_style.img)

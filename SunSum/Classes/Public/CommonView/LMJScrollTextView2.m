@@ -159,7 +159,7 @@
 }
 
 - (void)clickAction{
-    if ([self isCurrentViewControllerVisible:[self viewController]] && self.delegate && [self.delegate respondsToSelector:@selector(scrollTextView2:clickIndex:content:)]) {
+    if ([self isCurrentViewControllerVisible:[self viewController]] && self.delegate && [self.delegate respondsToSelector:@selector(scrollTextView2:clickIndex:content:)]&&_textDataArr.count >0) {
         [self.delegate scrollTextView2:self clickIndex:_index content:[_textDataArr[_index] copy]];
     }
 }

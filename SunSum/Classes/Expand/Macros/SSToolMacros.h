@@ -49,6 +49,8 @@ img.style.maxWidth = %f;   \
 //app版本
 #define kSSAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
+#warning --
+
 #define kSSAppId @"1438596690"
 
 
