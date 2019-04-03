@@ -398,6 +398,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
         }
         self.unMessageCount = unread;
         kNoticeReloadkUnMessage
+    }else{
+         self.unMessageCount = 0;
     }
 }
 
