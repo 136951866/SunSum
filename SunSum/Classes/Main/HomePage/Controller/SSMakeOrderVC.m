@@ -113,7 +113,7 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.backgroundColor = [UIColor colorWithHexString:@"f4f4f4"];
     if(_hasAdress){
         self.sAddressView.frame = CGRectMake(0, 0, SCREEN_WIDTH, [SSMakeOrderSelectAddressView getViewHeightWithModel:_addressModel]);
         [self.sAddressView setUIWithModel:_addressModel];
@@ -121,6 +121,7 @@
     }else{
         _tableView.tableHeaderView = self.notAddressView;
     }
+    self.view.backgroundColor = [UIColor colorWithHexString:@"f4f4f4"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WechatSuccess:) name:WX_PAY_RESULT object:nil];
 }
 

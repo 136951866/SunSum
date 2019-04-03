@@ -39,22 +39,15 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-AJ-ZCo">
                         <rect key="frame" x="149" y="108" width="35.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-xN-pIJ">
-                        <rect key="frame" x="215.5" y="108" width="35.5" height="17"/>
+                        <rect key="frame" x="198.5" y="108" width="35.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.062745098039215685" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.99607843137254903" green="0.27058823529411763" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_huiyuanbiaoshi" translatesAutoresizingMaskIntoConstraints="NO" id="M6V-Lj-O09">
-                        <rect key="frame" x="191.5" y="108" width="17" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="17" id="32m-sS-LqV"/>
-                            <constraint firstAttribute="width" constant="17" id="Agw-UC-InH"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="立即购买" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB6-qq-qbA">
                         <rect key="frame" x="298" y="98" width="65" height="27"/>
                         <color key="backgroundColor" red="0.062745098039215685" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,20 +80,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="DAC-MU-ZHh" secondAttribute="trailing" constant="12" id="B3g-wD-l7m"/>
-                    <constraint firstItem="M6V-Lj-O09" firstAttribute="centerY" secondItem="of8-AJ-ZCo" secondAttribute="centerY" id="BCY-db-A6l"/>
                     <constraint firstItem="RJz-wC-aRA" firstAttribute="top" secondItem="DAC-MU-ZHh" secondAttribute="bottom" constant="7" id="DVy-MU-6lA"/>
                     <constraint firstItem="RJz-wC-aRA" firstAttribute="leading" secondItem="DAC-MU-ZHh" secondAttribute="leading" id="FzZ-e7-8tF"/>
                     <constraint firstAttribute="bottom" secondItem="RnD-hm-1V4" secondAttribute="bottom" id="JVB-Yf-YMl"/>
                     <constraint firstItem="DAC-MU-ZHh" firstAttribute="top" secondItem="TqK-8Q-4t9" secondAttribute="top" constant="12" id="LBH-1T-AnN"/>
-                    <constraint firstItem="rLM-xN-pIJ" firstAttribute="leading" secondItem="M6V-Lj-O09" secondAttribute="trailing" constant="7" id="MoA-XU-XSo"/>
                     <constraint firstAttribute="trailing" secondItem="XB6-qq-qbA" secondAttribute="trailing" constant="12" id="Pd2-jb-645"/>
                     <constraint firstItem="rLM-xN-pIJ" firstAttribute="centerY" secondItem="of8-AJ-ZCo" secondAttribute="centerY" id="RAy-0d-Q0m"/>
                     <constraint firstItem="TqK-8Q-4t9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="REA-fr-T5o"/>
+                    <constraint firstItem="rLM-xN-pIJ" firstAttribute="leading" secondItem="of8-AJ-ZCo" secondAttribute="trailing" constant="14" id="RT3-2o-5cb"/>
                     <constraint firstItem="XB6-qq-qbA" firstAttribute="bottom" secondItem="of8-AJ-ZCo" secondAttribute="bottom" id="aZg-iC-hLf"/>
                     <constraint firstItem="of8-AJ-ZCo" firstAttribute="bottom" secondItem="TqK-8Q-4t9" secondAttribute="bottom" constant="-12" id="bq1-WD-EK9"/>
                     <constraint firstItem="of8-AJ-ZCo" firstAttribute="leading" secondItem="DAC-MU-ZHh" secondAttribute="leading" id="e4V-uj-TWY"/>
                     <constraint firstAttribute="trailing" secondItem="RnD-hm-1V4" secondAttribute="trailing" id="lgj-kB-S3L"/>
-                    <constraint firstItem="M6V-Lj-O09" firstAttribute="leading" secondItem="of8-AJ-ZCo" secondAttribute="trailing" constant="7" id="mtG-BK-bie"/>
                     <constraint firstItem="TqK-8Q-4t9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="pEn-Lu-OX9"/>
                     <constraint firstItem="DAC-MU-ZHh" firstAttribute="leading" secondItem="TqK-8Q-4t9" secondAttribute="trailing" constant="12" id="sh2-fh-7bR"/>
                     <constraint firstItem="RJz-wC-aRA" firstAttribute="trailing" secondItem="DAC-MU-ZHh" secondAttribute="trailing" id="uIx-tJ-HNs"/>
@@ -122,7 +113,4 @@
             <point key="canvasLocation" x="32.5" y="96.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="pic_huiyuanbiaoshi" width="17" height="17"/>
-    </resources>
 </document>

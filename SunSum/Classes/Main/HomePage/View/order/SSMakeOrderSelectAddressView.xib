@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-hu-V6e">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoa-os-vfY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pgwu" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-hu-V6e">
                     <rect key="frame" x="15" y="28" width="15" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="ZT1-YO-3w7"/>
@@ -23,7 +27,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quW-Ub-Dfp">
-                    <rect key="frame" x="40" y="7" width="40.5" height="15"/>
+                    <rect key="frame" x="40" y="7" width="41" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="41" id="JPU-Ne-Y1Z"/>
                     </constraints>
@@ -70,16 +74,19 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="R1u-Z1-SHC" firstAttribute="top" secondItem="EP0-98-bm0" secondAttribute="bottom" constant="10.5" id="56P-Xu-D2O"/>
                 <constraint firstItem="fxw-lf-Ofw" firstAttribute="leading" secondItem="quW-Ub-Dfp" secondAttribute="leading" id="7Yb-Tk-ioy"/>
                 <constraint firstItem="fxw-lf-Ofw" firstAttribute="leading" secondItem="fpy-hu-V6e" secondAttribute="trailing" constant="10" id="DRd-xj-Gfu"/>
+                <constraint firstItem="hoa-os-vfY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EFu-Zg-vY6"/>
                 <constraint firstItem="fpy-hu-V6e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="28" id="Gza-qg-7LC"/>
                 <constraint firstItem="VBo-nw-eEK" firstAttribute="leading" secondItem="EP0-98-bm0" secondAttribute="trailing" constant="5" id="K01-iS-KBN"/>
                 <constraint firstItem="fpy-hu-V6e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="KnG-Bx-aDS"/>
                 <constraint firstItem="U1a-5l-1bb" firstAttribute="leading" secondItem="R1u-Z1-SHC" secondAttribute="trailing" constant="5" id="Pqv-Z6-ak2"/>
+                <constraint firstItem="hoa-os-vfY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QTg-HK-VJW"/>
                 <constraint firstItem="R1u-Z1-SHC" firstAttribute="leading" secondItem="fxw-lf-Ofw" secondAttribute="trailing" id="R2Z-Uo-tEI"/>
+                <constraint firstAttribute="trailing" secondItem="hoa-os-vfY" secondAttribute="trailing" id="Zvt-MG-Uil"/>
                 <constraint firstItem="U1a-5l-1bb" firstAttribute="bottom" secondItem="fpy-hu-V6e" secondAttribute="bottom" id="ahc-d0-GSv"/>
                 <constraint firstItem="VBo-nw-eEK" firstAttribute="centerY" secondItem="quW-Ub-Dfp" secondAttribute="centerY" id="baC-qg-zNu"/>
                 <constraint firstItem="U1a-5l-1bb" firstAttribute="trailing" secondItem="VBo-nw-eEK" secondAttribute="trailing" id="bvG-Qr-Hhp"/>
@@ -89,6 +96,7 @@
                 <constraint firstItem="EP0-98-bm0" firstAttribute="centerY" secondItem="quW-Ub-Dfp" secondAttribute="centerY" id="q3M-So-rUP"/>
                 <constraint firstItem="EP0-98-bm0" firstAttribute="leading" secondItem="quW-Ub-Dfp" secondAttribute="trailing" constant="1" id="wMQ-2p-6HI"/>
                 <constraint firstItem="quW-Ub-Dfp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="xOU-Ts-6Jo"/>
+                <constraint firstAttribute="bottom" secondItem="hoa-os-vfY" secondAttribute="bottom" id="z4n-zu-eIQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -96,11 +104,11 @@
                 <outlet property="lblName" destination="EP0-98-bm0" id="vDh-NS-mgn"/>
                 <outlet property="lblPhone" destination="VBo-nw-eEK" id="Owa-JB-0qd"/>
             </connections>
-            <point key="canvasLocation" x="33" y="143.5"/>
+            <point key="canvasLocation" x="32" y="143.47826086956522"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_add" width="15" height="18"/>
+        <image name="icon-pgwu" width="15" height="18"/>
         <image name="inco-yytmtmda" width="7" height="13"/>
     </resources>
 </document>

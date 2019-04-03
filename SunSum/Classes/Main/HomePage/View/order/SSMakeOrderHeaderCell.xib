@@ -65,40 +65,29 @@
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_huiyuanbiaoshi" translatesAutoresizingMaskIntoConstraints="NO" id="kOo-zD-RYf">
-                        <rect key="frame" x="231" y="87" width="18" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="8lF-fS-s73"/>
-                            <constraint firstAttribute="width" constant="18" id="wvG-KM-8bf"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-RB-0aV">
-                        <rect key="frame" x="264" y="84" width="48" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="48" id="M9H-7z-IUs"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-RB-0aV">
+                        <rect key="frame" x="231" y="85" width="81" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <color key="textColor" red="0.062745098039215685" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.99607843139999996" green="0.27058823529999998" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1Ap-RB-0aV" firstAttribute="leading" secondItem="kOo-zD-RYf" secondAttribute="trailing" constant="15" id="90c-GL-Nhc"/>
                     <constraint firstAttribute="trailing" secondItem="TwL-JK-bVP" secondAttribute="trailing" id="CJS-5y-ulS"/>
                     <constraint firstItem="TwL-JK-bVP" firstAttribute="leading" secondItem="yKH-Wu-r31" secondAttribute="leading" id="CVh-FO-GXV"/>
                     <constraint firstItem="QZE-mb-ty7" firstAttribute="top" secondItem="cXh-VH-SFk" secondAttribute="bottom" constant="10" id="CxK-ba-2wi"/>
+                    <constraint firstItem="1Ap-RB-0aV" firstAttribute="leading" secondItem="Rdh-5B-4Wj" secondAttribute="trailing" constant="5" id="FIv-Mr-C6y"/>
                     <constraint firstItem="QZE-mb-ty7" firstAttribute="leading" secondItem="cXh-VH-SFk" secondAttribute="leading" id="Fxy-wA-2bP"/>
                     <constraint firstItem="Rdh-5B-4Wj" firstAttribute="bottom" secondItem="arJ-BL-Y0r" secondAttribute="bottom" id="Hc6-Ck-5RM"/>
-                    <constraint firstItem="1Ap-RB-0aV" firstAttribute="centerY" secondItem="kOo-zD-RYf" secondAttribute="centerY" id="NGf-za-TwG"/>
                     <constraint firstItem="cXh-VH-SFk" firstAttribute="leading" secondItem="arJ-BL-Y0r" secondAttribute="trailing" constant="6" id="Pqg-Pc-dZa"/>
                     <constraint firstItem="arJ-BL-Y0r" firstAttribute="top" secondItem="TwL-JK-bVP" secondAttribute="bottom" constant="8" id="RiX-LC-Ggs"/>
                     <constraint firstItem="qcj-AI-hfV" firstAttribute="trailing" secondItem="cXh-VH-SFk" secondAttribute="trailing" id="VPh-77-Ga3"/>
-                    <constraint firstAttribute="bottom" secondItem="kOo-zD-RYf" secondAttribute="bottom" constant="5.5" id="VfI-ab-am6"/>
                     <constraint firstItem="arJ-BL-Y0r" firstAttribute="leading" secondItem="yKH-Wu-r31" secondAttribute="leading" constant="15" id="Vmj-ID-Su0"/>
                     <constraint firstItem="cXh-VH-SFk" firstAttribute="top" secondItem="arJ-BL-Y0r" secondAttribute="top" id="Zd5-YO-Q7a"/>
+                    <constraint firstItem="1Ap-RB-0aV" firstAttribute="centerY" secondItem="Rdh-5B-4Wj" secondAttribute="centerY" id="bUY-dw-Mjb"/>
                     <constraint firstItem="Rdh-5B-4Wj" firstAttribute="leading" secondItem="QZE-mb-ty7" secondAttribute="leading" id="dzm-95-rNO"/>
                     <constraint firstItem="qcj-AI-hfV" firstAttribute="leading" secondItem="QZE-mb-ty7" secondAttribute="trailing" constant="8" id="fGj-dY-sow"/>
-                    <constraint firstItem="kOo-zD-RYf" firstAttribute="leading" secondItem="Rdh-5B-4Wj" secondAttribute="trailing" constant="5" id="gEp-fu-k4e"/>
+                    <constraint firstAttribute="trailing" secondItem="1Ap-RB-0aV" secondAttribute="trailing" constant="8" id="lzi-NP-q6L"/>
                     <constraint firstAttribute="trailing" secondItem="cXh-VH-SFk" secondAttribute="trailing" constant="15" id="oPf-3Y-FSS"/>
                     <constraint firstItem="TwL-JK-bVP" firstAttribute="top" secondItem="yKH-Wu-r31" secondAttribute="top" id="rQu-BU-Hhg"/>
                     <constraint firstItem="qcj-AI-hfV" firstAttribute="centerY" secondItem="QZE-mb-ty7" secondAttribute="centerY" id="sWy-U5-a5p"/>
@@ -106,7 +95,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPic" destination="arJ-BL-Y0r" id="leq-tF-kVP"/>
-                <outlet property="imgVip" destination="kOo-zD-RYf" id="KYr-eZ-nOs"/>
                 <outlet property="lblCommonPrice" destination="Rdh-5B-4Wj" id="wlr-ch-v0T"/>
                 <outlet property="lblNum" destination="qcj-AI-hfV" id="3NG-hO-6rD"/>
                 <outlet property="lblPrice" destination="1Ap-RB-0aV" id="BQF-43-Gtv"/>
@@ -116,7 +104,4 @@
             <point key="canvasLocation" x="37" y="56.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="pic_huiyuanbiaoshi" width="17" height="17"/>
-    </resources>
 </document>
