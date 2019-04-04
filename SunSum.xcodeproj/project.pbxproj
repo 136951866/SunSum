@@ -775,6 +775,9 @@
 		36D66EC2213F7DD2000476FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D66EC0213F7DD2000476FF /* AppDelegate.m */; };
 		36D66ECE213F80A5000476FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D66ECD213F80A5000476FF /* Assets.xcassets */; };
 		36F43DD0216C942100FBA16E /* BankTransferAccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F43DCF216C942100FBA16E /* BankTransferAccountsVC.m */; };
+		36F4C0AF22560463005E2713 /* SSPAVistorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F4C0AC22560462005E2713 /* SSPAVistorCell.m */; };
+		36F4C0B022560463005E2713 /* SSPAVistorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F4C0AE22560463005E2713 /* SSPAVistorCell.xib */; };
+		36F4C0B322560470005E2713 /* SSPAVistorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F4C0B222560470005E2713 /* SSPAVistorVC.m */; };
 		36F5E76F222F6895000B0241 /* TUIKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36F5E76C222F6893000B0241 /* TUIKitResource.bundle */; };
 		36F5E771222F6895000B0241 /* TUIKitFace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36F5E76E222F6895000B0241 /* TUIKitFace.bundle */; };
 		36F5E80E222F68F1000B0241 /* TSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5E776222F68F0000B0241 /* TSwitchCell.m */; };
@@ -2251,6 +2254,11 @@
 		36D66ECD213F80A5000476FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F43DCE216C942100FBA16E /* BankTransferAccountsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankTransferAccountsVC.h; sourceTree = "<group>"; };
 		36F43DCF216C942100FBA16E /* BankTransferAccountsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankTransferAccountsVC.m; sourceTree = "<group>"; };
+		36F4C0AC22560462005E2713 /* SSPAVistorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPAVistorCell.m; sourceTree = "<group>"; };
+		36F4C0AD22560463005E2713 /* SSPAVistorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPAVistorCell.h; sourceTree = "<group>"; };
+		36F4C0AE22560463005E2713 /* SSPAVistorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSPAVistorCell.xib; sourceTree = "<group>"; };
+		36F4C0B12256046F005E2713 /* SSPAVistorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPAVistorVC.h; sourceTree = "<group>"; };
+		36F4C0B222560470005E2713 /* SSPAVistorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPAVistorVC.m; sourceTree = "<group>"; };
 		36F5E76C222F6893000B0241 /* TUIKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIKitResource.bundle; sourceTree = "<group>"; };
 		36F5E76D222F6894000B0241 /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
 		36F5E76E222F6895000B0241 /* TUIKitFace.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIKitFace.bundle; sourceTree = "<group>"; };
@@ -2942,6 +2950,8 @@
 		3673D0DE2248B5AE0007F3C5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				36F4C0B12256046F005E2713 /* SSPAVistorVC.h */,
+				36F4C0B222560470005E2713 /* SSPAVistorVC.m */,
 				36227605224486630031AA0F /* SSStoreApplyStatusVC.h */,
 				36227604224486630031AA0F /* SSStoreApplyStatusVC.m */,
 				36227603224486630031AA0F /* SSStoreApplyStatusVC.xib */,
@@ -4519,6 +4529,9 @@
 		36D36F38223F860F009F781B /* home */ = {
 			isa = PBXGroup;
 			children = (
+				36F4C0AD22560463005E2713 /* SSPAVistorCell.h */,
+				36F4C0AC22560462005E2713 /* SSPAVistorCell.m */,
+				36F4C0AE22560463005E2713 /* SSPAVistorCell.xib */,
 				3622760C2244867B0031AA0F /* SSStoreApplyView.h */,
 				3622760B2244867A0031AA0F /* SSStoreApplyView.m */,
 				3622760A2244867A0031AA0F /* SSStoreApplyView.xib */,
@@ -5634,6 +5647,7 @@
 				36D368A5223F6880009F781B /* SSExitVC.xib in Resources */,
 				36459A9F2251AF0E00AB8329 /* SSGoodManngerSpecAddCell.xib in Resources */,
 				36D36EF1223F7737009F781B /* SSMyOrderDetailCell.xib in Resources */,
+				36F4C0B022560463005E2713 /* SSPAVistorCell.xib in Resources */,
 				36D36C58223F699C009F781B /* SSShopCartMakeOrderVC.xib in Resources */,
 				36D36DF6223F6A46009F781B /* SSMineShareVC.xib in Resources */,
 				36D36B5A223F695C009F781B /* SSShoppingMallCell.xib in Resources */,
@@ -5941,6 +5955,7 @@
 				3628476C2140FD79008FE7F9 /* DataMD5.m in Sources */,
 				36D36DBD223F6A46009F781B /* SSNewMineHomeHeaderView.m in Sources */,
 				3670728F221C04BB0070BA90 /* ZHPlaceInfoTableViewCell.m in Sources */,
+				36F4C0B322560470005E2713 /* SSPAVistorVC.m in Sources */,
 				36D36920223F68C3009F781B /* SSThridHomeVC.m in Sources */,
 				360830D6219AAE4300C72B22 /* NSString+HDExtension.m in Sources */,
 				36D36CA7223F69B7009F781B /* SSOrderDetailModel.m in Sources */,
@@ -6170,6 +6185,7 @@
 				36D36B66223F695C009F781B /* SSThridProductDetailsHeaderView.m in Sources */,
 				36F5E810222F68F1000B0241 /* TAlertView.m in Sources */,
 				36D36CF8223F6A0B009F781B /* SSAddClerksVC.m in Sources */,
+				36F4C0AF22560463005E2713 /* SSPAVistorCell.m in Sources */,
 				36FEEBDB214CEFB400060209 /* TDWebViewCell.m in Sources */,
 				36D3693E223F68C3009F781B /* SSArticelSearchVC.m in Sources */,
 				36459AEB2251B13700AB8329 /* THDatePickerView.m in Sources */,

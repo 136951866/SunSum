@@ -31,6 +31,7 @@
 #import "SSStoreApplyModel.h"
 #import "SSStoreApplyStatusVC.h"
 #import "SSDynamicGoodApplyVC.h"
+#import "SSPAVistorVC.h"
 
 @interface SSNewMineHomeCell()<UICollectionViewDelegate,UICollectionViewDataSource>{
     NSArray *_arrModel;
@@ -152,6 +153,10 @@
             [homeVc.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case MePAVistor:{
+            SSPAVistorVC *vc = [[SSPAVistorVC alloc]init];
+            [homeVc.navigationController pushViewController:vc animated:YES];
+        }
         default:
             break;
     }
