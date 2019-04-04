@@ -410,6 +410,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
             if([kMeUnNilStr([conv getReceiver]) isEqualToString:kMeUnNilStr(kCurrentUser.tls_data.tls_id)]){
                 continue;
             }
+            if([conv getUnReadMessageNum] == 0){
+                continue;
+            }
             unread +=[conv getUnReadMessageNum];
         }
         self.unMessageCount = unread;
