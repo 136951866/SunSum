@@ -51,7 +51,7 @@ img.style.maxWidth = %f;   \
 
 #warning --
 
-#define kSSAppId @"1438596690"
+#define kSSAppId @""
 
 
 
