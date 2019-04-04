@@ -61,7 +61,7 @@
     sheet.blockBtnTapHandle = ^(NSInteger index){
         kMeSTRONGSELF
         if(index){
-            [SSCommonTool showWithTellPhone:kMeUnNilStr(model.cellphone) inView:strongSelf.view];
+            [SSCommonTool showWithTellPhone:kMeUnNilStr(model.user.cellphone) inView:strongSelf.view];
         }else{
             if([kMeUnNilStr(model.tls_id) isEqualToString:kCurrentUser.tls_data.tls_id]){
                 [SSShowViewTool showMessage:@"暂不支持和自己聊天" view:strongSelf.view];
