@@ -82,11 +82,26 @@
     TIMManager *manager = [TIMManager sharedInstance];
     NSArray *convs = [manager getConversationList];
     for (TIMConversation *conv in convs) {
+        if(convs == nil){
+            continue;
+        }
+        
         if([conv getType] == TIM_SYSTEM){
             continue;
         }
         //[conv getMessage:[[TUIKit sharedInstance] getConfig].msgCountPerRequest last:nil succ:nil fail:nil];
         TIMMessage *msg = [conv getLastMsg];
+        if(msg == nil){
+            continue;
+        }
+        
+        if(kMeUnNilStr([conv getReceiver]).length == 0){
+            continue;
+        }
+        
+        if([kMeUnNilStr([conv getReceiver]) isEqualToString:kMeUnNilStr(kCurrentUser.tls_data.tls_id)]){
+            continue;
+        }
         
         TConversationCellData *data = [[TConversationCellData alloc] init];
         data.unRead = [conv getUnReadMessageNum];
