@@ -38,6 +38,40 @@
 #define kNetInvateCode @"502"
 
 /*********************************************/
+#pragma makr - ai
+//查询 雷达(底部导航) 时间 访问人数数据信息
+#define SSIPcommonairadartime @"common/airadar/time"
+//互动次数查询
+#define SSIPcommonairadarcommunication @"common/airadar/communication"
+//雷达--行为
+#define SSIPcommonaigetMemberBehavior @"common/airadar/getMemberBehavior"
+//客户   -  加入时间
+#define SSIPcommonaigetjoinTime @"common/airadar/joinTime"
+//客户 -   活跃时间
+#define SSIPcommonaigetactive @"common/airadar/active"
+//客户 -   跟进
+#define SSIPcommonaigetupdateFollow @"common/airadar/follow"
+//客户搜索
+#define SSIPcommonaigetsearch @"common/airadar/search"
+//客户详情(雷达)
+#define SSIPcommonaigetMemberDetail @"common/airadar/getMemberDetail"
+//用户访问记录
+#define SSIPcommonaigetMemberVisit @"common/airadar/getMemberVisit"
+//获取客户资料
+#define SSIPcommonaigetCustomerDetail @"common/airadar/customerDetail"
+//修改客户资料
+#define SSIPcommonaiupdateDetail @"common/airadar/updateDetail"
+//实际跟进阶段   更新
+#define SSIPcommonaiupdateFollow @"common/airadar/updateFollow"
+//获取标签列表
+#define SSIPcommonaigetLabel @"common/label/getLabel"
+//设置用户标签
+#define SSIPcommonaisetMemberLabel @"common/user/setMemberLabel"
+//
+#define SSIPcommonaifollowUpMember @""
+/*********************************************/
+
+/*********************************************/
 #pragma makr - goodMannger
 //获取门店权限
 #define SSIPcommonggetStorePower @"common/store/getStorePower"

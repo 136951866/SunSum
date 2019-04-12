@@ -38,6 +38,7 @@
 #import "SSMyDistrbutionVC.h"
 #import "SSBynamicPublishVC.h"
 #import "SSNoticeVC.h"
+#import "SSAIHomeVC.h"
 
 @interface SSSNewHomePageVC ()<UIScrollViewDelegate,SSSNewHomePageViewDelegate>{
     CGFloat _allHeight;
@@ -274,15 +275,18 @@
 #pragma mark -SSSNewHomePageViewDelegate
 
 - (void)toNoticeVC{
-    if([SSUserInfoModel isLogin]){
-        [self toNotice];
-    }else{
-        kMeWEAKSELF
-        [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
-            kMeSTRONGSELF
-            [strongSelf toNotice];
-        } failHandler:nil];
-    }
+#warning ---
+    SSAIHomeVC *home = [[SSAIHomeVC alloc]init];
+    [self.navigationController pushViewController:home animated:YES];
+//    if([SSUserInfoModel isLogin]){
+//        [self toNotice];
+//    }else{
+//        kMeWEAKSELF
+//        [SSWxLoginVC presentLoginVCWithSuccessHandler:^(id object) {
+//            kMeSTRONGSELF
+//            [strongSelf toNotice];
+//        } failHandler:nil];
+//    }
 }
 
 - (void)toNotice{

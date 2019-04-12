@@ -10,4 +10,6 @@
 
 @interface SSRCConversationListVC : SSBaseVC
 
+@property (nonatomic, assign) BOOL isAi;
+
 @end

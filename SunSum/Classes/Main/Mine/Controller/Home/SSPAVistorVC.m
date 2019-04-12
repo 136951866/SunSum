@@ -56,6 +56,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SSVistorUserModel *model = self.refresh.arrData[indexPath.row];
+    if(model.user == nil){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
+    if(kMeUnNilStr(model.tls_id).length == 0){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
+    if(kMeUnNilStr(model.user.cellphone).length == 0){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
+    
     SSCustomActionSheet *sheet = [[SSCustomActionSheet alloc]initWithTitles:@[@"聊天",@"拨打电话"]];
     kMeWEAKSELF
     sheet.blockBtnTapHandle = ^(NSInteger index){
