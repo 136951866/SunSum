@@ -1,34 +1,33 @@
 //
-//  SSPAVistorVC.m
-//  SS时代
+//  SSPNewAVistorContentVC.m
+//  SunSum
 //
-//  Created by hank on 2019/4/4.
+//  Created by hank on 2019/4/12.
 //  Copyright © 2019 hank. All rights reserved.
 //
 
-#import "SSPAVistorVC.h"
+#import "SSPNewAVistorContentVC.h"
 #import "SSPAVistorCell.h"
 #import "SSVistorUserModel.h"
 #import "SSRCConversationVC.h"
 
-@interface SSPAVistorVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
+@interface SSPNewAVistorContentVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) ZLRefreshTool         *refresh;
 
 @end
 
-@implementation SSPAVistorVC
+@implementation SSPNewAVistorContentVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"获客图文";
     [self.view addSubview:self.tableView];
     [self.refresh addRefreshView];
-    // Do any additional setup after loading the view.
 }
 
 - (NSDictionary *)requestParameter{
+    
     return @{@"token":kMeUnNilStr(kCurrentUser.token)};
 }
 
@@ -36,7 +35,8 @@
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[SSVistorUserModel mj_objectArrayWithKeyValuesArray:data]];
+//    [self.refresh.arrData addObjectsFromArray:[SSVistorUserModel mj_objectArrayWithKeyValuesArray:data]];
+     [self.refresh.arrData addObjectsFromArray:@[[SSVistorUserModel new],[SSVistorUserModel new]]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -93,7 +93,7 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,kMeNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kCategoryViewHeight) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSPAVistorCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSPAVistorCell class])];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;
@@ -117,5 +117,6 @@
     }
     return _refresh;
 }
+
 
 @end

@@ -10,12 +10,40 @@
 
 @implementation SSFourHomeHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
 }
-*/
+
+
+- (IBAction)toAiAction:(UIButton *)sender {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(toAiVC)]){
+        [self.delegate toAiVC];
+    }
+}
+
+- (IBAction)toStoreDiagnosisAction:(UIButton *)sender {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(toStoreDiagnosisVC)]){
+        [self.delegate toStoreDiagnosisVC];
+    }
+}
+
+- (IBAction)toPAAction:(UIButton *)sender {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(toPAVC)]){
+        [self.delegate toPAVC];
+    }
+}
+
+- (IBAction)toClerkManngerAction:(UIButton *)sender {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(toClerkManngerVC)]){
+        [self.delegate toClerkManngerVC];
+    }
+}
+
+- (IBAction)toCaseAction:(UIButton *)sender {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(toCaseVC)]){
+        [self.delegate toCaseVC];
+    }
+}
+
 
 @end

@@ -10,7 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+const static CGFloat kSSFourHomeHeaderViewHeight = 320;
+
+@protocol  SSFourHomeHeaderViewDelegate <NSObject>
+- (void) toAiVC;
+- (void) toStoreDiagnosisVC;
+- (void) toPAVC;
+- (void) toClerkManngerVC;
+- (void) toCaseVC;
+@end
+
 @interface SSFourHomeHeaderView : UITableViewHeaderFooterView
+
+@property(nonatomic, weak) id<SSFourHomeHeaderViewDelegate> delegate;
 
 @end
 

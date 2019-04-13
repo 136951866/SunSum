@@ -23,7 +23,8 @@
 #import "AppDelegate.h"
 #import "SSMemberHomeVC.h"
 
-#import "SSSNewHomePageVC.h"
+//#import "SSSNewHomePageVC.h"
+#import "SSFourHomeVC.h"
 #import "SSBynamicHomeVC.h"
 @interface SSTabBarVC ()<UITabBarControllerDelegate>
 
@@ -42,7 +43,7 @@
     self.tabBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     // 1.初始化子控制器
-    SSSNewHomePageVC *home = [[SSSNewHomePageVC alloc] init];
+    SSFourHomeVC *home = [[SSFourHomeVC alloc] init];
     [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
     
     SSStoreHomeVC *store = [[SSStoreHomeVC alloc] init];

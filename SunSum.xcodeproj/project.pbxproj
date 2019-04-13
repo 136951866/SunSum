@@ -21,6 +21,14 @@
 		360830D6219AAE4300C72B22 /* NSString+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360830CE219AAE4200C72B22 /* NSString+HDExtension.m */; };
 		360830D7219AAE4300C72B22 /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 360830D1219AAE4200C72B22 /* HDAlertView.m */; };
 		360830D8219AAE4300C72B22 /* UIImage+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 360830D4219AAE4200C72B22 /* UIImage+HDExtension.m */; };
+		360CF0712260D7F2009D9D89 /* SSClerkLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360CF06F2260D7F2009D9D89 /* SSClerkLogCell.m */; };
+		360CF0722260D7F2009D9D89 /* SSClerkLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CF0702260D7F2009D9D89 /* SSClerkLogCell.xib */; };
+		360CF0762260D9FF009D9D89 /* SSClerkLogContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360CF0742260D9FF009D9D89 /* SSClerkLogContentCell.m */; };
+		360CF0772260D9FF009D9D89 /* SSClerkLogContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CF0752260D9FF009D9D89 /* SSClerkLogContentCell.xib */; };
+		360CF07B2260DD5F009D9D89 /* SSClerkSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360CF0792260DD5F009D9D89 /* SSClerkSortCell.m */; };
+		360CF07C2260DD5F009D9D89 /* SSClerkSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CF07A2260DD5F009D9D89 /* SSClerkSortCell.xib */; };
+		360CF0802260DFA2009D9D89 /* SSClerkSortContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360CF07E2260DFA2009D9D89 /* SSClerkSortContentCell.m */; };
+		360CF0812260DFA2009D9D89 /* SSClerkSortContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CF07F2260DFA2009D9D89 /* SSClerkSortContentCell.xib */; };
 		3617C30D21D0ADCB00004072 /* MeCoupleFilterLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */; };
 		362276002244864D0031AA0F /* SSStoreApplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FD2244864D0031AA0F /* SSStoreApplyModel.m */; };
 		362276012244864E0031AA0F /* SSStoreApplyParModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */; };
@@ -126,6 +134,16 @@
 		365151C0214134380044C763 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 365151BE214134370044C763 /* MBProgressHUD+MJ.m */; };
 		365942C022602EA800C5D976 /* SSFourHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942BF22602EA700C5D976 /* SSFourHomeHeaderView.m */; };
 		365942C222602EBE00C5D976 /* SSFourHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365942C122602EBE00C5D976 /* SSFourHomeHeaderView.xib */; };
+		365942C622603A2900C5D976 /* SSFourHomeDairyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942C422603A2900C5D976 /* SSFourHomeDairyCell.m */; };
+		365942C722603A2900C5D976 /* SSFourHomeDairyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365942C522603A2900C5D976 /* SSFourHomeDairyCell.xib */; };
+		365942CB22603C5700C5D976 /* SSFourHomeWorkShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942C922603C5700C5D976 /* SSFourHomeWorkShowCell.m */; };
+		365942CC22603C5700C5D976 /* SSFourHomeWorkShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365942CA22603C5700C5D976 /* SSFourHomeWorkShowCell.xib */; };
+		365942CF22607D8C00C5D976 /* SSPNewAVistorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942CE22607D8C00C5D976 /* SSPNewAVistorVC.m */; };
+		365942D222607DA200C5D976 /* SSPNewAVistorContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942D122607DA200C5D976 /* SSPNewAVistorContentVC.m */; };
+		365942D72260848800C5D976 /* SSClerkTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942D52260848800C5D976 /* SSClerkTaskCell.m */; };
+		365942D82260848800C5D976 /* SSClerkTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365942D62260848800C5D976 /* SSClerkTaskCell.xib */; };
+		365942DC22608C3E00C5D976 /* SSClerkTaskContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 365942DA22608C3E00C5D976 /* SSClerkTaskContentCell.m */; };
+		365942DD22608C3E00C5D976 /* SSClerkTaskContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365942DB22608C3E00C5D976 /* SSClerkTaskContentCell.xib */; };
 		365B6D9122602DA40003442A /* SSFourHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 365B6D9022602DA40003442A /* SSFourHomeVC.m */; };
 		365DB25A2147628200001A04 /* UIView+MECommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 365DB2592147628200001A04 /* UIView+MECommon.m */; };
 		366D5B21214A4F290021C1BB /* UITextView+MEXibConfiguartion.m in Sources */ = {isa = PBXBuildFile; fileRef = 366D5B20214A4F290021C1BB /* UITextView+MEXibConfiguartion.m */; };
@@ -135,6 +153,7 @@
 		36707291221C04BB0070BA90 /* ZHPlaceInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3670728D221C04BA0070BA90 /* ZHPlaceInfoTableViewCell.xib */; };
 		36707295221C04C90070BA90 /* ZHMapAroundInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36707292221C04C90070BA90 /* ZHMapAroundInfoViewController.m */; };
 		36707296221C04C90070BA90 /* ZHMapAroundInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36707294221C04C90070BA90 /* ZHMapAroundInfoViewController.xib */; };
+		3673AE9922609BC200432C54 /* SSNewClerkManngerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3673AE9822609BC200432C54 /* SSNewClerkManngerVC.m */; };
 		3673D0DC2248B40D0007F3C5 /* SSDynamicGoodApplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3673D0DA2248B40D0007F3C5 /* SSDynamicGoodApplyCell.m */; };
 		3673D0DD2248B40D0007F3C5 /* SSDynamicGoodApplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3673D0DB2248B40D0007F3C5 /* SSDynamicGoodApplyCell.xib */; };
 		3673D0E12248B6050007F3C5 /* SSDynamicGoodApplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3673D0E02248B6050007F3C5 /* SSDynamicGoodApplyVC.m */; };
@@ -971,6 +990,18 @@
 		360830D2219AAE4200C72B22 /* HDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMacro.h; sourceTree = "<group>"; };
 		360830D3219AAE4200C72B22 /* NSString+HDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HDExtension.h"; sourceTree = "<group>"; };
 		360830D4219AAE4200C72B22 /* UIImage+HDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HDExtension.m"; sourceTree = "<group>"; };
+		360CF06E2260D7F2009D9D89 /* SSClerkLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkLogCell.h; sourceTree = "<group>"; };
+		360CF06F2260D7F2009D9D89 /* SSClerkLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkLogCell.m; sourceTree = "<group>"; };
+		360CF0702260D7F2009D9D89 /* SSClerkLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkLogCell.xib; sourceTree = "<group>"; };
+		360CF0732260D9FF009D9D89 /* SSClerkLogContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkLogContentCell.h; sourceTree = "<group>"; };
+		360CF0742260D9FF009D9D89 /* SSClerkLogContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkLogContentCell.m; sourceTree = "<group>"; };
+		360CF0752260D9FF009D9D89 /* SSClerkLogContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkLogContentCell.xib; sourceTree = "<group>"; };
+		360CF0782260DD5F009D9D89 /* SSClerkSortCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkSortCell.h; sourceTree = "<group>"; };
+		360CF0792260DD5F009D9D89 /* SSClerkSortCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkSortCell.m; sourceTree = "<group>"; };
+		360CF07A2260DD5F009D9D89 /* SSClerkSortCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkSortCell.xib; sourceTree = "<group>"; };
+		360CF07D2260DFA2009D9D89 /* SSClerkSortContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkSortContentCell.h; sourceTree = "<group>"; };
+		360CF07E2260DFA2009D9D89 /* SSClerkSortContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkSortContentCell.m; sourceTree = "<group>"; };
+		360CF07F2260DFA2009D9D89 /* SSClerkSortContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkSortContentCell.xib; sourceTree = "<group>"; };
 		3617C30B21D0ADCB00004072 /* MeCoupleFilterLeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCoupleFilterLeftCell.h; sourceTree = "<group>"; };
 		3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCoupleFilterLeftCell.m; sourceTree = "<group>"; };
 		362275FC2244864D0031AA0F /* SSStoreApplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSStoreApplyModel.h; sourceTree = "<group>"; };
@@ -1166,6 +1197,22 @@
 		365942BE22602EA700C5D976 /* SSFourHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourHomeHeaderView.h; sourceTree = "<group>"; };
 		365942BF22602EA700C5D976 /* SSFourHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourHomeHeaderView.m; sourceTree = "<group>"; };
 		365942C122602EBE00C5D976 /* SSFourHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSFourHomeHeaderView.xib; sourceTree = "<group>"; };
+		365942C322603A2900C5D976 /* SSFourHomeDairyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourHomeDairyCell.h; sourceTree = "<group>"; };
+		365942C422603A2900C5D976 /* SSFourHomeDairyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourHomeDairyCell.m; sourceTree = "<group>"; };
+		365942C522603A2900C5D976 /* SSFourHomeDairyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSFourHomeDairyCell.xib; sourceTree = "<group>"; };
+		365942C822603C5700C5D976 /* SSFourHomeWorkShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourHomeWorkShowCell.h; sourceTree = "<group>"; };
+		365942C922603C5700C5D976 /* SSFourHomeWorkShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourHomeWorkShowCell.m; sourceTree = "<group>"; };
+		365942CA22603C5700C5D976 /* SSFourHomeWorkShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSFourHomeWorkShowCell.xib; sourceTree = "<group>"; };
+		365942CD22607D8C00C5D976 /* SSPNewAVistorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPNewAVistorVC.h; sourceTree = "<group>"; };
+		365942CE22607D8C00C5D976 /* SSPNewAVistorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPNewAVistorVC.m; sourceTree = "<group>"; };
+		365942D022607DA200C5D976 /* SSPNewAVistorContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPNewAVistorContentVC.h; sourceTree = "<group>"; };
+		365942D122607DA200C5D976 /* SSPNewAVistorContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPNewAVistorContentVC.m; sourceTree = "<group>"; };
+		365942D42260848800C5D976 /* SSClerkTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTaskCell.h; sourceTree = "<group>"; };
+		365942D52260848800C5D976 /* SSClerkTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTaskCell.m; sourceTree = "<group>"; };
+		365942D62260848800C5D976 /* SSClerkTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkTaskCell.xib; sourceTree = "<group>"; };
+		365942D922608C3E00C5D976 /* SSClerkTaskContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTaskContentCell.h; sourceTree = "<group>"; };
+		365942DA22608C3E00C5D976 /* SSClerkTaskContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTaskContentCell.m; sourceTree = "<group>"; };
+		365942DB22608C3E00C5D976 /* SSClerkTaskContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkTaskContentCell.xib; sourceTree = "<group>"; };
 		365B6D8F22602DA40003442A /* SSFourHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourHomeVC.h; sourceTree = "<group>"; };
 		365B6D9022602DA40003442A /* SSFourHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourHomeVC.m; sourceTree = "<group>"; };
 		365DB2582147628200001A04 /* UIView+MECommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MECommon.h"; sourceTree = "<group>"; };
@@ -1183,6 +1230,8 @@
 		36707292221C04C90070BA90 /* ZHMapAroundInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHMapAroundInfoViewController.m; sourceTree = "<group>"; };
 		36707293221C04C90070BA90 /* ZHMapAroundInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHMapAroundInfoViewController.h; sourceTree = "<group>"; };
 		36707294221C04C90070BA90 /* ZHMapAroundInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHMapAroundInfoViewController.xib; sourceTree = "<group>"; };
+		3673AE9722609BC200432C54 /* SSNewClerkManngerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNewClerkManngerVC.h; sourceTree = "<group>"; };
+		3673AE9822609BC200432C54 /* SSNewClerkManngerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNewClerkManngerVC.m; sourceTree = "<group>"; };
 		3673D0D92248B40D0007F3C5 /* SSDynamicGoodApplyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSDynamicGoodApplyCell.h; sourceTree = "<group>"; };
 		3673D0DA2248B40D0007F3C5 /* SSDynamicGoodApplyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSDynamicGoodApplyCell.m; sourceTree = "<group>"; };
 		3673D0DB2248B40D0007F3C5 /* SSDynamicGoodApplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSDynamicGoodApplyCell.xib; sourceTree = "<group>"; };
@@ -2982,6 +3031,12 @@
 				365942BE22602EA700C5D976 /* SSFourHomeHeaderView.h */,
 				365942BF22602EA700C5D976 /* SSFourHomeHeaderView.m */,
 				365942C122602EBE00C5D976 /* SSFourHomeHeaderView.xib */,
+				365942C322603A2900C5D976 /* SSFourHomeDairyCell.h */,
+				365942C422603A2900C5D976 /* SSFourHomeDairyCell.m */,
+				365942C522603A2900C5D976 /* SSFourHomeDairyCell.xib */,
+				365942C822603C5700C5D976 /* SSFourHomeWorkShowCell.h */,
+				365942C922603C5700C5D976 /* SSFourHomeWorkShowCell.m */,
+				365942CA22603C5700C5D976 /* SSFourHomeWorkShowCell.xib */,
 			);
 			path = Four;
 			sourceTree = "<group>";
@@ -2991,8 +3046,46 @@
 			children = (
 				365B6D8F22602DA40003442A /* SSFourHomeVC.h */,
 				365B6D9022602DA40003442A /* SSFourHomeVC.m */,
+				365942CD22607D8C00C5D976 /* SSPNewAVistorVC.h */,
+				365942CE22607D8C00C5D976 /* SSPNewAVistorVC.m */,
+				365942D022607DA200C5D976 /* SSPNewAVistorContentVC.h */,
+				365942D122607DA200C5D976 /* SSPNewAVistorContentVC.m */,
 			);
 			path = Four;
+			sourceTree = "<group>";
+		};
+		365942D32260842B00C5D976 /* ClerkMannger */ = {
+			isa = PBXGroup;
+			children = (
+				365942D42260848800C5D976 /* SSClerkTaskCell.h */,
+				365942D52260848800C5D976 /* SSClerkTaskCell.m */,
+				365942D62260848800C5D976 /* SSClerkTaskCell.xib */,
+				365942D922608C3E00C5D976 /* SSClerkTaskContentCell.h */,
+				365942DA22608C3E00C5D976 /* SSClerkTaskContentCell.m */,
+				365942DB22608C3E00C5D976 /* SSClerkTaskContentCell.xib */,
+				360CF06E2260D7F2009D9D89 /* SSClerkLogCell.h */,
+				360CF06F2260D7F2009D9D89 /* SSClerkLogCell.m */,
+				360CF0702260D7F2009D9D89 /* SSClerkLogCell.xib */,
+				360CF0732260D9FF009D9D89 /* SSClerkLogContentCell.h */,
+				360CF0742260D9FF009D9D89 /* SSClerkLogContentCell.m */,
+				360CF0752260D9FF009D9D89 /* SSClerkLogContentCell.xib */,
+				360CF0782260DD5F009D9D89 /* SSClerkSortCell.h */,
+				360CF0792260DD5F009D9D89 /* SSClerkSortCell.m */,
+				360CF07A2260DD5F009D9D89 /* SSClerkSortCell.xib */,
+				360CF07D2260DFA2009D9D89 /* SSClerkSortContentCell.h */,
+				360CF07E2260DFA2009D9D89 /* SSClerkSortContentCell.m */,
+				360CF07F2260DFA2009D9D89 /* SSClerkSortContentCell.xib */,
+			);
+			path = ClerkMannger;
+			sourceTree = "<group>";
+		};
+		365942DE2260958F00C5D976 /* ClerkMannger */ = {
+			isa = PBXGroup;
+			children = (
+				3673AE9722609BC200432C54 /* SSNewClerkManngerVC.h */,
+				3673AE9822609BC200432C54 /* SSNewClerkManngerVC.m */,
+			);
+			path = ClerkMannger;
 			sourceTree = "<group>";
 		};
 		366D5B1E214A4EFB0021C1BB /* UITextView */ = {
@@ -3360,46 +3453,6 @@
 				36D368C7223F68C3009F781B /* Visit */,
 				36D368BC223F68C3009F781B /* ProductDetail */,
 				36D368AD223F68C3009F781B /* Home */,
-				36D368AB223F68C3009F781B /* SSNoticeVC.h */,
-				36D368AC223F68C3009F781B /* SSHomePageVC.h */,
-				36D368B2223F68C3009F781B /* SSNewHomePage.h */,
-				36D368B3223F68C3009F781B /* SSSecondHomePageVC.xib */,
-				36D368B4223F68C3009F781B /* SSActiveVC.h */,
-				36D368B5223F68C3009F781B /* SSVActiveListVC.h */,
-				36D368B6223F68C3009F781B /* SSProductSearchVC.xib */,
-				36D368B7223F68C3009F781B /* SSProductSearchVC.m */,
-				36D368B8223F68C3009F781B /* SSNoticeTypeVC.h */,
-				36D368B9223F68C3009F781B /* SSProductListVC.h */,
-				36D368BA223F68C3009F781B /* SSMakeOrderVC.m */,
-				36D368BB223F68C3009F781B /* SSProductDetailsVC.h */,
-				36D368C1223F68C3009F781B /* SSSNewHomeActiveVC.h */,
-				36D368C2223F68C3009F781B /* SSSNewHomePageVC.h */,
-				36D368C3223F68C3009F781B /* SSNewAddressVC.m */,
-				36D368C4223F68C3009F781B /* SSGoodsAttributeVC.m */,
-				36D368C5223F68C3009F781B /* SSFilterGoodVC.m */,
-				36D368C6223F68C3009F781B /* SSFilterVC.h */,
-				36D368CE223F68C3009F781B /* SSSelectAddressVC.m */,
-				36D368CF223F68C3009F781B /* SSSecondHomePageVC.m */,
-				36D368D5223F68C3009F781B /* SSNewHomePage.m */,
-				36D368D6223F68C3009F781B /* SSHomePageVC.m */,
-				36D368D7223F68C3009F781B /* SSNoticeVC.m */,
-				36D368D8223F68C3009F781B /* SSNewAddressVC.xib */,
-				36D368D9223F68C3009F781B /* SSMakeOrderVC.h */,
-				36D368DA223F68C3009F781B /* SSProductListVC.m */,
-				36D368DB223F68C3009F781B /* SSNoticeTypeVC.m */,
-				36D368DC223F68C3009F781B /* SSProductSearchVC.h */,
-				36D368DD223F68C3009F781B /* SSActiveVC.m */,
-				36D368DE223F68C3009F781B /* SSVActiveListVC.m */,
-				36D368DF223F68C3009F781B /* SSSNewHomePageVC.m */,
-				36D368E6223F68C3009F781B /* SSNewAddressVC.h */,
-				36D368E7223F68C3009F781B /* SSMakeOrderVC.xib */,
-				36D368F4223F68C3009F781B /* SSSNewHomeActiveVC.m */,
-				36D368F5223F68C3009F781B /* SSProductDetailsVC.m */,
-				36D368F6223F68C3009F781B /* SSSecondHomePageVC.h */,
-				36D368F7223F68C3009F781B /* SSSelectAddressVC.h */,
-				36D368F8223F68C3009F781B /* SSFilterVC.m */,
-				36D368F9223F68C3009F781B /* SSFilterGoodVC.h */,
-				36D368FA223F68C3009F781B /* SSGoodsAttributeVC.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3407,11 +3460,9 @@
 		36D368AD223F68C3009F781B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				36F8D9AA2261E16000105D3A /* home */,
+				365942DE2260958F00C5D976 /* ClerkMannger */,
 				365942BD22602E4000C5D976 /* Four */,
-				36D368AE223F68C3009F781B /* SSThridHomeVC.h */,
-				36D368AF223F68C3009F781B /* SSThridRushSpikeVC.m */,
-				36D368B0223F68C3009F781B /* SSThridHomeVC.m */,
-				36D368B1223F68C3009F781B /* SSThridRushSpikeVC.h */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -3561,31 +3612,9 @@
 		36D36963223F690F009F781B /* home */ = {
 			isa = PBXGroup;
 			children = (
-				36D36964223F690F009F781B /* SSGoodSpecModel.h */,
-				36D36965223F690F009F781B /* SSAdvModel.h */,
-				36D36966223F690F009F781B /* SSHomeGoodModel.h */,
+				36F8D9AC2261E29100105D3A /* ClerkMannger */,
+				36F8D9AB2261E1AE00105D3A /* home */,
 				36D36967223F690F009F781B /* Thrid */,
-				36D36970223F690F009F781B /* SSNoticeModel.h */,
-				36D36971223F690F009F781B /* SSNewHomeViewModel.h */,
-				36D36972223F690F009F781B /* SSPriceAndStockModel.h */,
-				36D36973223F690F009F781B /* SSSNewHomeStyle.m */,
-				36D36974223F690F009F781B /* SSAdModel.h */,
-				36D36975223F690F009F781B /* SSSActivityContentModel.h */,
-				36D36976223F690F009F781B /* SSSActivityModel.h */,
-				36D36977223F690F009F781B /* SSGoodDetailModel.m */,
-				36D36978223F690F009F781B /* SSGoodModel.h */,
-				36D36979223F690F009F781B /* SSNewHomeViewModel.m */,
-				36D3697A223F690F009F781B /* SSPriceAndStockModel.m */,
-				36D3697B223F690F009F781B /* SSNoticeModel.m */,
-				36D3697C223F690F009F781B /* SSHomeGoodModel.m */,
-				36D3697D223F690F009F781B /* SSAdvModel.m */,
-				36D3697E223F690F009F781B /* SSGoodSpecModel.m */,
-				36D3697F223F690F009F781B /* SSAdModel.m */,
-				36D36980223F690F009F781B /* SSSNewHomeStyle.h */,
-				36D36981223F690F009F781B /* SSGoodDetailModel.h */,
-				36D36982223F690F009F781B /* SSSActivityModel.m */,
-				36D36983223F690F009F781B /* SSSActivityContentModel.m */,
-				36D36984223F690F009F781B /* SSGoodModel.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -3704,56 +3733,11 @@
 		36D36A1C223F695B009F781B /* home */ = {
 			isa = PBXGroup;
 			children = (
-				365942BC22602E3400C5D976 /* Four */,
-				36D36A1D223F695B009F781B /* SSActiveCell.m */,
-				36D36A1E223F695B009F781B /* SSNoticeCell.h */,
-				36D36A1F223F695B009F781B /* Thrid */,
-				36D36A3A223F695B009F781B /* SSNewHomeMainCell.xib */,
-				36D36A3B223F695B009F781B /* SSHomeHeaderMenuView.h */,
-				36D36A3C223F695B009F781B /* SSProductCell.xib */,
-				36D36A3D223F695B009F781B /* SSHomeMiaoDongCell.m */,
-				36D36A3E223F695B009F781B /* SSHomePageHeaderView.h */,
-				36D36A3F223F695B009F781B /* SSadminDistributionModel.m */,
-				36D36A40223F695B009F781B /* SSNewHomeCell.h */,
-				36D36A41223F695B009F781B /* SSProductCell.h */,
+				36F8D9A92261E0D000105D3A /* home */,
 				36D36A42223F695B009F781B /* Second */,
-				36D36A49223F695B009F781B /* SSNewActiveCell.m */,
-				36D36A4A223F695B009F781B /* SSHomeSearchView.m */,
-				36D36A4B223F695B009F781B /* SSHomeMiaoDongCell.xib */,
-				36D36A4C223F695B009F781B /* SSBaoQiangCell.xib */,
-				36D36A4D223F695B009F781B /* SSNewHomeMainCell.m */,
-				36D36A4E223F695B009F781B /* SSHomeMainCell.h */,
-				36D36A4F223F695B009F781B /* SSRushBuyView.m */,
-				36D36A50223F695B009F781B /* SSBaoQiangCell.h */,
-				36D36A51223F695B009F781B /* SSNoticeCell.xib */,
-				36D36A52223F695B009F781B /* SSNewHomePageHeaderView.m */,
-				36D36A53223F695B009F781B /* SSNewBaoQiangCell.m */,
-				36D36A54223F695B009F781B /* SSSearchHistoryView.m */,
-				36D36A55223F695B009F781B /* SSNewActiveCell.xib */,
-				36D36A56223F695B009F781B /* SSHomeHeaderMenuView.m */,
-				36D36A57223F695B009F781B /* SSNoticeCell.m */,
-				36D36A58223F695B009F781B /* SSHomeHeaderMenuView.xib */,
-				36D36A59223F695B009F781B /* SSActiveCell.h */,
-				36D36A5A223F695B009F781B /* SSHomeMiaoDongCell.h */,
-				36D36A5B223F695B009F781B /* SSHomeMainCell.xib */,
-				36D36A5C223F695B009F781B /* SSNewActiveCell.h */,
-				36D36A5D223F695B009F781B /* SSNewBaoQiangCell.xib */,
-				36D36A5E223F695B009F781B /* SSNewHomeCell.m */,
-				36D36A5F223F695B009F781B /* SSProductCell.m */,
-				36D36A60223F695B009F781B /* SSadminDistributionModel.h */,
-				36D36A61223F695B009F781B /* SSHomeSearchView.xib */,
-				36D36A62223F695B009F781B /* SSHomePageHeaderView.m */,
-				36D36A63223F695B009F781B /* SSSearchHistoryView.h */,
-				36D36A64223F695B009F781B /* SSNewHomePageHeaderView.h */,
-				36D36A65223F695B009F781B /* SSNewBaoQiangCell.h */,
-				36D36A66223F695B009F781B /* SSBaoQiangCell.m */,
-				36D36A67223F695B009F781B /* SSNewHomePageHeaderView.xib */,
-				36D36A68223F695B009F781B /* SSActiveCell.xib */,
-				36D36A69223F695B009F781B /* SSRushBuyView.h */,
-				36D36A6A223F695B009F781B /* SSNewHomeCell.xib */,
-				36D36A6B223F695B009F781B /* SSHomeMainCell.m */,
-				36D36A6C223F695B009F781B /* SSNewHomeMainCell.h */,
-				36D36A6D223F695B009F781B /* SSHomeSearchView.h */,
+				36D36A1F223F695B009F781B /* Thrid */,
+				365942D32260842B00C5D976 /* ClerkMannger */,
+				365942BC22602E3400C5D976 /* Four */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -5418,6 +5402,149 @@
 			path = CLInputToolbar;
 			sourceTree = "<group>";
 		};
+		36F8D9A92261E0D000105D3A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				36D36A1D223F695B009F781B /* SSActiveCell.m */,
+				36D36A1E223F695B009F781B /* SSNoticeCell.h */,
+				36D36A3A223F695B009F781B /* SSNewHomeMainCell.xib */,
+				36D36A3B223F695B009F781B /* SSHomeHeaderMenuView.h */,
+				36D36A3C223F695B009F781B /* SSProductCell.xib */,
+				36D36A3D223F695B009F781B /* SSHomeMiaoDongCell.m */,
+				36D36A3E223F695B009F781B /* SSHomePageHeaderView.h */,
+				36D36A3F223F695B009F781B /* SSadminDistributionModel.m */,
+				36D36A40223F695B009F781B /* SSNewHomeCell.h */,
+				36D36A41223F695B009F781B /* SSProductCell.h */,
+				36D36A49223F695B009F781B /* SSNewActiveCell.m */,
+				36D36A4A223F695B009F781B /* SSHomeSearchView.m */,
+				36D36A4B223F695B009F781B /* SSHomeMiaoDongCell.xib */,
+				36D36A4C223F695B009F781B /* SSBaoQiangCell.xib */,
+				36D36A4D223F695B009F781B /* SSNewHomeMainCell.m */,
+				36D36A4E223F695B009F781B /* SSHomeMainCell.h */,
+				36D36A4F223F695B009F781B /* SSRushBuyView.m */,
+				36D36A50223F695B009F781B /* SSBaoQiangCell.h */,
+				36D36A51223F695B009F781B /* SSNoticeCell.xib */,
+				36D36A52223F695B009F781B /* SSNewHomePageHeaderView.m */,
+				36D36A53223F695B009F781B /* SSNewBaoQiangCell.m */,
+				36D36A54223F695B009F781B /* SSSearchHistoryView.m */,
+				36D36A55223F695B009F781B /* SSNewActiveCell.xib */,
+				36D36A56223F695B009F781B /* SSHomeHeaderMenuView.m */,
+				36D36A57223F695B009F781B /* SSNoticeCell.m */,
+				36D36A58223F695B009F781B /* SSHomeHeaderMenuView.xib */,
+				36D36A59223F695B009F781B /* SSActiveCell.h */,
+				36D36A5A223F695B009F781B /* SSHomeMiaoDongCell.h */,
+				36D36A5B223F695B009F781B /* SSHomeMainCell.xib */,
+				36D36A5C223F695B009F781B /* SSNewActiveCell.h */,
+				36D36A5D223F695B009F781B /* SSNewBaoQiangCell.xib */,
+				36D36A5E223F695B009F781B /* SSNewHomeCell.m */,
+				36D36A5F223F695B009F781B /* SSProductCell.m */,
+				36D36A60223F695B009F781B /* SSadminDistributionModel.h */,
+				36D36A61223F695B009F781B /* SSHomeSearchView.xib */,
+				36D36A62223F695B009F781B /* SSHomePageHeaderView.m */,
+				36D36A63223F695B009F781B /* SSSearchHistoryView.h */,
+				36D36A64223F695B009F781B /* SSNewHomePageHeaderView.h */,
+				36D36A65223F695B009F781B /* SSNewBaoQiangCell.h */,
+				36D36A66223F695B009F781B /* SSBaoQiangCell.m */,
+				36D36A67223F695B009F781B /* SSNewHomePageHeaderView.xib */,
+				36D36A68223F695B009F781B /* SSActiveCell.xib */,
+				36D36A69223F695B009F781B /* SSRushBuyView.h */,
+				36D36A6A223F695B009F781B /* SSNewHomeCell.xib */,
+				36D36A6B223F695B009F781B /* SSHomeMainCell.m */,
+				36D36A6C223F695B009F781B /* SSNewHomeMainCell.h */,
+				36D36A6D223F695B009F781B /* SSHomeSearchView.h */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		36F8D9AA2261E16000105D3A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				36D368AB223F68C3009F781B /* SSNoticeVC.h */,
+				36D368AC223F68C3009F781B /* SSHomePageVC.h */,
+				36D368B2223F68C3009F781B /* SSNewHomePage.h */,
+				36D368B3223F68C3009F781B /* SSSecondHomePageVC.xib */,
+				36D368B4223F68C3009F781B /* SSActiveVC.h */,
+				36D368B5223F68C3009F781B /* SSVActiveListVC.h */,
+				36D368B6223F68C3009F781B /* SSProductSearchVC.xib */,
+				36D368B7223F68C3009F781B /* SSProductSearchVC.m */,
+				36D368B8223F68C3009F781B /* SSNoticeTypeVC.h */,
+				36D368B9223F68C3009F781B /* SSProductListVC.h */,
+				36D368BA223F68C3009F781B /* SSMakeOrderVC.m */,
+				36D368BB223F68C3009F781B /* SSProductDetailsVC.h */,
+				36D368C1223F68C3009F781B /* SSSNewHomeActiveVC.h */,
+				36D368C2223F68C3009F781B /* SSSNewHomePageVC.h */,
+				36D368C3223F68C3009F781B /* SSNewAddressVC.m */,
+				36D368C4223F68C3009F781B /* SSGoodsAttributeVC.m */,
+				36D368C5223F68C3009F781B /* SSFilterGoodVC.m */,
+				36D368C6223F68C3009F781B /* SSFilterVC.h */,
+				36D368CE223F68C3009F781B /* SSSelectAddressVC.m */,
+				36D368CF223F68C3009F781B /* SSSecondHomePageVC.m */,
+				36D368D5223F68C3009F781B /* SSNewHomePage.m */,
+				36D368D6223F68C3009F781B /* SSHomePageVC.m */,
+				36D368D7223F68C3009F781B /* SSNoticeVC.m */,
+				36D368D8223F68C3009F781B /* SSNewAddressVC.xib */,
+				36D368D9223F68C3009F781B /* SSMakeOrderVC.h */,
+				36D368DA223F68C3009F781B /* SSProductListVC.m */,
+				36D368DB223F68C3009F781B /* SSNoticeTypeVC.m */,
+				36D368DC223F68C3009F781B /* SSProductSearchVC.h */,
+				36D368DD223F68C3009F781B /* SSActiveVC.m */,
+				36D368DE223F68C3009F781B /* SSVActiveListVC.m */,
+				36D368DF223F68C3009F781B /* SSSNewHomePageVC.m */,
+				36D368E6223F68C3009F781B /* SSNewAddressVC.h */,
+				36D368E7223F68C3009F781B /* SSMakeOrderVC.xib */,
+				36D368F4223F68C3009F781B /* SSSNewHomeActiveVC.m */,
+				36D368F5223F68C3009F781B /* SSProductDetailsVC.m */,
+				36D368F6223F68C3009F781B /* SSSecondHomePageVC.h */,
+				36D368F7223F68C3009F781B /* SSSelectAddressVC.h */,
+				36D368F8223F68C3009F781B /* SSFilterVC.m */,
+				36D368F9223F68C3009F781B /* SSFilterGoodVC.h */,
+				36D368FA223F68C3009F781B /* SSGoodsAttributeVC.h */,
+				36D368AE223F68C3009F781B /* SSThridHomeVC.h */,
+				36D368AF223F68C3009F781B /* SSThridRushSpikeVC.m */,
+				36D368B0223F68C3009F781B /* SSThridHomeVC.m */,
+				36D368B1223F68C3009F781B /* SSThridRushSpikeVC.h */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		36F8D9AB2261E1AE00105D3A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				36D36970223F690F009F781B /* SSNoticeModel.h */,
+				36D36971223F690F009F781B /* SSNewHomeViewModel.h */,
+				36D36972223F690F009F781B /* SSPriceAndStockModel.h */,
+				36D36973223F690F009F781B /* SSSNewHomeStyle.m */,
+				36D36974223F690F009F781B /* SSAdModel.h */,
+				36D36975223F690F009F781B /* SSSActivityContentModel.h */,
+				36D36976223F690F009F781B /* SSSActivityModel.h */,
+				36D36977223F690F009F781B /* SSGoodDetailModel.m */,
+				36D36978223F690F009F781B /* SSGoodModel.h */,
+				36D36979223F690F009F781B /* SSNewHomeViewModel.m */,
+				36D3697A223F690F009F781B /* SSPriceAndStockModel.m */,
+				36D3697B223F690F009F781B /* SSNoticeModel.m */,
+				36D3697C223F690F009F781B /* SSHomeGoodModel.m */,
+				36D3697D223F690F009F781B /* SSAdvModel.m */,
+				36D3697E223F690F009F781B /* SSGoodSpecModel.m */,
+				36D3697F223F690F009F781B /* SSAdModel.m */,
+				36D36980223F690F009F781B /* SSSNewHomeStyle.h */,
+				36D36981223F690F009F781B /* SSGoodDetailModel.h */,
+				36D36982223F690F009F781B /* SSSActivityModel.m */,
+				36D36983223F690F009F781B /* SSSActivityContentModel.m */,
+				36D36984223F690F009F781B /* SSGoodModel.m */,
+				36D36964223F690F009F781B /* SSGoodSpecModel.h */,
+				36D36965223F690F009F781B /* SSAdvModel.h */,
+				36D36966223F690F009F781B /* SSHomeGoodModel.h */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		36F8D9AC2261E29100105D3A /* ClerkMannger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClerkMannger;
+			sourceTree = "<group>";
+		};
 		36FB87A822423081000A7547 /* Bdata */ = {
 			isa = PBXGroup;
 			children = (
@@ -5742,6 +5869,7 @@
 				36D36B76223F695C009F781B /* SSProductDetailsBottomView.xib in Resources */,
 				36D36F13223F7737009F781B /* SSMyAppointmentCell.xib in Resources */,
 				36D36BD9223F6973009F781B /* SSStoreHomeCell.xib in Resources */,
+				360CF0772260D9FF009D9D89 /* SSClerkLogContentCell.xib in Resources */,
 				36D36A09223F694D009F781B /* SSCoupleHomeHeaderView.xib in Resources */,
 				36D36D03223F6A0B009F781B /* SSBrandAbilityManngerVC.xib in Resources */,
 				36D36934223F68C3009F781B /* SSNewAddressVC.xib in Resources */,
@@ -5752,6 +5880,7 @@
 				36D3693F223F68C3009F781B /* SSArticleDetailVC.xib in Resources */,
 				36D36B5C223F695C009F781B /* SSThridProductDetailsCommentCell.xib in Resources */,
 				36D36F22223F7737009F781B /* SSAddClerkCell.xib in Resources */,
+				365942D82260848800C5D976 /* SSClerkTaskCell.xib in Resources */,
 				36D36BD7223F6973009F781B /* SSAppointOrderMainCell.xib in Resources */,
 				36D36B6C223F695C009F781B /* SSProductDetailCommentCell.xib in Resources */,
 				36D36F1E223F7737009F781B /* SSClerkStatisticHeaderView.xib in Resources */,
@@ -5772,6 +5901,7 @@
 				36D36C1D223F6980009F781B /* SSBynamicMainCell.xib in Resources */,
 				36ED6BF9225F957200552F13 /* SSAiTagCell.xib in Resources */,
 				36D36BDD223F6973009F781B /* SSNewStoreHomeCell.xib in Resources */,
+				365942C722603A2900C5D976 /* SSFourHomeDairyCell.xib in Resources */,
 				36D36B67223F695C009F781B /* SSThridProductDetailsTipCell.xib in Resources */,
 				36D36B57223F695C009F781B /* SSPosterContentListCell.xib in Resources */,
 				36D36B3D223F695C009F781B /* SSVisterDetailCell.xib in Resources */,
@@ -5839,6 +5969,7 @@
 				36D36DE3223F6A46009F781B /* SSModifyPhoneVC.xib in Resources */,
 				36D36B6E223F695C009F781B /* SSProductDetalsBuyedContentCell.xib in Resources */,
 				36D36CAC223F69B7009F781B /* SSBStoreMannagerCell.xib in Resources */,
+				360CF0812260DFA2009D9D89 /* SSClerkSortContentCell.xib in Resources */,
 				36F5E76F222F6895000B0241 /* TUIKitResource.bundle in Resources */,
 				36D36BE7223F6973009F781B /* SSAppointmentTimeCell.xib in Resources */,
 				36ED6C09225F957200552F13 /* SSAiCustomerDetailCell.xib in Resources */,
@@ -5846,6 +5977,7 @@
 				36D368A8223F6880009F781B /* SSAddTelView.xib in Resources */,
 				36D36F19223F7737009F781B /* SSClerksSortCell.xib in Resources */,
 				3673D0DD2248B40D0007F3C5 /* SSDynamicGoodApplyCell.xib in Resources */,
+				360CF0722260D7F2009D9D89 /* SSClerkLogCell.xib in Resources */,
 				36D36B44223F695C009F781B /* SSVistorPathCell.xib in Resources */,
 				36D369FE223F694D009F781B /* SSCoupleMailCell.xib in Resources */,
 				36D36B09223F695C009F781B /* SSCommondCouponCell.xib in Resources */,
@@ -5922,6 +6054,8 @@
 				36D36B20223F695C009F781B /* SSHomeHeaderMenuView.xib in Resources */,
 				36459AAC2251AF0E00AB8329 /* SSAddGoodGoodAttributeCell.xib in Resources */,
 				36D36DDD223F6A46009F781B /* SSMyDistributionReusableView.xib in Resources */,
+				365942CC22603C5700C5D976 /* SSFourHomeWorkShowCell.xib in Resources */,
+				360CF07C2260DD5F009D9D89 /* SSClerkSortCell.xib in Resources */,
 				36D36AFF223F695C009F781B /* SSThridHomeHeaderView.xib in Resources */,
 				36D3693B223F68C3009F781B /* SSShoppingMallVC.xib in Resources */,
 				36D36B29223F695C009F781B /* SSActiveCell.xib in Resources */,
@@ -5940,6 +6074,7 @@
 				36459AB22251AF0E00AB8329 /* SSGoodManngerSpecCell.xib in Resources */,
 				3673D0EC2248C90E0007F3C5 /* SSDynamicGoodApplyNineGridCell.xib in Resources */,
 				36D36EF7223F7737009F781B /* SSGetCaseMainCell.xib in Resources */,
+				365942DD22608C3E00C5D976 /* SSClerkTaskContentCell.xib in Resources */,
 				36D36948223F68C3009F781B /* SSCreatePosterVC.xib in Resources */,
 				36F5E844222F68F1000B0241 /* Assets.xcassets in Resources */,
 				36D36DEA223F6A46009F781B /* SSDistrbutionMyTeamCell.xib in Resources */,
@@ -6038,6 +6173,7 @@
 				3601766C215B8CE10080EB00 /* ALAssetsLibrary+MECategory.m in Sources */,
 				36D36B2E223F695C009F781B /* SSGiftMainContentCell.m in Sources */,
 				36D36E0C223F6B92009F781B /* SSSearchNearAddressVC.m in Sources */,
+				365942D72260848800C5D976 /* SSClerkTaskCell.m in Sources */,
 				36459A7B2251AEFB00AB8329 /* SSGoodManngerGoodSpec.m in Sources */,
 				36D36885223F6847009F781B /* SSLocationCLLModel.m in Sources */,
 				36D36D05223F6A0B009F781B /* SSBrandAbilityAnalysisVC.m in Sources */,
@@ -6050,6 +6186,7 @@
 				36D36869223F681F009F781B /* SSIMageVC.m in Sources */,
 				36D36F27223F7737009F781B /* SSBrandAiCell.m in Sources */,
 				36D36953223F68C3009F781B /* SSCoupleHomeVC.m in Sources */,
+				365942CF22607D8C00C5D976 /* SSPNewAVistorVC.m in Sources */,
 				36472AF421C8E15C00CC3E48 /* JXCategoryDotCell.m in Sources */,
 				36459AAA2251AF0E00AB8329 /* SSGoodManngerSpecMainCell.m in Sources */,
 				36459AA82251AF0E00AB8329 /* SSAddGoodBasicCell.m in Sources */,
@@ -6168,6 +6305,7 @@
 				36459A802251AEFB00AB8329 /* SSAddGoodModel.m in Sources */,
 				36D36946223F68C3009F781B /* SSFilterVC.m in Sources */,
 				36D36D01223F6A0B009F781B /* SSBrandManngerAllContentVC.m in Sources */,
+				365942DC22608C3E00C5D976 /* SSClerkTaskContentCell.m in Sources */,
 				36D36867223F681F009F781B /* SSRCConversationListVC.m in Sources */,
 				369130A122363B6E008B1836 /* AAPie.m in Sources */,
 				36ED6C00225F957200552F13 /* SSAiCustomerDataView.m in Sources */,
@@ -6248,6 +6386,7 @@
 				36F5E821222F68F1000B0241 /* TPopView.m in Sources */,
 				36707289221C04AD0070BA90 /* ZHPlaceInfoModel.m in Sources */,
 				36D3692A223F68C3009F781B /* SSVistorPathVC.m in Sources */,
+				365942CB22603C5700C5D976 /* SSFourHomeWorkShowCell.m in Sources */,
 				36D36B6D223F695C009F781B /* SSThridProductDetailsCommentContontCell.m in Sources */,
 				36D36DC8223F6A46009F781B /* SSNewMineHomeContentCell.m in Sources */,
 				36D36F0C223F7737009F781B /* SSBDataDealStructContentView.m in Sources */,
@@ -6330,6 +6469,7 @@
 				36F5E842222F68F1000B0241 /* TPersonalCommonCell.m in Sources */,
 				36D36C16223F6980009F781B /* SSBynamicCommentCell.m in Sources */,
 				36D36E2E223F6C50009F781B /* SSAlertView.m in Sources */,
+				360CF0712260D7F2009D9D89 /* SSClerkLogCell.m in Sources */,
 				36D36DC2223F6A46009F781B /* SSPayStatusVC.m in Sources */,
 				36D36EF2223F7737009F781B /* SSOrderExpressDetailCell.m in Sources */,
 				36472AFC21C8E15C00CC3E48 /* JXCategoryTitleView.m in Sources */,
@@ -6391,6 +6531,7 @@
 				36459ABF2251AF1F00AB8329 /* SSGoodManngerVC.m in Sources */,
 				36D36DC9223F6A46009F781B /* SSMineNewShareVC.m in Sources */,
 				36D36CB2223F69B7009F781B /* SSAppointmentModel.m in Sources */,
+				3673AE9922609BC200432C54 /* SSNewClerkManngerVC.m in Sources */,
 				36ED6C2B225F957F00552F13 /* SSAICustomerSearchVC.m in Sources */,
 				36D36EF3223F7737009F781B /* SSMyChildOrderContentCell.m in Sources */,
 				36D36DFB223F6A46009F781B /* SSDistributionOrderMainVC.m in Sources */,
@@ -6400,6 +6541,7 @@
 				36D369C0223F690F009F781B /* SSAdvModel.m in Sources */,
 				360830D8219AAE4300C72B22 /* UIImage+HDExtension.m in Sources */,
 				3628476B2140FD78008FE7F9 /* XMLDictionary.m in Sources */,
+				360CF0802260DFA2009D9D89 /* SSClerkSortContentCell.m in Sources */,
 				36D36DC4223F6A46009F781B /* SSMySelfExtractionOrderVC.m in Sources */,
 				36D36949223F68C3009F781B /* SSPosterListVC.m in Sources */,
 				36F5E82D222F68F1000B0241 /* TFaceView.m in Sources */,
@@ -6433,6 +6575,7 @@
 				36459AEB2251B13700AB8329 /* THDatePickerView.m in Sources */,
 				3691309722363B6E008B1836 /* AAStyle.m in Sources */,
 				36D3692C223F68C3009F781B /* SSVisterDetailVC.m in Sources */,
+				360CF0762260D9FF009D9D89 /* SSClerkLogContentCell.m in Sources */,
 				36D36865223F681F009F781B /* SSNavigationVC.m in Sources */,
 				36D36886223F6847009F781B /* SSBaseModel.m in Sources */,
 				36D36943223F68C3009F781B /* SSArticleDetailVC.m in Sources */,
@@ -6451,6 +6594,7 @@
 				3691308422363B6E008B1836 /* AAOptions.m in Sources */,
 				36F5E81A222F68F1000B0241 /* TResponderTextView.m in Sources */,
 				365151BD214133440044C763 /* ZLRequestResponse.m in Sources */,
+				365942D222607DA200C5D976 /* SSPNewAVistorContentVC.m in Sources */,
 				3691309F22363B6E008B1836 /* AASpline.m in Sources */,
 				36F5E823222F68F1000B0241 /* TMessageResource.m in Sources */,
 				36D369B9223F690F009F781B /* SSThridHomeRudeTimeModel.m in Sources */,
@@ -6545,6 +6689,7 @@
 				3628476D2140FD79008FE7F9 /* getIPhoneIP.m in Sources */,
 				36D36CAA223F69B7009F781B /* SSLogistModel.m in Sources */,
 				36D36F16223F7737009F781B /* SSAppointmentDetailBootomView.m in Sources */,
+				360CF07B2260DD5F009D9D89 /* SSClerkSortCell.m in Sources */,
 				36459AA92251AF0E00AB8329 /* SSGoodManngerSpecCell.m in Sources */,
 				36D369CB223F690F009F781B /* SSArticelDetailModel.m in Sources */,
 				3637F0572249F8BC002C661E /* SSDynamicGoodApplyStatusVC.m in Sources */,
@@ -6563,6 +6708,7 @@
 				36D368A1223F6880009F781B /* SSUserInfoModel.m in Sources */,
 				36D369CA223F690F009F781B /* SSArticelCategoryModel.m in Sources */,
 				36D36CB8223F69B7009F781B /* SSMoneyDetailedModel.m in Sources */,
+				365942C622603A2900C5D976 /* SSFourHomeDairyCell.m in Sources */,
 				36FD640D213FAC54009743C5 /* UIImage+MEExtension.m in Sources */,
 				36D36AF4223F695C009F781B /* SSMakeOrderSelectAddressView.m in Sources */,
 				363281232249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m in Sources */,
