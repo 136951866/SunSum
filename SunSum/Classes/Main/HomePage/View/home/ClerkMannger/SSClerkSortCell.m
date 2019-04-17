@@ -8,6 +8,7 @@
 
 #import "SSClerkSortCell.h"
 #import "SSClerkSortContentCell.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSClerkSortCell ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -60,7 +61,7 @@
 
 
 - (void)setUIWithArr:(NSArray *)arr selectBlock:(kMeIndexBlock)selectBlock selectIndex:(NSInteger)selectIndex{
-    _arrdata = arr;
+    _arrdata = kMeUnArr(arr);
     _block = selectBlock;
     _currentIndex = selectIndex;
     UIButton *currentBtn = [self viewWithTag:_currentIndex+1000];
@@ -77,7 +78,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SSClerkSortContentCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkSortContentCell class]) forIndexPath:indexPath];
-    [cell setUIWIthModel:@"" sort:indexPath.row];
+    SSNewClerkManngerDataContentModel *model = _arrdata[indexPath.row];
+    [cell setUIWIthModel:model sort:indexPath.row type:_currentIndex];
     return cell;
 }
 

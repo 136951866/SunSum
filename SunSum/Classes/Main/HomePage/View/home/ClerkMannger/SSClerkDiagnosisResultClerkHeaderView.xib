@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SSClerkDiagnosisResultClerkHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52e-RK-hjW">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="新客"/>
+                    <state key="selected">
+                        <color key="titleColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fQw-Ng-PY5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLq-PK-msK">
+                    <rect key="frame" x="94" y="0.0" width="93.5" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="潜在"/>
+                    <state key="selected">
+                        <color key="titleColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fUC-eD-JBq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciU-Vw-cJ6">
+                    <rect key="frame" x="187.5" y="0.0" width="94" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="意向"/>
+                    <state key="selected">
+                        <color key="titleColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="uIg-Ae-47G"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or0-jd-sUW">
+                    <rect key="frame" x="281.5" y="0.0" width="93.5" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="老客户"/>
+                    <state key="selected">
+                        <color key="titleColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1bC-jn-hyf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Or0-jd-sUW" firstAttribute="leading" secondItem="ciU-Vw-cJ6" secondAttribute="trailing" id="1Wt-lM-zdw"/>
+                <constraint firstItem="ciU-Vw-cJ6" firstAttribute="leading" secondItem="dLq-PK-msK" secondAttribute="trailing" id="1zb-e4-jo3"/>
+                <constraint firstItem="dLq-PK-msK" firstAttribute="width" secondItem="52e-RK-hjW" secondAttribute="width" id="4fL-ug-vGx"/>
+                <constraint firstAttribute="bottom" secondItem="52e-RK-hjW" secondAttribute="bottom" id="Hb8-f2-ybM"/>
+                <constraint firstItem="ciU-Vw-cJ6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ok3-eg-oif"/>
+                <constraint firstAttribute="bottom" secondItem="ciU-Vw-cJ6" secondAttribute="bottom" id="QVq-LI-eGK"/>
+                <constraint firstItem="Or0-jd-sUW" firstAttribute="width" secondItem="52e-RK-hjW" secondAttribute="width" id="WkC-sP-wPq"/>
+                <constraint firstAttribute="bottom" secondItem="dLq-PK-msK" secondAttribute="bottom" id="X47-Do-F1d"/>
+                <constraint firstAttribute="bottom" secondItem="Or0-jd-sUW" secondAttribute="bottom" id="XUs-gp-e7c"/>
+                <constraint firstItem="dLq-PK-msK" firstAttribute="leading" secondItem="52e-RK-hjW" secondAttribute="trailing" id="ZiT-5P-UEZ"/>
+                <constraint firstAttribute="trailing" secondItem="Or0-jd-sUW" secondAttribute="trailing" id="jLi-zB-xsP"/>
+                <constraint firstItem="ciU-Vw-cJ6" firstAttribute="width" secondItem="52e-RK-hjW" secondAttribute="width" id="kzq-O0-mhG"/>
+                <constraint firstItem="52e-RK-hjW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nES-be-Jdn"/>
+                <constraint firstItem="Or0-jd-sUW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nVI-wc-DhU"/>
+                <constraint firstItem="ciU-Vw-cJ6" firstAttribute="leading" secondItem="dLq-PK-msK" secondAttribute="trailing" id="svX-2x-xxF"/>
+                <constraint firstItem="dLq-PK-msK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vTa-V6-4mX"/>
+                <constraint firstItem="52e-RK-hjW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yRm-cw-rMW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnAttention" destination="ciU-Vw-cJ6" id="hKH-Sh-jb3"/>
+                <outlet property="btnNew" destination="52e-RK-hjW" id="3uR-0l-THQ"/>
+                <outlet property="btnOld" destination="Or0-jd-sUW" id="17F-MJ-ne7"/>
+                <outlet property="btnqz" destination="dLq-PK-msK" id="1je-4C-Np0"/>
+            </connections>
+        </view>
+    </objects>
+</document>

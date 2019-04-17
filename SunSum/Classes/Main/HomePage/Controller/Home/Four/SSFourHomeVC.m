@@ -13,7 +13,13 @@
 #import "SSAIHomeVC.h"
 #import "SSPNewAVistorVC.h"
 #import "SSNewClerkManngerVC.h"
+#import "SSClerkWorkDaliyVC.h"
+#import "SSClerkPlanAchieveVC.h"
+#import "SSClerkDiagnosisResultVC.h"
+#import "SSClerkWorkStatisticsVC.h"
 
+#warning --
+#import "SSClerkPushTaskVC.h"
 @interface SSFourHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -53,7 +59,8 @@
 }
 
 - (void)toStoreDiagnosisVC{
-    
+    SSClerkDiagnosisResultVC *vc = [[SSClerkDiagnosisResultVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)toPAVC{
@@ -67,7 +74,8 @@
 }
 
 - (void)toCaseVC{
-    
+    SSClerkPushTaskVC *vc = [[SSClerkPushTaskVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - tableView deleagte and sourcedata
@@ -87,6 +95,17 @@
         return cell;
     }else{
         SSFourHomeWorkShowCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSFourHomeWorkShowCell class]) forIndexPath:indexPath];
+        kMeWEAKSELF
+        cell.planAchieveBlock = ^{
+            kMeSTRONGSELF
+            SSClerkPlanAchieveVC *vc = [[SSClerkPlanAchieveVC alloc]init];
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
+        cell.workFinishBlock = ^{
+            kMeSTRONGSELF
+            SSClerkWorkStatisticsVC *vc = [[SSClerkWorkStatisticsVC alloc]init];
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
         return cell;
     }
 }
@@ -102,7 +121,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    if(indexPath.row == 0){
+        //运营
+    }else if (indexPath.row == 1){
+        //工作
+        SSClerkWorkDaliyVC *vc = [[SSClerkWorkDaliyVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+   
 }
 
 

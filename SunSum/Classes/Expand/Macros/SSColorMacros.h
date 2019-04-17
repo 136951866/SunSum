@@ -17,6 +17,8 @@
 #define kSSHexColor(color) [UIColor colorWithHexString:color]
 #define kSSColorRGB(rgb)    [UIColor colorWithRed:(rgb)/255.0 green:(rgb)/255.0 blue:(rgb)/255.0 alpha:1.0]
 
+#define kSS262d47 [UIColor colorWithHexString:@"262d47"]
+#define kSS171c30 [UIColor colorWithHexString:@"171c30"]
 #define kSS333333 [UIColor colorWithHexString:@"333333"]
 #define kSSf6f5fa [UIColor colorWithHexString:@"f6f5fa"]
 #define kSSf4f4f4 [UIColor colorWithHexString:@"f4f4f4"]

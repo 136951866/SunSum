@@ -8,6 +8,7 @@
 
 #import "SSClerkTaskCell.h"
 #import "SSClerkTaskContentCell.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSClerkTaskCell ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -15,6 +16,8 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *lblF;
+@property (weak, nonatomic) IBOutlet UILabel *lblNotF;
 
 @end
 
@@ -36,8 +39,10 @@
     _tableView.backgroundColor = kSSf6f5fa;
 }
 
-- (void)setUIWithArr:(NSArray *)arr{
-    _arrdata = arr;
+- (void)setUIWithArr:(SSNewClerkManngerModel *)model{
+    _arrdata = kMeUnArr(model.clerk_task.clerk_finish_percent);
+    _lblF.text = kMeUnNilStr(model.clerk_task.finish_task);
+    _lblNotF.text = kMeUnNilStr(model.clerk_task.unfinish_task);
     _tableView.hidden = !kMeUnArr(_arrdata).count;
     [self.tableView reloadData];
 }
@@ -50,7 +55,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SSClerkTaskContentCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkTaskContentCell class]) forIndexPath:indexPath];
-    [cell setUIWIthModel:@""];
+    SSNewClerkManngerClerkTaskpercentModel *model = _arrdata[indexPath.row];
+    [cell setUIWIthModel:model];
     return cell;
 }
 
@@ -58,8 +64,9 @@
     
 }
 
-+ (CGFloat)getCellHeightWithArr:(NSArray *)arr{
++ (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model{
     CGFloat height = kSSClerkTaskCellOrgialHeight;
+    NSArray *arr = kMeUnArr(model.clerk_task.clerk_finish_percent);
     height +=(kMeUnArr(arr).count * kSSClerkTaskContentCellHeight);
     return height;
 }

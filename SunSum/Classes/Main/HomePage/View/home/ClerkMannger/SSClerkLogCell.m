@@ -8,6 +8,7 @@
 
 #import "SSClerkLogCell.h"
 #import "SSClerkLogContentCell.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSClerkLogCell ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -15,6 +16,11 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *lblToday;
+@property (weak, nonatomic) IBOutlet UILabel *lblWait;
+@property (weak, nonatomic) IBOutlet UILabel *lblOut;
+
+
 
 @end
 
@@ -36,9 +42,12 @@
     _tableView.backgroundColor = kSSf6f5fa;
 }
 
-- (void)setUIWithArr:(NSArray *)arr{
-    _arrdata = arr;
+- (void)setUIWithArr:(SSNewClerkManngerModel *)model{
+    _arrdata = kMeUnArr(model.clerk_task_service.client);
     _tableView.hidden = !kMeUnArr(_arrdata).count;
+    _lblToday.text = kMeUnNilStr(model.clerk_task_service.clerk_today_log_count);
+    _lblWait.text = kMeUnNilStr(model.clerk_task_service.wait_servcie_count);
+    _lblOut.text = kMeUnNilStr(model.clerk_task_service.overdue_count);
     [self.tableView reloadData];
 }
 
@@ -50,16 +59,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SSClerkLogContentCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkLogContentCell class]) forIndexPath:indexPath];
-    [cell setUIWIthModel:@""];
+    SSNewClerkManngerClerkTaskclientModel *model = _arrdata[indexPath.row];
+    [cell setUIWIthModel:model];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    kMeCallBlock(_selectIndexBlock,indexPath.row);
 }
 
-+ (CGFloat)getCellHeightWithArr:(NSArray *)arr{
++ (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model{
     CGFloat height = kSSClerkLogCellOrgialHeight;
+    NSArray *arr = kMeUnArr(model.clerk_task_service.client);
     height +=(kMeUnArr(arr).count * kSSClerkLogContentCellHeight);
     return height;
 }

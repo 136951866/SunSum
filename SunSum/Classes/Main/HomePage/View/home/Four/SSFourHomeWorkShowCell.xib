@@ -420,6 +420,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsA-U3-o1f">
+                                <rect key="frame" x="110" y="0.0" width="193" height="47.5"/>
+                                <connections>
+                                    <action selector="planAchieveAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ilE-mO-RIL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -431,10 +437,14 @@
                             <constraint firstItem="884-Bq-0Kj" firstAttribute="top" secondItem="BMS-SZ-lfH" secondAttribute="bottom" constant="40" id="Nh2-Cw-WzI"/>
                             <constraint firstItem="BMS-SZ-lfH" firstAttribute="leading" secondItem="Vsw-Pc-pln" secondAttribute="leading" id="Q4y-Yc-5ab"/>
                             <constraint firstAttribute="trailing" secondItem="884-Bq-0Kj" secondAttribute="trailing" constant="15" id="R8X-dU-zFD"/>
+                            <constraint firstItem="WsA-U3-o1f" firstAttribute="leading" secondItem="49c-ut-QZD" secondAttribute="trailing" id="Unl-CA-nns"/>
                             <constraint firstAttribute="trailing" secondItem="tOv-ve-HNQ" secondAttribute="trailing" constant="15" id="aqP-og-KFW"/>
+                            <constraint firstAttribute="trailing" secondItem="WsA-U3-o1f" secondAttribute="trailing" id="dq1-wC-GTz"/>
                             <constraint firstItem="49c-ut-QZD" firstAttribute="leading" secondItem="dfc-oV-RlV" secondAttribute="trailing" constant="10" id="eab-yw-Imf"/>
                             <constraint firstItem="BMS-SZ-lfH" firstAttribute="top" secondItem="49c-ut-QZD" secondAttribute="bottom" constant="15" id="eeb-8e-oQO"/>
+                            <constraint firstItem="BMS-SZ-lfH" firstAttribute="top" secondItem="WsA-U3-o1f" secondAttribute="bottom" id="fSh-CO-Fga"/>
                             <constraint firstItem="49c-ut-QZD" firstAttribute="centerY" secondItem="dfc-oV-RlV" secondAttribute="centerY" id="jKk-Co-Deo"/>
+                            <constraint firstItem="WsA-U3-o1f" firstAttribute="top" secondItem="Vsw-Pc-pln" secondAttribute="top" id="nFS-cZ-oGW"/>
                             <constraint firstItem="dfc-oV-RlV" firstAttribute="leading" secondItem="Vsw-Pc-pln" secondAttribute="leading" constant="15" id="opk-bW-CRS"/>
                             <constraint firstItem="mnj-Mx-Lzb" firstAttribute="centerY" secondItem="dfc-oV-RlV" secondAttribute="centerY" id="rRc-EY-Zrs"/>
                             <constraint firstItem="884-Bq-0Kj" firstAttribute="leading" secondItem="Vsw-Pc-pln" secondAttribute="leading" constant="15" id="ygj-3v-WyM"/>
@@ -770,12 +780,20 @@
                                     <constraint firstItem="4nM-Cg-FHD" firstAttribute="top" secondItem="Cir-Qq-A3c" secondAttribute="top" constant="15" id="xH6-Fc-cqJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e3-6f-7iP">
+                                <rect key="frame" x="106" y="0.0" width="197" height="49"/>
+                                <connections>
+                                    <action selector="workFinishAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xKR-Tl-DES"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EVc-Xo-CYe" firstAttribute="centerY" secondItem="rx6-Yt-IRj" secondAttribute="centerY" id="2ow-yP-fj5"/>
+                            <constraint firstAttribute="trailing" secondItem="6e3-6f-7iP" secondAttribute="trailing" id="43L-vu-5rr"/>
                             <constraint firstItem="rHW-8g-oxn" firstAttribute="top" secondItem="gzx-Fl-O3y" secondAttribute="bottom" constant="15" id="6Gr-Ot-39b"/>
                             <constraint firstItem="Cir-Qq-A3c" firstAttribute="top" secondItem="qdU-hh-Vm7" secondAttribute="bottom" id="6Ze-IF-ARe"/>
+                            <constraint firstItem="6e3-6f-7iP" firstAttribute="leading" secondItem="gzx-Fl-O3y" secondAttribute="trailing" id="8No-jT-O9R"/>
                             <constraint firstItem="qdU-hh-Vm7" firstAttribute="leading" secondItem="3p8-bK-Umg" secondAttribute="leading" id="BXo-u0-eb2"/>
                             <constraint firstItem="wco-R7-oSo" firstAttribute="leading" secondItem="3p8-bK-Umg" secondAttribute="leading" id="DBt-OT-fdq"/>
                             <constraint firstAttribute="trailing" secondItem="rHW-8g-oxn" secondAttribute="trailing" id="LEm-A9-bLd"/>
@@ -785,12 +803,14 @@
                             <constraint firstAttribute="trailing" secondItem="wco-R7-oSo" secondAttribute="trailing" id="MoS-Aq-3a4"/>
                             <constraint firstItem="rx6-Yt-IRj" firstAttribute="top" secondItem="3p8-bK-Umg" secondAttribute="top" constant="15" id="Oua-ao-weu"/>
                             <constraint firstItem="7Hz-aG-wgp" firstAttribute="leading" secondItem="EVc-Xo-CYe" secondAttribute="trailing" constant="10" id="TPH-F7-BKR"/>
+                            <constraint firstItem="rHW-8g-oxn" firstAttribute="top" secondItem="6e3-6f-7iP" secondAttribute="bottom" id="Tbh-Cl-5zd"/>
                             <constraint firstItem="gzx-Fl-O3y" firstAttribute="centerY" secondItem="rx6-Yt-IRj" secondAttribute="centerY" id="ZpF-S2-67X"/>
                             <constraint firstItem="7Hz-aG-wgp" firstAttribute="centerY" secondItem="rx6-Yt-IRj" secondAttribute="centerY" id="c75-Lu-eQj"/>
                             <constraint firstAttribute="trailing" secondItem="7Hz-aG-wgp" secondAttribute="trailing" constant="15" id="dod-kV-7Ph"/>
                             <constraint firstItem="wco-R7-oSo" firstAttribute="top" secondItem="rHW-8g-oxn" secondAttribute="bottom" id="dtk-La-A0f"/>
                             <constraint firstAttribute="trailing" secondItem="Cir-Qq-A3c" secondAttribute="trailing" id="dwR-cY-cR6"/>
                             <constraint firstItem="rHW-8g-oxn" firstAttribute="leading" secondItem="3p8-bK-Umg" secondAttribute="leading" id="gbb-52-N3x"/>
+                            <constraint firstItem="6e3-6f-7iP" firstAttribute="top" secondItem="3p8-bK-Umg" secondAttribute="top" id="h90-pY-sxg"/>
                             <constraint firstAttribute="height" constant="458" id="uAJ-mi-urw"/>
                             <constraint firstItem="qdU-hh-Vm7" firstAttribute="top" secondItem="wco-R7-oSo" secondAttribute="bottom" id="yt8-WI-xga"/>
                             <constraint firstItem="rx6-Yt-IRj" firstAttribute="leading" secondItem="3p8-bK-Umg" secondAttribute="leading" constant="15" id="zbO-gW-0DW"/>

@@ -31,7 +31,7 @@
 @property (copy, nonatomic) NSString *day; //选中日
 @property (copy, nonatomic) NSString *hour; //选中时
 @property (copy, nonatomic) NSString *minute; //选中分
-
+@property (nonatomic, assign) BOOL isNeedYearMonth;
 @end
 
 #define THColorRGB(rgb)    [UIColor colorWithRed:(rgb)/255.0 green:(rgb)/255.0 blue:(rgb)/255.0 alpha:1.0]
@@ -44,6 +44,7 @@
 {
     self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     if (self) {
+        _isNeedYearMonth = NO;
         _selectDay = block;
 //        self.backgroundColor = [UIColor whiteColor];
         self.backgroundColor =[UIColor colorWithRed:128/255.0f green:128/255.0f blue:128/255.0f alpha:0.65];
@@ -188,6 +189,9 @@
     NSString *minute = self.minute.length == 3 ? [NSString stringWithFormat:@"%ld", self.minute.integerValue] : [NSString stringWithFormat:@"0%ld", self.minute.integerValue];
     
     self.selectStr = [NSString stringWithFormat:@"%ld-%@-%@  %@:%@", [self.year integerValue], month, day, hour, minute];
+    if(_isNeedYearMonth){
+        self.selectStr = [NSString stringWithFormat:@"%ld-%@", [self.year integerValue], month];
+    }
     [self removeFromSuperview];
     kMeCallBlock(_selectDay,self.selectStr);
 //    if ([self.delegate respondsToSelector:@selector(datePickerViewSaveBtnClickDelegate:)]) {

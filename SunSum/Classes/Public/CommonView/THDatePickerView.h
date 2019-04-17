@@ -40,6 +40,9 @@
 //@property (weak, nonatomic) id <THDatePickerViewDelegate> delegate;
 
 - (instancetype)initWithSelectDaye:(kMeTextBlock)block;
+
+
+
 /**
  显示  必须调用
  */

@@ -11,7 +11,9 @@
 #import "SSVistorUserModel.h"
 #import "SSRCConversationVC.h"
 
-@interface SSPNewAVistorContentVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
+@interface SSPNewAVistorContentVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>{
+    BOOL _isPoster;
+}
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) ZLRefreshTool         *refresh;
@@ -20,6 +22,20 @@
 
 @implementation SSPNewAVistorContentVC
 
+- (instancetype)initWithPoster{
+    if(self = [super init]){
+        _isPoster = YES;
+    }
+    return self;
+}
+
+- (instancetype)initWithArticel{
+    if(self = [super init]){
+        _isPoster = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
@@ -27,7 +43,6 @@
 }
 
 - (NSDictionary *)requestParameter{
-    
     return @{@"token":kMeUnNilStr(kCurrentUser.token)};
 }
 
@@ -35,8 +50,7 @@
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-//    [self.refresh.arrData addObjectsFromArray:[SSVistorUserModel mj_objectArrayWithKeyValuesArray:data]];
-     [self.refresh.arrData addObjectsFromArray:@[[SSVistorUserModel new],[SSVistorUserModel new]]];
+    [self.refresh.arrData addObjectsFromArray:[SSVistorUserModel mj_objectArrayWithKeyValuesArray:data]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -107,7 +121,14 @@
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonGetAccessUser)];
+        NSString *str = @"";
+        if(_isPoster){
+            str = kGetApiWithUrl(SSIPcommonposterspostersVisitList);
+        }else{
+            str = kGetApiWithUrl(SSIPcommonpostersarticleVisitList);
+        }
+        
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:str];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {

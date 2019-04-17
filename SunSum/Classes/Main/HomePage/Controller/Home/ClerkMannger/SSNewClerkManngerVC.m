@@ -10,10 +10,17 @@
 #import "SSClerkTaskCell.h"
 #import "SSClerkLogCell.h"
 #import "SSClerkSortCell.h"
+#import "SSCLerkTaskHomeVC.h"
+#import "SSCLerkLogHomeVC.h"
+#import "SSCLerkSortHomeVC.h"
+#import "SSClerkPlanAchieveVC.h"
+#import "SSEditClerkLogVC.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSNewClerkManngerVC ()<UITableViewDelegate, UITableViewDataSource>{
     NSArray *_arrSelect;
     NSInteger _currentIndex;
+    SSNewClerkManngerModel *_model;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,8 +33,18 @@
     [super viewDidLoad];
     self.title = @"员工管理";
     _currentIndex = 0;
-    _arrSelect = @[@[@""],@[@"",@"",@""],@[]];
-    [self.view addSubview:self.tableView];
+    _model = [SSNewClerkManngerModel new];
+    _arrSelect = @[@[],@[],@[]];
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetclerkclerkManagementWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_model = [SSNewClerkManngerModel mj_objectWithKeyValues:responseObject.data];
+        strongSelf->_arrSelect = @[kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByShareCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpMemberCount.data)];
+        [strongSelf.view addSubview:strongSelf.tableView];
+    } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -35,19 +52,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    kMeWEAKSELF
     if(indexPath.row == 0){
         SSClerkTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkTaskCell class]) forIndexPath:indexPath];
-        [cell setUIWithArr:@[@"",@"",@""]];
+        [cell setUIWithArr:_model];
         return cell;
     }else if (indexPath.row == 1){
         SSClerkLogCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkLogCell class]) forIndexPath:indexPath];
-        [cell setUIWithArr:@[@"",@"",@""]];
+        [cell setUIWithArr:_model];
+        cell.selectIndexBlock = ^(NSInteger index) {
+            kMeSTRONGSELF
+            SSEditClerkLogVC *vc = [[SSEditClerkLogVC alloc]init];
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
         return cell;
     }else{
         SSClerkSortCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkSortCell class]) forIndexPath:indexPath];
         NSArray *arr = _arrSelect[_currentIndex];
-        kMeWEAKSELF
         [cell setUIWithArr:arr selectBlock:^(NSInteger index) {
             kMeSTRONGSELF
             strongSelf->_currentIndex = index;
@@ -59,12 +80,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == 0){
-        return [SSClerkTaskCell getCellHeightWithArr:@[@"",@"",@""]];
+        return [SSClerkTaskCell getCellHeightWithArr:_model];
     }else if (indexPath.row == 1){
-        return [SSClerkLogCell getCellHeightWithArr:@[@"",@"",@""]];
+        return [SSClerkLogCell getCellHeightWithArr:_model];
     }else{
         NSArray *arr = _arrSelect[_currentIndex];
         return [SSClerkSortCell getCellHeightWithArr:arr];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        SSCLerkTaskHomeVC *vc = [[SSCLerkTaskHomeVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
+        SSCLerkLogHomeVC *vc = [[SSCLerkLogHomeVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 2){
+        SSCLerkSortHomeVC *vc = [[SSCLerkSortHomeVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

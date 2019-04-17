@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 const static CGFloat kSSClerkTaskContentCellHeight = 38;
-
+@class SSNewClerkManngerClerkTaskpercentModel;
 @interface SSClerkTaskContentCell : UITableViewCell
 
-- (void)setUIWIthModel:(id)model;
+- (void)setUIWIthModel:(SSNewClerkManngerClerkTaskpercentModel *)model;
 
 @end
 

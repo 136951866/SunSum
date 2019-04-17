@@ -71,6 +71,18 @@
     return [fmt stringFromDate:date];
 }
 
++ (NSString *)getNowYearMonth{
+    NSDate *date =[NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [formatter setDateFormat:@"yyyy"];
+    NSInteger currentYear=[[formatter stringFromDate:date] integerValue];
+    [formatter setDateFormat:@"MM"];
+    NSInteger currentMonth=[[formatter stringFromDate:date]integerValue];
+    [formatter setDateFormat:@"dd"];
+    return [NSString stringWithFormat:@"%ld-%02ld",currentYear,currentMonth];
+}
+
 //+(NSString*)getCurrentTimes{
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];

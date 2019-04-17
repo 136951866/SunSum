@@ -12,10 +12,13 @@ const static CGFloat kSSClerkLogCellOrgialHeight = 213;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSNewClerkManngerModel;
 @interface SSClerkLogCell : UITableViewCell
 
-- (void)setUIWithArr:(NSArray *)arr;
-+ (CGFloat)getCellHeightWithArr:(NSArray *)arr;
+- (void)setUIWithArr:(SSNewClerkManngerModel *)model;
++ (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model;
+
+@property (nonatomic,copy)kMeIndexBlock selectIndexBlock;
 
 @end
 

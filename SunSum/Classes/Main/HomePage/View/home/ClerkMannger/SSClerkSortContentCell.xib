@@ -55,6 +55,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPIc" destination="csr-C9-k49" id="LUo-c6-nNv"/>
+                <outlet property="lblCount" destination="AvA-aH-klZ" id="U29-y3-oB6"/>
+                <outlet property="lblName" destination="xlW-QR-geA" id="Rtz-zp-jZz"/>
             </connections>
         </tableViewCell>
     </objects>

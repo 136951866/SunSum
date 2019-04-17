@@ -27,6 +27,16 @@
 @interface SSPublicNetWorkTool : NSObject
 
 /*********************************************/
+#pragma makr - 新版本 顾客 图文 店员
+//员工管理(返回所有内容)
++ (void)postgetclerkclerkManagementWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+
+
+/*********************************************/
+
+
+
+/*********************************************/
 #pragma makr - ai
 //设置用户标签
 + (void)postgetCustomerGetLabelWithLabel:(NSString*)label uid:(NSString*)uid SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;

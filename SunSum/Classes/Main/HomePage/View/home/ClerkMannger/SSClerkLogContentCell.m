@@ -7,6 +7,7 @@
 //
 
 #import "SSClerkLogContentCell.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSClerkLogContentCell()
 
@@ -23,12 +24,11 @@
     // Initialization code
 }
 
-- (void)setUIWIthModel:(id)model{
-    kSDLoadImg(_imgPic, kMeUnNilStr(kCurrentUser.header_pic));
-    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ 服务于%@",kMeUnNilStr(kCurrentUser.name),@"2019-04-04 04:00:00"]];
+- (void)setUIWIthModel:(SSNewClerkManngerClerkTaskclientModel *)model{
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ 服务于%@",kMeUnNilStr(model.nick_name),kMeUnNilStr(model.service_at)]];
     NSUInteger firstLoc = [[aString string] rangeOfString:@" "].location + 1;
     NSUInteger secondLoc = aString.length;
-    //    [[aString string] rangeOfString:@"元"].location;
     NSRange range = NSMakeRange(firstLoc, secondLoc - firstLoc);
     [aString addAttribute:NSForegroundColorAttributeName value:kSS999999 range:range];
     [aString addAttribute:NSFontAttributeName value:kMeFont(9) range:range];

@@ -59,7 +59,7 @@
 
 - (SSPNewAVistorContentVC *)posterVC{
     if(!_posterVC){
-        _posterVC = [[SSPNewAVistorContentVC alloc]init];
+        _posterVC = [[SSPNewAVistorContentVC alloc]initWithPoster];
         _posterVC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _posterVC.view.frame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kCategoryViewHeight);
         [self addChildViewController:_posterVC];
@@ -69,7 +69,7 @@
 
 - (SSPNewAVistorContentVC *)articleVC{
     if(!_articleVC){
-        _articleVC = [[SSPNewAVistorContentVC alloc]init];
+        _articleVC = [[SSPNewAVistorContentVC alloc]initWithArticel];
         _articleVC.view.frame = CGRectMake(SCREEN_WIDTH,0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kCategoryViewHeight);
         _articleVC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addChildViewController:_articleVC];

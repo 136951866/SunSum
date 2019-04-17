@@ -14,6 +14,9 @@ const static CGFloat kSSFourHomeWorkShowCellHeight = 1068;
 
 @interface  SSFourHomeWorkShowCell: UITableViewCell
 
+@property (nonatomic, copy) kMeBasicBlock planAchieveBlock;
+@property (nonatomic, copy) kMeBasicBlock workFinishBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -37,6 +37,72 @@
 #define kNetError @"503"
 #define kNetInvateCode @"502"
 
+
+/*********************************************/
+#pragma makr - 新版本 顾客 图文 店员
+
+//图文
+//获客图文-海报
+#define SSIPcommonposterspostersVisitList @"common/posters/postersVisitList"
+//获客图文-文章
+#define SSIPcommonpostersarticleVisitList @"common/article/articleVisitList"
+
+
+//店员
+//员工管理(返回所有内容)
+#define SSIPcommonclerkclerkManagement @"common/clerk/clerkManagement"
+//工作统计-服务日志（统计部分）
+#define SSIPcommonclerkserviceLog @"common/clerk/serviceLog"
+//任务祥情
+#define SSIPcommonclertaskDetail @"common/clerk/taskDetail"
+//计划达成-任务列表
+#define SSIPcommonclerkTaskList @"common/clerk/taskList"
+//计划达成
+#define SSIPcommonclerkclerkTaskFinishState @"common/clerk/clerkTaskFinishState"
+//工作日报
+#define SSIPcommoncustomerdailyWorkReport @"common/customer/dailyWorkReport"
+//店员通过分享数排名
+#define SSIPcommonclerkclerkOrderByShareCount @"common/clerk/clerkOrderByShareCount"
+//员工管理->员工日志
+#define SSIPcommonclerkclerkTaskService @"common/clerk/clerkTaskService"
+//员工管理->员工任务
+#define SSIPcommonclerkclerkTask @"common/clerk/clerkTask"
+//编写店员日志
+#define SSIPcommonclerkfinishTask @"common/clerk/finishTask"
+//店员任务列表
+#define SSIPcommonclerkclerkTaskList @"common/clerk/clerkTaskList"
+//员工管理->员工任务(查看更多)
+#define SSIPcommonclerkclerkTaskMore @"common/clerk/clerkTaskMore"
+//创建店员任务
+#define SSIPcommonclerkcreateClerkTask @"common/clerk/createClerkTask"
+//店员通过沟通（跟进）客户数排名
+#define SSIPcommonclerkclerkOrderByFollowUpMemberCount @"common/clerk/clerkOrderByFollowUpMemberCount"
+//店员通过发表动态次数排名
+#define SSIPcommonclerkclerkOrderByPublishCount @"common/clerk/clerkOrderByPublishCount"
+//店员通过沟通（跟进）数排名
+#define SSIPcommonclerkclerkOrderByFollowUpCount @"common/clerk/clerkOrderByFollowUpCount"
+
+
+//顾客
+//诊断结果（返回所有，员工排行暂未做）
+#define SSIPcommoncustomercustomerDiagnose @"common/customer/customerDiagnose"
+//本月客户数量、上月客户数量
+#define SSIPcommoncustomerlastMonthAndThisMonthCustomerCount @"common/customer/lastMonthAndThisMonthCustomerCount"
+//客户成长转化分析图
+#define SSIPcommoncustomertransformationAnalysisChart @"common/customer/transformationAnalysisChart"
+//本月客户成长
+#define SSIPcommoncustomerthisMonthCustomerGrowth @"common/customer/thisMonthCustomerGrowth"
+
+
+
+/*********************************************/
+
+
+
+
+
+
+
 /*********************************************/
 #pragma makr - ai
 //查询 雷达(底部导航) 时间 访问人数数据信息

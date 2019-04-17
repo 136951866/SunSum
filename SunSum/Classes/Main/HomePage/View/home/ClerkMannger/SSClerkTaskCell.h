@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class SSNewClerkManngerModel;
 const static CGFloat kSSClerkTaskCellOrgialHeight = 251;
 
 @interface SSClerkTaskCell : UITableViewCell
 
-- (void)setUIWithArr:(NSArray *)arr;
-+ (CGFloat)getCellHeightWithArr:(NSArray *)arr;
+- (void)setUIWithArr:(SSNewClerkManngerModel *)model;
++ (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model;
 
 @end
 

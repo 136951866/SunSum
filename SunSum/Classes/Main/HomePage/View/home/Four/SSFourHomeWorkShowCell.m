@@ -16,6 +16,16 @@
     // Initialization code
 }
 
+- (IBAction)planAchieveAction:(UIButton *)sender {
+    kMeCallBlock(_planAchieveBlock);
+}
+
+- (IBAction)workFinishAction:(UIButton *)sender {
+    kMeCallBlock(_workFinishBlock);
+}
+
+
+
 
 
 @end
