@@ -9,11 +9,14 @@
 #import "SSClerkDiagnosisResultCustomerCell.h"
 #import "AAChartKit.h"
 #import "AAChartModel.h"
+#import "SSClerkDiagnosisResultmodel.h"
 
 @interface SSClerkDiagnosisResultCustomerCell ()<AAChartViewDidFinishLoadDelegate>
 
 @property (nonatomic, strong) AAChartModel *aaChartModel;
 @property (weak, nonatomic) IBOutlet AAChartView *aaChartView;
+@property (weak, nonatomic) IBOutlet UILabel *lblThisMonth;
+@property (weak, nonatomic) IBOutlet UILabel *lblLastMonth;
 
 
 
@@ -24,6 +27,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = 0;
+    self.backgroundColor = [UIColor clearColor];
     self.aaChartView.backgroundColor = [UIColor clearColor];
     self.aaChartView.delegate = self;
     self.aaChartView.scrollEnabled = NO;//禁用 AAChartView 滚动效果
@@ -31,7 +35,7 @@
     // Initialization code
 }
 
-- (void)setUiWithModel:(NSArray *)nowMonth lastMonth:(NSArray*)lastMonth Xtitle:(NSArray*)Xtitle model:(id)model{
+- (void)setUiWithModel:(NSArray *)nowMonth lastMonth:(NSArray*)lastMonth Xtitle:(NSArray*)Xtitle model:(SSClerkDiagnosisResultmodel *)model{
 //    _aaChartModel.title = kMeUnNilStr(title);
     _aaChartModel.categories = Xtitle;
     self.aaChartModel
@@ -48,6 +52,9 @@
                  ]
                );
     [self.aaChartView aa_refreshChartWithChartModel:self.aaChartModel];
+    _lblThisMonth.text = @(model.lastMonthAndThisMonthCustomerCount.this_month_count).description;
+    _lblLastMonth.text = @(model.lastMonthAndThisMonthCustomerCount.last_month_count).description;
+
 }
 
 - (AAChartModel *)aaChartModel{

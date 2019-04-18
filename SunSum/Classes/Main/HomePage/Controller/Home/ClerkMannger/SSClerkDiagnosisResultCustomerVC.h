@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkDiagnosisResultmodel;
 @interface SSClerkDiagnosisResultCustomerVC : SSBaseVC
+
+- (instancetype)initWithModel:(SSClerkDiagnosisResultmodel*)model;
 
 @end
 

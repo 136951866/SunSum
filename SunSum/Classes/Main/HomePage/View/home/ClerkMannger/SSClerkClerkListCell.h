@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkModel;
 const static CGFloat kSSClerkClerkListCellHeight = 65;
 
 
 @interface SSClerkClerkListCell : UITableViewCell
-- (void)setUIWIthModel:(id)model;
+- (void)setUIWIthModel:(SSClerkModel *)model;
 
 @end
 

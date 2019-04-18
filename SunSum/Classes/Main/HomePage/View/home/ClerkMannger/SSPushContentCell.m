@@ -7,13 +7,13 @@
 //
 
 #import "SSPushContentCell.h"
-#import "SSTextView.h"
+
 
 @interface SSPushContentCell ()
 
 @property (weak, nonatomic) IBOutlet UIView *viewForText;
-@property (nonatomic , strong) SSTextView *textView;
-@property (nonatomic, strong) NSObject *model;
+
+@property (nonatomic, strong) NSString *model;
 
 @end
 
@@ -27,21 +27,21 @@
 }
 
 
-- (void)setUIWithModel:(id)model{
+- (void)setUIWithModel:(NSString *)model{
     _model = model;
-    //    self.textView.textView.text = kMeUnNilStr(_model.goods_detail);
-    //    if ( kMeUnNilStr(_model.goods_detail).length == 0) {
-    //        self.textView.placeholderTextView.hidden = NO;
-    //    }else{
-    //        self.textView.placeholderTextView.hidden =YES;
-    //    }
+    self.textView.textView.text = kMeUnNilStr(model);
+    if ( kMeUnNilStr(model).length == 0) {
+        self.textView.placeholderTextView.hidden = NO;
+    }else{
+        self.textView.placeholderTextView.hidden =YES;
+    }
 }
 
 
 - (SSTextView *)textView{
     if(!_textView){
         _textView = [[SSTextView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-20, 178)];
-        _textView.placeholderTextView.text = @"请填写任务内容";
+        _textView.placeholderTextView.text = @"请填写内容";
         _textView.textView.font = kMeFont(12);
         _textView.placeholderTextView.font = kMeFont(12);
         _textView.textView.textColor = kSSblack;

@@ -25,4 +25,6 @@
 + (NSMutableArray *)getTime;
 +(NSString *)timestampSwitchTime:(NSString *)timestamp andFormatter:(NSString *)format;
 + (NSString *)getNowYearMonth;
++ (NSInteger )getMonth;
++ (NSInteger )getYear;
 @end

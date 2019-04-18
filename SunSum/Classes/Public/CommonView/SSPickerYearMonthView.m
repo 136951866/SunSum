@@ -91,7 +91,7 @@
     UIButton *saveBtn = [[UIButton alloc] init];
     saveBtn.frame = CGRectMake(self.frame.size.width - 50, 2, 40, 40);
     //    [saveBtn setImage:[UIImage imageNamed:@"icon_select1"] forState:UIControlStateNormal];
-    [saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+    [saveBtn setTitle:@"确定" forState:UIControlStateNormal];
     [saveBtn setTitleColor:kSSblack forState:UIControlStateNormal];
     [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.toolView addSubview:saveBtn];

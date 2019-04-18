@@ -7,6 +7,7 @@
 //
 
 #import "SSCLerkSortHomeCell.h"
+#import "SSNewClerkManngerModel.h"
 
 @interface SSCLerkSortHomeCell ()
 
@@ -24,7 +25,7 @@
     // Initialization code
 }
 
-- (void)setUIWithModel:(id)model sort:(NSInteger)sort{
+- (void)setUIWithModel:(SSNewClerkManngerDataContentModel *)model sort:(NSInteger)sort{
     _lblSore.text = @(sort).description;
     if(sort == 1){
         _lblSore.backgroundColor = [UIColor colorWithHexString:@"FF9C00"];
@@ -35,8 +36,8 @@
     }else{
         _lblSore.backgroundColor = [UIColor colorWithHexString:@"8F8F8F"];
     }
-    _lblTitle.text = kMeUnNilStr(@"11");
-    _lblSubTitle.text = kMeUnNilStr(@"222");
+    _lblTitle.text = kMeUnNilStr(model.name);
+    _lblSubTitle.text = kMeUnNilStr(model.count);
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "kSSClerkPlanAchieveListCell.h"
+#import "SSClerkPlanAchieveClerkModel.h"
 
 @interface kSSClerkPlanAchieveListCell ()
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgfinish;
 @end
 
 @implementation kSSClerkPlanAchieveListCell
@@ -22,9 +24,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = 0;
+    _lblTime.adjustsFontSizeToFitWidth = YES;
 }
 
-- (void)setUIWIthModel:(id)model sort:(NSInteger)sort{
+- (void)setUIWIthModel:(SSClerkPlanAchieveClerkModel *)model sort:(NSInteger)sort{
     _lblSore.text = @(sort).description;
     if(sort == 1){
         _lblSore.backgroundColor = [UIColor colorWithHexString:@"FF9C00"];
@@ -35,8 +38,10 @@
     }else{
         _lblSore.backgroundColor = [UIColor colorWithHexString:@"8F8F8F"];
     }
-    _lblTitle.text = kMeUnNilStr(@"111");
-    _lblTime.text = kMeUnNilStr(@"2019-09-90 00:00");
-    _lblSubtitle.text = kMeUnNilStr(@"111");
+    
+    _lblTitle.text = kMeUnNilStr(model.task_title);
+    _lblTime.text =kMeUnNilStr(model.last_time);
+    _lblSubtitle.text =  kMeUnNilStr(model.task_content);
+    _imgfinish.hidden = model.status !=2;
 }
 @end

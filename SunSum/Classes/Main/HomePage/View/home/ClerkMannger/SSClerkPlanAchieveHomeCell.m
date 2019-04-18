@@ -8,6 +8,7 @@
 
 #import "SSClerkPlanAchieveHomeCell.h"
 #import "QLCycleProgressView.h"
+#import "SSClerkPlanAchieveClerkHeaderModel.h"
 
 @interface SSClerkPlanAchieveHomeCell ()
 
@@ -27,11 +28,12 @@
     [_viewForProgress addSubview:self.progressView];
 }
 
-- (void)setUIWIthModel:(id)model{
-    self.progressView.progress = 0.5;
-    self.progressView.content = @"全部任务:10000";
-    _lblAchieveed.text = @(0).description;
-    _lblAchieveNot.text = @(0).description;
+- (void)setUIWIthModel:(SSClerkPlanAchieveClerkHeaderModel *)model{
+    CGFloat rate = (CGFloat)((CGFloat)(model.finish_task)/(CGFloat)(model.total_task));
+    self.progressView.progress = rate;
+    self.progressView.content = [NSString stringWithFormat:@"全部任务:%@",@(model.total_task).description];
+    _lblAchieveed.text = @(model.finish_task).description;
+    _lblAchieveNot.text = @(model.unfinish_task).description;
 }
 
 - (QLCycleProgressView *)progressView {

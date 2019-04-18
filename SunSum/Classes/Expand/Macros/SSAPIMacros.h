@@ -49,10 +49,20 @@
 
 
 //店员
+//员工排名
+#define SSIPcommonclerkclerkOrderCount @"common/clerk/clerkOrderCount"
+//运营日报(返回上面两个饼图数据)
+#define SSIPcommonclerkdailyOperations @"common/clerk/dailyOperations"
+//运营日报-员工今日未完成
+#define SSIPcommonclerktodayClerkUnfinishTask @"common/clerk/todayClerkUnfinishTask"
+//诊断结果-员工排名
+#define SSIPcommonclerkdiagnosisClerkOrder @"common/clerk/diagnosisClerkOrder"
 //员工管理(返回所有内容)
 #define SSIPcommonclerkclerkManagement @"common/clerk/clerkManagement"
 //工作统计-服务日志（统计部分）
 #define SSIPcommonclerkserviceLog @"common/clerk/serviceLog"
+//工作统计-服务日志(店员列表部分)
+#define SSIPcommonclerkclerkServiceLog @"common/clerk/clerkServiceLog"
 //任务祥情
 #define SSIPcommonclertaskDetail @"common/clerk/taskDetail"
 //计划达成-任务列表

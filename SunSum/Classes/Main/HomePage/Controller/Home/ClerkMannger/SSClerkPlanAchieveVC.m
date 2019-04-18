@@ -12,9 +12,13 @@
 #import "THDatePickerView.h"
 #import "SSClerkTaskDetailVC.h"
 #import "SSPickerYearMonthView.h"
+#import "SSClerkPlanAchieveClerkModel.h"
+#import "SSClerkPlanAchieveClerkHeaderModel.h"
+
 @interface SSClerkPlanAchieveVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
 {
     NSString *_currentTime;
+    SSClerkPlanAchieveClerkHeaderModel *_model;
 }
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) ZLRefreshTool         *refresh;
@@ -26,9 +30,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"计划达成";
+    _model = [SSClerkPlanAchieveClerkHeaderModel new];
     _currentTime = [SSTimeTool getNowYearMonth];
     [self.view addSubview:self.tableView];
     [self.refresh addRefreshView];
+}
+
+
+- (void)getHeaderData{
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetSSIPcommonclerkTaskFinishStateWithdate:kMeUnNilStr(_currentTime) SuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_model = [SSClerkPlanAchieveClerkHeaderModel mj_objectWithKeyValues:responseObject.data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [strongSelf.tableView reloadData];
+        });
+    } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 - (void)selectTimeAction{
@@ -36,22 +56,25 @@
     SSPickerYearMonthView *view = [[SSPickerYearMonthView alloc]initWithSelectDaye:^(NSString *str) {
         kMeSTRONGSELF
         strongSelf->_currentTime = kMeUnArr(str);
-        _lblTime.text = kMeUnArr(str);
+        strongSelf->_lblTime.text = kMeUnArr(str);
+        [strongSelf.refresh reload];
     }];
     [kMeCurrentWindow endEditing:YES];
     [kMeCurrentWindow addSubview:view];
 }
 
 - (NSDictionary *)requestParameter{
-    [self.refresh.arrData addObjectsFromArray:@[@"",@"",@"",@""]];
-    return @{@"token":kMeUnNilStr(kCurrentUser.token)};
+    if(self.refresh.pageIndex == 1){
+        [self getHeaderData];
+    }
+    return @{@"token":kMeUnNilStr(kCurrentUser.token),@"date":kMeUnNilStr(_currentTime)};
 }
 
 - (void)handleResponse:(id)data{
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[NSObject mj_objectArrayWithKeyValuesArray:data]];
+    [self.refresh.arrData addObjectsFromArray:[SSClerkPlanAchieveClerkModel mj_objectArrayWithKeyValuesArray:data]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -69,10 +92,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 0){
         SSClerkPlanAchieveHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkPlanAchieveHomeCell class]) forIndexPath:indexPath];
-        [cell setUIWIthModel:@""];
+        [cell setUIWIthModel:_model];
         return cell;
     }else{
-        NSObject *model = self.refresh.arrData[indexPath.row];
+        SSClerkPlanAchieveClerkModel *model = self.refresh.arrData[indexPath.row];
         kSSClerkPlanAchieveListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([kSSClerkPlanAchieveListCell class]) forIndexPath:indexPath];
         [cell setUIWIthModel:model sort:indexPath.row+1];
         return cell;
@@ -89,7 +112,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SSClerkTaskDetailVC *vc = [[SSClerkTaskDetailVC alloc]init];
+    if(indexPath.section == 0){
+        return;
+    }
+    SSClerkPlanAchieveClerkModel *model = self.refresh.arrData[indexPath.row];
+    SSClerkTaskDetailVC *vc = [[SSClerkTaskDetailVC alloc]initWithTaskId:@(model.idField).description];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -141,10 +168,11 @@
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(@"")];
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkTaskList)];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
         _refresh.showFailView = NO;
+        _refresh.showMaskView = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
             failView.backgroundColor = [UIColor whiteColor];
             failView.lblOfNodata.text = @"没有任务";

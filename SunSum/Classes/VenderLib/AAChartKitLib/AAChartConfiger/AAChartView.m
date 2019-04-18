@@ -78,7 +78,8 @@
         _wkWebView = [[WKWebView alloc] init];
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
-        _wkWebView.backgroundColor = [UIColor whiteColor];
+        _wkWebView.backgroundColor = [UIColor clearColor];
+        _wkWebView.scrollView.backgroundColor = [UIColor clearColor];
         [self addSubview:_wkWebView];
         _wkWebView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addConstraints:[self configureTheConstraintArrayWithItem:_wkWebView toItem:self]];

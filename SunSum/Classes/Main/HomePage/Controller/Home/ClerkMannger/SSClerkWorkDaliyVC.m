@@ -8,8 +8,11 @@
 
 #import "SSClerkWorkDaliyVC.h"
 #import "SSClerkWorkDaliyCell.h"
+#import "SSClerkWorkDaliyModel.h"
 
-@interface SSClerkWorkDaliyVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface SSClerkWorkDaliyVC ()<UITableViewDelegate, UITableViewDataSource>{
+    SSClerkWorkDaliyModel *_model;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
@@ -18,9 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"工作日报";
+    _model = [SSClerkWorkDaliyModel new];
     self.view.backgroundColor = kSSf6f5fa;
     [self.view addSubview:self.tableView];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(requestNetWork)];
+    [self.tableView.mj_header beginRefreshing];
     // Do any additional setup after loading the view.
+}
+
+- (void)requestNetWork{
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetSSIPcommoncustomerdailyWorkReportWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_model = [SSClerkWorkDaliyModel mj_objectWithKeyValues:responseObject.data];
+        [strongSelf.tableView reloadData];
+        [strongSelf.tableView.mj_header endRefreshing];
+    } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -29,7 +48,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSClerkWorkDaliyCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkWorkDaliyCell class]) forIndexPath:indexPath];
-    [cell setUiWithModel:@[@(1),@(2),@(3),@(4)] Xtitle:@[@"新客户",@"潜在客户",@"意向客户",@"老客户"] title:@"" progress:@"100%"];
+    NSInteger all = _model.new_customer + _model.potential_customer + _model.Intention_customer+_model.regular_customer;
+    [cell setUiWithModel:@[@(_model.new_customer),@(_model.potential_customer),@(_model.Intention_customer),@(_model.regular_customer)] Xtitle:@[@"新客户",@"潜在客户",@"意向客户",@"老客户"] title:@"" progress:@(all).description];
     return cell;
 }
 

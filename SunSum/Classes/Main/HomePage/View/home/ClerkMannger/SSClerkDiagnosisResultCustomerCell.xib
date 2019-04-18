@@ -205,6 +205,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="aaChartView" destination="e9x-LF-LPC" id="spQ-wH-A4b"/>
+                <outlet property="lblLastMonth" destination="KGZ-5F-kvJ" id="1b0-Tc-mpp"/>
+                <outlet property="lblThisMonth" destination="6L4-LL-Hur" id="4H8-qB-0VL"/>
             </connections>
             <point key="canvasLocation" x="64" y="79.610194902548727"/>
         </tableViewCell>

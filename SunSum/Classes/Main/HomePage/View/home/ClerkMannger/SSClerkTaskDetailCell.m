@@ -7,6 +7,7 @@
 //
 
 #import "SSClerkTaskDetailCell.h"
+#import "SSClerkTaskDetailModel.h"
 
 @interface SSClerkTaskDetailCell ()
 
@@ -24,18 +25,23 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = 0;
+    _lblTime.adjustsFontSizeToFitWidth = YES;
 }
 
-- (void)setUIWIthModel:(id)model{
-    NSString *str = kMeUnNilStr(@"对洒喝点酒洒喝豆浆洒喝豆浆洒喝豆浆洒好的借口大厦酒店会撒娇和第三空间啊好的借口");
+- (void)setUIWIthModel:(SSClerkTaskDetailModel *)model{
+    NSString *str = kMeUnNilStr(model.task_content);
     CGFloat sh =
     [NSAttributedString heightForAtsWithStr:kMeUnNilStr(str) font:[UIFont systemFontOfSize:12] width:(SCREEN_WIDTH- 40) lineH:0];
     _consTitleHeight.constant = sh>15?sh:15;
     [_lblContent setAtsWithStr:kMeUnNilStr(str) lineGap:0];
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblName.text = kMeUnNilStr(model.nick_name);
+    _lblTask.text = kMeUnNilStr(model.task_title);
+    _lblTime.text = kMeUnNilStr(model.last_time);
 }
-+ (CGFloat)getCellHeightWithModel:(NSObject *)model{
++ (CGFloat)getCellHeightWithModel:(SSClerkTaskDetailModel *)model{
     CGFloat height = kSSClerkTaskDetailCellHeight - 15;
-    NSString *str = kMeUnNilStr(@"对洒喝点酒洒喝豆浆洒喝豆浆洒喝豆浆洒好的借口大厦酒店会撒娇和第三空间啊好的借口");
+    NSString *str = kMeUnNilStr(model.task_content);
     CGFloat sh =
     [NSAttributedString heightForAtsWithStr:kMeUnNilStr(str) font:[UIFont systemFontOfSize:12] width:(SCREEN_WIDTH-50) lineH:0];
     height += sh>15?sh:15;

@@ -9,8 +9,11 @@
 #import "SSClerkDiagnosisResultClerkVC.h"
 #import "SSClerkDiagnosisResultClerkCell.h"
 #import "SSClerkDiagnosisResultClerkHeaderView.h"
+#import "SSClerkDiagnosisResultClerkModel.h"
 
-@interface SSClerkDiagnosisResultClerkVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
+@interface SSClerkDiagnosisResultClerkVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>{
+    NSInteger _currentIndex;
+}
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -25,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navBarHidden = YES;
+    _currentIndex = 1;
     self.view.backgroundColor =kSS171c30;
     [self.view addSubview:self.cview];
     [self.cview addSubview:self.headerView];
@@ -34,15 +38,14 @@
 }
 
 - (NSDictionary *)requestParameter{
-    [self.refresh.arrData addObjectsFromArray:@[@"",@"",@"",@""]];
-    return @{@"token":kMeUnNilStr(kCurrentUser.token)};
+    return @{@"token":kMeUnNilStr(kCurrentUser.token),@"client_type":@(_currentIndex)};
 }
 
 - (void)handleResponse:(id)data{
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[NSObject mj_objectArrayWithKeyValuesArray:data]];
+    [self.refresh.arrData addObjectsFromArray:[SSClerkDiagnosisResultClerkModel mj_objectArrayWithKeyValuesArray:data]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,7 +54,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSClerkDiagnosisResultClerkCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkDiagnosisResultClerkCell class]) forIndexPath:indexPath];
-    NSObject *model = self.refresh.arrData[indexPath.row];
+    SSClerkDiagnosisResultClerkModel *model = self.refresh.arrData[indexPath.row];
     [cell setUIWithModel:model sort:indexPath.row + 1];
    
     return cell;
@@ -81,7 +84,7 @@
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(@"")];
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkdiagnosisClerkOrder)];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
         _refresh.showMaskView = YES;
@@ -110,6 +113,7 @@
         kMeWEAKSELF
         _headerView.indexBlock = ^(NSInteger index) {
             kMeSTRONGSELF
+            strongSelf->_currentIndex = index+1;
             [strongSelf.refresh reload];
         };
     }

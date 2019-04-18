@@ -209,6 +209,8 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
+                <outlet property="imgArrow" destination="g7k-ES-pHO" id="pe1-1J-JCs"/>
+                <outlet property="lblFinish" destination="Lir-JP-kh2" id="hak-cV-TMf"/>
                 <outlet property="lblOut" destination="0un-iv-oL8" id="ToP-5e-4pQ"/>
                 <outlet property="lblToday" destination="fhg-6q-ysA" id="4wA-IN-Syp"/>
                 <outlet property="lblWait" destination="FPs-s8-NyA" id="Csm-tX-kSW"/>

@@ -97,6 +97,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imgfinish" destination="Wxu-9I-gCj" id="ioi-Cf-4ms"/>
                 <outlet property="lblSore" destination="XL5-dG-dvV" id="Rch-1D-KSy"/>
                 <outlet property="lblSubtitle" destination="hgg-t4-pTW" id="bfc-ca-ma0"/>
                 <outlet property="lblTime" destination="DAi-pz-HYb" id="ZWU-QH-aSY"/>

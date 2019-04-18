@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SSClerkClerkListVC : SSBaseVC
-
+- (instancetype)initWithArr:(NSArray *)arrClerId;
+@property (nonatomic, copy) kMeArrBlock block;
 @end
 
 NS_ASSUME_NONNULL_END

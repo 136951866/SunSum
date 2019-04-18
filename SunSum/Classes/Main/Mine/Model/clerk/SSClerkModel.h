@@ -19,5 +19,5 @@
 @property (nonatomic, assign) NSInteger sex;
 @property (nonatomic, assign) NSInteger share;
 @property (nonatomic, assign) NSInteger user_type;
-
+@property (nonatomic, assign) BOOL isSelect;
 @end

@@ -9,11 +9,15 @@
 #import "SSCLerkSortHomeVC.h"
 #import "SSCLerkSortHomeCell.h"
 #import "SPullDownMenuView.h"
+#import "SSNewClerkManngerModel.h"
 
 const static CGFloat kmenuHeight = 44;
 
 @interface SSCLerkSortHomeVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate,SPullDownMenuViewDelegate>
-
+{
+    NSInteger _order_type;
+    NSInteger _order_date_type;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) ZLRefreshTool         *refresh;
 @property (nonatomic, strong) SPullDownMenuView *menu;
@@ -26,6 +30,8 @@ const static CGFloat kmenuHeight = 44;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"员工排名";
+    _order_type = 1;
+    _order_date_type = 1;
     [self.view addSubview:self.menu];
     [self.view addSubview:self.tableView];
     [self.view addSubview:[self getBottomView]];
@@ -33,21 +39,28 @@ const static CGFloat kmenuHeight = 44;
 }
 
 - (NSDictionary *)requestParameter{
-    [self.refresh.arrData addObjectsFromArray:@[@"",@"",@"",@""]];
-    return @{@"token":kMeUnNilStr(kCurrentUser.token)};
+    return @{@"token":kMeUnNilStr(kCurrentUser.token),@"order_type":@(_order_type),@"order_date_type":@(_order_date_type)};
 }
 
 - (void)handleResponse:(id)data{
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[NSObject mj_objectArrayWithKeyValuesArray:data]];
-    
+    _lblAllCOunt.text = @(self.refresh.allRows).description;
+    [self.refresh.arrData addObjectsFromArray:[SSNewClerkManngerDataContentModel mj_objectArrayWithKeyValuesArray:data]];
 }
 
 
 - (void)pullDownMenuView:(SPullDownMenuView *)menu didSelectedIndex:(NSIndexPath *)indexPath{
-
+    NSLog(@"%@---%@",@(indexPath.section),@(indexPath.row));
+    if(indexPath.row == 0){
+        _order_type = indexPath.section +1;
+        NSLog(@"%@",@(_order_type));
+    }else{
+        _order_date_type = indexPath.section +1;
+        NSLog(@"%@",@(_order_date_type));
+    }
+    [self.refresh reload];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,7 +69,7 @@ const static CGFloat kmenuHeight = 44;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSCLerkSortHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSCLerkSortHomeCell class]) forIndexPath:indexPath];
-    NSObject *model = self.refresh.arrData[indexPath.row];
+    SSNewClerkManngerDataContentModel *model = self.refresh.arrData[indexPath.row];
     [cell setUIWithModel:model sort:indexPath.row + 1];
     return cell;
 }
@@ -85,9 +98,10 @@ const static CGFloat kmenuHeight = 44;
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(@"")];
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkclerkOrderCount)];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
+        _refresh.showMaskView = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
             failView.backgroundColor = [UIColor whiteColor];
             failView.lblOfNodata.text = @"没有员工";

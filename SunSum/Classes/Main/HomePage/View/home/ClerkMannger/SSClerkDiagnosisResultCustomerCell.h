@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 const static CGFloat kSSClerkDiagnosisResultCustomerCellHeight = 351;
-
+@class SSClerkDiagnosisResultmodel;
 @interface SSClerkDiagnosisResultCustomerCell : UITableViewCell
 
-- (void)setUiWithModel:(NSArray *)nowMonth lastMonth:(NSArray*)lastMonth Xtitle:(NSArray*)Xtitle model:(id)model;
+- (void)setUiWithModel:(NSArray *)nowMonth lastMonth:(NSArray*)lastMonth Xtitle:(NSArray*)Xtitle model:(SSClerkDiagnosisResultmodel *)model;
 
 @end
 

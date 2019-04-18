@@ -8,19 +8,39 @@
 
 #import "SSClerkTaskDetailVC.h"
 #import "SSClerkTaskDetailCell.h"
+#import "SSClerkTaskDetailModel.h"
 
-@interface SSClerkTaskDetailVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface SSClerkTaskDetailVC ()<UITableViewDelegate, UITableViewDataSource>{
+    NSString *_taskId;
+    SSClerkTaskDetailModel *_model;
+}
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation SSClerkTaskDetailVC
 
+- (instancetype)initWithTaskId:(NSString *)taskId{
+    if(self = [super init]){
+        _taskId = taskId;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"任务详情";
-    [self.view addSubview:self.tableView];
-    self.view.backgroundColor =  [UIColor colorWithHexString:@"FAFAFC"];;
+    _model = [SSClerkTaskDetailModel new];
+    self.view.backgroundColor =  [UIColor colorWithHexString:@"FAFAFC"];
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetclerktaskDetailWithTaskId:_taskId SuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_model = [SSClerkTaskDetailModel mj_objectWithKeyValues:responseObject.data];
+        [strongSelf.view addSubview:strongSelf.tableView];
+    } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    }];
     // Do any additional setup after loading the view.
 }
 
@@ -30,14 +50,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSClerkTaskDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkTaskDetailCell class]) forIndexPath:indexPath];
-    [cell setUIWIthModel:@""];
+    [cell setUIWIthModel:_model];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [SSClerkTaskDetailCell getCellHeightWithModel:@""];
+    return [SSClerkTaskDetailCell getCellHeightWithModel:_model];
 }
-
 
 - (UITableView *)tableView{
     if(!_tableView){

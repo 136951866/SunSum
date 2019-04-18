@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkDiagnosisResultmodel;
 const static CGFloat kSSClerkDiagnosisResultHeaderViewHeight = 249;
 
 @interface SSClerkDiagnosisResultHeaderView : UIView
 
-- (void)setUiWithModel:(id)model;
+- (void)setUiWithModel:(SSClerkDiagnosisResultmodel *)model;
 
 @end
 

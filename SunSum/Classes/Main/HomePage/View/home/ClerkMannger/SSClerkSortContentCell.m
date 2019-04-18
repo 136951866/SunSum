@@ -35,13 +35,14 @@
         _imgPIc.image = [UIImage imageNamed:@"icon_brandAi_three"];
     }
     _lblName.text = kMeUnNilStr(model.name);
-    if(type == 0){
-        _lblCount.text = kMeUnNilStr(model.share_count);
-    }else if (type == 1){
-        _lblCount.text = kMeUnNilStr(model.follow_up_count);
-    }else{
-        _lblCount.text =  kMeUnNilStr(model.member_count);
-    }
+    _lblCount.text = kMeUnNilStr(model.count);
+//    if(type == 0){
+//        _lblCount.text = kMeUnNilStr(model.share_count);
+//    }else if (type == 1){
+//        _lblCount.text = kMeUnNilStr(model.follow_up_count);
+//    }else{
+//        _lblCount.text =  kMeUnNilStr(model.member_count);
+//    }
 }
 
 

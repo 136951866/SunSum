@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-const static CGFloat kSSClerkPushTaskCellHeight = 279;
+const static CGFloat kSSClerkPushTaskCellHeight = 241;
 
 @interface SSClerkPushTaskCell : UITableViewCell
 - (void)setUIWIthModel:(id)model;
+@property (nonatomic,copy)kMeBasicBlock pushTitleBlcok;
 @property (nonatomic,copy)kMeBasicBlock pushContentBlcok;
 @property (nonatomic,copy)kMeBasicBlock pushTimeBlcok;
 @property (nonatomic,copy)kMeBasicBlock SelectClerkBlcok;

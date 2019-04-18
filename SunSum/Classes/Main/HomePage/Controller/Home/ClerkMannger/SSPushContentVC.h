@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SSPushContentVC : SSBaseVC
 
+@property (nonatomic , copy)NSString *content;
+@property (nonatomic , strong)kMeTextBlock textBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

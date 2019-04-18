@@ -32,7 +32,7 @@
 }
 
 - (void)setUiWithModel:(NSArray *)model Xtitle:(NSArray*)Xtitle title:(NSString *)title progress:(NSString*)progress{
-    _lblProgress.text = kMeUnNilStr(@"100%");
+    _lblProgress.text = kMeUnNilStr(progress);
     self.aaChartModel.title = kMeUnNilStr(title);
     //    NSArray *arrSex = @[@"女",@"男",@"保密"];
     NSMutableArray *arr = [NSMutableArray array];

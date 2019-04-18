@@ -9,7 +9,7 @@
 #import "SSCLerkTaskHomeVC.h"
 #import "SSCLerkTaskHomeCell.h"
 #import "SSCLerkTaskHomeModel.h"
-
+#import "SSClerkTaskDetailVC.h"
 
 @interface SSCLerkTaskHomeVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
 
@@ -55,7 +55,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  
+    SSCLerkTaskHomeModel *model = self.refresh.arrData[indexPath.row];
+    SSClerkTaskDetailVC *vc = [[SSClerkTaskDetailVC alloc]initWithTaskId:@(model.idField).description];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UITableView *)tableView{

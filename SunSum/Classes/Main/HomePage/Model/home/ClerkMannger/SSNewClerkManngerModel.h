@@ -12,12 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SSNewClerkManngerDataContentModel : SSBaseModel
 
-//沟通
-@property (nonatomic, strong) NSString * follow_up_count;
-//分享
-@property (nonatomic, strong) NSString * share_count;
-//s客户
-@property (nonatomic, strong) NSString * member_count;
+////沟通
+//@property (nonatomic, strong) NSString * follow_up_count;
+////分享
+//@property (nonatomic, strong) NSString * share_count;
+////s客户
+//@property (nonatomic, strong) NSString * member_count;
+@property (nonatomic, strong) NSString * count;
 @property (nonatomic, strong) NSString * member_id;
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * header_pic;

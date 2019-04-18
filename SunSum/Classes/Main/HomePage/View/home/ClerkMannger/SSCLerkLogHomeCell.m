@@ -7,6 +7,7 @@
 //
 
 #import "SSCLerkLogHomeCell.h"
+#import "SSCLerkTaskHomeModel.h"
 
 @interface SSCLerkLogHomeCell ()
 
@@ -28,23 +29,35 @@
     // Initialization code
 }
 
-- (void)setUIWithModel:(id)model{
-    NSString *str = kMeUnNilStr(@"对洒喝点酒洒喝豆浆洒喝豆浆洒喝豆浆洒好的借口大厦酒店会撒娇和第三空间啊好的借口");
+- (void)setUIWithModel:(SSCLerkTaskHomeModel *)model{
+    NSString *str = kMeUnNilStr(model.task_content);
     CGFloat sh =
     [NSAttributedString heightForAtsWithStr:kMeUnNilStr(str) font:[UIFont systemFontOfSize:13] width:(SCREEN_WIDTH-50) lineH:0];
     _consTitleHeight.constant = sh>17?sh:17;
     [_lblContent setAtsWithStr:kMeUnNilStr(str) lineGap:0];
     // 剩 169DFF 完成999999 逾期 FE913C
-    // 完成 隐藏btnEdit
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblName.text = kMeUnNilStr(model.name);
+    _lblTime.text = kMeUnNilStr(model.last_time);
+    _lblStatus.text = kMeUnNilStr(model.status_text);
+    if(model.status == 0){
+        _lblStatus.textColor = [UIColor colorWithHexString:@"FE913C"];
+    }else if (model.status == 1){
+        _lblStatus.textColor = [UIColor colorWithHexString:@"169DFF"];
+    }else{
+        _lblStatus.textColor = [UIColor colorWithHexString:@"999999"];
+    }
 }
 
-+ (CGFloat)getCellHeightWithModel:(NSObject *)model{
++ (CGFloat)getCellHeightWithModel:(SSCLerkTaskHomeModel *)model{
     CGFloat height = kSSCLerkLogHomeCellHeight - 17;
-    NSString *str = kMeUnNilStr(@"对洒喝点酒洒喝豆浆洒喝豆浆洒喝豆浆洒好的借口大厦酒店会撒娇和第三空间啊好的借口");
+    NSString *str = kMeUnNilStr(model.task_content);
     CGFloat sh =
     [NSAttributedString heightForAtsWithStr:kMeUnNilStr(str) font:[UIFont systemFontOfSize:13] width:(SCREEN_WIDTH-50) lineH:0];
     height += sh>17?sh:17;
-//    完成 -56
+    if(model.status == 2){
+        height -=56;
+    }
     return height;
 }
 @end

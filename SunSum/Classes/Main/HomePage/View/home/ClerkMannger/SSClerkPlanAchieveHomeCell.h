@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkPlanAchieveClerkHeaderModel;
 const static CGFloat kSSClerkPlanAchieveHomeCellHeight = 314;
 
 @interface SSClerkPlanAchieveHomeCell : UITableViewCell
 
-- (void)setUIWIthModel:(id)model;
+- (void)setUIWIthModel:(SSClerkPlanAchieveClerkHeaderModel *)model;
 
 @end
 

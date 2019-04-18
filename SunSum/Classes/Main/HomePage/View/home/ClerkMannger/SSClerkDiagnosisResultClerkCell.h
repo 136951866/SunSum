@@ -10,12 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkDiagnosisResultClerkModel;
 const static CGFloat kSSClerkDiagnosisResultClerkCellHeight = 50;
 
 
 @interface SSClerkDiagnosisResultClerkCell : UITableViewCell
 
-- (void)setUIWithModel:(id)model sort:(NSInteger)sort;
+- (void)setUIWithModel:(SSClerkDiagnosisResultClerkModel *)model sort:(NSInteger)sort;
 
 @end
 

@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkTaskDetailModel;
 const static CGFloat kSSClerkTaskDetailCellHeight = 172;
 
 @interface SSClerkTaskDetailCell : UITableViewCell
-- (void)setUIWIthModel:(id)model;
-+ (CGFloat)getCellHeightWithModel:(NSObject *)model;
+- (void)setUIWIthModel:(SSClerkTaskDetailModel *)model;
++ (CGFloat)getCellHeightWithModel:(SSClerkTaskDetailModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "SSClerkClerkListCell.h"
+#import "SSClerkModel.h"
 
 @interface SSClerkClerkListCell ()
 
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbltitle;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
+@property (weak, nonatomic) IBOutlet UIImageView *imgselect;
 
 @end
 
@@ -25,10 +27,11 @@
     // Initialization code
 }
 
-- (void)setUIWIthModel:(id)model{
-    kSDLoadImg(_imgPic, kMeUnNilStr(@""));
-    _lbltitle.text = kMeUnNilStr(@"11");
-    _lblSubtitle.text = kMeUnNilStr(@"11");
+- (void)setUIWIthModel:(SSClerkModel *)model{
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lbltitle.text = kMeUnNilStr(model.name);
+    _lblSubtitle.text = kMeUnNilStr(model.cellphone);
+    _imgselect.hidden = !model.isSelect;
 }
 
 @end

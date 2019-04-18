@@ -7,6 +7,7 @@
 //
 
 #import "SSClerkDiagnosisResultClerkCell.h"
+#import "SSClerkDiagnosisResultClerkModel.h"
 
 @interface SSClerkDiagnosisResultClerkCell ()
 
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblsort;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UIView *lblCount;
+@property (weak, nonatomic) IBOutlet UILabel *lblNum;
 
 @end
 
@@ -25,7 +27,7 @@
     // Initialization code
 }
 
-- (void)setUIWithModel:(id)model sort:(NSInteger)sort{
+- (void)setUIWithModel:(SSClerkDiagnosisResultClerkModel *)model sort:(NSInteger)sort{
     if(sort>0 && sort<4){
         _imgICon.hidden = NO;
         _lblsort.hidden = YES;
@@ -52,6 +54,8 @@
         _imgICon.hidden = YES;
     }
     _lblsort.text = @(sort).description;
+    _lblTitle.text = kMeUnNilStr(model.name);
+    _lblNum.text = @(model.member_count).description;
 }
 
 @end

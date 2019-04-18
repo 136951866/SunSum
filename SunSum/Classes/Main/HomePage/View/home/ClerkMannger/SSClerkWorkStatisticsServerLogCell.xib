@@ -73,11 +73,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="11" id="nVf-Sa-Ffb"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,9 +83,6 @@
                                     <constraint firstItem="9MT-az-YHE" firstAttribute="top" secondItem="JqQ-oz-HaG" secondAttribute="top" id="fL8-fR-NG7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -150,6 +142,16 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.96470588235294119" green="0.96078431372549022" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="consRate" destination="nVf-Sa-Ffb" id="9is-Eg-goI"/>
+                <outlet property="imgPic" destination="3kt-ta-hg3" id="Wz7-wO-WMI"/>
+                <outlet property="lblAll" destination="Mqf-3c-ej6" id="dgX-hB-iaY"/>
+                <outlet property="lblFinish" destination="wZj-iP-y0F" id="E2M-Co-hdg"/>
+                <outlet property="lblName" destination="o2x-Pk-yQv" id="3mL-qO-jlO"/>
+                <outlet property="lblOnTime" destination="CDH-Ul-eGT" id="bvx-ZE-jCi"/>
+                <outlet property="lblOntimePercent" destination="jYn-5t-JxB" id="EU8-HZ-NtU"/>
+                <outlet property="lblfinishPercent" destination="POR-1S-lw0" id="Uil-cI-R1t"/>
+            </connections>
             <point key="canvasLocation" x="52.799999999999997" y="79.160419790104953"/>
         </tableViewCell>
     </objects>

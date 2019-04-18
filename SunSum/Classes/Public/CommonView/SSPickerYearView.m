@@ -81,7 +81,7 @@
     UIButton *saveBtn = [[UIButton alloc] init];
     saveBtn.frame = CGRectMake(self.frame.size.width - 50, 2, 40, 40);
     //    [saveBtn setImage:[UIImage imageNamed:@"icon_select1"] forState:UIControlStateNormal];
-    [saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+    [saveBtn setTitle:@"确定" forState:UIControlStateNormal];
     [saveBtn setTitleColor:kSSblack forState:UIControlStateNormal];
     [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.toolView addSubview:saveBtn];
@@ -168,11 +168,11 @@
                 self.year = year_integerValue;
                 return;
             }
-            if (year_integerValue.integerValue < time_integerValue) {
-                [pickerView selectRow:[self.dataArray[component] indexOfObject:self.timeArr[component]] inComponent:component animated:YES];
-            }else{
+//            if (year_integerValue.integerValue < time_integerValue) {
+//                [pickerView selectRow:[self.dataArray[component] indexOfObject:self.timeArr[component]] inComponent:component animated:YES];
+//            }else{
                 self.year = year_integerValue;
-            }
+//            }
         } break;
         default: break;
     }

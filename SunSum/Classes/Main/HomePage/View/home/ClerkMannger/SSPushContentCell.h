@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSTextView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 const static CGFloat kSSPushContentCellHeight = 200;
 
 @interface SSPushContentCell : UITableViewCell
-- (void)setUIWithModel:(id)model;
+- (void)setUIWithModel:(NSString *)model;
+@property (nonatomic , strong) SSTextView *textView;
 @end
 
 NS_ASSUME_NONNULL_END

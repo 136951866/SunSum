@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-const static CGFloat kSSFourHomeWorkShowCellHeight = 1068;
+const static CGFloat kSSFourHomeWorkShowCellHeight = 939;
 
 @interface  SSFourHomeWorkShowCell: UITableViewCell
 

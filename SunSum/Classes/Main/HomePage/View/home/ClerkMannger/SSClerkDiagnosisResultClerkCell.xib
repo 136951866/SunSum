@@ -82,6 +82,7 @@
             <connections>
                 <outlet property="imgICon" destination="M5j-jr-Xau" id="Q1z-jb-Y3h"/>
                 <outlet property="lblCount" destination="H2p-sc-9uM" id="V4t-Mh-XYK"/>
+                <outlet property="lblNum" destination="HvW-zM-edl" id="y1Y-Yq-LVY"/>
                 <outlet property="lblTitle" destination="416-jn-5u1" id="X9y-JR-Dbj"/>
                 <outlet property="lblsort" destination="NIn-kh-Ico" id="4UK-eH-gWt"/>
             </connections>

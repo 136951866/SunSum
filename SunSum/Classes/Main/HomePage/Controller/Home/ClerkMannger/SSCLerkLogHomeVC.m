@@ -9,6 +9,7 @@
 #import "SSCLerkLogHomeVC.h"
 #import "SSCLerkLogHomeCell.h"
 #import "SSEditClerkLogVC.h"
+#import "SSCLerkTaskHomeModel.h"
 
 @interface SSCLerkLogHomeVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
 
@@ -27,7 +28,6 @@
 }
 
 - (NSDictionary *)requestParameter{
-    [self.refresh.arrData addObjectsFromArray:@[@"",@"",@"",@""]];
     return @{@"token":kMeUnNilStr(kCurrentUser.token)};
 }
 
@@ -35,7 +35,7 @@
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[NSObject mj_objectArrayWithKeyValuesArray:data]];
+    [self.refresh.arrData addObjectsFromArray:[SSCLerkTaskHomeModel mj_objectArrayWithKeyValuesArray:data]];
     
 }
 
@@ -45,13 +45,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSCLerkLogHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSCLerkLogHomeCell class]) forIndexPath:indexPath];
-    NSObject *model = self.refresh.arrData[indexPath.row];
+    SSCLerkTaskHomeModel *model = self.refresh.arrData[indexPath.row];
     [cell setUIWithModel:model];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSObject *model = self.refresh.arrData[indexPath.row];
+    SSCLerkTaskHomeModel *model = self.refresh.arrData[indexPath.row];
     return [SSCLerkLogHomeCell getCellHeightWithModel:model];
 }
 
@@ -69,14 +69,14 @@
         _tableView.tableFooterView = [UIView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundColor = kSSf6f5fa;
     }
     return _tableView;
 }
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(@"")];
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkclerkTaskList)];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {

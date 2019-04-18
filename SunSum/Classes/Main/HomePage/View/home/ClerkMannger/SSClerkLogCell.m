@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblToday;
 @property (weak, nonatomic) IBOutlet UILabel *lblWait;
 @property (weak, nonatomic) IBOutlet UILabel *lblOut;
+@property (weak, nonatomic) IBOutlet UILabel *lblFinish;
+@property (weak, nonatomic) IBOutlet UIImageView *imgArrow;
 
 
 
@@ -43,6 +45,13 @@
 }
 
 - (void)setUIWithArr:(SSNewClerkManngerModel *)model{
+    if(kCurrentUser.client_type == SSClientBTypeStyle){
+        _lblFinish.hidden = YES;
+        _imgArrow.hidden = YES;
+    }else{
+        _lblFinish.hidden = NO;
+        _imgArrow.hidden = NO;
+    }
     _arrdata = kMeUnArr(model.clerk_task_service.client);
     _tableView.hidden = !kMeUnArr(_arrdata).count;
     _lblToday.text = kMeUnNilStr(model.clerk_task_service.clerk_today_log_count);
@@ -54,7 +63,7 @@
 #pragma mark - tableView deleagte and sourcedata
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _arrdata.count;
+    return kCurrentUser.client_type == SSClientBTypeStyle?0:_arrdata.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,8 +79,11 @@
 
 + (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model{
     CGFloat height = kSSClerkLogCellOrgialHeight;
-    NSArray *arr = kMeUnArr(model.clerk_task_service.client);
-    height +=(kMeUnArr(arr).count * kSSClerkLogContentCellHeight);
+    if(kCurrentUser.client_type == SSClientBTypeStyle){
+    }else{
+        NSArray *arr = kMeUnArr(model.clerk_task_service.client);
+        height +=(kMeUnArr(arr).count * kSSClerkLogContentCellHeight);
+    }
     return height;
 }
 

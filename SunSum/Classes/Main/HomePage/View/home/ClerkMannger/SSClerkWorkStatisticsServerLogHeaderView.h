@@ -10,9 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkWorkStatisticsServerLogHeaderModel;
 const static CGFloat kSSClerkWorkStatisticsServerLogHeaderViewHeight = 105;
 
 @interface SSClerkWorkStatisticsServerLogHeaderView : UIView
+
+- (void)setUiWIthModel:(SSClerkWorkStatisticsServerLogHeaderModel *)model;
 
 @end
 

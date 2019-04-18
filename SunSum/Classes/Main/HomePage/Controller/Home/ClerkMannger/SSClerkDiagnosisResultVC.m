@@ -10,10 +10,12 @@
 #import "SSClerkDiagnosisResultHeaderView.h"
 #import "SSClerkDiagnosisResultCustomerVC.h"
 #import "SSClerkDiagnosisResultClerkVC.h"
+#import "SSClerkDiagnosisResultmodel.h"
 
 @interface SSClerkDiagnosisResultVC ()<JXCategoryViewDelegate>{
     NSArray *_arrType;
     NSInteger _currentType;
+    SSClerkDiagnosisResultmodel *_model;
 }
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic , strong) UIView *viewForNav;
@@ -30,8 +32,23 @@
     [super viewDidLoad];
     self.navBarHidden = YES;
     self.view.backgroundColor = kSS171c30;
+    _model = [SSClerkDiagnosisResultmodel new];
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetSSIPcommoncustomercustomerDiagnoseWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_model = [SSClerkDiagnosisResultmodel mj_objectWithKeyValues:responseObject.data];
+        [strongSelf initSomethin];
+    } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
+}
+
+- (void)initSomethin{
     [self.view addSubview:self.viewForNav];
     [self.view addSubview:self.headerView];
+    [self.headerView setUiWithModel:_model];
     [self.view addSubview:self.tableView];
     
     _arrType = @[@"客户成长转化分析图",@"员工排名"];
@@ -60,7 +77,6 @@
     [self.scrollView addSubview:self.clerkVC.view];
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.categoryView];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -109,7 +125,7 @@
 
 - (SSClerkDiagnosisResultCustomerVC *)customerVC{
     if(!_customerVC){
-        _customerVC = [[SSClerkDiagnosisResultCustomerVC alloc]init];
+        _customerVC = [[SSClerkDiagnosisResultCustomerVC alloc]initWithModel:_model];
         _customerVC.view.frame = CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kCategoryViewHeight-kSSClerkDiagnosisResultHeaderViewHeight);
         _customerVC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addChildViewController:_customerVC];

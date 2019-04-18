@@ -94,6 +94,10 @@
         SSCLerkTaskHomeVC *vc = [[SSCLerkTaskHomeVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
+#warning ---
+//        if(kCurrentUser.client_type == SSClientBTypeStyle){
+//            return;
+//        }
         SSCLerkLogHomeVC *vc = [[SSCLerkLogHomeVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2){

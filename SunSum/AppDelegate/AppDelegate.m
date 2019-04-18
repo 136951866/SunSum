@@ -124,6 +124,7 @@
             [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
                 
             } seq:0];
+            
         });
     }
     self.window = [[UIWindow alloc] init];

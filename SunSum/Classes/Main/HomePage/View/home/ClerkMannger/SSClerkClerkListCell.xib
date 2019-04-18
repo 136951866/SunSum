@@ -44,13 +44,18 @@
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clerkSelect" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-3f-Sid">
+                        <rect key="frame" x="297" y="41.5" width="23" height="23"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="57V-ZF-U42" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="31M-38-fUt"/>
                     <constraint firstItem="t2K-37-n3L" firstAttribute="leading" secondItem="57V-ZF-U42" secondAttribute="trailing" constant="10" id="I7K-4b-ohr"/>
                     <constraint firstAttribute="trailing" secondItem="t2K-37-n3L" secondAttribute="trailing" constant="10" id="LHQ-67-QYL"/>
                     <constraint firstItem="WX4-6h-F1h" firstAttribute="leading" secondItem="57V-ZF-U42" secondAttribute="trailing" constant="10" id="QgM-n6-Du8"/>
+                    <constraint firstAttribute="bottom" secondItem="F2Q-3f-Sid" secondAttribute="bottom" id="VWn-Tl-OQY"/>
                     <constraint firstItem="WX4-6h-F1h" firstAttribute="top" secondItem="t2K-37-n3L" secondAttribute="bottom" constant="4" id="W3i-Jo-h83"/>
+                    <constraint firstAttribute="trailing" secondItem="F2Q-3f-Sid" secondAttribute="trailing" id="Wzd-X4-YYE"/>
                     <constraint firstAttribute="trailing" secondItem="WX4-6h-F1h" secondAttribute="trailing" constant="10" id="c3V-Kb-pP8"/>
                     <constraint firstItem="jqe-vw-p0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eDh-5M-gA4"/>
                     <constraint firstAttribute="trailing" secondItem="jqe-vw-p0c" secondAttribute="trailing" id="foA-u8-TbU"/>
@@ -61,10 +66,14 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPic" destination="57V-ZF-U42" id="2ly-gX-YOf"/>
+                <outlet property="imgselect" destination="F2Q-3f-Sid" id="mH5-ML-6Jx"/>
                 <outlet property="lblSubtitle" destination="WX4-6h-F1h" id="xCq-7x-NqF"/>
                 <outlet property="lbltitle" destination="t2K-37-n3L" id="gzh-cJ-0es"/>
             </connections>
             <point key="canvasLocation" x="49.600000000000001" y="93.103448275862078"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="clerkSelect" width="23" height="23"/>
+    </resources>
 </document>

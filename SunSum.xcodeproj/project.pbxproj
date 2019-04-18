@@ -39,6 +39,7 @@
 		3612918E22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3612918C22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.m */; };
 		3612918F22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3612918D22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.xib */; };
 		3617C30D21D0ADCB00004072 /* MeCoupleFilterLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */; };
+		361F852822686FE8009F8926 /* SSClerkCreateClerkTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */; };
 		362276002244864D0031AA0F /* SSStoreApplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FD2244864D0031AA0F /* SSStoreApplyModel.m */; };
 		362276012244864E0031AA0F /* SSStoreApplyParModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */; };
 		36227607224486640031AA0F /* SSStoreApplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36227602224486630031AA0F /* SSStoreApplyVC.m */; };
@@ -50,6 +51,8 @@
 		3628476B2140FD78008FE7F9 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 362847652140FD77008FE7F9 /* XMLDictionary.m */; };
 		3628476C2140FD79008FE7F9 /* DataMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 362847672140FD78008FE7F9 /* DataMD5.m */; };
 		3628476D2140FD79008FE7F9 /* getIPhoneIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 362847682140FD78008FE7F9 /* getIPhoneIP.m */; };
+		362A36F622684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A36F522684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m */; };
+		362A36F922685F93000F3F1A /* SSClerkTaskDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */; };
 		363281232249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */; };
 		363281242249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */; };
 		36371554218ACE9E0057E59F /* UIButton+ImageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36371553218ACE9D0057E59F /* UIButton+ImageTitleStyle.m */; };
@@ -239,6 +242,9 @@
 		369130A022363B6E008B1836 /* AAItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691307A22363B6E008B1836 /* AAItemStyle.m */; };
 		369130A122363B6E008B1836 /* AAPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691307B22363B6E008B1836 /* AAPie.m */; };
 		369130A222363B6E008B1836 /* AAChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691308122363B6E008B1836 /* AAChart.m */; };
+		36B0CC29226735FE0097C6D2 /* SSClerkWorkDaliyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC28226735FE0097C6D2 /* SSClerkWorkDaliyModel.m */; };
+		36B0CC2C226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC2B226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m */; };
+		36B0CC2F22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC2E22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m */; };
 		36B8DCC0226474D8006A3AE4 /* SSEditClerkInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B8DCBF226474D8006A3AE4 /* SSEditClerkInfoVC.m */; };
 		36B8DCC922647B2D006A3AE4 /* SSClerkClerkListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B8DCC722647B2D006A3AE4 /* SSClerkClerkListCell.m */; };
 		36B8DCCA22647B2D006A3AE4 /* SSClerkClerkListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DCC822647B2D006A3AE4 /* SSClerkClerkListCell.xib */; };
@@ -855,6 +861,8 @@
 		36DD41CB2266C7710034D49F /* SSPickerYearMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD41CA2266C7710034D49F /* SSPickerYearMonthView.m */; };
 		36DD41CE2266D1A10034D49F /* SSNewClerkManngerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD41CD2266D1A10034D49F /* SSNewClerkManngerModel.m */; };
 		36DD41D12266FC440034D49F /* SSCLerkTaskHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD41D02266FC440034D49F /* SSCLerkTaskHomeModel.m */; };
+		36DD41D422672AD30034D49F /* SSClerkDiagnosisResultmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD41D322672AD20034D49F /* SSClerkDiagnosisResultmodel.m */; };
+		36DD41D7226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD41D6226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m */; };
 		36ED6BD7225F956300552F13 /* SSAiCustomerTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6BCB225F956300552F13 /* SSAiCustomerTagModel.m */; };
 		36ED6BD8225F956300552F13 /* SSAiCustomerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6BCC225F956300552F13 /* SSAiCustomerDataModel.m */; };
 		36ED6BD9225F956300552F13 /* SSAICustomerHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6BCE225F956300552F13 /* SSAICustomerHomeModel.m */; };
@@ -969,6 +977,14 @@
 		36F5E853222F68F1000B0241 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5E80B222F68F0000B0241 /* VideoViewController.m */; };
 		36F5E854222F6A04000B0241 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F5E76D222F6894000B0241 /* ImSDK.framework */; };
 		36F5E855222F6A04000B0241 /* ImSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F5E76D222F6894000B0241 /* ImSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36F5FDF02268134D0024DDA8 /* SSClerkOperationDailyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FDEF2268134D0024DDA8 /* SSClerkOperationDailyVC.m */; };
+		36F5FDF42268138E0024DDA8 /* SSClerkOperationDailyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FDF22268138E0024DDA8 /* SSClerkOperationDailyCell.m */; };
+		36F5FDF52268138E0024DDA8 /* SSClerkOperationDailyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F5FDF32268138E0024DDA8 /* SSClerkOperationDailyCell.xib */; };
+		36F5FDF9226822D70024DDA8 /* SSClerkOperationDailyMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FDF7226822D70024DDA8 /* SSClerkOperationDailyMainCell.m */; };
+		36F5FDFA226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F5FDF8226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib */; };
+		36F5FDFD226825D70024DDA8 /* SSClerkOperationDailyMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FDFC226825D70024DDA8 /* SSClerkOperationDailyMainModel.m */; };
+		36F5FE00226827340024DDA8 /* SSClerkOperationDailyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FDFF226827340024DDA8 /* SSClerkOperationDailyModel.m */; };
+		36F5FE032268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F5FE022268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m */; };
 		36F697022230B571001E53BA /* HKPickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F696FE2230B56F001E53BA /* HKPickerHelper.m */; };
 		36F8D9B02261E30400105D3A /* SSCLerkTaskHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D9AE2261E30400105D3A /* SSCLerkTaskHomeCell.m */; };
 		36F8D9B12261E30400105D3A /* SSCLerkTaskHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F8D9AF2261E30400105D3A /* SSCLerkTaskHomeCell.xib */; };
@@ -1083,6 +1099,8 @@
 		3612918D22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkDiagnosisResultCustomerCell.xib; sourceTree = "<group>"; };
 		3617C30B21D0ADCB00004072 /* MeCoupleFilterLeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCoupleFilterLeftCell.h; sourceTree = "<group>"; };
 		3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCoupleFilterLeftCell.m; sourceTree = "<group>"; };
+		361F852622686FE8009F8926 /* SSClerkCreateClerkTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkCreateClerkTaskModel.h; sourceTree = "<group>"; };
+		361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkCreateClerkTaskModel.m; sourceTree = "<group>"; };
 		362275FC2244864D0031AA0F /* SSStoreApplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSStoreApplyModel.h; sourceTree = "<group>"; };
 		362275FD2244864D0031AA0F /* SSStoreApplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSStoreApplyModel.m; sourceTree = "<group>"; };
 		362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSStoreApplyParModel.m; sourceTree = "<group>"; };
@@ -1103,6 +1121,10 @@
 		362847672140FD78008FE7F9 /* DataMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataMD5.m; sourceTree = "<group>"; };
 		362847682140FD78008FE7F9 /* getIPhoneIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getIPhoneIP.m; sourceTree = "<group>"; };
 		362847692140FD78008FE7F9 /* LVWxPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVWxPay.h; sourceTree = "<group>"; };
+		362A36F422684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkWorkStatisticsServerLogModel.h; sourceTree = "<group>"; };
+		362A36F522684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkWorkStatisticsServerLogModel.m; sourceTree = "<group>"; };
+		362A36F722685F93000F3F1A /* SSClerkTaskDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTaskDetailModel.h; sourceTree = "<group>"; };
+		362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTaskDetailModel.m; sourceTree = "<group>"; };
 		363281202249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSDynamicGoodApplyStatusCell.h; sourceTree = "<group>"; };
 		363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSDynamicGoodApplyStatusCell.m; sourceTree = "<group>"; };
 		363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSDynamicGoodApplyStatusCell.xib; sourceTree = "<group>"; };
@@ -1449,6 +1471,12 @@
 		3691307F22363B6E008B1836 /* AAPlotLinesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPlotLinesElement.h; sourceTree = "<group>"; };
 		3691308022363B6E008B1836 /* AAColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAColumn.h; sourceTree = "<group>"; };
 		3691308122363B6E008B1836 /* AAChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAChart.m; sourceTree = "<group>"; };
+		36B0CC27226735FE0097C6D2 /* SSClerkWorkDaliyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkWorkDaliyModel.h; sourceTree = "<group>"; };
+		36B0CC28226735FE0097C6D2 /* SSClerkWorkDaliyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkWorkDaliyModel.m; sourceTree = "<group>"; };
+		36B0CC2A226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkPlanAchieveClerkModel.h; sourceTree = "<group>"; };
+		36B0CC2B226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkPlanAchieveClerkModel.m; sourceTree = "<group>"; };
+		36B0CC2D22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkPlanAchieveClerkHeaderModel.h; sourceTree = "<group>"; };
+		36B0CC2E22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkPlanAchieveClerkHeaderModel.m; sourceTree = "<group>"; };
 		36B8DCBE226474D8006A3AE4 /* SSEditClerkInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSEditClerkInfoVC.h; sourceTree = "<group>"; };
 		36B8DCBF226474D8006A3AE4 /* SSEditClerkInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSEditClerkInfoVC.m; sourceTree = "<group>"; };
 		36B8DCC622647B2D006A3AE4 /* SSClerkClerkListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkClerkListCell.h; sourceTree = "<group>"; };
@@ -2509,6 +2537,10 @@
 		36DD41CD2266D1A10034D49F /* SSNewClerkManngerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNewClerkManngerModel.m; sourceTree = "<group>"; };
 		36DD41CF2266FC440034D49F /* SSCLerkTaskHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCLerkTaskHomeModel.h; sourceTree = "<group>"; };
 		36DD41D02266FC440034D49F /* SSCLerkTaskHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCLerkTaskHomeModel.m; sourceTree = "<group>"; };
+		36DD41D222672AD20034D49F /* SSClerkDiagnosisResultmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkDiagnosisResultmodel.h; sourceTree = "<group>"; };
+		36DD41D322672AD20034D49F /* SSClerkDiagnosisResultmodel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkDiagnosisResultmodel.m; sourceTree = "<group>"; };
+		36DD41D5226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkDiagnosisResultClerkModel.h; sourceTree = "<group>"; };
+		36DD41D6226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkDiagnosisResultClerkModel.m; sourceTree = "<group>"; };
 		36ED6BCB225F956300552F13 /* SSAiCustomerTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAiCustomerTagModel.m; sourceTree = "<group>"; };
 		36ED6BCC225F956300552F13 /* SSAiCustomerDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAiCustomerDataModel.m; sourceTree = "<group>"; };
 		36ED6BCD225F956300552F13 /* SSAIDataHomeTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAIDataHomeTimeModel.h; sourceTree = "<group>"; };
@@ -2723,6 +2755,20 @@
 		36F5E80B222F68F0000B0241 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		36F5E80C222F68F0000B0241 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		36F5E80D222F68F0000B0241 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		36F5FDEE2268134D0024DDA8 /* SSClerkOperationDailyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkOperationDailyVC.h; sourceTree = "<group>"; };
+		36F5FDEF2268134D0024DDA8 /* SSClerkOperationDailyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkOperationDailyVC.m; sourceTree = "<group>"; };
+		36F5FDF12268138E0024DDA8 /* SSClerkOperationDailyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkOperationDailyCell.h; sourceTree = "<group>"; };
+		36F5FDF22268138E0024DDA8 /* SSClerkOperationDailyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkOperationDailyCell.m; sourceTree = "<group>"; };
+		36F5FDF32268138E0024DDA8 /* SSClerkOperationDailyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkOperationDailyCell.xib; sourceTree = "<group>"; };
+		36F5FDF6226822D70024DDA8 /* SSClerkOperationDailyMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkOperationDailyMainCell.h; sourceTree = "<group>"; };
+		36F5FDF7226822D70024DDA8 /* SSClerkOperationDailyMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkOperationDailyMainCell.m; sourceTree = "<group>"; };
+		36F5FDF8226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkOperationDailyMainCell.xib; sourceTree = "<group>"; };
+		36F5FDFB226825D70024DDA8 /* SSClerkOperationDailyMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkOperationDailyMainModel.h; sourceTree = "<group>"; };
+		36F5FDFC226825D70024DDA8 /* SSClerkOperationDailyMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkOperationDailyMainModel.m; sourceTree = "<group>"; };
+		36F5FDFE226827340024DDA8 /* SSClerkOperationDailyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkOperationDailyModel.h; sourceTree = "<group>"; };
+		36F5FDFF226827340024DDA8 /* SSClerkOperationDailyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkOperationDailyModel.m; sourceTree = "<group>"; };
+		36F5FE01226849190024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkWorkStatisticsServerLogHeaderModel.h; sourceTree = "<group>"; };
+		36F5FE022268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkWorkStatisticsServerLogHeaderModel.m; sourceTree = "<group>"; };
 		36F696FE2230B56F001E53BA /* HKPickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPickerHelper.m; sourceTree = "<group>"; };
 		36F696FF2230B56F001E53BA /* HKPickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKPickerHelper.h; sourceTree = "<group>"; };
 		36F8D9AD2261E30400105D3A /* SSCLerkTaskHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCLerkTaskHomeCell.h; sourceTree = "<group>"; };
@@ -3318,6 +3364,12 @@
 				367AA76F2265E541004A9AFE /* SSClerkWorkStatisticsCustomerVistHeaderView.h */,
 				367AA7702265E541004A9AFE /* SSClerkWorkStatisticsCustomerVistHeaderView.m */,
 				367AA7722265E57A004A9AFE /* SSClerkWorkStatisticsCustomerVistHeaderView.xib */,
+				36F5FDF12268138E0024DDA8 /* SSClerkOperationDailyCell.h */,
+				36F5FDF22268138E0024DDA8 /* SSClerkOperationDailyCell.m */,
+				36F5FDF32268138E0024DDA8 /* SSClerkOperationDailyCell.xib */,
+				36F5FDF6226822D70024DDA8 /* SSClerkOperationDailyMainCell.h */,
+				36F5FDF7226822D70024DDA8 /* SSClerkOperationDailyMainCell.m */,
+				36F5FDF8226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -3361,6 +3413,8 @@
 				367AA75B2265D04C004A9AFE /* SSClerkWorkStatisticsServerLogVC.m */,
 				367AA75D2265D071004A9AFE /* SSClerkWorkStatisticsCustomerVistVC.h */,
 				367AA75E2265D071004A9AFE /* SSClerkWorkStatisticsCustomerVistVC.m */,
+				36F5FDEE2268134D0024DDA8 /* SSClerkOperationDailyVC.h */,
+				36F5FDEF2268134D0024DDA8 /* SSClerkOperationDailyVC.m */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -5829,6 +5883,28 @@
 				36DD41CD2266D1A10034D49F /* SSNewClerkManngerModel.m */,
 				36DD41CF2266FC440034D49F /* SSCLerkTaskHomeModel.h */,
 				36DD41D02266FC440034D49F /* SSCLerkTaskHomeModel.m */,
+				36DD41D222672AD20034D49F /* SSClerkDiagnosisResultmodel.h */,
+				36DD41D322672AD20034D49F /* SSClerkDiagnosisResultmodel.m */,
+				36DD41D5226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.h */,
+				36DD41D6226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m */,
+				36B0CC27226735FE0097C6D2 /* SSClerkWorkDaliyModel.h */,
+				36B0CC28226735FE0097C6D2 /* SSClerkWorkDaliyModel.m */,
+				36B0CC2A226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.h */,
+				36B0CC2B226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m */,
+				36B0CC2D22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.h */,
+				36B0CC2E22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m */,
+				36F5FDFB226825D70024DDA8 /* SSClerkOperationDailyMainModel.h */,
+				36F5FDFC226825D70024DDA8 /* SSClerkOperationDailyMainModel.m */,
+				36F5FDFE226827340024DDA8 /* SSClerkOperationDailyModel.h */,
+				36F5FDFF226827340024DDA8 /* SSClerkOperationDailyModel.m */,
+				36F5FE01226849190024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.h */,
+				36F5FE022268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m */,
+				362A36F422684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.h */,
+				362A36F522684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m */,
+				362A36F722685F93000F3F1A /* SSClerkTaskDetailModel.h */,
+				362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */,
+				361F852622686FE8009F8926 /* SSClerkCreateClerkTaskModel.h */,
+				361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -6212,6 +6288,7 @@
 				36D36F21223F7737009F781B /* SSWithdrawalView.xib in Resources */,
 				36D36954223F68C3009F781B /* SSCoupleHomeMainGoodGoodsCell.xib in Resources */,
 				36D36C12223F6980009F781B /* SSBynamicPublishVC.xib in Resources */,
+				36F5FDF52268138E0024DDA8 /* SSClerkOperationDailyCell.xib in Resources */,
 				36D36B43223F695C009F781B /* SSVistorVisterCell.xib in Resources */,
 				36D368A4223F6880009F781B /* SSWxLoginVC.xib in Resources */,
 				36ED6C04225F957200552F13 /* SSAiTagCollectionReusableView.xib in Resources */,
@@ -6304,6 +6381,7 @@
 				36D36B5A223F695C009F781B /* SSShoppingMallCell.xib in Resources */,
 				36D36B2A223F695C009F781B /* SSNewHomeCell.xib in Resources */,
 				36459AE22251B09A00AB8329 /* jquery.js in Resources */,
+				36F5FDFA226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib in Resources */,
 				36D36B4E223F695C009F781B /* SSArticleCell.xib in Resources */,
 				36ED6BFD225F957200552F13 /* SSAIDataHomeActiveHomeCell.xib in Resources */,
 				36D36AF5223F695C009F781B /* SSMakeOrderHeaderCell.xib in Resources */,
@@ -6491,6 +6569,7 @@
 				36D369C6223F690F009F781B /* SSVistorCountModel.m in Sources */,
 				36F5E832222F68F1000B0241 /* TTextView.m in Sources */,
 				36472AEE21C8E15C00CC3E48 /* JXCategoryIndicatorBallView.m in Sources */,
+				36DD41D7226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m in Sources */,
 				36FD63FC213FAAD5009743C5 /* NSAttributedString+MESize.m in Sources */,
 				36D36869223F681F009F781B /* SSIMageVC.m in Sources */,
 				36D36F27223F7737009F781B /* SSBrandAiCell.m in Sources */,
@@ -6533,6 +6612,7 @@
 				36D36DC6223F6A46009F781B /* SSBDataDealVC.m in Sources */,
 				36FD6406213FABE2009743C5 /* UIBarButtonItem+MEExtension.m in Sources */,
 				3669332A2265C3A5004DA6B1 /* SSClerkTaskDetailVC.m in Sources */,
+				36DD41D422672AD30034D49F /* SSClerkDiagnosisResultmodel.m in Sources */,
 				36D36C35223F6993009F781B /* SSMemberHomeImageCell.m in Sources */,
 				36D36DF0223F6A46009F781B /* SSInteralExchangVC.m in Sources */,
 				3691308F22363B6E008B1836 /* AAPlotBandsElement.m in Sources */,
@@ -6540,6 +6620,7 @@
 				36D36CAD223F69B7009F781B /* SSBStoreMannagerCell.m in Sources */,
 				36ED6C27225F957F00552F13 /* SSAIDataHomeTimeVC.m in Sources */,
 				3612918E22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.m in Sources */,
+				362A36F922685F93000F3F1A /* SSClerkTaskDetailModel.m in Sources */,
 				36FB87B922423170000A7547 /* SSBdataLineCell.m in Sources */,
 				3691309C22363B6E008B1836 /* AALabel.m in Sources */,
 				36F5E84F222F68F1000B0241 /* EMVoiceConverter.mm in Sources */,
@@ -6584,6 +6665,7 @@
 				36472AED21C8E15C00CC3E48 /* JXCategoryIndicatorImageView.m in Sources */,
 				36FD63F8213FAA20009743C5 /* NSObject+MERelation.m in Sources */,
 				36D3692D223F68C3009F781B /* SSSelectAddressVC.m in Sources */,
+				36B0CC2F22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m in Sources */,
 				36D36B6B223F695C009F781B /* SSThridProductDetailsCommentCell.m in Sources */,
 				36459A7D2251AEFB00AB8329 /* SSAddGoodStoreGoodsType.m in Sources */,
 				36D36B1F223F695C009F781B /* SSNoticeCell.m in Sources */,
@@ -6721,6 +6803,7 @@
 				365151BB214133440044C763 /* ZLFailLoadView.m in Sources */,
 				36D369FF223F694D009F781B /* SSCoupleFilterNavView.m in Sources */,
 				36D36AF2223F695C009F781B /* SSMessageTextField.m in Sources */,
+				36B0CC29226735FE0097C6D2 /* SSClerkWorkDaliyModel.m in Sources */,
 				36D36F24223F7737009F781B /* SSBrandPieCell.m in Sources */,
 				36459AA12251AF0E00AB8329 /* SSGoodManngerCell.m in Sources */,
 				36D36CB6223F69B7009F781B /* SSBrandAbilityAnalysisModel.m in Sources */,
@@ -6818,6 +6901,7 @@
 				36D36B72223F695C009F781B /* SSProductDetalsBuyedCell.m in Sources */,
 				36D36BCB223F6973009F781B /* SSAppointmentInfoVC.m in Sources */,
 				36472B0321C8E15C00CC3E48 /* JXCategoryListVCContainerView.m in Sources */,
+				36F5FDF9226822D70024DDA8 /* SSClerkOperationDailyMainCell.m in Sources */,
 				36F5E840222F68F1000B0241 /* TGroupInfoController.m in Sources */,
 				36D36876223F6833009F781B /* SSBankTransferAccountsCell.m in Sources */,
 				36D36E03223F6A46009F781B /* SSOrderExpressDetailVC.m in Sources */,
@@ -6864,6 +6948,7 @@
 				36D36CB2223F69B7009F781B /* SSAppointmentModel.m in Sources */,
 				3673AE9922609BC200432C54 /* SSNewClerkManngerVC.m in Sources */,
 				36ED6C2B225F957F00552F13 /* SSAICustomerSearchVC.m in Sources */,
+				361F852822686FE8009F8926 /* SSClerkCreateClerkTaskModel.m in Sources */,
 				36D36EF3223F7737009F781B /* SSMyChildOrderContentCell.m in Sources */,
 				367AA75F2265D071004A9AFE /* SSClerkWorkStatisticsCustomerVistVC.m in Sources */,
 				36D36DFB223F6A46009F781B /* SSDistributionOrderMainVC.m in Sources */,
@@ -6888,6 +6973,7 @@
 				36D36B70223F695C009F781B /* SSProductDetalsBuyedContentCell.m in Sources */,
 				36D36B62223F695C009F781B /* SSThridProductDetailsTipCell.m in Sources */,
 				36D36B1E223F695C009F781B /* SSHomeHeaderMenuView.m in Sources */,
+				36F5FE032268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m in Sources */,
 				36FB87C5224231C1000A7547 /* SSBdataVC.m in Sources */,
 				36F5E820222F68F1000B0241 /* TAddIndicatorView.m in Sources */,
 				3691309322363B6E008B1836 /* AAYAxis.m in Sources */,
@@ -6968,9 +7054,11 @@
 				36D36E51223F6C8A009F781B /* SSShowViewTool.m in Sources */,
 				36D36EFD223F7737009F781B /* SSCouponOrderCell.m in Sources */,
 				36D36868223F681F009F781B /* SSBaseVC.m in Sources */,
+				36F5FDF42268138E0024DDA8 /* SSClerkOperationDailyCell.m in Sources */,
 				36B8DCD522648334006A3AE4 /* SSClerkPushTaskVC.m in Sources */,
 				36D36C32223F6993009F781B /* SSMemberHomeProductCell.m in Sources */,
 				36D36BCD223F6973009F781B /* SSNewStoreDetailsVC.m in Sources */,
+				36F5FE00226827340024DDA8 /* SSClerkOperationDailyModel.m in Sources */,
 				366925692264245800BE1F24 /* QLCycleProgressView.m in Sources */,
 				36D36B01223F695C009F781B /* SSCommondCouponCell.m in Sources */,
 				3604CA8E21707AA800F7471B /* UIImage+MEGIF.m in Sources */,
@@ -7004,6 +7092,7 @@
 				36D36B2B223F695C009F781B /* SSHomeMainCell.m in Sources */,
 				3604EF1821BF91EE0000DBDE /* LMJScrollTextView2.m in Sources */,
 				36D36DFA223F6A46009F781B /* SSNewMineHomeCell.m in Sources */,
+				36F5FDF02268134D0024DDA8 /* SSClerkOperationDailyVC.m in Sources */,
 				36472B0221C8E15C00CC3E48 /* JXCategoryNumberCellModel.m in Sources */,
 				36D36883223F6847009F781B /* SSJupshContentModel.m in Sources */,
 				363A6BFA21E19A4A008B303B /* MeMyActityMineVC.m in Sources */,
@@ -7015,12 +7104,14 @@
 				36F5E82A222F68F1000B0241 /* TSystemMessageCell.m in Sources */,
 				36D36CF9223F6A0B009F781B /* SSClerksSortVC.m in Sources */,
 				36D36B0F223F695C009F781B /* SSSNewHomeActiveCommondCell.m in Sources */,
+				36B0CC2C226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m in Sources */,
 				36371554218ACE9E0057E59F /* UIButton+ImageTitleStyle.m in Sources */,
 				3612918722657C15002414E3 /* SSClerkDiagnosisResultCustomerVC.m in Sources */,
 				3600B855217EF10700049F49 /* YBRectConst.m in Sources */,
 				3691308B22363B6E008B1836 /* AASeries.m in Sources */,
 				36F5E822222F68F1000B0241 /* TMoreView.m in Sources */,
 				36472B0021C8E15C00CC3E48 /* JXCategoryNumberView.m in Sources */,
+				36F5FDFD226825D70024DDA8 /* SSClerkOperationDailyMainModel.m in Sources */,
 				362276012244864E0031AA0F /* SSStoreApplyParModel.m in Sources */,
 				36472AF721C8E15C00CC3E48 /* JXCategoryTitleImageView.m in Sources */,
 				36D36CF7223F6A0B009F781B /* SSClerkManngerVC.m in Sources */,
@@ -7083,6 +7174,7 @@
 				36D36E13223F6BC6009F781B /* SSAddressPickerView.m in Sources */,
 				3691309D22363B6E008B1836 /* AALegend.m in Sources */,
 				36F5E841222F68F1000B0241 /* TGroupMemberCell.m in Sources */,
+				362A36F622684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m in Sources */,
 				36D36D0A223F6A0B009F781B /* SSCouponOrderVC.m in Sources */,
 				36D368A9223F6880009F781B /* SSAddTelView.m in Sources */,
 				36F697022230B571001E53BA /* HKPickerHelper.m in Sources */,

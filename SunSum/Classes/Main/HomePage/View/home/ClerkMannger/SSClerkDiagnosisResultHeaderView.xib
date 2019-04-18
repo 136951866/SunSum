@@ -153,6 +153,12 @@
                 <constraint firstAttribute="trailing" secondItem="I56-Yu-1kv" secondAttribute="trailing" constant="15" id="XYe-rt-m1c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblAttend" destination="jlz-JS-tDO" id="UWW-XU-mnQ"/>
+                <outlet property="lblNew" destination="fjh-Ny-oV2" id="6yr-X3-W6S"/>
+                <outlet property="lblOld" destination="pBK-uG-PXc" id="WA9-du-wGm"/>
+                <outlet property="lblqz" destination="pYy-FJ-Wru" id="8PN-4Z-bsw"/>
+            </connections>
         </view>
     </objects>
     <resources>

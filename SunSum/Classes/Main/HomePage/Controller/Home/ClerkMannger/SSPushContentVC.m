@@ -9,23 +9,31 @@
 #import "SSPushContentVC.h"
 #import "SSPushContentCell.h"
 
-@interface SSPushContentVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface SSPushContentVC ()<UITableViewDelegate, UITableViewDataSource>{
+    
+}
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSObject *model;
+@property (nonatomic, strong) NSString *model;
 @property (nonatomic, strong) UIButton *btnSave;
+@property (nonatomic, strong) SSPushContentCell *cell;
 @end
 
 @implementation SSPushContentVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"发布内容";
     [self.view addSubview:self.tableView];
     [self.view addSubview:[self getBottomView]];
 }
 
+- (void)setContent:(NSString *)content{
+    _content = content;
+    _model = content;
+}
+
 - (void)saveAction:(UIButton *)btn{
-    
+    kMeCallBlock(_textBlock,kMeUnNilStr(_cell.textView.textView.text));
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -33,9 +41,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SSPushContentCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSPushContentCell class]) forIndexPath:indexPath];
-    [cell setUIWithModel:_model];
-    return cell;
+    _cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSPushContentCell class]) forIndexPath:indexPath];
+    [_cell setUIWithModel:_model];
+    return _cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

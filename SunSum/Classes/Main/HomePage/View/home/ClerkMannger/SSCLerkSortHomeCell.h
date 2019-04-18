@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSNewClerkManngerDataContentModel;
 const static CGFloat kSSCLerkSortHomeCellHeight = 43;
 
 @interface SSCLerkSortHomeCell : UITableViewCell
-- (void)setUIWithModel:(id)model sort:(NSInteger)sort;
+- (void)setUIWithModel:(SSNewClerkManngerDataContentModel *)model sort:(NSInteger)sort;
 @end
 
 NS_ASSUME_NONNULL_END

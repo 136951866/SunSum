@@ -8,13 +8,23 @@
 
 #import "SSClerkDiagnosisResultCustomerVC.h"
 #import "SSClerkDiagnosisResultCustomerCell.h"
+#import "SSClerkDiagnosisResultmodel.h"
 
-@interface SSClerkDiagnosisResultCustomerVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface SSClerkDiagnosisResultCustomerVC ()<UITableViewDelegate, UITableViewDataSource>{
+    SSClerkDiagnosisResultmodel *_model;
+}
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation SSClerkDiagnosisResultCustomerVC
+
+- (instancetype)initWithModel:(SSClerkDiagnosisResultmodel*)model{
+    if(self = [super init]){
+        _model = model;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +40,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSClerkDiagnosisResultCustomerCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkDiagnosisResultCustomerCell class]) forIndexPath:indexPath];
-    [cell setUiWithModel:@[@(1),@(2),@(3),@(4)] lastMonth:@[@(10),@(11),@(12),@(13)] Xtitle:@[@"新客户",@"潜在客户",@"意向客户",@"老客户"] model:nil];
+    [cell setUiWithModel:@[@(_model.transformationAnalysisChart.this_month.new_customer),@(_model.transformationAnalysisChart.this_month.potential_customer),@(_model.transformationAnalysisChart.this_month.Intention_customer),@(_model.transformationAnalysisChart.this_month.regular_customer)] lastMonth:@[@(_model.transformationAnalysisChart.last_month.new_customer),@(_model.transformationAnalysisChart.last_month.potential_customer),@(_model.transformationAnalysisChart.last_month.Intention_customer),@(_model.transformationAnalysisChart.last_month.regular_customer)] Xtitle:@[@"新客户",@"潜在客户",@"意向客户",@"老客户"] model:_model];
     return cell;
 }
 

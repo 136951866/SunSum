@@ -11,11 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 const static CGFloat kSSCLerkLogHomeCellHeight = 204;
-
+@class SSCLerkTaskHomeModel;
 @interface SSCLerkLogHomeCell : UITableViewCell
 
-- (void)setUIWithModel:(id)model;
-+ (CGFloat)getCellHeightWithModel:(NSObject *)model;
+- (void)setUIWithModel:(SSCLerkTaskHomeModel *)model;
++ (CGFloat)getCellHeightWithModel:(SSCLerkTaskHomeModel *)model;
 
 @end
 

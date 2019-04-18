@@ -16,7 +16,8 @@
 #import "SSClerkWorkDaliyVC.h"
 #import "SSClerkPlanAchieveVC.h"
 #import "SSClerkDiagnosisResultVC.h"
-#import "SSClerkWorkStatisticsVC.h"
+#import "SSClerkWorkStatisticsServerLogVC.h"
+#import "SSClerkOperationDailyVC.h"
 
 #warning --
 #import "SSClerkPushTaskVC.h"
@@ -103,7 +104,7 @@
         };
         cell.workFinishBlock = ^{
             kMeSTRONGSELF
-            SSClerkWorkStatisticsVC *vc = [[SSClerkWorkStatisticsVC alloc]init];
+            SSClerkWorkStatisticsServerLogVC *vc = [[SSClerkWorkStatisticsServerLogVC alloc]init];
             [strongSelf.navigationController pushViewController:vc animated:YES];
         };
         return cell;
@@ -123,6 +124,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row == 0){
         //运营
+        
+        SSClerkOperationDailyVC *vc = [[SSClerkOperationDailyVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
         //工作
         SSClerkWorkDaliyVC *vc = [[SSClerkWorkDaliyVC alloc]init];

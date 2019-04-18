@@ -23,15 +23,32 @@
 @class SSDynamicGoodApplyModel;
 @class SSAddGoodModel;
 @class SSAiCustomerDataModel;
+@class SSClerkCreateClerkTaskModel;
 
 @interface SSPublicNetWorkTool : NSObject
 
 /*********************************************/
 #pragma makr - 新版本 顾客 图文 店员
+//顾客
 //员工管理(返回所有内容)
 + (void)postgetclerkclerkManagementWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 
 
+// 顾客
+//诊断结果（返回所有，员工排行暂未做）
++ (void)postgetSSIPcommoncustomercustomerDiagnoseWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//工作日报
++ (void)postgetSSIPcommoncustomerdailyWorkReportWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//计划达成
++ (void)postgetSSIPcommonclerkTaskFinishStateWithdate:(NSString*)date SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//运营日报(返回上面两个饼图数据)
++ (void)postgetclerkdailyOperationsWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//工作统计-服务日志（统计部分
++ (void)postgetSSIPcommonclerkserviceLogWithdate:(NSString*)date SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//任务祥情
++ (void)postgetclerktaskDetailWithTaskId:(NSString*)taskId SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//创建店员任务
++ (void)postgetSSIPcommoncreateClerkTaskWithmodel:(SSClerkCreateClerkTaskModel*)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 /*********************************************/
 
 

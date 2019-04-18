@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkPlanAchieveClerkModel;
 const static CGFloat kkSSClerkPlanAchieveListCellHeight = 59;
 
 @interface kSSClerkPlanAchieveListCell : UITableViewCell
-- (void)setUIWIthModel:(id)model sort:(NSInteger)sort;
+- (void)setUIWIthModel:(SSClerkPlanAchieveClerkModel *)model sort:(NSInteger)sort;
 
 @end
 
