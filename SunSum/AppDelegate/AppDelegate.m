@@ -132,7 +132,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
     NSString *frist = [[NSUserDefaults standardUserDefaults] objectForKey:kSSAppVersion];
     if(kMeUnNilStr(frist).length){
-        [self.window setRootViewController:[SSTabBarVC new]];
+        if([SSUserInfoModel isLogin]){
+//            switch (kCurrentUser.user_type) {
+//                case 3:{
+                    [self.window setRootViewController:[SSTabBarVC new]];
+//                }break;
+//                case 5:{
+//
+//                }break;
+//            }
+        }else{
+            [SSWxLoginVC toLoginVC];
+        }
     }else{
         SSGuideVC *fvc = [[SSGuideVC alloc] init];
         [self.window setRootViewController:fvc];

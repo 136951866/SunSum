@@ -13,6 +13,7 @@
 #import "SSWxAuthModel.h"
 #import "JPUSHService.h"
 #import "AppDelegate.h"
+#import "SSTabBarVC.h"
 
 #define kImgTopMargin (54.0 * kMeFrameScaleY())
 
@@ -36,7 +37,6 @@
 @property (strong, nonatomic) SSAddTelView *addTelVIew;
 @property (weak, nonatomic) IBOutlet UIButton *btnWxLogin;
 @property (weak, nonatomic) IBOutlet UILabel *lblLogin;
-@property (assign, nonatomic) BOOL isShowCancel;
 @property (weak, nonatomic) IBOutlet UIButton *btnBreturn;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnReturn;
@@ -103,24 +103,50 @@
 }
 
 -(void)loginSuccess{
-    [self loginIm];
-    [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
-    //设置alias
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-            NSLog(@"iAlias=%@",iAlias);
-        } seq:0];
-    });
-    kNoticeUserLogin
-    if(self.isModelPush){
-        kMeWEAKSELF
-        [SSCommonTool dismissViewControllerAnimated:YES completion:^{
-            kMeSTRONGSELF
-            kMeCallBlock(strongSelf.blockSuccess,nil);
-        }];
-    }else{
-        kMeCallBlock(self.blockSuccess,nil);
+    switch (kCurrentUser.user_type) {
+        case 3:{
+            //B
+            [self loginIm];
+            [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
+            //设置alias
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+                    NSLog(@"iAlias=%@",iAlias);
+                } seq:0];
+            });
+            kNoticeUserLogin
+            [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+        }
+            break;
+        case 5:{
+            //clerk
+            [self loginIm];
+            [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
+            //设置alias
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+                    NSLog(@"iAlias=%@",iAlias);
+                } seq:0];
+            });
+            kNoticeUserLogin
+            [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+        }
+            break;
+        default:{
+            [kCurrentUser removeFromLocalData];
+            kMeAlter(@"提示", @"您还没有权限");
+        }
+            break;
     }
+//    if(self.isModelPush){
+//        kMeWEAKSELF
+//        [SSCommonTool dismissViewControllerAnimated:YES completion:^{
+//            kMeSTRONGSELF
+//            kMeCallBlock(strongSelf.blockSuccess,nil);
+//        }];
+//    }else{
+//        kMeCallBlock(self.blockSuccess,nil);
+//    }
 }
 
 -(void)loginFail{

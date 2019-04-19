@@ -11,13 +11,14 @@
 #import "SSWxAuthModel.h"
 #import "JPUSHService.h"
 #import "AppDelegate.h"
+#import "SSTabBarVC.h"
 
 @interface SSWxLoginVC (){
     BOOL _isNewUser;
 }
 
 @property (assign, nonatomic) BOOL isModelPush;
-@property (assign, nonatomic) BOOL isShowCancel;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnWxLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btnReturn;
 @property (strong, nonatomic) SSAddTelView *addTelVIew;
@@ -27,6 +28,18 @@
 @implementation SSWxLoginVC
 
 #pragma mark - LifeCycle
+
++ (void)toLoginVC{
+    if([WXApi isWXAppInstalled]){
+        SSWxLoginVC *loginvc = [[SSWxLoginVC alloc]init];
+        loginvc.isShowCancel = NO;
+        [kMeCurrentWindow setRootViewController:loginvc];
+    }else{
+        SSLoginVC *loginvc = [[SSLoginVC alloc]init];
+        loginvc.isShowCancel = NO;
+        [kMeCurrentWindow setRootViewController:loginvc];
+    }
+}
 
 + (void)presentLoginVCWithIsShowCancel:(BOOL)isShowCancel SuccessHandler:(kMeObjBlock)blockSuccess failHandler:(kMeObjBlock)blockFail{
     if([WXApi isWXAppInstalled]){
@@ -65,15 +78,41 @@
 #pragma mark - Private
 
 -(void)loginSuccess{
-    [self loginIm];
-    [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
-    //设置alias
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-            NSLog(@"iAlias=%@",iAlias);
-        } seq:0];
-    });
-    kNoticeUserLogin
+    switch (kCurrentUser.user_type) {
+        case 3:{
+            //B
+            [self loginIm];
+            [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
+            //设置alias
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+                    NSLog(@"iAlias=%@",iAlias);
+                } seq:0];
+            });
+            kNoticeUserLogin
+            [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+        }
+            break;
+        case 5:{
+            //clerk
+            [self loginIm];
+            [SSPublicNetWorkTool getUserCheckFirstBuyWithSuccessBlock:nil failure:nil];
+            //设置alias
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [JPUSHService setAlias:kMeUnNilStr(kCurrentUser.uid) completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+                    NSLog(@"iAlias=%@",iAlias);
+                } seq:0];
+            });
+            kNoticeUserLogin
+            [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+        }
+            break;
+        default:{
+            [kCurrentUser removeFromLocalData];
+            kMeAlter(@"提示", @"您还没有权限");
+        }
+            break;
+    }
     if(self.isModelPush){
         kMeWEAKSELF
         [SSCommonTool dismissViewControllerAnimated:YES completion:^{

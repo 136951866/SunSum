@@ -79,7 +79,11 @@
 - (void)intoApp:(UIButton *)btn{
     [[NSUserDefaults standardUserDefaults] setObject:kSSAppVersion forKey:kSSAppVersion];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+    if([SSUserInfoModel isLogin]){
+        [kMeCurrentWindow setRootViewController:[SSTabBarVC new]];
+    }else{
+        [SSWxLoginVC toLoginVC];
+    }
 }
 
 - (UIScrollView *)scrollView{

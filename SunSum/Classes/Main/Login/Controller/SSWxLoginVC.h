@@ -14,5 +14,7 @@
 + (void)presentLoginVCWithSuccessHandler:(kMeObjBlock)blockSuccess failHandler:(kMeObjBlock)blockFail;
 @property (strong, nonatomic) kMeObjBlock blockSuccess;
 @property (strong, nonatomic) kMeObjBlock blockFail;
+@property (assign, nonatomic) BOOL isShowCancel;
 
++ (void)toLoginVC;
 @end

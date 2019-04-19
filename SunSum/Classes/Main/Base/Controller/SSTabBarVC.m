@@ -45,25 +45,38 @@
     self.delegate = self;
     self.tabBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    // 1.初始化子控制器
-    SSFourHomeVC *home = [[SSFourHomeVC alloc] init];
-    [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
-    
-    SSFilterGoodVC *store = [[SSFilterGoodVC alloc] initWithcategory_id:@"0" title:@"优选"];
-    //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
-    [self addChildVc:store title:@"商城" image:@"store" selectedImage:@"store_s"];
     
     
-    SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
-    //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
-    [self addChildVc:dynamic title:@"动态" image:@"dynamic" selectedImage:@"dynamic_s"];
-
+    if(kCurrentUser.user_type == 3){
+        // 1.初始化子控制器
+        SSFourHomeVC *home = [[SSFourHomeVC alloc] init];
+        [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
+        
+        SSFilterGoodVC *store = [[SSFilterGoodVC alloc] initWithcategory_id:@"0" title:@"优选"];
+        //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
+        [self addChildVc:store title:@"商城" image:@"store" selectedImage:@"store_s"];
+        
+        
+        SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
+        //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
+        [self addChildVc:dynamic title:@"动态" image:@"dynamic" selectedImage:@"dynamic_s"];
+        
+        
+        SSClerkPushTaskVC *shopcart = [[SSClerkPushTaskVC alloc] init];
+        [self addChildVc:shopcart title:@"任务" image:@"pushTask" selectedImage:@"pushTask_s"];
+        
+        self.mine = [[SSNewMineHomeVC alloc] init];
+        [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
+    }else if (kCurrentUser.user_type == 5){
+        UIViewController *home = [[UIViewController alloc] init];
+        [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
     
-    SSClerkPushTaskVC *shopcart = [[SSClerkPushTaskVC alloc] init];
-    [self addChildVc:shopcart title:@"任务" image:@"pushTask" selectedImage:@"pushTask_s"];
-    
-    self.mine = [[SSNewMineHomeVC alloc] init];
-    [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
+        SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
+        [self addChildVc:dynamic title:@"动态" image:@"dynamic" selectedImage:@"dynamic_s"];
+        
+        self.mine = [[SSNewMineHomeVC alloc] init];
+        [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
+    }
     [self getUnMeaasge];
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{

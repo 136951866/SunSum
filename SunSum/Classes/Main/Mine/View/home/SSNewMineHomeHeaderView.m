@@ -87,7 +87,8 @@
     SSNewMineHomeVC *home = (SSNewMineHomeVC *)[SSCommonTool getVCWithClassWtihClassName:[SSNewMineHomeVC class] targetResponderView:self];
     SSMineSetVC *setVC = [[SSMineSetVC alloc]init];
     setVC.exitBlock = ^{
-        home.tabBarController.selectedIndex = 0;
+//        home.tabBarController.selectedIndex = 0;
+        [SSWxLoginVC toLoginVC];
     };
     if(home){
         [home.navigationController pushViewController:setVC animated:YES];
