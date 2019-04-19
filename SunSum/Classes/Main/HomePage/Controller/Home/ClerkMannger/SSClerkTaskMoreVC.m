@@ -34,7 +34,7 @@
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[SSNewClerkManngerModel mj_objectArrayWithKeyValuesArray:data]];
+    [self.refresh.arrData addObjectsFromArray:[SSNewClerkManngerClerkTaskpercentModel mj_objectArrayWithKeyValuesArray:data]];
     
 }
 
@@ -72,12 +72,11 @@
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkclerkTask)];
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(SSIPcommonclerkclerkTaskMore)];
         _refresh.delegate = self;
-        _refresh.isGet = YES;
         _refresh.isDataInside = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
-            failView.backgroundColor = [UIColor whiteColor];
+            failView.backgroundColor = [UIColor clearColor];
             failView.lblOfNodata.text = @"没有任务";
         }];
     }

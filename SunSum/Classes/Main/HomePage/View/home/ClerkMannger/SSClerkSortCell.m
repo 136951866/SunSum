@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
 @property (weak, nonatomic) IBOutlet UIButton *btnGt;
 @property (weak, nonatomic) IBOutlet UIButton *btnCustomer;
+@property (weak, nonatomic) IBOutlet UIButton *btnServer;
 
 @end
 
@@ -44,6 +45,7 @@
     [_btnShare setBackgroundImage:[SSCommonTool createImageWithColor:[UIColor colorWithHexString:@"169DFF"]] forState:UIControlStateSelected];
     [_btnGt setBackgroundImage:[SSCommonTool createImageWithColor:[UIColor colorWithHexString:@"169DFF"]] forState:UIControlStateSelected];
     [_btnCustomer setBackgroundImage:[SSCommonTool createImageWithColor:[UIColor colorWithHexString:@"169DFF"]] forState:UIControlStateSelected];
+    [_btnServer setBackgroundImage:[SSCommonTool createImageWithColor:[UIColor colorWithHexString:@"169DFF"]] forState:UIControlStateSelected];
     _currentIndex = 0;
 }
 

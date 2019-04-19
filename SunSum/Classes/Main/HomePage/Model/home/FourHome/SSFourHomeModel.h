@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger total;
 @property (nonatomic, assign) NSInteger finish_task_count;
 @property (nonatomic, assign) NSInteger reservation_count;
+@property (nonatomic, assign) NSInteger reservation_num;
+@property (nonatomic, strong) NSString *reservation_percent;
 @property (nonatomic, strong) SSFourHomejobPerformancepercentModel *today_task_finished_percent;
 
 @end

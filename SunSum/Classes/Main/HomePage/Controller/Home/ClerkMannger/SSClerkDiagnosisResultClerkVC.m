@@ -89,8 +89,9 @@
         _refresh.isDataInside = YES;
         _refresh.showMaskView = YES;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
-            failView.backgroundColor = [UIColor whiteColor];
-            failView.lblOfNodata.text = @"没有员工";
+            failView.lblOfNodata.textColor = [UIColor whiteColor];
+            failView.backgroundColor = [UIColor clearColor];
+            failView.lblOfNodata.text = @"没有客户";
         }];
     }
     return _refresh;

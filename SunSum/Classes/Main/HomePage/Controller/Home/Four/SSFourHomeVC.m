@@ -20,8 +20,6 @@
 #import "SSClerkOperationDailyVC.h"
 #import "SSFourHomeModel.h"
 
-#warning --
-#import "SSClerkPushTaskVC.h"
 @interface SSFourHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
 {
     SSFourHomeModel *_homeModel;
@@ -88,8 +86,7 @@
 }
 
 - (void)toCaseVC{
-    SSClerkPushTaskVC *vc = [[SSClerkPushTaskVC alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - tableView deleagte and sourcedata

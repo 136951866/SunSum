@@ -112,7 +112,7 @@ const static CGFloat kmenuHeight = 44;
 
 - (SPullDownMenuView *)menu{
     if(!_menu){
-        NSArray *arr = @[@[@"分享数", @"沟通数", @"客户数"], @[@"本月",@"上月",@"昨天",@"今天"]];
+        NSArray *arr = @[@[@"分享数", @"沟通数", @"客户数",@"预约数排名"], @[@"本月",@"上月",@"昨天",@"今天"]];
         _menu = [[SPullDownMenuView alloc] initWithFrame:CGRectMake(0, kMeNavBarHeight, SCREEN_WIDTH, kmenuHeight) withTitle:arr withSelectColor:kSSPink];
         _menu.delegate = self;
     }

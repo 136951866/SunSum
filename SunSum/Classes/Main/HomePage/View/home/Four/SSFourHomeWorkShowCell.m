@@ -122,7 +122,8 @@
     _lblJobTaskTodayFinish.text = [@(rateJobtFStr).description stringByAppendingString:@"%"];
     _lblJobTaskTodayFinishRate.text = [NSString stringWithFormat:@"当天完成率(%@/%@)",@(model.jobAccount.today_task_finished_percent.today_task_finish),@(model.jobAccount.today_task_finished_percent.today_task_total)];
     
-    
+    _lblJobServerCount.text = @(model.jobAccount.reservation_num).description;
+    _lblJobServerStr.text = kMeUnNilStr(model.jobAccount.reservation_percent);
     
     [self layoutIfNeeded];
 }

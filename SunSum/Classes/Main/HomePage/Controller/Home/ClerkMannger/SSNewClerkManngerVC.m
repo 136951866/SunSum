@@ -35,12 +35,13 @@
     self.title = @"员工管理";
     _currentIndex = 0;
     _model = [SSNewClerkManngerModel new];
-    _arrSelect = @[@[],@[],@[]];
+    _arrSelect = @[@[],@[],@[],@[]];
     kMeWEAKSELF
+#warning ---
     [SSPublicNetWorkTool postgetclerkclerkManagementWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
         strongSelf->_model = [SSNewClerkManngerModel mj_objectWithKeyValues:responseObject.data];
-        strongSelf->_arrSelect = @[kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByShareCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpMemberCount.data)];
+        strongSelf->_arrSelect = @[kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByShareCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpMemberCount.data),@[]];
         [strongSelf.view addSubview:strongSelf.tableView];
     } failure:^(id object) {
         kMeSTRONGSELF
