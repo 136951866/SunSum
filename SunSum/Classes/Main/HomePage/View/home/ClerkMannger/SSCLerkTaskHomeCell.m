@@ -25,7 +25,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = 0;
-    _lblTime.adjustsFontSizeToFitWidth = YES;
+_lblStatus.adjustsFontSizeToFitWidth = YES;
     // Initialization code
 }
 

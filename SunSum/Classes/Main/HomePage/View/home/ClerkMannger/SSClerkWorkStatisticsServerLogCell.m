@@ -42,7 +42,10 @@
     _lblfinishPercent.text = kMeUnNilStr(model.finish_percent);
     _lblOnTime.text = [NSString stringWithFormat:@"准时完成日志(%@个)",@(model.finish_on_time).description];
     _lblOntimePercent.text = kMeUnNilStr(model.finish_on_time_percent);
-    CGFloat rate = (CGFloat)((CGFloat)model.finish/(CGFloat)model.total);
+    CGFloat rate = 0;
+    if(model.total != 0){
+        rate = (CGFloat)((CGFloat)model.finish/(CGFloat)model.total);
+    }
     NSInteger ratenum = rate * _cellW;
     if(ratenum<0){
         ratenum = 0;

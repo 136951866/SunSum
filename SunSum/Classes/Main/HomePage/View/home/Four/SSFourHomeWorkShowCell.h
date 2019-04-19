@@ -10,10 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSFourHomeModel;
 const static CGFloat kSSFourHomeWorkShowCellHeight = 939;
 
 @interface  SSFourHomeWorkShowCell: UITableViewCell
 
+
+- (void)setUIWithModel:(SSFourHomeModel *)model;
 @property (nonatomic, copy) kMeBasicBlock planAchieveBlock;
 @property (nonatomic, copy) kMeBasicBlock workFinishBlock;
 

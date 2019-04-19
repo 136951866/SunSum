@@ -18,11 +18,14 @@
 #import "SSClerkDiagnosisResultVC.h"
 #import "SSClerkWorkStatisticsServerLogVC.h"
 #import "SSClerkOperationDailyVC.h"
+#import "SSFourHomeModel.h"
 
 #warning --
 #import "SSClerkPushTaskVC.h"
 @interface SSFourHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
-
+{
+    SSFourHomeModel *_homeModel;
+}
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) SSFourHomeHeaderView         *headerView;
 
@@ -34,6 +37,7 @@
     [super viewDidLoad];
     self.navBarHidden = YES;
     [self.view addSubview:self.tableView];
+    _homeModel = [SSFourHomeModel new];
     self.view.backgroundColor = [UIColor colorWithHexString:@"f6f5fa"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadData)];
     [self.tableView.mj_header beginRefreshing];
@@ -50,8 +54,14 @@
 }
 
 - (void)reloadData{
-    [self.tableView reloadData];
-    [self.tableView.mj_header endRefreshing];
+    kMeWEAKSELF
+    [SSPublicNetWorkTool postgetclerkhomeAllWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+        kMeSTRONGSELF
+        strongSelf->_homeModel = [SSFourHomeModel mj_objectWithKeyValues:responseObject.data];
+        [strongSelf.tableView reloadData];
+        [strongSelf.tableView.mj_header endRefreshing];
+    } failure:^(id object) {
+    }];
 }
 
 - (void)toAiVC{
@@ -96,6 +106,7 @@
         return cell;
     }else{
         SSFourHomeWorkShowCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSFourHomeWorkShowCell class]) forIndexPath:indexPath];
+        [cell setUIWithModel:_homeModel];
         kMeWEAKSELF
         cell.planAchieveBlock = ^{
             kMeSTRONGSELF

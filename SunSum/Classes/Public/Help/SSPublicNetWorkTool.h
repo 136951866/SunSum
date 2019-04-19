@@ -32,8 +32,8 @@
 //顾客
 //员工管理(返回所有内容)
 + (void)postgetclerkclerkManagementWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
-
-
+////首页（返回所有数据）
++ (void)postgetclerkhomeAllWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 // 顾客
 //诊断结果（返回所有，员工排行暂未做）
 + (void)postgetSSIPcommoncustomercustomerDiagnoseWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;

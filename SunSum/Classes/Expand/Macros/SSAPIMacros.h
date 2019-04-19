@@ -91,7 +91,8 @@
 #define SSIPcommonclerkclerkOrderByPublishCount @"common/clerk/clerkOrderByPublishCount"
 //店员通过沟通（跟进）数排名
 #define SSIPcommonclerkclerkOrderByFollowUpCount @"common/clerk/clerkOrderByFollowUpCount"
-
+//首页（返回所有数据）
+#define SSIPcommonclerkhomeAll @"common/clerk/homeAll"
 
 //顾客
 //诊断结果（返回所有，员工排行暂未做）

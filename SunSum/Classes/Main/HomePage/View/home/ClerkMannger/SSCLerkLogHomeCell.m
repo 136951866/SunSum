@@ -26,7 +26,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = 0;
-    // Initialization code
+    _lblStatus.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setUIWithModel:(SSCLerkTaskHomeModel *)model{
