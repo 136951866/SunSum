@@ -26,6 +26,9 @@
 //#import "SSSNewHomePageVC.h"
 #import "SSFourHomeVC.h"
 #import "SSBynamicHomeVC.h"
+#import "SSFilterGoodVC.h"
+#import "SSClerkPushTaskVC.h"
+
 @interface SSTabBarVC ()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) SSNewMineHomeVC *mine;
@@ -46,23 +49,18 @@
     SSFourHomeVC *home = [[SSFourHomeVC alloc] init];
     [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
     
-    SSStoreHomeVC *store = [[SSStoreHomeVC alloc] init];
+    SSFilterGoodVC *store = [[SSFilterGoodVC alloc] initWithcategory_id:@"0" title:@"优选"];
     //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
-    [self addChildVc:store title:@"门店" image:@"store" selectedImage:@"store_s"];
+    [self addChildVc:store title:@"商城" image:@"store" selectedImage:@"store_s"];
     
     
     SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
     //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
     [self addChildVc:dynamic title:@"动态" image:@"dynamic" selectedImage:@"dynamic_s"];
-    //    SSMemberHomeVC *member = [[SSMemberHomeVC alloc]init];
-    ////    SSIMageVC *member = [[SSIMageVC alloc]initWithType:SSMainMemberStyle];
-    ////    member.isNeedH5Title = NO;
-    //    //[self.navigationController pushViewController:webVC animated:YES];
-    //    //SSMemberHomeVC *member = [[SSMemberHomeVC alloc] init];
-    //    [self addChildVc:member title:@"超级会员" image:@"hat" selectedImage:@"hat"];
+
     
-    SSProductShoppingCartVC *shopcart = [[SSProductShoppingCartVC alloc] init];
-    [self addChildVc:shopcart title:@"购物车" image:@"shopcart" selectedImage:@"shopcart_s"];
+    SSClerkPushTaskVC *shopcart = [[SSClerkPushTaskVC alloc] init];
+    [self addChildVc:shopcart title:@"任务" image:@"pushTask" selectedImage:@"pushTask_s"];
     
     self.mine = [[SSNewMineHomeVC alloc] init];
     [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
@@ -80,6 +78,7 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogout) name:kUserLogout object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogin) name:kUserLogin object:nil];
 }
+
 - (void)userLogout{
     self.mine.tabBarItem.badgeValue = nil;
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kUnMessage object:nil];
@@ -115,9 +114,9 @@
         childVc.title =@"鲜橙智店";
         childVc.tabBarItem.title=@"首页";
     }
-    if([title isEqualToString:@"门店"]){
-        childVc.title =@"全部门店";
-        childVc.tabBarItem.title=@"门店";
+    if([title isEqualToString:@"任务"]){
+        childVc.title =@"发布任务";
+        childVc.tabBarItem.title=@"任务";
     }
     [self addChildViewController:nav];
 }
@@ -125,7 +124,7 @@
 #pragma mark - UITabBarControllerDelegate
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{//每次点击都会执行的方法
-    if([viewController.tabBarItem.title isEqualToString:@"购物车"]||[viewController.tabBarItem.title isEqualToString:@"我的"]||[viewController.tabBarItem.title isEqualToString:@"动态"]){
+    if([viewController.tabBarItem.title isEqualToString:@"购物车"]||[viewController.tabBarItem.title isEqualToString:@"我的"]||[viewController.tabBarItem.title isEqualToString:@"动态"]||[viewController.tabBarItem.title isEqualToString:@"任务"]){
         if([SSUserInfoModel isLogin]){
             return YES;
         }

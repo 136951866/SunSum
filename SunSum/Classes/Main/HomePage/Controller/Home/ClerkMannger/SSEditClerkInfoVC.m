@@ -8,46 +8,81 @@
 
 #import "SSEditClerkInfoVC.h"
 #import "SSEditClerkInfoCell.h"
+#import "SSClerkFinishTaskModel.h"
 
 const static CGFloat kBootomHeight = 90;
 
 @interface SSEditClerkInfoVC ()<UITableViewDelegate, UITableViewDataSource>{
-    BOOL _isMark;
+    SSClerkEditLogType _type;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSObject *model;
+@property (nonatomic, strong) SSClerkFinishTaskModel *model;
+@property (nonatomic, strong) SSEditClerkInfoCell *cell;
 @property (nonatomic, strong) UIButton *btnSave;
 @end
 
 @implementation SSEditClerkInfoVC
 
-
-- (instancetype)initWithMarkModel:(id)model{
+- (instancetype)initWithServerModel:(SSClerkFinishTaskModel *)model{
     if(self = [super init]){
         _model = model;
-        _isMark = YES;
+        _type = SSClerkEditLogServerNumType;
     }
     return self;
 }
 
-- (instancetype)initWithNoticeModel:(id)model{
+- (instancetype)initWithMarkModel:(SSClerkFinishTaskModel *)model{
     if(self = [super init]){
         _model = model;
-        _isMark = NO;
+        _type = SSClerkEditLogmarkType;
+    }
+    return self;
+}
+
+- (instancetype)initWithNoticeModel:(SSClerkFinishTaskModel *)model{
+    if(self = [super init]){
+        _model = model;
+        _type = SSClerkEditLogNoticeType;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = _isMark?@"备注":@"注意事项";
+    switch (_type) {
+        case SSClerkEditLogmarkType:
+            self.title = @"备注";
+            break;
+        case SSClerkEditLogNoticeType:
+            self.title = @"注意事项";
+            break;
+        case SSClerkEditLogServerNumType:
+            self.title = @"预约数量";
+            break;
+        default:
+            break;
+    }
     [self.view addSubview:self.tableView];
      [self.view addSubview:[self getBottomView]];
 }
 
 - (void)saveAction:(UIButton *)btn{
-    
+    kMeCallBlock(_finifhBlock,kMeUnNilStr(_cell.textView.textView.text));
+    switch (_type) {
+        case SSClerkEditLogmarkType:
+            self.model.desc = kMeUnNilStr(_cell.textView.textView.text);
+            break;
+        case SSClerkEditLogNoticeType:
+            self.model.matters_attention = kMeUnNilStr(_cell.textView.textView.text);
+            break;
+        case SSClerkEditLogServerNumType:
+            self.model.reservation_num = kMeUnNilStr(_cell.textView.textView.text);
+            break;
+        default:
+            break;
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,13 +90,21 @@ const static CGFloat kBootomHeight = 90;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SSEditClerkInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSEditClerkInfoCell class]) forIndexPath:indexPath];
-    if(_isMark){
-        [cell setMarkUIWithModel:self.model];
-    }else{
-        [cell setNoticeUIWithModel:self.model];
+    _cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSEditClerkInfoCell class]) forIndexPath:indexPath];
+    switch (_type) {
+        case SSClerkEditLogmarkType:
+            [_cell setMarkUIWithModel:_model];
+            break;
+        case SSClerkEditLogNoticeType:
+            [_cell setNoticeUIWithModel:_model];
+            break;
+        case SSClerkEditLogServerNumType:
+            [_cell setServerUIWithModel:_model];
+            break;
+        default:
+            break;
     }
-    return cell;
+    return _cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkFinishTaskModel;
 @interface SSEditClerkInfoVC : SSBaseVC
-- (instancetype)initWithMarkModel:(id)model;
-- (instancetype)initWithNoticeModel:(id)model;
+- (instancetype)initWithMarkModel:(SSClerkFinishTaskModel *)model;
+- (instancetype)initWithNoticeModel:(SSClerkFinishTaskModel *)model;
+- (instancetype)initWithServerModel:(SSClerkFinishTaskModel *)model;
+@property (nonatomic, copy) kMeTextBlock finifhBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

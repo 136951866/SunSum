@@ -52,7 +52,7 @@
         _lblFinish.hidden = NO;
         _imgArrow.hidden = NO;
     }
-    _arrdata = kMeUnArr(model.clerk_task_service.client);
+    _arrdata = @[];//kMeUnArr(model.clerk_task_service.client);
     _tableView.hidden = !kMeUnArr(_arrdata).count;
     _lblToday.text = kMeUnNilStr(model.clerk_task_service.clerk_today_log_count);
     _lblWait.text = kMeUnNilStr(model.clerk_task_service.wait_servcie_count);
@@ -74,16 +74,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    kMeCallBlock(_selectIndexBlock,indexPath.row);
+//    kMeCallBlock(_selectIndexBlock,indexPath.row);
 }
 
 + (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model{
     CGFloat height = kSSClerkLogCellOrgialHeight;
-    if(kCurrentUser.client_type == SSClientBTypeStyle){
-    }else{
-        NSArray *arr = kMeUnArr(model.clerk_task_service.client);
-        height +=(kMeUnArr(arr).count * kSSClerkLogContentCellHeight);
-    }
+//    if(kCurrentUser.client_type == SSClientBTypeStyle){
+//    }else{
+//        NSArray *arr = kMeUnArr(model.clerk_task_service.client);
+//        height +=(kMeUnArr(arr).count * kSSClerkLogContentCellHeight);
+//    }
     return height;
 }
 

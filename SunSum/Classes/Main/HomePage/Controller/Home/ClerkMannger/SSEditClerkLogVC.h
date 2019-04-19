@@ -10,8 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSCLerkTaskHomeModel;
 @interface SSEditClerkLogVC : SSBaseVC
-
+- (instancetype)initWithModel:(SSCLerkTaskHomeModel *)model;
+@property (nonatomic , copy) kMeBasicBlock finishBlock;
 @end
 
 NS_ASSUME_NONNULL_END

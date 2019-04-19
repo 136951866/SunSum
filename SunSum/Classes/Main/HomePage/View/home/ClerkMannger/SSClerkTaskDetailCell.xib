@@ -27,9 +27,14 @@
                                     <constraint firstAttribute="width" constant="21" id="K4r-F9-5G4"/>
                                     <constraint firstAttribute="height" constant="21" id="b85-q2-PKf"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-09-01 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysd-bO-j2J">
-                                <rect key="frame" x="205" y="14" width="114" height="16"/>
+                                <rect key="frame" x="205" y="8" width="114" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="WHV-c4-6Je"/>
                                 </constraints>
@@ -43,17 +48,32 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu3-uA-OsG">
+                                <rect key="frame" x="205" y="8" width="114" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="查看日志编写记录">
+                                    <color key="titleColor" red="0.062745098039215685" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkLogAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rlQ-kS-gQS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZDi-Yp-Krh" firstAttribute="leading" secondItem="AGY-M4-91f" secondAttribute="leading" constant="9" id="16P-v1-wFq"/>
                             <constraint firstItem="ZDi-Yp-Krh" firstAttribute="centerY" secondItem="AGY-M4-91f" secondAttribute="centerY" id="1wx-bC-P1b"/>
+                            <constraint firstItem="Lu3-uA-OsG" firstAttribute="top" secondItem="Ysd-bO-j2J" secondAttribute="top" id="74Y-SQ-VMO"/>
                             <constraint firstAttribute="bottom" secondItem="tJ7-dF-Ote" secondAttribute="bottom" id="Klf-e8-N6Y"/>
                             <constraint firstItem="Ysd-bO-j2J" firstAttribute="centerY" secondItem="AGY-M4-91f" secondAttribute="centerY" id="QjI-Z0-OYV"/>
+                            <constraint firstItem="Lu3-uA-OsG" firstAttribute="trailing" secondItem="Ysd-bO-j2J" secondAttribute="trailing" id="dX4-bD-N18"/>
                             <constraint firstItem="tJ7-dF-Ote" firstAttribute="leading" secondItem="ZDi-Yp-Krh" secondAttribute="trailing" constant="9" id="esy-hA-lo5"/>
                             <constraint firstAttribute="trailing" secondItem="Ysd-bO-j2J" secondAttribute="trailing" constant="9" id="m7y-aQ-pxP"/>
+                            <constraint firstItem="Lu3-uA-OsG" firstAttribute="bottom" secondItem="Ysd-bO-j2J" secondAttribute="bottom" id="t3Y-Rd-Vz3"/>
                             <constraint firstItem="tJ7-dF-Ote" firstAttribute="top" secondItem="AGY-M4-91f" secondAttribute="top" id="t8w-KA-BnG"/>
                             <constraint firstItem="Ysd-bO-j2J" firstAttribute="leading" secondItem="tJ7-dF-Ote" secondAttribute="trailing" constant="9" id="teT-KD-Wgm"/>
+                            <constraint firstItem="Lu3-uA-OsG" firstAttribute="leading" secondItem="Ysd-bO-j2J" secondAttribute="leading" id="ud1-0D-W92"/>
                             <constraint firstAttribute="height" constant="44" id="w6W-cf-ODc"/>
                         </constraints>
                     </view>
@@ -142,6 +162,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="btnClerkLog" destination="Lu3-uA-OsG" id="2bV-YF-K8Q"/>
                 <outlet property="consTitleHeight" destination="mB2-kB-rIC" id="INr-z5-asF"/>
                 <outlet property="imgPic" destination="ZDi-Yp-Krh" id="AFk-iA-6RL"/>
                 <outlet property="lblContent" destination="xUg-Ns-zo7" id="gCB-4L-W34"/>

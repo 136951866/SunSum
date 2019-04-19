@@ -38,6 +38,8 @@
         [strongSelf.tableView.mj_header endRefreshing];
     } failure:^(id object) {
         kMeSTRONGSELF
+        [strongSelf.tableView reloadData];
+        [strongSelf.tableView.mj_header endRefreshing];
         [strongSelf.navigationController popViewControllerAnimated:YES];
     }];
 }

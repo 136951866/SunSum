@@ -10,14 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-const static CGFloat kSSEditClerkLogCellHeight = 283;
+@class SSClerkFinishTaskModel;
+const static CGFloat kSSEditClerkLogCellHeight = 333;
 
 @interface SSEditClerkLogCell : UITableViewCell
-- (void)setUIWIthModel:(id)model;
-+ (CGFloat)getCellHeightWithModel:(NSObject *)model;
+- (void)setUIWIthModel:(SSClerkFinishTaskModel *)model;
++ (CGFloat)getCellHeightWithModel:(SSClerkFinishTaskModel *)model;
 
 @property (nonatomic,copy)kMeBasicBlock notichBlock;
 @property (nonatomic,copy)kMeBasicBlock markBlock;
+@property (nonatomic,copy)kMeBasicBlock serverBlock;
 
 @end
 

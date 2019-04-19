@@ -7,15 +7,15 @@
 //
 
 #import "SSEditClerkInfoCell.h"
-#import "SSTextView.h"
 
+#import "SSClerkFinishTaskModel.h"
 
 @interface SSEditClerkInfoCell (){
-    BOOL _isMakr;
+    //0 备注 1注意 2预约数
+    SSClerkEditLogType _type;
 }
 @property (weak, nonatomic) IBOutlet UIView *viewForText;
-@property (nonatomic , strong) SSTextView *textView;
-@property (nonatomic, strong) NSObject *model;
+@property (nonatomic,strong) SSClerkFinishTaskModel *model;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPic;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbltime;
@@ -28,42 +28,61 @@
     [super awakeFromNib];
     self.selectionStyle = 0;
     [_viewForText addSubview:self.textView];
+    _lbltime.adjustsFontSizeToFitWidth = YES;
     // Initialization code
 }
 
-- (void)setMarkUIWithModel:(id)model{
+- (void)setServerUIWithModel:(SSClerkFinishTaskModel *)model{
     _model = model;
-    _isMakr = YES;
-    kSDLoadImg(_imgPic, kMeUnNilStr(@""));
-    _lblTitle.text = kMeUnNilStr(@"11");
-    _lbltime.text = kMeUnNilStr(@"2019-09-09 00:00");
-//    self.textView.textView.text = kMeUnNilStr(_model.goods_detail);
-//    if ( kMeUnNilStr(_model.goods_detail).length == 0) {
-//        self.textView.placeholderTextView.hidden = NO;
-//    }else{
-//        self.textView.placeholderTextView.hidden =YES;
-//    }
+    _type = SSClerkEditLogServerNumType;
+    _textView.textView.keyboardType = UIKeyboardTypeNumberPad;
+    _textView.placeholderTextView.text = @"预约数";
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblTitle.text = kMeUnNilStr(model.name);
+    _lbltime.text = kMeUnNilStr(model.last_time);
+    self.textView.textView.text = kMeUnNilStr(model.reservation_num);
+    if (kMeUnNilStr(model.reservation_num).length == 0) {
+        self.textView.placeholderTextView.hidden = NO;
+    }else{
+        self.textView.placeholderTextView.hidden =YES;
+    }
 }
 
-- (void)setNoticeUIWithModel:(id)model{
+- (void)setMarkUIWithModel:(SSClerkFinishTaskModel *)model{
     _model = model;
-    _isMakr = NO;
-    kSDLoadImg(_imgPic, kMeUnNilStr(@""));
-    _lblTitle.text = kMeUnNilStr(@"11");
-    _lbltime.text = kMeUnNilStr(@"2019-09-09 00:00");
-    //    self.textView.textView.text = kMeUnNilStr(_model.goods_detail);
-    //    if ( kMeUnNilStr(_model.goods_detail).length == 0) {
-    //        self.textView.placeholderTextView.hidden = NO;
-    //    }else{
-    //        self.textView.placeholderTextView.hidden =YES;
-    //    }
+    _type = SSClerkEditLogmarkType;
+    _textView.placeholderTextView.text = @"备注";
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblTitle.text = kMeUnNilStr(model.name);
+    _lbltime.text = kMeUnNilStr(model.last_time);
+    self.textView.textView.text = kMeUnNilStr(model.desc);
+    if ( kMeUnNilStr(model.desc).length == 0) {
+        self.textView.placeholderTextView.hidden = NO;
+    }else{
+        self.textView.placeholderTextView.hidden =YES;
+    }
+}
+
+- (void)setNoticeUIWithModel:(SSClerkFinishTaskModel *)model{
+    _model = model;
+    _type = SSClerkEditLogNoticeType;
+    _textView.placeholderTextView.text = @"注意事项";
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblTitle.text = kMeUnNilStr(model.name);
+    _lbltime.text = kMeUnNilStr(model.last_time);
+    self.textView.textView.text = kMeUnNilStr(model.matters_attention);
+    if ( kMeUnNilStr(model.matters_attention).length == 0) {
+        self.textView.placeholderTextView.hidden = NO;
+    }else{
+        self.textView.placeholderTextView.hidden =YES;
+    }
 }
 
 
 - (SSTextView *)textView{
     if(!_textView){
         _textView = [[SSTextView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-20, 178)];
-        _textView.placeholderTextView.text =_isMakr?@"给这个员工备注":@"注意事项";
+//        _textView.placeholderTextView.text =_isMakr?@"备注":@"注意事项";
         _textView.textView.font = kMeFont(12);
         _textView.placeholderTextView.font = kMeFont(12);
         _textView.textView.textColor = kSSblack;

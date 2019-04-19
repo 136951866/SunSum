@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SSTextView.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class SSClerkFinishTaskModel;
 const static CGFloat kSSEditClerkLogCellHeight = 242;
 
 
 @interface SSEditClerkInfoCell : UITableViewCell
 
-- (void)setMarkUIWithModel:(id)model;
-- (void)setNoticeUIWithModel:(id)model;
+- (void)setMarkUIWithModel:(SSClerkFinishTaskModel *)model;
+- (void)setNoticeUIWithModel:(SSClerkFinishTaskModel *)model;
+- (void)setServerUIWithModel:(SSClerkFinishTaskModel *)model;
+@property (nonatomic , strong) SSTextView *textView;
 
 @end
 

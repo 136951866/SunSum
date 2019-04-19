@@ -10,6 +10,8 @@
 #import "SSCLerkLogHomeCell.h"
 #import "SSEditClerkLogVC.h"
 #import "SSCLerkTaskHomeModel.h"
+#import "SSNewClerkManngerModel.h"
+#import "SSClerkTaskDetailVC.h"
 
 @interface SSCLerkLogHomeVC ()<UITableViewDelegate, UITableViewDataSource,RefreshToolDelegate>
 
@@ -56,8 +58,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SSEditClerkLogVC *vc = [[SSEditClerkLogVC alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    SSCLerkTaskHomeModel *model = self.refresh.arrData[indexPath.row];
+    if(model.status == 2){
+        SSClerkTaskDetailVC *vc = [[SSClerkTaskDetailVC alloc]initWithTaskId:@(model.idField).description];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        SSEditClerkLogVC *vc = [[SSEditClerkLogVC alloc]initWithModel:model];
+        kMeWEAKSELF
+        vc.finishBlock = ^{
+            model.status = 2;
+            model.status_text = @"已完成";
+            kMeSTRONGSELF
+            [strongSelf.tableView reloadData];
+        };
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (UITableView *)tableView{

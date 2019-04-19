@@ -11,6 +11,11 @@
 		3600B856217EF10700049F49 /* YBPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600B851217EF10600049F49 /* YBPopupMenuPath.m */; };
 		3600B857217EF10700049F49 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600B853217EF10600049F49 /* YBPopupMenu.m */; };
 		3600D2D5226960B6009DEC59 /* SSFourHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600D2D4226960B6009DEC59 /* SSFourHomeModel.m */; };
+		3600D2D822699636009DEC59 /* SSClerkFinishTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600D2D722699636009DEC59 /* SSClerkFinishTaskModel.m */; };
+		3600D2DB2269AAF4009DEC59 /* SSCheckClerkLogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600D2DA2269AAF4009DEC59 /* SSCheckClerkLogVC.m */; };
+		3600D2DF2269AB92009DEC59 /* SSCheckClerkLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600D2DD2269AB92009DEC59 /* SSCheckClerkLogCell.m */; };
+		3600D2E02269AB93009DEC59 /* SSCheckClerkLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3600D2DE2269AB92009DEC59 /* SSCheckClerkLogCell.xib */; };
+		3600D2E32269C7A9009DEC59 /* SSClerkTaskMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600D2E22269C7A9009DEC59 /* SSClerkTaskMoreVC.m */; };
 		3601766C215B8CE10080EB00 /* ALAssetsLibrary+MECategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3601766B215B8CE10080EB00 /* ALAssetsLibrary+MECategory.m */; };
 		3602A18B21424091004A6E1F /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3602A18321424091004A6E1F /* UIWebView+FLUIWebView.m */; };
 		3602A18C21424091004A6E1F /* ZLWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3602A18621424091004A6E1F /* ZLWebVC.m */; };
@@ -1050,6 +1055,15 @@
 		3600B854217EF10600049F49 /* YBPopupMenuPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenuPath.h; sourceTree = "<group>"; };
 		3600D2D3226960B6009DEC59 /* SSFourHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourHomeModel.h; sourceTree = "<group>"; };
 		3600D2D4226960B6009DEC59 /* SSFourHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourHomeModel.m; sourceTree = "<group>"; };
+		3600D2D622699636009DEC59 /* SSClerkFinishTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkFinishTaskModel.h; sourceTree = "<group>"; };
+		3600D2D722699636009DEC59 /* SSClerkFinishTaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkFinishTaskModel.m; sourceTree = "<group>"; };
+		3600D2D92269AAF4009DEC59 /* SSCheckClerkLogVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCheckClerkLogVC.h; sourceTree = "<group>"; };
+		3600D2DA2269AAF4009DEC59 /* SSCheckClerkLogVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCheckClerkLogVC.m; sourceTree = "<group>"; };
+		3600D2DC2269AB92009DEC59 /* SSCheckClerkLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCheckClerkLogCell.h; sourceTree = "<group>"; };
+		3600D2DD2269AB92009DEC59 /* SSCheckClerkLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCheckClerkLogCell.m; sourceTree = "<group>"; };
+		3600D2DE2269AB92009DEC59 /* SSCheckClerkLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSCheckClerkLogCell.xib; sourceTree = "<group>"; };
+		3600D2E12269C7A9009DEC59 /* SSClerkTaskMoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTaskMoreVC.h; sourceTree = "<group>"; };
+		3600D2E22269C7A9009DEC59 /* SSClerkTaskMoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTaskMoreVC.m; sourceTree = "<group>"; };
 		3601766A215B8CE10080EB00 /* ALAssetsLibrary+MECategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+MECategory.h"; sourceTree = "<group>"; };
 		3601766B215B8CE10080EB00 /* ALAssetsLibrary+MECategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+MECategory.m"; sourceTree = "<group>"; };
 		3602A18321424091004A6E1F /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
@@ -3382,6 +3396,9 @@
 				36F5FDF6226822D70024DDA8 /* SSClerkOperationDailyMainCell.h */,
 				36F5FDF7226822D70024DDA8 /* SSClerkOperationDailyMainCell.m */,
 				36F5FDF8226822D70024DDA8 /* SSClerkOperationDailyMainCell.xib */,
+				3600D2DC2269AB92009DEC59 /* SSCheckClerkLogCell.h */,
+				3600D2DD2269AB92009DEC59 /* SSCheckClerkLogCell.m */,
+				3600D2DE2269AB92009DEC59 /* SSCheckClerkLogCell.xib */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -3427,6 +3444,10 @@
 				367AA75E2265D071004A9AFE /* SSClerkWorkStatisticsCustomerVistVC.m */,
 				36F5FDEE2268134D0024DDA8 /* SSClerkOperationDailyVC.h */,
 				36F5FDEF2268134D0024DDA8 /* SSClerkOperationDailyVC.m */,
+				3600D2D92269AAF4009DEC59 /* SSCheckClerkLogVC.h */,
+				3600D2DA2269AAF4009DEC59 /* SSCheckClerkLogVC.m */,
+				3600D2E12269C7A9009DEC59 /* SSClerkTaskMoreVC.h */,
+				3600D2E22269C7A9009DEC59 /* SSClerkTaskMoreVC.m */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -5918,6 +5939,8 @@
 				362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */,
 				361F852622686FE8009F8926 /* SSClerkCreateClerkTaskModel.h */,
 				361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */,
+				3600D2D622699636009DEC59 /* SSClerkFinishTaskModel.h */,
+				3600D2D722699636009DEC59 /* SSClerkFinishTaskModel.m */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -6379,6 +6402,7 @@
 				36D368A6223F6880009F781B /* SSLoginVC.xib in Resources */,
 				36459AE32251B09A00AB8329 /* richText_editor.html in Resources */,
 				36D36B1D223F695C009F781B /* SSNewActiveCell.xib in Resources */,
+				3600D2E02269AB93009DEC59 /* SSCheckClerkLogCell.xib in Resources */,
 				36D36B03223F695C009F781B /* SSThridHomeTimeSecionView.xib in Resources */,
 				36D36F03223F7737009F781B /* SSMineExchangeRudeCell.xib in Resources */,
 				36FB87C122423170000A7547 /* SSBdataLineCell.xib in Resources */,
@@ -6638,6 +6662,7 @@
 				3691309C22363B6E008B1836 /* AALabel.m in Sources */,
 				36F5E84F222F68F1000B0241 /* EMVoiceConverter.mm in Sources */,
 				36D36947223F68C3009F781B /* SSPosterContentListVC.m in Sources */,
+				3600D2DB2269AAF4009DEC59 /* SSCheckClerkLogVC.m in Sources */,
 				36D36B4B223F695C009F781B /* SSSkuBuyView.m in Sources */,
 				36D36AFB223F695C009F781B /* SSThridHomeHeaderView.m in Sources */,
 				36D36EEF223F7737009F781B /* SSMyOrderDetailCell.m in Sources */,
@@ -6881,6 +6906,7 @@
 				36FD640A213FAC28009743C5 /* UIImage+MECompress.m in Sources */,
 				36D369CD223F690F009F781B /* SSArticelModel.m in Sources */,
 				36D36B4A223F695C009F781B /* SSSkuByReusableView.m in Sources */,
+				3600D2E32269C7A9009DEC59 /* SSClerkTaskMoreVC.m in Sources */,
 				365151C0214134380044C763 /* MBProgressHUD+MJ.m in Sources */,
 				36D36EF8223F7737009F781B /* SSGetCaseMainCell.m in Sources */,
 				36D36E2C223F6C50009F781B /* SSTextView.m in Sources */,
@@ -7057,6 +7083,7 @@
 				36D36AFC223F695C009F781B /* SSThridNavView.m in Sources */,
 				36707295221C04C90070BA90 /* ZHMapAroundInfoViewController.m in Sources */,
 				36D36B1B223F695C009F781B /* SSNewBaoQiangCell.m in Sources */,
+				3600D2DF2269AB92009DEC59 /* SSCheckClerkLogCell.m in Sources */,
 				36D36C15223F6980009F781B /* SSBynamicCommentView.m in Sources */,
 				36D36BD1223F6973009F781B /* SSServiceDetailsModel.m in Sources */,
 				36F5E833222F68F1000B0241 /* TMenuCell.m in Sources */,
@@ -7245,6 +7272,7 @@
 				36D36CBD223F69B7009F781B /* SSDistrbutionOrderModel.m in Sources */,
 				36D36C5C223F699C009F781B /* SSShoppingCartMakeOrderAttrModel.m in Sources */,
 				36D36C55223F699C009F781B /* SSShoppingCartVC.m in Sources */,
+				3600D2D822699636009DEC59 /* SSClerkFinishTaskModel.m in Sources */,
 				36D36E54223F6C8A009F781B /* SSCommonTool.m in Sources */,
 				36D36941223F68C3009F781B /* SSArticelSearchDataVC.m in Sources */,
 				36D36BF3223F6974009F781B /* SSServiceDetailsBottomView.m in Sources */,

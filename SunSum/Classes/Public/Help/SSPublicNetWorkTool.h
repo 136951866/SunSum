@@ -24,7 +24,7 @@
 @class SSAddGoodModel;
 @class SSAiCustomerDataModel;
 @class SSClerkCreateClerkTaskModel;
-
+@class SSClerkFinishTaskModel;
 @interface SSPublicNetWorkTool : NSObject
 
 /*********************************************/
@@ -49,6 +49,10 @@
 + (void)postgetclerktaskDetailWithTaskId:(NSString*)taskId SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 //创建店员任务
 + (void)postgetSSIPcommoncreateClerkTaskWithmodel:(SSClerkCreateClerkTaskModel*)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//编写店员日志
++ (void)postgetSSIPfinishTaskWithmodel:(SSClerkFinishTaskModel*)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+
+//
 /*********************************************/
 
 

@@ -61,6 +61,9 @@
         [strongSelf.tableView reloadData];
         [strongSelf.tableView.mj_header endRefreshing];
     } failure:^(id object) {
+        kMeSTRONGSELF
+        [strongSelf.tableView reloadData];
+        [strongSelf.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -135,7 +138,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row == 0){
         //运营
-        
         SSClerkOperationDailyVC *vc = [[SSClerkOperationDailyVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){

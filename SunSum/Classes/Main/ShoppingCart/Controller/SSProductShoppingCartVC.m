@@ -35,20 +35,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(![SSUserInfoModel isLogin]){
-//        [self.view addSubview:self.loginVC.view];
-    }else{
-        [self.view addSubview:self.tableView];
-        [self.view addSubview:self.bottomView];
-        [self.refresh addRefreshView];
-        [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.equalTo(@(kSSShopppingCartBottomViewHeight));
-            make.width.equalTo(@(SCREEN_WIDTH));
-            make.top.equalTo(@(SCREEN_HEIGHT-kSSShopppingCartBottomViewHeight-kMeTabBarHeight));
-        }];
-    }
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogout) name:kUserLogout object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogin) name:kUserLogin object:nil];
+    self.title = @"购物车";
+//    if(![SSUserInfoModel isLogin]){
+////        [self.view addSubview:self.loginVC.view];
+//    }else{
+    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.bottomView];
+    [self.refresh addRefreshView];
+    [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(kSSShopppingCartBottomViewHeight));
+        make.width.equalTo(@(SCREEN_WIDTH));
+        make.top.equalTo(@(SCREEN_HEIGHT-kSSShopppingCartBottomViewHeight));
+    }];
+//    }
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogout) name:kUserLogout object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogin) name:kUserLogin object:nil];
     kShopCartReload
 }
 
@@ -71,7 +72,7 @@
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@(kSSShopppingCartBottomViewHeight));
         make.width.equalTo(@(SCREEN_WIDTH));
-        make.top.equalTo(@(SCREEN_HEIGHT-kSSShopppingCartBottomViewHeight-kMeTabBarHeight));
+        make.top.equalTo(@(SCREEN_HEIGHT-kSSShopppingCartBottomViewHeight));
     }];
 //    [self.loginVC.view removeFromSuperview];
 //    self.loginVC = nil;
@@ -280,7 +281,7 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kMeNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kMeTabBarHeight-kSSShopppingCartBottomViewHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kMeNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kSSShopppingCartBottomViewHeight) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSShoppingCartCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSShoppingCartCell class])];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;

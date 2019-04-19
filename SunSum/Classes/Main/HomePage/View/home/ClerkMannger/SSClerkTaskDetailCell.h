@@ -16,6 +16,9 @@ const static CGFloat kSSClerkTaskDetailCellHeight = 172;
 @interface SSClerkTaskDetailCell : UITableViewCell
 - (void)setUIWIthModel:(SSClerkTaskDetailModel *)model;
 + (CGFloat)getCellHeightWithModel:(SSClerkTaskDetailModel *)model;
+
+@property (nonatomic , copy) kMeBasicBlock checkLogBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

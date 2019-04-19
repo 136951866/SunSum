@@ -9,6 +9,7 @@
 #import "SSClerkTaskDetailVC.h"
 #import "SSClerkTaskDetailCell.h"
 #import "SSClerkTaskDetailModel.h"
+#import "SSCheckClerkLogVC.h"
 
 @interface SSClerkTaskDetailVC ()<UITableViewDelegate, UITableViewDataSource>{
     NSString *_taskId;
@@ -41,7 +42,6 @@
         kMeSTRONGSELF
         [strongSelf.navigationController popViewControllerAnimated:YES];
     }];
-    // Do any additional setup after loading the view.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,6 +51,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SSClerkTaskDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkTaskDetailCell class]) forIndexPath:indexPath];
     [cell setUIWIthModel:_model];
+    kMeWEAKSELF
+    cell.checkLogBlock = ^{
+        kMeSTRONGSELF
+        SSCheckClerkLogVC *vc = [[SSCheckClerkLogVC alloc]initWithModel:strongSelf->_model];
+        [strongSelf.navigationController pushViewController:vc animated:YES];
+    };
     return cell;
 }
 
@@ -67,7 +73,7 @@
         _tableView.tableFooterView = [UIView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor =  [UIColor colorWithHexString:@"FAFAFC"];
+        _tableView.backgroundColor =  [UIColor colorWithHexString:@"FAFAFC"];;
     }
     return _tableView;
 }

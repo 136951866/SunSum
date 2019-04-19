@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * nick_name;
 @property (nonatomic, strong) NSString * service_at;
-
+@property (nonatomic, strong) NSString * idField;
 
 @end
 

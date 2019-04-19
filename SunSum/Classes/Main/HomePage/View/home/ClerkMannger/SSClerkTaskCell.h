@@ -17,6 +17,8 @@ const static CGFloat kSSClerkTaskCellOrgialHeight = 251;
 - (void)setUIWithArr:(SSNewClerkManngerModel *)model;
 + (CGFloat)getCellHeightWithArr:(SSNewClerkManngerModel *)model;
 
+@property (nonatomic, copy) kMeBasicBlock moreBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

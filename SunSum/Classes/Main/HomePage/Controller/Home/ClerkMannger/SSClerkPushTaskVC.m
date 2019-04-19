@@ -26,7 +26,9 @@ const static CGFloat kBootomViewHeight = 90;
 
 @implementation SSClerkPushTaskVC
 
-
+- (void)dealloc{
+    kNSNotificationCenterDealloc
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +38,22 @@ const static CGFloat kBootomViewHeight = 90;
     _model.arrclerk_id = [NSArray array];
     [self.view addSubview:self.tableView];
     [self.view addSubview:[self getBottomView]];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogout) name:kUserLogout object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userLogin) name:kUserLogin object:nil];
+}
+
+- (void)userLogout{
+    _model = [SSClerkCreateClerkTaskModel new];
+    _model.token = kMeUnNilStr(kCurrentUser.token);
+    _model.arrclerk_id = [NSArray array];
+    [self.tableView reloadData];
+}
+
+- (void)userLogin{
+    _model = [SSClerkCreateClerkTaskModel new];
+    _model.token = kMeUnNilStr(kCurrentUser.token);
+    _model.arrclerk_id = [NSArray array];
+    [self.tableView reloadData];
 }
 
 - (void)saveAction:(UIButton *)btn{
@@ -52,14 +70,17 @@ const static CGFloat kBootomViewHeight = 90;
         return;
     }
     if(kMeUnArr(_model.arrclerk_id).count == 0){
-        [SSShowViewTool showMessage:@"请选择电源" view:kMeCurrentWindow];
+        [SSShowViewTool showMessage:@"请选择店员" view:kMeCurrentWindow];
         return;
     }
     _model.clerk_id =[_model.arrclerk_id componentsJoinedByString:@","];
     kMeWEAKSELF
     [SSPublicNetWorkTool postgetSSIPcommoncreateClerkTaskWithmodel:_model SuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
-        [strongSelf.navigationController popViewControllerAnimated:YES];
+        strongSelf->_model = [SSClerkCreateClerkTaskModel new];
+        strongSelf->_model.token = kMeUnNilStr(kCurrentUser.token);
+        strongSelf->_model.arrclerk_id = [NSArray array];
+        [strongSelf.tableView reloadData];
     } failure:^(id object) {
         
     }];
@@ -150,7 +171,7 @@ const static CGFloat kBootomViewHeight = 90;
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,kMeNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kBootomViewHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,kMeNavBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-kMeNavBarHeight-kBootomViewHeight-kMeTabBarHeight) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSClerkPushTaskCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSClerkPushTaskCell class])];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;
@@ -164,7 +185,7 @@ const static CGFloat kBootomViewHeight = 90;
 }
 
 - (UIView *)getBottomView{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - kBootomViewHeight, SCREEN_WIDTH, kBootomViewHeight)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - kBootomViewHeight-kMeTabBarHeight, SCREEN_WIDTH, kBootomViewHeight)];
     _btnSave = [SSView btnWithFrame:CGRectMake(15, (kBootomViewHeight-40)/2, SCREEN_WIDTH-30, 40) Img:nil title:@"确定发布" target:self Action:@selector(saveAction:)];
     _btnSave.cornerRadius = 20;
     _btnSave.clipsToBounds = YES;

@@ -41,7 +41,7 @@ SSModelObjectClassInArrayWithDic(@{@"clerk_finish_percent" : [SSNewClerkManngerC
 //员工日志
 
 @implementation SSNewClerkManngerClerkTaskclientModel : SSBaseModel
-
+SSModelIdToIdField
 @end
 
 @implementation SSNewClerkManngerClerkTaskServiceModel : SSBaseModel

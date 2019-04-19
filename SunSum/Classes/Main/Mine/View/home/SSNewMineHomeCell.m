@@ -32,6 +32,7 @@
 #import "SSStoreApplyStatusVC.h"
 #import "SSDynamicGoodApplyVC.h"
 #import "SSPAVistorVC.h"
+#import "SSProductShoppingCartVC.h"
 
 @interface SSNewMineHomeCell()<UICollectionViewDelegate,UICollectionViewDataSource>{
     NSArray *_arrModel;
@@ -157,6 +158,12 @@
             SSPAVistorVC *vc = [[SSPAVistorVC alloc]init];
             [homeVc.navigationController pushViewController:vc animated:YES];
         }
+            
+        case MeShopCartt:{
+            SSProductShoppingCartVC *vc = [[SSProductShoppingCartVC alloc]init];
+            [homeVc.navigationController pushViewController:vc animated:YES];
+        }
+            
         default:
             break;
     }

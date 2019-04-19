@@ -22,6 +22,7 @@
 #import "SSAddGoodModel.h"
 #import "SSAiCustomerDataModel.h"
 #import "SSClerkCreateClerkTaskModel.h"
+#import "SSClerkFinishTaskModel.h"
 
 @implementation SSPublicNetWorkTool
 
@@ -158,6 +159,25 @@
     NSString *url = kGetApiWithUrl(SSIPcommonclerkcreateClerkTask);
     NSDictionary *dic = [model mj_keyValues];
     MBProgressHUD *HUD = [self commitWithHUD:@"发布中"];
+    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
+        [SSShowViewTool SHOWHUDWITHHUD:HUD test:@"发布成功"];
+        kMeCallBlock(successBlock,responseObject);
+    } failure:^(id error) {
+        if([error isKindOfClass:[ZLRequestResponse class]]){
+            ZLRequestResponse *res = (ZLRequestResponse*)error;
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        }else{
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        }
+        kMeCallBlock(failure,error);
+    }];
+}
+
+//编写店员日志
++ (void)postgetSSIPfinishTaskWithmodel:(SSClerkFinishTaskModel*)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
+    NSString *url = kGetApiWithUrl(SSIPcommonclerkfinishTask);
+    NSDictionary *dic = [model mj_keyValues];
+    MBProgressHUD *HUD = [self commitWithHUD:@"提交中"];
     [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
         [HUD hideAnimated:YES];
         kMeCallBlock(successBlock,responseObject);

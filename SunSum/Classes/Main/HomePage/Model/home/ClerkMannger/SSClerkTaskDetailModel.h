@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString * matters_attention;
 @property (nonatomic, strong) NSString * service_at;
 @property (nonatomic, strong) NSString * desc;
+@property (nonatomic, strong) NSString * reservation_num;
 
 @end
 

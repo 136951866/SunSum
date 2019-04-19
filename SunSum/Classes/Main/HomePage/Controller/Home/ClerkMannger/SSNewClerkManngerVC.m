@@ -16,6 +16,7 @@
 #import "SSClerkPlanAchieveVC.h"
 #import "SSEditClerkLogVC.h"
 #import "SSNewClerkManngerModel.h"
+#import "SSClerkTaskMoreVC.h"
 
 @interface SSNewClerkManngerVC ()<UITableViewDelegate, UITableViewDataSource>{
     NSArray *_arrSelect;
@@ -56,15 +57,22 @@
     if(indexPath.row == 0){
         SSClerkTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkTaskCell class]) forIndexPath:indexPath];
         [cell setUIWithArr:_model];
+        kMeWEAKSELF
+        cell.moreBlock = ^{
+            kMeSTRONGSELF
+            SSClerkTaskMoreVC *vc = [[SSClerkTaskMoreVC alloc]init];
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
         return cell;
     }else if (indexPath.row == 1){
         SSClerkLogCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkLogCell class]) forIndexPath:indexPath];
         [cell setUIWithArr:_model];
-        cell.selectIndexBlock = ^(NSInteger index) {
-            kMeSTRONGSELF
-            SSEditClerkLogVC *vc = [[SSEditClerkLogVC alloc]init];
-            [strongSelf.navigationController pushViewController:vc animated:YES];
-        };
+//        cell.selectIndexBlock = ^(NSInteger index) {
+//            kMeSTRONGSELF
+//            SSNewClerkManngerClerkTaskclientModel *cmodel = kMeUnArr(strongSelf->_model.clerk_task_service.client)[index];
+//            SSEditClerkLogVC *vc = [[SSEditClerkLogVC alloc]initWithModel:cmodel];
+//            [strongSelf.navigationController pushViewController:vc animated:YES];
+//        };
         return cell;
     }else{
         SSClerkSortCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkSortCell class]) forIndexPath:indexPath];
@@ -94,10 +102,9 @@
         SSCLerkTaskHomeVC *vc = [[SSCLerkTaskHomeVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
-#warning ---
-//        if(kCurrentUser.client_type == SSClientBTypeStyle){
-//            return;
-//        }
+        if(kCurrentUser.client_type == SSClientBTypeStyle){
+            return;
+        }
         SSCLerkLogHomeVC *vc = [[SSCLerkLogHomeVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2){
