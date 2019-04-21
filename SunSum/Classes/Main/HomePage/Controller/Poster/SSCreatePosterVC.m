@@ -94,6 +94,7 @@
     kSDLoadImg(_imgHeader,kMeUnNilStr(kCurrentUser.header_pic));
     _lblName.text = kMeUnNilStr(kCurrentUser.name);
     NSString *str = @"";
+#warning ----
     if(_isActive){
         str = [NSString stringWithFormat:@"http://md.meshidai.com/api/redbag_qrcode?uid=%@&pid=0&activity_id=%@",kMeUnNilStr(kCurrentUser.uid),kMeUnNilStr(_activeModel.activity_id)];
     }else{
