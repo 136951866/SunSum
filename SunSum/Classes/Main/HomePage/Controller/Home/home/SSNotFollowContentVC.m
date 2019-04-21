@@ -20,7 +20,7 @@
 
 - (instancetype)initWithday:(NSInteger)day{
     if(self = [super init]){
-        _type = 1;
+        _type = day;
     }
     return self;
 }
