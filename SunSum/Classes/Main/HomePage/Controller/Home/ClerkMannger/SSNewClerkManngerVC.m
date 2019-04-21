@@ -37,7 +37,7 @@
     _model = [SSNewClerkManngerModel new];
     _arrSelect = @[@[],@[],@[],@[]];
     kMeWEAKSELF
-#warning ---
+#warning --- 预约数
     [SSPublicNetWorkTool postgetclerkclerkManagementWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
         strongSelf->_model = [SSNewClerkManngerModel mj_objectWithKeyValues:responseObject.data];
