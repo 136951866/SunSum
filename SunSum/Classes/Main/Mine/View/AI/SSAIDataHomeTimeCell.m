@@ -8,6 +8,7 @@
 
 #import "SSAIDataHomeTimeCell.h"
 #import "SSAIDataHomeTimeModel.h"
+#import "SSMonthNotFollowUpMemberModel.h"
 
 @interface SSAIDataHomeTimeCell ()
 
@@ -30,6 +31,12 @@
     kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
     _lblTitle.text = [NSString stringWithFormat:@"%@第%@次查看您的小店",kMeUnNilStr(model.nick_name),kMeUnNilStr(model.count)];
     _lblTime.text = kMeUnNilStr(model.created_at);
+}
+
+- (void)setFollowUIWithModel:(SSMonthNotFollowUpMemberModel *)model{
+    kSDLoadImg(_imgPic, kMeUnNilStr(model.header_pic));
+    _lblTitle.text =kMeUnNilStr(model.nick_name);
+    _lblTime.text = @"";
 }
 
 - (void)setPeopleUIWithModel:(SSAIDataHomeTimeModel *)model{

@@ -11,7 +11,7 @@
 
 @interface SSClerkTGetTaskListVC ()<JXCategoryViewDelegate,UIScrollViewDelegate>{
     NSArray *_arrType;
-    SSOrderStyle _currentType;
+    NSInteger _currentType;
 }
 
 @property (nonatomic, strong) JXCategoryTitleView *categoryView;

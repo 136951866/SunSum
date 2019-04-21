@@ -103,7 +103,12 @@
 #define SSIPcommoncustomerthisMonthCustomerGrowth @"common/customer/thisMonthCustomerGrowth"
 //任务列表（店员的）
 #define SSIPcommonclerkTaskListByStatus @"common/clerk/clerkTaskListByStatus"
-
+//客户跟进（7天15天30天）统计
+#define SSIPcommonclerknotFollowUpMember @"common/clerk/notFollowUpMember"
+//近30天没跟进的用户
+#define SSIPcommonclerkthisMonthNotFollowUpMember @"common/clerk/thisMonthNotFollowUpMember"
+//任务列表（店员的）
+#define SSIPcommonclerkTaskListByStatus @"common/clerk/clerkTaskListByStatus"
 /*********************************************/
 
 
@@ -142,8 +147,8 @@
 #define SSIPcommonaigetLabel @"common/label/getLabel"
 //设置用户标签
 #define SSIPcommonaisetMemberLabel @"common/user/setMemberLabel"
-//
-#define SSIPcommonaifollowUpMember @""
+//跟进投票用户（点击打电话时调用）
+#define SSIPcommonaifollowUpMember @"common/followup/followUpMember"
 /*********************************************/
 
 /*********************************************/

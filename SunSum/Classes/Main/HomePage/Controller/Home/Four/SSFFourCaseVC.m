@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"方案";
+    self.title = @"案例";
     _arrImage = @[@"caseedu",@"caseedutour",@"caseeducar",@"caseeduzx"];
     _currntIndex = 0;
     [self.view addSubview:self.tableView];

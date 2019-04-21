@@ -136,6 +136,45 @@
     }];
 }
 
+//客户跟进（7天15天30天）统计
++ (void)postgetSSIPcommonclerknotFollowUpMemberWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
+    NSString *url = kGetApiWithUrl(SSIPcommonclerknotFollowUpMember);
+    [THTTPManager postWithParameter:@{@"token":kMeUnNilStr(kCurrentUser.token)} strUrl:url success:^(ZLRequestResponse *responseObject) {
+        //        [HUD hideAnimated:YES];
+        kMeCallBlock(successBlock,responseObject);
+    } failure:^(id error) {
+        //        if([error isKindOfClass:[ZLRequestResponse class]]){
+        //            ZLRequestResponse *res = (ZLRequestResponse*)error;
+        //            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        //        }else{
+        //            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        //        }
+        kMeCallBlock(failure,error);
+    }];
+}
+
+//跟进投票用户（点击打电话时调用） 1投票活动2海报3文章4访问店铺
++ (void)postgetSSIPcommonclerknotFollowUpMemberWithUid:(NSString*)uid type:(NSInteger)type SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
+    NSString *url = kGetApiWithUrl(SSIPcommonaifollowUpMember);
+    MBProgressHUD *HUD = [self commitWithHUD:@""];
+    [THTTPManager postWithParameter:@{@"token":kMeUnNilStr(kCurrentUser.token),@"uid":kMeUnNilStr(uid),@"type":@(type)} strUrl:url success:^(ZLRequestResponse *responseObject) {
+        //        [HUD hideAnimated:YES];
+        [HUD hideAnimated:YES];
+
+        kMeCallBlock(successBlock,responseObject);
+    } failure:^(id error) {
+        [HUD hideAnimated:YES];
+
+        //        if([error isKindOfClass:[ZLRequestResponse class]]){
+        //            ZLRequestResponse *res = (ZLRequestResponse*)error;
+        //            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        //        }else{
+        //            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        //        }
+        kMeCallBlock(failure,error);
+    }];
+}
+
 //任务祥情
 + (void)postgetclerktaskDetailWithTaskId:(NSString*)taskId SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
     NSString *url = kGetApiWithUrl(SSIPcommonclertaskDetail);
@@ -213,17 +252,17 @@
 //员工管理->员工日志
 + (void)postgetclerkclerkTaskServiceWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
     NSString *url = kGetApiWithUrl(SSIPcommonclerkclerkTaskService);
-    MBProgressHUD *HUD = [self commitWithHUD:@""];
+//    MBProgressHUD *HUD = [self commitWithHUD:@""];
     [THTTPManager postWithParameter:@{@"token":kMeUnNilStr(kCurrentUser.token)} strUrl:url success:^(ZLRequestResponse *responseObject) {
-        [HUD hideAnimated:YES];
+//        [HUD hideAnimated:YES];
         kMeCallBlock(successBlock,responseObject);
     } failure:^(id error) {
-        if([error isKindOfClass:[ZLRequestResponse class]]){
-            ZLRequestResponse *res = (ZLRequestResponse*)error;
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
-        }else{
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
-        }
+//        if([error isKindOfClass:[ZLRequestResponse class]]){
+//            ZLRequestResponse *res = (ZLRequestResponse*)error;
+//            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+//        }else{
+//            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+//        }
         kMeCallBlock(failure,error);
     }];
 }
@@ -321,7 +360,12 @@
         [HUD hideAnimated:YES];
         kMeCallBlock(successBlock,responseObject);
     } failure:^(id error) {
-        [HUD hideAnimated:YES];
+        if([error isKindOfClass:[ZLRequestResponse class]]){
+            ZLRequestResponse *res = (ZLRequestResponse*)error;
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        }else{
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        }
         kMeCallBlock(failure,error);
     }];
 }

@@ -54,6 +54,10 @@
 
 //员工管理->员工日志
 + (void)postgetclerkclerkTaskServiceWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//客户跟进（7天15天30天）统计
++ (void)postgetSSIPcommonclerknotFollowUpMemberWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//跟进投票用户（点击打电话时调用） 1投票活动2海报3文章4访问店铺
++ (void)postgetSSIPcommonclerknotFollowUpMemberWithUid:(NSString*)uid type:(NSInteger)type SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 /*********************************************/
 
 

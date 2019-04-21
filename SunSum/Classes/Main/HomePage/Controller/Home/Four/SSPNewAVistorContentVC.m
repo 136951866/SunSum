@@ -88,6 +88,12 @@
     sheet.blockBtnTapHandle = ^(NSInteger index){
         kMeSTRONGSELF
         if(index){
+            //1投票活动2海报3文章4访问店铺
+            NSInteger type = 3;
+            if(strongSelf->_isPoster){
+                type = 2;
+            }
+            [SSPublicNetWorkTool postgetSSIPcommonclerknotFollowUpMemberWithUid:@(model.member_id).description type:type SuccessBlock:nil failure:nil];
             [SSCommonTool showWithTellPhone:kMeUnNilStr(model.user.cellphone) inView:strongSelf.view];
         }else{
             if([kMeUnNilStr(model.tls_id) isEqualToString:kCurrentUser.tls_data.tls_id]){

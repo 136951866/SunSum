@@ -70,6 +70,12 @@
 		362A7E39226C4578006BDC5A /* SSFFourCaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E38226C4578006BDC5A /* SSFFourCaseVC.m */; };
 		362A7E3C226C45E0006BDC5A /* SSFFourCaseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E3B226C45E0006BDC5A /* SSFFourCaseHeaderView.m */; };
 		362A7E3E226C45F0006BDC5A /* SSFFourCaseHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A7E3D226C45F0006BDC5A /* SSFFourCaseHeaderView.xib */; };
+		362A7E42226C5AE2006BDC5A /* SSClerkFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E40226C5AE2006BDC5A /* SSClerkFollowCell.m */; };
+		362A7E43226C5AE2006BDC5A /* SSClerkFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A7E41226C5AE2006BDC5A /* SSClerkFollowCell.xib */; };
+		362A7E46226C5E40006BDC5A /* SSClerkNotFollowUpMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E45226C5E40006BDC5A /* SSClerkNotFollowUpMember.m */; };
+		362A7E49226C609F006BDC5A /* SSNotFollowContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E48226C609F006BDC5A /* SSNotFollowContentVC.m */; };
+		362A7E4C226C6100006BDC5A /* SSNotFollowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E4B226C6100006BDC5A /* SSNotFollowVC.m */; };
+		362A7E4F226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E4E226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.m */; };
 		363281232249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */; };
 		363281242249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */; };
 		36371554218ACE9E0057E59F /* UIButton+ImageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36371553218ACE9D0057E59F /* UIButton+ImageTitleStyle.m */; };
@@ -1172,6 +1178,17 @@
 		362A7E3A226C45E0006BDC5A /* SSFFourCaseHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFFourCaseHeaderView.h; sourceTree = "<group>"; };
 		362A7E3B226C45E0006BDC5A /* SSFFourCaseHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFFourCaseHeaderView.m; sourceTree = "<group>"; };
 		362A7E3D226C45F0006BDC5A /* SSFFourCaseHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSFFourCaseHeaderView.xib; sourceTree = "<group>"; };
+		362A7E3F226C5AE2006BDC5A /* SSClerkFollowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkFollowCell.h; sourceTree = "<group>"; };
+		362A7E40226C5AE2006BDC5A /* SSClerkFollowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkFollowCell.m; sourceTree = "<group>"; };
+		362A7E41226C5AE2006BDC5A /* SSClerkFollowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSClerkFollowCell.xib; sourceTree = "<group>"; };
+		362A7E44226C5E40006BDC5A /* SSClerkNotFollowUpMember.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkNotFollowUpMember.h; sourceTree = "<group>"; };
+		362A7E45226C5E40006BDC5A /* SSClerkNotFollowUpMember.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkNotFollowUpMember.m; sourceTree = "<group>"; };
+		362A7E47226C609F006BDC5A /* SSNotFollowContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNotFollowContentVC.h; sourceTree = "<group>"; };
+		362A7E48226C609F006BDC5A /* SSNotFollowContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNotFollowContentVC.m; sourceTree = "<group>"; };
+		362A7E4A226C6100006BDC5A /* SSNotFollowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNotFollowVC.h; sourceTree = "<group>"; };
+		362A7E4B226C6100006BDC5A /* SSNotFollowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNotFollowVC.m; sourceTree = "<group>"; };
+		362A7E4D226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSMonthNotFollowUpMemberModel.h; sourceTree = "<group>"; };
+		362A7E4E226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSMonthNotFollowUpMemberModel.m; sourceTree = "<group>"; };
 		363281202249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSDynamicGoodApplyStatusCell.h; sourceTree = "<group>"; };
 		363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSDynamicGoodApplyStatusCell.m; sourceTree = "<group>"; };
 		363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSDynamicGoodApplyStatusCell.xib; sourceTree = "<group>"; };
@@ -3439,6 +3456,9 @@
 				3600D2DC2269AB92009DEC59 /* SSCheckClerkLogCell.h */,
 				3600D2DD2269AB92009DEC59 /* SSCheckClerkLogCell.m */,
 				3600D2DE2269AB92009DEC59 /* SSCheckClerkLogCell.xib */,
+				362A7E3F226C5AE2006BDC5A /* SSClerkFollowCell.h */,
+				362A7E40226C5AE2006BDC5A /* SSClerkFollowCell.m */,
+				362A7E41226C5AE2006BDC5A /* SSClerkFollowCell.xib */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -5924,6 +5944,10 @@
 				36D368AF223F68C3009F781B /* SSThridRushSpikeVC.m */,
 				36D368B0223F68C3009F781B /* SSThridHomeVC.m */,
 				36D368B1223F68C3009F781B /* SSThridRushSpikeVC.h */,
+				362A7E47226C609F006BDC5A /* SSNotFollowContentVC.h */,
+				362A7E48226C609F006BDC5A /* SSNotFollowContentVC.m */,
+				362A7E4A226C6100006BDC5A /* SSNotFollowVC.h */,
+				362A7E4B226C6100006BDC5A /* SSNotFollowVC.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -5990,6 +6014,10 @@
 				361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */,
 				3600D2D622699636009DEC59 /* SSClerkFinishTaskModel.h */,
 				3600D2D722699636009DEC59 /* SSClerkFinishTaskModel.m */,
+				362A7E44226C5E40006BDC5A /* SSClerkNotFollowUpMember.h */,
+				362A7E45226C5E40006BDC5A /* SSClerkNotFollowUpMember.m */,
+				362A7E4D226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.h */,
+				362A7E4E226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.m */,
 			);
 			path = ClerkMannger;
 			sourceTree = "<group>";
@@ -6546,6 +6574,7 @@
 				36D3693D223F68C3009F781B /* SSMakeOrderVC.xib in Resources */,
 				36459AB22251AF0E00AB8329 /* SSGoodManngerSpecCell.xib in Resources */,
 				3673D0EC2248C90E0007F3C5 /* SSDynamicGoodApplyNineGridCell.xib in Resources */,
+				362A7E43226C5AE2006BDC5A /* SSClerkFollowCell.xib in Resources */,
 				36D36EF7223F7737009F781B /* SSGetCaseMainCell.xib in Resources */,
 				365942DD22608C3E00C5D976 /* SSClerkTaskContentCell.xib in Resources */,
 				36D36948223F68C3009F781B /* SSCreatePosterVC.xib in Resources */,
@@ -6637,6 +6666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D368A2223F6880009F781B /* SSExitVC.m in Sources */,
+				362A7E4C226C6100006BDC5A /* SSNotFollowVC.m in Sources */,
 				36D36B4C223F695C009F781B /* SSSkuBuyCell.m in Sources */,
 				36D36884223F6847009F781B /* SSStoreModel.m in Sources */,
 				36D36E2F223F6C50009F781B /* SSEnlargeTouchButton.m in Sources */,
@@ -6657,6 +6687,7 @@
 				36D36B58223F695C009F781B /* SSPosterContentListCell.m in Sources */,
 				36D369C6223F690F009F781B /* SSVistorCountModel.m in Sources */,
 				36F5E832222F68F1000B0241 /* TTextView.m in Sources */,
+				362A7E46226C5E40006BDC5A /* SSClerkNotFollowUpMember.m in Sources */,
 				36472AEE21C8E15C00CC3E48 /* JXCategoryIndicatorBallView.m in Sources */,
 				36DD41D7226731CC0034D49F /* SSClerkDiagnosisResultClerkModel.m in Sources */,
 				36FD63FC213FAAD5009743C5 /* NSAttributedString+MESize.m in Sources */,
@@ -6681,6 +6712,7 @@
 				36D36CB1223F69B7009F781B /* SSAppointDetailModel.m in Sources */,
 				36ED6C2F225F957F00552F13 /* SSAIDataHomePeopleVC.m in Sources */,
 				36DD41D12266FC440034D49F /* SSCLerkTaskHomeModel.m in Sources */,
+				362A7E4F226C65BD006BDC5A /* SSMonthNotFollowUpMemberModel.m in Sources */,
 				36227609224486640031AA0F /* SSStoreApplyStatusVC.m in Sources */,
 				36D36BCC223F6973009F781B /* SSStoreSearchVC.m in Sources */,
 				36D369D6223F690F009F781B /* SSCoupleDetailModle.m in Sources */,
@@ -6949,6 +6981,7 @@
 				36D36B55223F695C009F781B /* SSMyPosterContentCell.m in Sources */,
 				36D36E50223F6C8A009F781B /* SSPublicNetWorkTool.m in Sources */,
 				36D369BB223F690F009F781B /* SSGoodDetailModel.m in Sources */,
+				362A7E49226C609F006BDC5A /* SSNotFollowContentVC.m in Sources */,
 				36ED6BDB225F956300552F13 /* SSAIDataHomeTimeModel.m in Sources */,
 				36D36A03223F694D009F781B /* SSCoupleHomeMainCell.m in Sources */,
 				36D36EE8223F7737009F781B /* SSLogisticsHeaderView.m in Sources */,
@@ -7247,6 +7280,7 @@
 				36D369CA223F690F009F781B /* SSArticelCategoryModel.m in Sources */,
 				36D36CB8223F69B7009F781B /* SSMoneyDetailedModel.m in Sources */,
 				365942C622603A2900C5D976 /* SSFourHomeDairyCell.m in Sources */,
+				362A7E42226C5AE2006BDC5A /* SSClerkFollowCell.m in Sources */,
 				36FD640D213FAC54009743C5 /* UIImage+MEExtension.m in Sources */,
 				36D36AF4223F695C009F781B /* SSMakeOrderSelectAddressView.m in Sources */,
 				363281232249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m in Sources */,

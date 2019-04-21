@@ -57,7 +57,7 @@ const static CGFloat bottomBtnHeight = 47;
         [strongSelf.tableView reloadData];
     } failure:^(id object) {
         kMeSTRONGSELF
-        [strongSelf.navigationController popViewControllerAnimated:YES];
+//        [strongSelf.navigationController popViewControllerAnimated:YES];
     }];
 }
 
@@ -174,16 +174,20 @@ const static CGFloat bottomBtnHeight = 47;
 - (void)callAction{
     if(kMeUnNilStr(_model.cellphone).length == 0){
         [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
     }
+    [SSPublicNetWorkTool postgetSSIPcommonclerknotFollowUpMemberWithUid:@(_model.member_id).description type:4 SuccessBlock:nil failure:nil];
     [SSCommonTool showWithTellPhone:kMeUnNilStr(_model.cellphone) inView:self.view];
 }
 
 - (void)messageAction{
     if(kMeUnNilStr(_model.tls_id).length == 0){
         [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
     }
     if([kMeUnNilStr(_model.tls_id) isEqualToString:kCurrentUser.tls_data.tls_id]){
         [SSShowViewTool showMessage:@"暂不支持和自己聊天" view:self.view];
+        return;
     }else{
         TConversationCellData *data = [[TConversationCellData alloc] init];
         data.convId = kMeUnNilStr(_model.tls_id);

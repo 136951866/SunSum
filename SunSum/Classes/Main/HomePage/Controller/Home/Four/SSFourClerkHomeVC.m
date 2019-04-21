@@ -13,10 +13,14 @@
 #import "SSAIHomeVC.h"
 #import "SSPNewAVistorVC.h"
 #import "SSCLerkLogHomeVC.h"
+#import "SSClerkFollowCell.h"
+#import "SSClerkNotFollowUpMember.h"
+#import "SSNotFollowVC.h"
 
 @interface SSFourClerkHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
 {
     SSNewClerkManngerClerkTaskServiceModel *_homeModel;
+    SSClerkNotFollowUpMember *_notFollowMoldel;
 }
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) SSFourClerkHomeHeaderView         *headerView;
@@ -30,6 +34,7 @@
     self.navBarHidden = YES;
     [self.view addSubview:self.tableView];
     _homeModel = [SSNewClerkManngerClerkTaskServiceModel new];
+    _notFollowMoldel = [SSClerkNotFollowUpMember new];
     self.view.backgroundColor = [UIColor colorWithHexString:@"f6f5fa"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadData)];
     [self.tableView.mj_header beginRefreshing];
@@ -46,24 +51,46 @@
 }
 
 - (void)reloadData{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     kMeWEAKSELF
-    [SSPublicNetWorkTool postgetclerkclerkTaskServiceWithSuccessBlock:^(ZLRequestResponse *responseObject) {
-        kMeSTRONGSELF
-        strongSelf->_homeModel = [SSNewClerkManngerClerkTaskServiceModel mj_objectWithKeyValues:responseObject.data];
-        [strongSelf.tableView reloadData];
-        [strongSelf.tableView.mj_header endRefreshing];
-    } failure:^(id object) {
-        kMeSTRONGSELF
-        [strongSelf.tableView reloadData];
-        [strongSelf.tableView.mj_header endRefreshing];
-    }];
+    
+    dispatch_group_async(group, queue, ^{
+        [SSPublicNetWorkTool postgetclerkclerkTaskServiceWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+            kMeSTRONGSELF
+            strongSelf->_homeModel = [SSNewClerkManngerClerkTaskServiceModel mj_objectWithKeyValues:responseObject.data];
+            dispatch_semaphore_signal(semaphore);
+        } failure:^(id object) {
+            dispatch_semaphore_signal(semaphore);
+        }];
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        [SSPublicNetWorkTool postgetSSIPcommonclerknotFollowUpMemberWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+            kMeSTRONGSELF
+            strongSelf->_notFollowMoldel = [SSClerkNotFollowUpMember mj_objectWithKeyValues:responseObject.data];
+            dispatch_semaphore_signal(semaphore);
+        } failure:^(id object) {
+            dispatch_semaphore_signal(semaphore);
+        }];
+    });
+
+    dispatch_group_notify(group, queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            kMeSTRONGSELF
+            [strongSelf.tableView reloadData];
+            [strongSelf.tableView.mj_header endRefreshing];
+        });
+    });
 }
 
 - (void)toAiVC{
     SSAIHomeVC *vc = [[SSAIHomeVC alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 - (void)toPAVC{
     SSPNewAVistorVC *vc = [[SSPNewAVistorVC alloc]init];
@@ -73,13 +100,19 @@
 #pragma mark - tableView deleagte and sourcedata
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    SSClerkLogCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkLogCell class]) forIndexPath:indexPath];
-     [cell setLogUIWithArr:_homeModel];
-    return cell;
+    if(indexPath.row == 0){
+        SSClerkLogCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkLogCell class]) forIndexPath:indexPath];
+        [cell setLogUIWithArr:_homeModel];
+        return cell;
+    }else{
+        SSClerkFollowCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSClerkFollowCell class]) forIndexPath:indexPath];
+        [cell setUiWithModel:_notFollowMoldel];
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -87,15 +120,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SSCLerkLogHomeVC *vc = [[SSCLerkLogHomeVC alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if(indexPath.row == 0){
+        SSCLerkLogHomeVC *vc = [[SSCLerkLogHomeVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        SSNotFollowVC *vc = [[SSNotFollowVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
-
 
 - (UITableView *)tableView{
     if(!_tableView){
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeTabBarHeight) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSClerkLogCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSClerkLogCell class])];
+         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSClerkFollowCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSClerkFollowCell class])];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.tableHeaderView = self.headerView;
