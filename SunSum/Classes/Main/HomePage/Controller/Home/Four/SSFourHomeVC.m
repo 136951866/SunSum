@@ -19,6 +19,7 @@
 #import "SSClerkWorkStatisticsServerLogVC.h"
 #import "SSClerkOperationDailyVC.h"
 #import "SSFourHomeModel.h"
+#import "SSFFourCaseVC.h"
 
 @interface SSFourHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
 {
@@ -86,7 +87,8 @@
 }
 
 - (void)toCaseVC{
-    
+    SSFFourCaseVC *vc = [[SSFFourCaseVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - tableView deleagte and sourcedata

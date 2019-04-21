@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SSFFourCaseHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-Cr-tAI">
+                    <rect key="frame" x="10" y="10" width="355" height="93"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精选行业案例" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-VY-1OI">
+                            <rect key="frame" x="15" y="10" width="325" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daU-NA-7uB">
+                            <rect key="frame" x="15" y="37" width="325" height="1"/>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="NRm-hK-2oP"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="1000" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prL-k4-AdB">
+                            <rect key="frame" x="15" y="53" width="71.5" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="dGq-Mt-wXC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="教育培训">
+                                <color key="titleColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.086274509803921567" green="0.61568627450980395" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wus-SA-nog"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCY-nw-gvE">
+                            <rect key="frame" x="99.5" y="53" width="71.5" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="旅游服务">
+                                <color key="titleColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.086274509799999996" green="0.61568627450000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="d82-ia-exh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6s-Q8-Usc">
+                            <rect key="frame" x="184" y="53" width="71.5" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="汽类服务">
+                                <color key="titleColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.086274509799999996" green="0.61568627450000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gyH-yk-cwR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-9p-gc8">
+                            <rect key="frame" x="268.5" y="53" width="71.5" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="装修装饰">
+                                <color key="titleColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.086274509799999996" green="0.61568627450000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="s27-gS-Wnk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="daU-NA-7uB" secondAttribute="trailing" constant="15" id="0pK-Uh-wZE"/>
+                        <constraint firstAttribute="trailing" secondItem="AMt-9p-gc8" secondAttribute="trailing" constant="15" id="1fv-13-aiy"/>
+                        <constraint firstItem="prL-k4-AdB" firstAttribute="top" secondItem="daU-NA-7uB" secondAttribute="bottom" constant="15" id="4cz-4T-1Ql"/>
+                        <constraint firstItem="daU-NA-7uB" firstAttribute="top" secondItem="aDh-VY-1OI" secondAttribute="bottom" constant="10" id="63M-ee-wkn"/>
+                        <constraint firstItem="BCY-nw-gvE" firstAttribute="height" secondItem="prL-k4-AdB" secondAttribute="height" id="9Kw-at-D6Z"/>
+                        <constraint firstItem="r6s-Q8-Usc" firstAttribute="leading" secondItem="BCY-nw-gvE" secondAttribute="trailing" constant="13" id="A2i-Fz-wgh"/>
+                        <constraint firstItem="BCY-nw-gvE" firstAttribute="leading" secondItem="prL-k4-AdB" secondAttribute="trailing" constant="13" id="ASx-wd-CyO"/>
+                        <constraint firstItem="aDh-VY-1OI" firstAttribute="top" secondItem="B2E-Cr-tAI" secondAttribute="top" constant="10" id="KL2-c3-LH6"/>
+                        <constraint firstItem="prL-k4-AdB" firstAttribute="leading" secondItem="B2E-Cr-tAI" secondAttribute="leading" constant="15" id="LgU-Dg-E6p"/>
+                        <constraint firstItem="r6s-Q8-Usc" firstAttribute="height" secondItem="prL-k4-AdB" secondAttribute="height" id="ME3-gW-j0h"/>
+                        <constraint firstItem="BCY-nw-gvE" firstAttribute="width" secondItem="prL-k4-AdB" secondAttribute="width" id="Nj9-dT-vAb"/>
+                        <constraint firstItem="r6s-Q8-Usc" firstAttribute="width" secondItem="prL-k4-AdB" secondAttribute="width" id="OPQ-0p-fYb"/>
+                        <constraint firstItem="AMt-9p-gc8" firstAttribute="width" secondItem="prL-k4-AdB" secondAttribute="width" id="Pab-Ob-JYb"/>
+                        <constraint firstItem="AMt-9p-gc8" firstAttribute="height" secondItem="prL-k4-AdB" secondAttribute="height" id="Sbz-5u-plc"/>
+                        <constraint firstItem="r6s-Q8-Usc" firstAttribute="centerY" secondItem="prL-k4-AdB" secondAttribute="centerY" id="UD8-N0-CnU"/>
+                        <constraint firstItem="daU-NA-7uB" firstAttribute="leading" secondItem="B2E-Cr-tAI" secondAttribute="leading" constant="15" id="VSs-SD-nYI"/>
+                        <constraint firstItem="BCY-nw-gvE" firstAttribute="centerY" secondItem="prL-k4-AdB" secondAttribute="centerY" id="fyt-fe-xbJ"/>
+                        <constraint firstItem="AMt-9p-gc8" firstAttribute="leading" secondItem="r6s-Q8-Usc" secondAttribute="trailing" constant="13" id="gvp-DI-Sex"/>
+                        <constraint firstAttribute="trailing" secondItem="aDh-VY-1OI" secondAttribute="trailing" constant="15" id="l45-W0-n20"/>
+                        <constraint firstItem="AMt-9p-gc8" firstAttribute="centerY" secondItem="prL-k4-AdB" secondAttribute="centerY" id="vWX-wA-V5Z"/>
+                        <constraint firstItem="aDh-VY-1OI" firstAttribute="leading" secondItem="B2E-Cr-tAI" secondAttribute="leading" constant="15" id="yH7-N8-n6t"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="B2E-Cr-tAI" secondAttribute="bottom" id="Ifg-DB-Scl"/>
+                <constraint firstAttribute="trailing" secondItem="B2E-Cr-tAI" secondAttribute="trailing" constant="10" id="Qmj-ZG-hpr"/>
+                <constraint firstItem="B2E-Cr-tAI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Tsr-WY-l0h"/>
+                <constraint firstItem="B2E-Cr-tAI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cav-1y-9aT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnCar" destination="r6s-Q8-Usc" id="UKc-sN-aWU"/>
+                <outlet property="btnEdu" destination="prL-k4-AdB" id="IMI-1L-FzA"/>
+                <outlet property="btnTour" destination="BCY-nw-gvE" id="c0W-IT-8uI"/>
+                <outlet property="btnZX" destination="AMt-9p-gc8" id="Kt2-M9-Mci"/>
+            </connections>
+            <point key="canvasLocation" x="52" y="84.107946026986511"/>
+        </view>
+    </objects>
+</document>
