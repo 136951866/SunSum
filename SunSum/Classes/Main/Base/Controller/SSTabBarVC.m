@@ -29,10 +29,13 @@
 #import "SSFilterGoodVC.h"
 #import "SSClerkPushTaskVC.h"
 #import "SSFourClerkHomeVC.h"
+#import "SSNewClerkMineHomeVC.h"
 
 @interface SSTabBarVC ()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) SSNewMineHomeVC *mine;
+@property (nonatomic, strong) SSNewClerkMineHomeVC *clerkmine;
+
 @end
 
 @implementation SSTabBarVC
@@ -75,8 +78,8 @@
         SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
         [self addChildVc:dynamic title:@"动态" image:@"dynamic" selectedImage:@"dynamic_s"];
         
-        self.mine = [[SSNewMineHomeVC alloc] init];
-        [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
+        self.clerkmine = [[SSNewClerkMineHomeVC alloc] init];
+        [self addChildVc:self.clerkmine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
     }
     [self getUnMeaasge];
     
@@ -94,7 +97,12 @@
 }
 
 - (void)userLogout{
-    self.mine.tabBarItem.badgeValue = nil;
+    if(self.mine){
+       self.mine.tabBarItem.badgeValue = nil;
+    }
+    if(self.clerkmine){
+        self.clerkmine.tabBarItem.badgeValue = nil;
+    }
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kUnMessage object:nil];
 }
 
@@ -110,7 +118,11 @@
             if(appDelegate.unMessageCount>99){
                 str = @"99+";
             }
-            self.mine.tabBarItem.badgeValue = unmessgae==0?nil:str;
+            if(kCurrentUser.user_type == 3){
+                self.mine.tabBarItem.badgeValue = unmessgae==0?nil:str;
+            }else if (kCurrentUser.user_type == 5){
+                self.clerkmine.tabBarItem.badgeValue = unmessgae==0?nil:str;
+            }
         });
     }
 }

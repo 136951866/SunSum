@@ -28,6 +28,7 @@
 
 #import "SSGuideVC.h"
 #import "SSAppointmentDetailVC.h"
+#import "SSClerkTGetTaskListVC.h"
 
 @interface AppDelegate ()<WXApiDelegate,UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
 
@@ -42,19 +43,15 @@
 #pragma mark - init IM sdk
     [[TUIKit sharedInstance] initKit:sdkAppid accountType:sdkAccountType withConfig:[TUIKitConfig defaultConfig]];
 #warning ---
-    //    if([SSUserInfoModel isLogin] && kMeUnNilStr(kCurrentUser.tls_data.tls_id).length && kMeUnNilStr(kCurrentUser.tls_data.user_tls_key).length){
-//        NSLog(@"%@    %@",kMeUnNilStr(kCurrentUser.tls_data.tls_id),kMeUnNilStr(kCurrentUser.tls_data.user_tls_key));
-//        [[TUIKit sharedInstance] loginKit:kMeUnNilStr(kCurrentUser.tls_data.tls_id) userSig:kMeUnNilStr(kCurrentUser.tls_data.user_tls_key) succ:^{
-//            NSLog(@"sucess");
-//        } fail:^(int code, NSString *msg) {
-//            NSLog(@"fial");
-//        }];
-//    }
-    //    [[TIMFriendshipManager sharedInstance] GetSelfProfile:^(TIMUserProfile * profile) {
-    //        NSLog(@"GetSelfProfile identifier=%@ nickname=%@ allowType=%d", profile.identifier, profile.nickname, profile.allowType);
-    //    } fail:^(int code, NSString * err) {
-    //        NSLog(@"GetSelfProfile fail: code=%d err=%@", code, err);
-    //    }];
+        if([SSUserInfoModel isLogin] && kMeUnNilStr(kCurrentUser.tls_data.tls_id).length && kMeUnNilStr(kCurrentUser.tls_data.user_tls_key).length){
+        NSLog(@"%@    %@",kMeUnNilStr(kCurrentUser.tls_data.tls_id),kMeUnNilStr(kCurrentUser.tls_data.user_tls_key));
+        [[TUIKit sharedInstance] loginKit:kMeUnNilStr(kCurrentUser.tls_data.tls_id) userSig:kMeUnNilStr(kCurrentUser.tls_data.user_tls_key) succ:^{
+            NSLog(@"sucess");
+        } fail:^(int code, NSString *msg) {
+            NSLog(@"fial");
+        }];
+    }
+
     
     if (@available(iOS 11.0, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -470,7 +467,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
         //        NSString *type = contentDic[@"type"];
         //        NSInteger msg_id = [contentDic[@"msg_id"] integerValue];
         NSString *strType = kMeUnNilStr(model.type);
-        if([strType isEqualToString:@"1"] || [strType isEqualToString:@"2"]|| [strType isEqualToString:@"3"]|| [strType isEqualToString:@"7"]){
+        if([strType isEqualToString:@"1"] || [strType isEqualToString:@"2"]|| [strType isEqualToString:@"3"]|| [strType isEqualToString:@"7"]|| [strType isEqualToString:@"13"]){
             //1跳商品  2跳订单详情 3更新 4B店铺访问 5C店铺访问 7预约管理 8投票
             HDAlertView *alertView = [HDAlertView alertViewWithTitle:@"提示" andMessage:messageStr];
             alertView.isSupportRotating = YES;
@@ -497,6 +494,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
                 }else if ([strType isEqualToString:@"7"]){
                     SSAppointmentDetailVC *dvc = [[SSAppointmentDetailVC alloc]initWithReserve_sn:kMeUnNilStr(model.idField) userType:SSClientBTypeStyle];
+                    [baseVC.navigationController pushViewController:dvc animated:YES];
+                }else if ([strType isEqualToString:@"13"]){
+                    SSClerkTGetTaskListVC *dvc = [[SSClerkTGetTaskListVC alloc]init];
                     [baseVC.navigationController pushViewController:dvc animated:YES];
                 }else{
                     

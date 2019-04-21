@@ -152,7 +152,7 @@
                                     <constraint firstAttribute="width" constant="6" id="UD3-rI-FWJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任务发布内容" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-aQ-fdC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任务发布内容" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-aQ-fdC">
                                 <rect key="frame" x="222" y="0.0" width="80" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="AWg-5E-8yS"/>

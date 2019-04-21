@@ -101,8 +101,8 @@
 #define SSIPcommoncustomertransformationAnalysisChart @"common/customer/transformationAnalysisChart"
 //本月客户成长
 #define SSIPcommoncustomerthisMonthCustomerGrowth @"common/customer/thisMonthCustomerGrowth"
-
-
+//任务列表（店员的）
+#define SSIPcommonclerkTaskListByStatus @"common/clerk/clerkTaskListByStatus"
 
 /*********************************************/
 

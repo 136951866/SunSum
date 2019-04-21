@@ -62,6 +62,11 @@
 		3628476D2140FD79008FE7F9 /* getIPhoneIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 362847682140FD78008FE7F9 /* getIPhoneIP.m */; };
 		362A36F622684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A36F522684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m */; };
 		362A36F922685F93000F3F1A /* SSClerkTaskDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */; };
+		362A7E2C226C14A6006BDC5A /* SSNewClerkMineHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E2A226C14A6006BDC5A /* SSNewClerkMineHomeCell.m */; };
+		362A7E2D226C14A6006BDC5A /* SSNewClerkMineHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A7E2B226C14A6006BDC5A /* SSNewClerkMineHomeCell.xib */; };
+		362A7E30226C1A85006BDC5A /* SSNewClerkMineHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E2F226C1A85006BDC5A /* SSNewClerkMineHomeVC.m */; };
+		362A7E33226C21A3006BDC5A /* SSClerkTGetTaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E32226C21A3006BDC5A /* SSClerkTGetTaskListVC.m */; };
+		362A7E36226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362A7E35226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.m */; };
 		363281232249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */; };
 		363281242249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */; };
 		36371554218ACE9E0057E59F /* UIButton+ImageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36371553218ACE9D0057E59F /* UIButton+ImageTitleStyle.m */; };
@@ -1150,6 +1155,15 @@
 		362A36F522684E93000F3F1A /* SSClerkWorkStatisticsServerLogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkWorkStatisticsServerLogModel.m; sourceTree = "<group>"; };
 		362A36F722685F93000F3F1A /* SSClerkTaskDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTaskDetailModel.h; sourceTree = "<group>"; };
 		362A36F822685F93000F3F1A /* SSClerkTaskDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTaskDetailModel.m; sourceTree = "<group>"; };
+		362A7E29226C14A6006BDC5A /* SSNewClerkMineHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNewClerkMineHomeCell.h; sourceTree = "<group>"; };
+		362A7E2A226C14A6006BDC5A /* SSNewClerkMineHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNewClerkMineHomeCell.m; sourceTree = "<group>"; };
+		362A7E2B226C14A6006BDC5A /* SSNewClerkMineHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSNewClerkMineHomeCell.xib; sourceTree = "<group>"; };
+		362A7E2E226C1A85006BDC5A /* SSNewClerkMineHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNewClerkMineHomeVC.h; sourceTree = "<group>"; };
+		362A7E2F226C1A85006BDC5A /* SSNewClerkMineHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNewClerkMineHomeVC.m; sourceTree = "<group>"; };
+		362A7E31226C21A3006BDC5A /* SSClerkTGetTaskListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTGetTaskListVC.h; sourceTree = "<group>"; };
+		362A7E32226C21A3006BDC5A /* SSClerkTGetTaskListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTGetTaskListVC.m; sourceTree = "<group>"; };
+		362A7E34226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkTGetTaskListContentVC.h; sourceTree = "<group>"; };
+		362A7E35226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkTGetTaskListContentVC.m; sourceTree = "<group>"; };
 		363281202249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSDynamicGoodApplyStatusCell.h; sourceTree = "<group>"; };
 		363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSDynamicGoodApplyStatusCell.m; sourceTree = "<group>"; };
 		363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSDynamicGoodApplyStatusCell.xib; sourceTree = "<group>"; };
@@ -3656,6 +3670,12 @@
 				3637F0562249F8BC002C661E /* SSDynamicGoodApplyStatusVC.m */,
 				3637F0582249F90C002C661E /* SSDynamicGoodApplyStatusContentVC.h */,
 				3637F0592249F90C002C661E /* SSDynamicGoodApplyStatusContentVC.m */,
+				362A7E2E226C1A85006BDC5A /* SSNewClerkMineHomeVC.h */,
+				362A7E2F226C1A85006BDC5A /* SSNewClerkMineHomeVC.m */,
+				362A7E31226C21A3006BDC5A /* SSClerkTGetTaskListVC.h */,
+				362A7E32226C21A3006BDC5A /* SSClerkTGetTaskListVC.m */,
+				362A7E34226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.h */,
+				362A7E35226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -5059,6 +5079,9 @@
 				363281202249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.h */,
 				363281212249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.m */,
 				363281222249F41300B5A4AD /* SSDynamicGoodApplyStatusCell.xib */,
+				362A7E29226C14A6006BDC5A /* SSNewClerkMineHomeCell.h */,
+				362A7E2A226C14A6006BDC5A /* SSNewClerkMineHomeCell.m */,
+				362A7E2B226C14A6006BDC5A /* SSNewClerkMineHomeCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -6482,6 +6505,7 @@
 				36D36C36223F6993009F781B /* SSMemberHomeProductCell.xib in Resources */,
 				366933222265B78D004DA6B1 /* SSClerkDiagnosisResultClerkCell.xib in Resources */,
 				36227608224486640031AA0F /* SSStoreApplyStatusVC.xib in Resources */,
+				362A7E2D226C14A6006BDC5A /* SSNewClerkMineHomeCell.xib in Resources */,
 				36D36B20223F695C009F781B /* SSHomeHeaderMenuView.xib in Resources */,
 				36459AAC2251AF0E00AB8329 /* SSAddGoodGoodAttributeCell.xib in Resources */,
 				36D36DDD223F6A46009F781B /* SSMyDistributionReusableView.xib in Resources */,
@@ -6857,6 +6881,7 @@
 				36D369FF223F694D009F781B /* SSCoupleFilterNavView.m in Sources */,
 				36D36AF2223F695C009F781B /* SSMessageTextField.m in Sources */,
 				36B0CC29226735FE0097C6D2 /* SSClerkWorkDaliyModel.m in Sources */,
+				362A7E33226C21A3006BDC5A /* SSClerkTGetTaskListVC.m in Sources */,
 				36D36F24223F7737009F781B /* SSBrandPieCell.m in Sources */,
 				36459AA12251AF0E00AB8329 /* SSGoodManngerCell.m in Sources */,
 				36D36CB6223F69B7009F781B /* SSBrandAbilityAnalysisModel.m in Sources */,
@@ -7029,6 +7054,7 @@
 				36D36B70223F695C009F781B /* SSProductDetalsBuyedContentCell.m in Sources */,
 				36D36B62223F695C009F781B /* SSThridProductDetailsTipCell.m in Sources */,
 				36D36B1E223F695C009F781B /* SSHomeHeaderMenuView.m in Sources */,
+				362A7E30226C1A85006BDC5A /* SSNewClerkMineHomeVC.m in Sources */,
 				36F5FE032268491A0024DDA8 /* SSClerkWorkStatisticsServerLogHeaderModel.m in Sources */,
 				36FB87C5224231C1000A7547 /* SSBdataVC.m in Sources */,
 				36F5E820222F68F1000B0241 /* TAddIndicatorView.m in Sources */,
@@ -7171,6 +7197,7 @@
 				36F5FDFD226825D70024DDA8 /* SSClerkOperationDailyMainModel.m in Sources */,
 				362276012244864E0031AA0F /* SSStoreApplyParModel.m in Sources */,
 				36472AF721C8E15C00CC3E48 /* JXCategoryTitleImageView.m in Sources */,
+				362A7E2C226C14A6006BDC5A /* SSNewClerkMineHomeCell.m in Sources */,
 				36D36CF7223F6A0B009F781B /* SSClerkManngerVC.m in Sources */,
 				367AA7632265D0B6004A9AFE /* SSClerkWorkStatisticsServerLogCell.m in Sources */,
 				36459ADD2251B09900AB8329 /* KWEditorBar.m in Sources */,
@@ -7282,6 +7309,7 @@
 				3669257F2264625B00BE1F24 /* SSEditClerkLogCell.m in Sources */,
 				36D3689F223F6880009F781B /* SSUserPathModel.m in Sources */,
 				36D36E2D223F6C50009F781B /* SSCustomActionSheet.m in Sources */,
+				362A7E36226C21F4006BDC5A /* SSClerkTGetTaskListContentVC.m in Sources */,
 				369130A222363B6E008B1836 /* AAChart.m in Sources */,
 				3617C30D21D0ADCB00004072 /* MeCoupleFilterLeftCell.m in Sources */,
 				36D36CFF223F6A0B009F781B /* SSClerkSearchDataVC.m in Sources */,

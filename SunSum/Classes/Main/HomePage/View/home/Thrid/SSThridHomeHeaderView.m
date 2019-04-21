@@ -114,8 +114,9 @@ typedef NS_ENUM(NSUInteger, SSThridHomeHeaderViewActiveType) {
     SSShareTool *shareTool = [SSShareTool me_instanceForTarget:self];
     shareTool.sharWebpageUrl = SSIPShare;
     NSLog(@"%@",SSIPShare);
-    shareTool.shareTitle = @"睁着眼洗的洁面慕斯,你见过吗?";
-    shareTool.shareDescriptionBody = @"你敢买我就敢送,鲜橙氨基酸洁面慕斯(邮费10元)";
+#warning --
+    shareTool.shareTitle = @"鲜橙智店";
+    shareTool.shareDescriptionBody = @"鲜橙智店";
     shareTool.shareImage = kMeGetAssetImage(@"icon-wgvilogo");
     
     [shareTool shareWebPageToPlatformType:UMSocialPlatformType_WechatSession success:^(id data) {
