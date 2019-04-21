@@ -285,7 +285,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkT-4H-cBg">
                         <rect key="frame" x="0.0" y="185" width="320" height="46"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pteb" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-Ab-fLg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clerkCaht" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-Ab-fLg">
                                 <rect key="frame" x="21" y="14" width="22" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="Qbe-1R-6cD"/>
@@ -380,10 +380,10 @@
     </objects>
     <resources>
         <image name="clerkAricel" width="22" height="22"/>
+        <image name="clerkCaht" width="22" height="22"/>
         <image name="clerkData" width="22" height="22"/>
         <image name="clerkGetTask" width="22" height="21"/>
         <image name="clerkPoster" width="22" height="22"/>
         <image name="homeaairrow" width="6" height="11"/>
-        <image name="icon-pteb" width="14.5" height="14"/>
     </resources>
 </document>

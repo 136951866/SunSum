@@ -56,7 +56,7 @@ const static CGFloat bottomBtnHeight = 47;
         strongSelf->_model = [SSAiCustomerDetailModel mj_objectWithKeyValues:responseObject.data];
         [strongSelf.tableView reloadData];
     } failure:^(id object) {
-        kMeSTRONGSELF
+//        kMeSTRONGSELF
 //        [strongSelf.navigationController popViewControllerAnimated:YES];
     }];
 }
@@ -218,6 +218,7 @@ const static CGFloat bottomBtnHeight = 47;
         _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url: kGetApiWithUrl(SSIPcommonaigetMemberVisit)];
         _refresh.delegate = self;
         _refresh.isDataInside = YES;
+        _refresh.showFailView = NO;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
             failView.backgroundColor = [UIColor whiteColor];
             failView.lblOfNodata.text = @"没有客户";

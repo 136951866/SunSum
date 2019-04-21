@@ -266,7 +266,7 @@
     </objects>
     <resources>
         <image name="homeAi" width="50" height="50"/>
-        <image name="homeAiPa" width="34" height="34"/>
+        <image name="homeAiPa" width="50.5" height="50"/>
         <image name="homeClerk" width="34" height="34"/>
         <image name="homeStore" width="50.5" height="50"/>
         <image name="homeanlei" width="34" height="34"/>
