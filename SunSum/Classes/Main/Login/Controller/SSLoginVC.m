@@ -190,6 +190,7 @@
 
 - (IBAction)loginAction:(UIButton *)sender {
     kMeWEAKSELF
+    [self.view endEditing:YES];
     [SSPublicNetWorkTool postloginByPhoneWithPhone:kMeUnNilStr(_tfNnumber.text) code:kMeUnNilStr(_tfCaptcha.text) successBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
         [strongSelf dealWithUserInfoWithrespon:responseObject];
@@ -233,6 +234,7 @@
 }
 
 - (IBAction)wxlogin:(UIButton *)sender {
+    [self.view endEditing:YES];
     [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
         if (error) {
             [SSShowViewTool showMessage:@"授权失败" view:kMeCurrentWindow];

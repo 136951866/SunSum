@@ -60,6 +60,22 @@
     [self.tableView reloadData];
 }
 
+- (void)setLogUIWithArr:(SSNewClerkManngerClerkTaskServiceModel *)model{
+    if(kCurrentUser.client_type == SSClientBTypeStyle){
+        _lblFinish.hidden = YES;
+        _imgArrow.hidden = YES;
+    }else{
+        _lblFinish.hidden = NO;
+        _imgArrow.hidden = NO;
+    }
+    _arrdata = @[];//kMeUnArr(model.clerk_task_service.client);
+    _tableView.hidden = !kMeUnArr(_arrdata).count;
+    _lblToday.text = kMeUnNilStr(model.clerk_today_log_count);
+    _lblWait.text = kMeUnNilStr(model.wait_servcie_count);
+    _lblOut.text = kMeUnNilStr(model.overdue_count);
+    [self.tableView reloadData];
+}
+
 #pragma mark - tableView deleagte and sourcedata
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

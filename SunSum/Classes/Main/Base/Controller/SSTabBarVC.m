@@ -28,6 +28,7 @@
 #import "SSBynamicHomeVC.h"
 #import "SSFilterGoodVC.h"
 #import "SSClerkPushTaskVC.h"
+#import "SSFourClerkHomeVC.h"
 
 @interface SSTabBarVC ()<UITabBarControllerDelegate>
 
@@ -68,7 +69,7 @@
         self.mine = [[SSNewMineHomeVC alloc] init];
         [self addChildVc:self.mine  title:@"我的" image:@"mine" selectedImage:@"mine_s"];
     }else if (kCurrentUser.user_type == 5){
-        UIViewController *home = [[UIViewController alloc] init];
+        SSFourClerkHomeVC *home = [[SSFourClerkHomeVC alloc] init];
         [self addChildVc:home title:@"首页" image:@"home" selectedImage:@"home_s"];
     
         SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];

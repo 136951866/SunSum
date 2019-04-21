@@ -25,7 +25,7 @@
 #define kGetApiWithUrl(url) [BASEIP stringByAppendingString:url]
 
 #define SSIPgetQiniuToken @"getQiniuToken"
-
+#define SSIPgetQiniuTokenPermanent @"getQiniuTokenPermanent"
 #pragma makr - TEST
 #define SSIPgetTokenByFour @"common/user/getTokenByFour"
 

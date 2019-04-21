@@ -137,6 +137,7 @@
 }
 
 - (IBAction)wxlogin:(UIButton *)sender {
+    [self.view endEditing:YES];
     [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
         if (error) {
             [SSShowViewTool showMessage:@"授权失败" view:kMeCurrentWindow];
@@ -226,6 +227,7 @@
 
 
 - (IBAction)otherLoginAction:(UIButton *)sender {
+    [self.view endEditing:YES];
     kMeWEAKSELF
     [SSLoginVC presentLoginVCWithIsShowCancel:self.isShowCancel SuccessHandler:^(id object) {
         [SSCommonTool dismissViewControllerAnimated:YES completion:^{

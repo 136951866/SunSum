@@ -174,7 +174,7 @@
     [self.view addSubview:viewForBottom];
     kMeWEAKSELF
     MBProgressHUD *HUD = [SSPublicNetWorkTool commitWithHUD:@""];
-    [SSPublicNetWorkTool postgetQiuNiuTokkenWithSuccessBlock:^(ZLRequestResponse *responseObject) {
+    [SSPublicNetWorkTool postgetForEvenQiuNiuTokkenWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
         [HUD hideAnimated:YES];
         strongSelf->_token = responseObject.data[@"token"];

@@ -52,7 +52,8 @@
 //编写店员日志
 + (void)postgetSSIPfinishTaskWithmodel:(SSClerkFinishTaskModel*)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 
-//
+//员工管理->员工日志
++ (void)postgetclerkclerkTaskServiceWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 /*********************************************/
 
 
@@ -111,7 +112,8 @@
 #pragma makr - 公共
 //获取七牛云TOKEN
 + (void)postgetQiuNiuTokkenWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
-
+//获取永久七牛云TOKEN
++ (void)postgetForEvenQiuNiuTokkenWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
 //上传图片
 + (void)postQiNiuUpFileWithToken:(NSString *)token filePath:(NSString *)filePath successBlock:(kMeObjBlock)successBlock failure:(kMeObjBlock)failure;
 

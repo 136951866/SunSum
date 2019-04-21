@@ -46,6 +46,9 @@
 		3612918F22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3612918D22657C77002414E3 /* SSClerkDiagnosisResultCustomerCell.xib */; };
 		3617C30D21D0ADCB00004072 /* MeCoupleFilterLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */; };
 		361F852822686FE8009F8926 /* SSClerkCreateClerkTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */; };
+		3620D9EF226C084C004F2942 /* SSFourClerkHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3620D9EE226C084C004F2942 /* SSFourClerkHomeHeaderView.m */; };
+		3620D9F1226C085D004F2942 /* SSFourClerkHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3620D9F0226C085D004F2942 /* SSFourClerkHomeHeaderView.xib */; };
+		3620D9F4226C0A4A004F2942 /* SSFourClerkHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3620D9F3226C0A4A004F2942 /* SSFourClerkHomeVC.m */; };
 		362276002244864D0031AA0F /* SSStoreApplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FD2244864D0031AA0F /* SSStoreApplyModel.m */; };
 		362276012244864E0031AA0F /* SSStoreApplyParModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */; };
 		36227607224486640031AA0F /* SSStoreApplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36227602224486630031AA0F /* SSStoreApplyVC.m */; };
@@ -1118,6 +1121,11 @@
 		3617C30C21D0ADCB00004072 /* MeCoupleFilterLeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCoupleFilterLeftCell.m; sourceTree = "<group>"; };
 		361F852622686FE8009F8926 /* SSClerkCreateClerkTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkCreateClerkTaskModel.h; sourceTree = "<group>"; };
 		361F852722686FE8009F8926 /* SSClerkCreateClerkTaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkCreateClerkTaskModel.m; sourceTree = "<group>"; };
+		3620D9ED226C084C004F2942 /* SSFourClerkHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourClerkHomeHeaderView.h; sourceTree = "<group>"; };
+		3620D9EE226C084C004F2942 /* SSFourClerkHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourClerkHomeHeaderView.m; sourceTree = "<group>"; };
+		3620D9F0226C085D004F2942 /* SSFourClerkHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSFourClerkHomeHeaderView.xib; sourceTree = "<group>"; };
+		3620D9F2226C0A4A004F2942 /* SSFourClerkHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFourClerkHomeVC.h; sourceTree = "<group>"; };
+		3620D9F3226C0A4A004F2942 /* SSFourClerkHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFourClerkHomeVC.m; sourceTree = "<group>"; };
 		362275FC2244864D0031AA0F /* SSStoreApplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSStoreApplyModel.h; sourceTree = "<group>"; };
 		362275FD2244864D0031AA0F /* SSStoreApplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSStoreApplyModel.m; sourceTree = "<group>"; };
 		362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSStoreApplyParModel.m; sourceTree = "<group>"; };
@@ -3292,6 +3300,9 @@
 				365942C822603C5700C5D976 /* SSFourHomeWorkShowCell.h */,
 				365942C922603C5700C5D976 /* SSFourHomeWorkShowCell.m */,
 				365942CA22603C5700C5D976 /* SSFourHomeWorkShowCell.xib */,
+				3620D9ED226C084C004F2942 /* SSFourClerkHomeHeaderView.h */,
+				3620D9EE226C084C004F2942 /* SSFourClerkHomeHeaderView.m */,
+				3620D9F0226C085D004F2942 /* SSFourClerkHomeHeaderView.xib */,
 			);
 			path = Four;
 			sourceTree = "<group>";
@@ -3305,6 +3316,8 @@
 				365942CE22607D8C00C5D976 /* SSPNewAVistorVC.m */,
 				365942D022607DA200C5D976 /* SSPNewAVistorContentVC.h */,
 				365942D122607DA200C5D976 /* SSPNewAVistorContentVC.m */,
+				3620D9F2226C0A4A004F2942 /* SSFourClerkHomeVC.h */,
+				3620D9F3226C0A4A004F2942 /* SSFourClerkHomeVC.m */,
 			);
 			path = Four;
 			sourceTree = "<group>";
@@ -6516,6 +6529,7 @@
 				36459AAE2251AF0E00AB8329 /* SSAddGoodDivideCell.xib in Resources */,
 				36D36DF7223F6A46009F781B /* SSMyMobileVC.xib in Resources */,
 				36D36B53223F695C009F781B /* SSFilterMainCell.xib in Resources */,
+				3620D9F1226C085D004F2942 /* SSFourClerkHomeHeaderView.xib in Resources */,
 				36D36EF4223F7737009F781B /* SSOrderDetailView.xib in Resources */,
 				36D36C1A223F6980009F781B /* SSBynamicLikeCell.xib in Resources */,
 				36D66EB1213F7904000476FF /* Main.storyboard in Resources */,
@@ -6935,6 +6949,7 @@
 				36D66EB9213F7907000476FF /* main.m in Sources */,
 				36F5E817222F68F1000B0241 /* THelper.m in Sources */,
 				3691308D22363B6E008B1836 /* AAPlotOptions.m in Sources */,
+				3620D9EF226C084C004F2942 /* SSFourClerkHomeHeaderView.m in Sources */,
 				36B8DCDD22648E19006A3AE4 /* SSPushContentVC.m in Sources */,
 				36D36C53223F699C009F781B /* SSShoppingCartGoodsVC.m in Sources */,
 				36D36BCF223F6973009F781B /* SSAppointmentSelectStoreVC.m in Sources */,
@@ -7002,6 +7017,7 @@
 				36D36DC4223F6A46009F781B /* SSMySelfExtractionOrderVC.m in Sources */,
 				36D36949223F68C3009F781B /* SSPosterListVC.m in Sources */,
 				36F5E82D222F68F1000B0241 /* TFaceView.m in Sources */,
+				3620D9F4226C0A4A004F2942 /* SSFourClerkHomeVC.m in Sources */,
 				3691308A22363B6E008B1836 /* AALabels.m in Sources */,
 				36ED6C02225F957200552F13 /* SSAiTagCell.m in Sources */,
 				36D3694C223F68C3009F781B /* SSPosterActiveVC.m in Sources */,
