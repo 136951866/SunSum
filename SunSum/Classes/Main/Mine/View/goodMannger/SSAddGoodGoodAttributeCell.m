@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet SSBlockTextField *tfKey;
 @property (weak, nonatomic) IBOutlet SSBlockTextField *tfRestrict_num;
+@property (weak, nonatomic) IBOutlet SSBlockTextField *tfSendTime;
+
 
 @property (strong, nonatomic) SSAddGoodModel *model;
 
@@ -41,6 +43,10 @@
 
 @property (weak, nonatomic) IBOutlet SSBlockTextField *tfGoodDetail;
 
+@property (weak, nonatomic) IBOutlet SSBlockTextField *tfchuxiao;
+@property (weak, nonatomic) IBOutlet SSBlockTextField *tfpeisong;
+@property (weak, nonatomic) IBOutlet SSBlockTextField *tfyunfei;
+
 
 @end
 
@@ -66,6 +72,12 @@
     };
     _tfRestrict_num.text = kMeUnNilStr(_model.restrict_num);
     
+    
+    _tfSendTime.contentBlock = ^(NSString *str) {
+        kMeSTRONGSELF
+        strongSelf.model.delivery = kMeUnNilStr(str);
+    };
+    _tfSendTime.text = kMeUnNilStr(_model.delivery);
     
     NSString *strImg = kMeUnNilStr(_model.images);
     if(strImg.length){
@@ -106,6 +118,23 @@
         _tfGoodDetail.text = @"已填写";
     }else{
         _tfGoodDetail.text = @"";
+    }
+    if(kMeUnNilStr(_model.promotion).length){
+        _tfchuxiao.text = @"已填写";
+    }else{
+        _tfchuxiao.text = @"";
+    }
+    
+    if(kMeUnNilStr(_model.distribution).length){
+        _tfpeisong.text = @"已填写";
+    }else{
+        _tfpeisong.text = @"";
+    }
+    
+    if(kMeUnNilStr(_model.prompt).length){
+        _tfyunfei.text = @"已填写";
+    }else{
+        _tfyunfei.text = @"";
     }
     
     [self reloadBtn];
@@ -283,5 +312,18 @@
 - (IBAction)richEditAction:(UIButton *)sender {
     kMeCallBlock(_selectRichEditBlock);
 }
+
+- (IBAction)chuxiaoAction:(UIButton *)sender {
+    kMeCallBlock(_chuxiaoBlock);
+}
+
+- (IBAction)peisongAction:(UIButton *)sender {
+    kMeCallBlock(_peisongBlock);
+}
+
+- (IBAction)yunfeiAction:(UIButton *)sender {
+    kMeCallBlock(_yunfeiBlock);
+}
+
 
 @end

@@ -105,6 +105,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString * top_video;
 @property (nonatomic, strong) NSString * updated_at;
 @property (nonatomic, assign) NSInteger view_count;
+
+@property (nonatomic,strong) NSString *prompt;
+@property (nonatomic,strong) NSString *promotion;
+@property (nonatomic,strong) NSString *distribution;
+@property (nonatomic,strong) NSString *delivery;
+
 @property (nonatomic, strong) SSAddGoodDetailGroupModel *group;
 
 @end

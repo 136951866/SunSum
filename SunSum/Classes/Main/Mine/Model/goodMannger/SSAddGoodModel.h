@@ -77,7 +77,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSMutableArray *arrAddSpec;//s添加的规格属性
 @property (nonatomic,strong)NSMutableArray *arrSpec;//选择的顶上spec//规格 d大小
 
-
+@property (nonatomic,strong) NSString *prompt;
+@property (nonatomic,strong) NSString *promotion;
+@property (nonatomic,strong) NSString *distribution;
+@property (nonatomic,strong) NSString *delivery;
 
 
 +(SSAddGoodModel *)getModel;

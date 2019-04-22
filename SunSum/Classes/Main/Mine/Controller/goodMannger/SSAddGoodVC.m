@@ -22,6 +22,7 @@
 #import "SSAddGoodDetailModel.h"
 #import "SSGoodManngerStorePowerModel.h"
 #import "MERichTextVC.h"
+#import "SSPushContentVC.h"
 
 @interface SSAddGoodVC ()<UITableViewDelegate, UITableViewDataSource,TZImagePickerControllerDelegate,YBImageBrowserDataSource>{
     //0 good 1 hot 2rec
@@ -101,6 +102,11 @@
         addmodel.image_rec = kMeUnNilStr(model.image_rec);
         addmodel.keywords = kMeUnNilStr(model.keywords);
         
+        addmodel.prompt = kMeUnNilStr(model.prompt);
+        addmodel.promotion = kMeUnNilStr(model.promotion);
+        addmodel.distribution = kMeUnNilStr(model.distribution);
+        addmodel.delivery = kMeUnNilStr(model.delivery);
+
         
         addmodel.tool = model.product_position;
         addmodel.state = model.state;
@@ -268,6 +274,10 @@
     }
     if(!kMeUnNilStr(self.addModel.category).length){
         [SSShowViewTool showMessage:@"商品分类不能为空" view:kMeCurrentWindow];
+        return;
+    }
+    if(!kMeUnNilStr(self.addModel.delivery).length){
+        [SSShowViewTool showMessage:@"平均发货时间不能为空" view:kMeCurrentWindow];
         return;
     }
     
@@ -565,6 +575,42 @@
             vc.model = strongSelf.addModel;
             vc.token = strongSelf->_token;
             vc.finishBlcok = ^{
+                [strongSelf.tableView reloadData];
+            };
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
+        _cell.peisongBlock = ^{
+            kMeSTRONGSELF
+            SSPushContentVC *vc =[[SSPushContentVC alloc]init];
+            vc.content = kMeUnNilStr(strongSelf->_addModel.distribution);
+            vc.title = @"配送说明";
+            vc.textBlock = ^(NSString *str) {
+                kMeSTRONGSELF
+                strongSelf->_addModel.distribution = kMeUnNilStr(str);
+                [strongSelf.tableView reloadData];
+            };
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
+        _cell.chuxiaoBlock = ^{
+            kMeSTRONGSELF
+            SSPushContentVC *vc =[[SSPushContentVC alloc]init];
+            vc.content = kMeUnNilStr(strongSelf->_addModel.promotion);
+            vc.title = @"促销说明";
+            vc.textBlock = ^(NSString *str) {
+                kMeSTRONGSELF
+                strongSelf->_addModel.promotion = kMeUnNilStr(str);
+                [strongSelf.tableView reloadData];
+            };
+            [strongSelf.navigationController pushViewController:vc animated:YES];
+        };
+        _cell.yunfeiBlock = ^{
+            kMeSTRONGSELF
+            SSPushContentVC *vc =[[SSPushContentVC alloc]init];
+            vc.content = kMeUnNilStr(strongSelf->_addModel.prompt);
+            vc.title = @"提示";
+            vc.textBlock = ^(NSString *str) {
+                kMeSTRONGSELF
+                strongSelf->_addModel.prompt = kMeUnNilStr(str);
                 [strongSelf.tableView reloadData];
             };
             [strongSelf.navigationController pushViewController:vc animated:YES];

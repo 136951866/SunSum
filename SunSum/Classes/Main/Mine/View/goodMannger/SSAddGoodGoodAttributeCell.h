@@ -11,12 +11,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class SSAddGoodModel;
-const static CGFloat kSSAddGoodGoodAttributeCellHeight = 1019;
+const static CGFloat kSSAddGoodGoodAttributeCellHeight = 1230;
 
 @interface SSAddGoodGoodAttributeCell : UITableViewCell
 
 @property (nonatomic,copy)kMeBasicBlock selectSpecBlock;
 @property (nonatomic,copy)kMeBasicBlock selectRichEditBlock;
+
+@property (nonatomic,copy)kMeBasicBlock chuxiaoBlock;
+@property (nonatomic,copy)kMeBasicBlock peisongBlock;
+@property (nonatomic,copy)kMeBasicBlock yunfeiBlock;
+
 - (void)setUIWithModel:(SSAddGoodModel *)model;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgGood;
