@@ -153,6 +153,10 @@ const static CGFloat bottomBtnHeight = 47;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(_model.member_id == 0){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
     if(indexPath.section == 0){
         SSAiCustomerDataVC *vc = [[SSAiCustomerDataVC alloc]initWithUserId:_userId];
         [self.navigationController pushViewController:vc animated:YES];
