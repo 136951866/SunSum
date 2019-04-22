@@ -116,6 +116,10 @@ const static CGFloat bottomBtnHeight = 47;
 }
 
 - (void)toTagVC{
+    if(_model.member_id == 0){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
     SSAiCustomerTagVC *vc = [[SSAiCustomerTagVC alloc]initWithArrId:kMeUnArr(_model.label_id) uid:_userId];
     kMeWEAKSELF
     vc.finishBlock = ^{
@@ -126,6 +130,10 @@ const static CGFloat bottomBtnHeight = 47;
 }
 
 - (void)updataFollowDataWithStr:(NSString*)str{
+    if(_model.member_id == 0){
+        [SSShowViewTool showMessage:@"未获取到用户信息" view:self.view];
+        return;
+    }
     kMeWEAKSELF
     [SSPublicNetWorkTool postgetCustomerupdateFollowWithUid:_userId follow_up:str SuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
