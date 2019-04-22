@@ -70,7 +70,7 @@
                                     <constraint firstAttribute="trailing" secondItem="GTU-AQ-Qoi" secondAttribute="trailing" id="jgV-1q-f2E"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeworkshow" translatesAutoresizingMaskIntoConstraints="NO" id="fAf-gw-mYX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notFollow" translatesAutoresizingMaskIntoConstraints="NO" id="fAf-gw-mYX">
                                 <rect key="frame" x="15" y="15" width="19" height="15"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-KH-dko">
@@ -210,6 +210,6 @@
     </objects>
     <resources>
         <image name="homeaairrow" width="6" height="11"/>
-        <image name="homeworkshow" width="19" height="15"/>
+        <image name="notFollow" width="19" height="15"/>
     </resources>
 </document>

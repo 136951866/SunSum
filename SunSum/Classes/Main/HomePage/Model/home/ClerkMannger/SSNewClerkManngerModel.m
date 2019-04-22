@@ -14,6 +14,14 @@
 
 @implementation SSNewClerkManngerDataModel : SSBaseModel
 SSModelObjectClassInArrayWithDic(@{@"data" : [SSNewClerkManngerDataContentModel class]})
+
+- (NSArray *)data{
+    if(!_data){
+        _data = [NSArray array];
+    }
+    return _data;
+}
+
 @end
 
 @implementation SSNewClerkManngerClerkOrderModel : SSBaseModel

@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) SSNewClerkManngerDataModel * clerkOrderByFollowUpCount;
 //客户
 @property (nonatomic, strong) SSNewClerkManngerDataModel * clerkOrderByFollowUpMemberCount;
-
+@property (nonatomic, strong) SSNewClerkManngerDataModel * clerkOrderByReservationNum;
 @end
 
 

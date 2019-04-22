@@ -37,11 +37,10 @@
     _model = [SSNewClerkManngerModel new];
     _arrSelect = @[@[],@[],@[],@[]];
     kMeWEAKSELF
-#warning --- 预约数
     [SSPublicNetWorkTool postgetclerkclerkManagementWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
         strongSelf->_model = [SSNewClerkManngerModel mj_objectWithKeyValues:responseObject.data];
-        strongSelf->_arrSelect = @[kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByShareCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpMemberCount.data),@[]];
+        strongSelf->_arrSelect = @[kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByShareCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByFollowUpMemberCount.data),kMeUnArr(strongSelf->_model.clerk_order.clerkOrderByReservationNum.data)];
         [strongSelf.view addSubview:strongSelf.tableView];
     } failure:^(id object) {
         kMeSTRONGSELF
