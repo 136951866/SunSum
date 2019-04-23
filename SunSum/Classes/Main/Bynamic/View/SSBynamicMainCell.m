@@ -38,7 +38,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *consStoreTitleHeight;
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
 @property (weak, nonatomic) IBOutlet UIButton *btnDel;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *consDelW;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *consDelLeft;
 @end
 
 @implementation SSBynamicMainCell
@@ -55,11 +56,17 @@
     _model = model;
     if(kMeUnNilStr(model.member_id).length == 0){
         _btnDel.hidden = YES;
+        _consDelW.constant = 0;
+        _consDelLeft.constant = 0;
     }else{
         if([kMeUnNilStr(model.member_id) isEqualToString:kCurrentUser.uid]){
-             _btnDel.hidden = NO;
+            _btnDel.hidden = NO;
+            _consDelW.constant = 32;
+            _consDelLeft.constant = 8;
         }else{
             _btnDel.hidden = YES;
+            _consDelW.constant = 0;
+            _consDelLeft.constant = 0;
         }
     }
     _currentIndex = 0;
@@ -133,6 +140,10 @@
 
 - (IBAction)delAction:(UIButton *)sender {
     kMeCallBlock(_delBlock);
+}
+
+- (IBAction)saveAction:(UIButton *)sender {
+    kMeCallBlock(_saveBlock);
 }
 
 + (CGFloat)getCellHeightithModel:(SSBynamicHomeModel *)model{
