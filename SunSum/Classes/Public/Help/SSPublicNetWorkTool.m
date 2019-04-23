@@ -472,7 +472,11 @@
                           @"product_id":kMeUnNilStr(model.product_id),
                           @"spec_json":kMeUnNilStr(model.spec_json),
                           @"spec_name":kMeUnNilStr(model.spec_name),
-                          @"warehouse":@"1"
+                          @"warehouse":@"1",
+                          @"prompt":kMeUnNilStr(model.prompt),
+                          @"promotion":kMeUnNilStr(model.promotion),
+                          @"distribution":kMeUnNilStr(model.distribution),
+                          @"delivery":kMeUnNilStr(model.delivery),
                           };
     NSLog(@"%@",model.spec_json);
     NSLog(@"%@",model.spec_name);
