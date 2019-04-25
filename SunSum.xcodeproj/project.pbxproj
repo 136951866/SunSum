@@ -922,6 +922,8 @@
 		36ED6C2D225F957F00552F13 /* SSAICustomerHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6C1E225F957F00552F13 /* SSAICustomerHomeVC.m */; };
 		36ED6C2E225F957F00552F13 /* SSAIDataHomeActiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6C1F225F957F00552F13 /* SSAIDataHomeActiveVC.m */; };
 		36ED6C2F225F957F00552F13 /* SSAIDataHomePeopleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ED6C20225F957F00552F13 /* SSAIDataHomePeopleVC.m */; };
+		36EE699D22715D7D00B10983 /* SSArticleAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE699B22715D7D00B10983 /* SSArticleAdCell.m */; };
+		36EE699E22715D7D00B10983 /* SSArticleAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36EE699C22715D7D00B10983 /* SSArticleAdCell.xib */; };
 		36F43DD0216C942100FBA16E /* BankTransferAccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F43DCF216C942100FBA16E /* BankTransferAccountsVC.m */; };
 		36F4C0AF22560463005E2713 /* SSPAVistorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F4C0AC22560462005E2713 /* SSPAVistorCell.m */; };
 		36F4C0B022560463005E2713 /* SSPAVistorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F4C0AE22560463005E2713 /* SSPAVistorCell.xib */; };
@@ -2668,6 +2670,9 @@
 		36ED6C21225F957F00552F13 /* SSAICustomerHomeContentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAICustomerHomeContentVC.h; sourceTree = "<group>"; };
 		36ED6C22225F957F00552F13 /* SSAIHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAIHomeVC.h; sourceTree = "<group>"; };
 		36ED6C23225F957F00552F13 /* SSAIDataHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAIDataHomeVC.h; sourceTree = "<group>"; };
+		36EE699A22715D7D00B10983 /* SSArticleAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSArticleAdCell.h; sourceTree = "<group>"; };
+		36EE699B22715D7D00B10983 /* SSArticleAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSArticleAdCell.m; sourceTree = "<group>"; };
+		36EE699C22715D7D00B10983 /* SSArticleAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSArticleAdCell.xib; sourceTree = "<group>"; };
 		36F43DCE216C942100FBA16E /* BankTransferAccountsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankTransferAccountsVC.h; sourceTree = "<group>"; };
 		36F43DCF216C942100FBA16E /* BankTransferAccountsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankTransferAccountsVC.m; sourceTree = "<group>"; };
 		36F4C0AC22560462005E2713 /* SSPAVistorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPAVistorCell.m; sourceTree = "<group>"; };
@@ -4299,6 +4304,9 @@
 				36D36AA7223F695B009F781B /* SSArticleCell.xib */,
 				36D36AA8223F695B009F781B /* SSArticleCell.m */,
 				36D36AA9223F695B009F781B /* SSWebTitleCell.m */,
+				36EE699A22715D7D00B10983 /* SSArticleAdCell.h */,
+				36EE699B22715D7D00B10983 /* SSArticleAdCell.m */,
+				36EE699C22715D7D00B10983 /* SSArticleAdCell.xib */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -6511,6 +6519,7 @@
 				36D36F2A223F7737009F781B /* SSBrandAbilityAnalysisCell.xib in Resources */,
 				36D36BDF223F6973009F781B /* SSStoreHomeIntroduceCell.xib in Resources */,
 				36D36DB2223F6A46009F781B /* SSMineCustomerPhone.xib in Resources */,
+				36EE699E22715D7D00B10983 /* SSArticleAdCell.xib in Resources */,
 				36D36DD9223F6A46009F781B /* SSMoneyDetailedCell.xib in Resources */,
 				36FB87C222423170000A7547 /* SSBdataColumnCell.xib in Resources */,
 				36459ADF2251B09900AB8329 /* article_editor.js in Resources */,
@@ -6724,6 +6733,7 @@
 				36F5E812222F68F1000B0241 /* TPickView.m in Sources */,
 				36D36955223F68C3009F781B /* SSJDCoupleHomeVC.m in Sources */,
 				36D36CBB223F69B7009F781B /* SSBStoreMannagerModel.m in Sources */,
+				36EE699D22715D7D00B10983 /* SSArticleAdCell.m in Sources */,
 				36D36B04223F695C009F781B /* SSThridHomeTimeSecionView.m in Sources */,
 				36D36E08223F6A46009F781B /* SSMyDistributionReusableView.m in Sources */,
 				365DB25A2147628200001A04 /* UIView+MECommon.m in Sources */,
