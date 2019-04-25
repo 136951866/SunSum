@@ -66,8 +66,7 @@
             [strongSelf.view addSubview:strongSelf.scrollerView];
             [strongSelf.view addSubview:strongSelf.btnSave];
             [strongSelf.scrollerView addSubview:strongSelf.cview];
-            [strongSelf.cview setCode:responseObject.data[@"image_url"] levStr:strongSelf->_lev];
-        });
+            [strongSelf.cview setCode:kMeUnNilStr(responseObject.data) levStr:strongSelf->_lev];        });
     } failure:^(id object) {
         kMeSTRONGSELF
         [strongSelf.navigationController popViewControllerAnimated:YES];

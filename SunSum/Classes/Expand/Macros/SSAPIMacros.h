@@ -534,7 +534,7 @@
 //获取C端以上用户的订单明细 B
 #define SSIPcommonUserGetAdminOrder @"common/user/getAdminOrder"
 //获取C端二维码
-#define SSIPcommonUserGetCode @"common/user/getCode"
+#define SSIPcommonUserGetCode @"common/user/getWechatCode"
 //第二版 获取首页数据
 //#define SSIPGetHomePageData @"homePageData"
 //判断是否完成首单
