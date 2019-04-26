@@ -126,12 +126,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunSum/Classes/Public/Help/SSPublicNetWorkTool.m"
-            timestampString = "577694652.209733"
+            timestampString = "577984293.110564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "+postgetSSIPcommonclerknotFollowUpMemberWithUid:type:SuccessBlock:failure:"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "+postgetSSIPcommonclerknotFollowUpMemberWithSuccessBlock:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,12 +142,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SunSum/Classes/Public/Help/SSPublicNetWorkTool.m"
-            timestampString = "577694652.210225"
+            timestampString = "577984293.110653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "+postgetSSIPcommonclerknotFollowUpMemberWithUid:type:SuccessBlock:failure:"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "+postgetSSIPcommonclerknotFollowUpMemberWithSuccessBlock:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -190,6 +190,84 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SunSum/Classes/Main/Mine/Controller/BrandStory/MEBrandStoryVC.m"
+            timestampString = "577984293.110756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SunSum/Classes/Main/Mine/Controller/BrandStory/MEBrandStoryVC.m"
+            timestampString = "577984293.110806"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SunSum/Classes/Main/Mine/Controller/BrandStory/MEBrandStoryVC.m"
+            timestampString = "577984293.110851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

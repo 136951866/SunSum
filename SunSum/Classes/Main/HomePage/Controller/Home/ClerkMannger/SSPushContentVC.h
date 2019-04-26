@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic , copy)NSString *content;
 @property (nonatomic , strong)kMeTextBlock textBlock;
-
+@property (nonatomic , assign)BOOL isNum;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -214,6 +214,17 @@ NS_INLINE NSString *kMeFilePathAtDocumentWithName(NSString *fileNAme){
     return [documentFilePath stringByAppendingPathComponent:fileNAme];
 }
 
+NS_INLINE NSString *kFilePathForVideo(){
+    NSString *videoCache = [NSTemporaryDirectory() stringByAppendingPathComponent:@"videos"] ;
+    BOOL isDir = NO;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL existed = [fileManager fileExistsAtPath:videoCache isDirectory:&isDir];
+    if ( !(isDir == YES && existed == YES) ) {
+        [fileManager createDirectoryAtPath:videoCache withIntermediateDirectories:YES attributes:nil error:nil];
+    };
+    return videoCache;
+}
+
 /** NSLog */
 #ifdef DEBUG
 #define NSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])

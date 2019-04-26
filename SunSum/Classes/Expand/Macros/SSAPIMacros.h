@@ -35,6 +35,12 @@
 #define kNetError @"503"
 #define kNetInvateCode @"502"
 
+/*********************************************/
+#pragma makr - 品牌故事
+//创建/编辑品牌故事
+#define SSIPcommonbrandstoryeditOrCreateBrandStoryt @"common/brandstory/editOrCreateBrandStory"
+//获取门店品牌故事
+#define SSIPcommonbrandstorybrandStory @"common/brandstory/brandStory"
 
 /*********************************************/
 #pragma makr - 新版本 顾客 图文 店员

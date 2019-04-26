@@ -23,8 +23,99 @@
 #import "SSAiCustomerDataModel.h"
 #import "SSClerkCreateClerkTaskModel.h"
 #import "SSClerkFinishTaskModel.h"
+#import "MEBrandStoryModel.h"
 
 @implementation SSPublicNetWorkTool
+
+
+/*********************************************/
+#pragma makr - 品牌故事
+
+//获取门店品牌故事
++ (void)postgetcommonbrandstorybrandStoryWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
+    NSString *url = kGetApiWithUrl(SSIPcommonbrandstorybrandStory);
+    MBProgressHUD *HUD = [self commitWithHUD:@""];
+    [THTTPManager postWithParameter:@{@"token":kMeUnNilStr(kCurrentUser.token)} strUrl:url success:^(ZLRequestResponse *responseObject) {
+        [HUD hideAnimated:YES];
+        kMeCallBlock(successBlock,responseObject);
+    } failure:^(id error) {
+        if([error isKindOfClass:[ZLRequestResponse class]]){
+            ZLRequestResponse *res = (ZLRequestResponse*)error;
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        }else{
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        }
+        kMeCallBlock(failure,error);
+    }];
+}
+//创建/编辑品牌故事
++ (void)postgetbrandstoryeditOrCreateBrandStorytWithmodel:(MEBrandStoryModel *)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
+    
+    NSString *content = @"";
+    NSString *header_media = @"";
+
+    NSError *error = nil;
+    if(model.header_mediamodel){
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[model.header_mediamodel mj_keyValues]
+                                                           options:kNilOptions
+                                                             error:&error];
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                     encoding:NSUTF8StringEncoding];
+        header_media = jsonString;
+    }
+    
+    if(model.arrdata.count){
+        __block NSMutableArray *arrjson = [NSMutableArray array];
+
+        [model.arrdata enumerateObjectsUsingBlock:^(MEBrandStoryContentModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSDictionary *dic = [obj mj_keyValues];
+            [arrjson addObject:dic];
+        }];
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:arrjson
+                                                           options:kNilOptions
+                                                             error:&error];
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                     encoding:NSUTF8StringEncoding];
+        content = jsonString;
+    }
+
+    
+    NSDictionary *dic = @{
+                          @"token":kMeUnNilStr(model.token),
+                          @"title":kMeUnNilStr(model.title),
+                          @"business_time":kMeUnNilStr(model.business_time),
+                          @"phone":kMeUnNilStr(model.phone),
+                          @"province":kMeUnNilStr(model.province),
+                          @"city":kMeUnNilStr(model.city),
+                          @"area":kMeUnNilStr(model.area),
+                          
+                    
+                          @"address":kMeUnNilStr(model.address),
+                          @"latitude":kMeUnNilStr(model.latitude),
+                          @"longitude":kMeUnNilStr(model.longitude),
+                          
+                          @"header_media":kMeUnNilStr(header_media),
+                          @"content":kMeUnNilStr(content),
+           
+                          };
+
+    NSLog(@"%@",dic);
+    NSString *url = kGetApiWithUrl(SSIPcommonbrandstoryeditOrCreateBrandStoryt);
+    MBProgressHUD *HUD = [self commitWithHUD:@"提交中"];
+    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
+        [HUD hideAnimated:YES];
+        kMeCallBlock(successBlock,responseObject);
+    } failure:^(id error) {
+        if([error isKindOfClass:[ZLRequestResponse class]]){
+            ZLRequestResponse *res = (ZLRequestResponse*)error;
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
+        }else{
+            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
+        }
+        kMeCallBlock(failure,error);
+    }];
+}
+
 
 /*********************************************/
 #pragma makr - 新版本 顾客 图文 店员

@@ -25,7 +25,17 @@
 @class SSAiCustomerDataModel;
 @class SSClerkCreateClerkTaskModel;
 @class SSClerkFinishTaskModel;
+@class MEBrandStoryModel;
 @interface SSPublicNetWorkTool : NSObject
+
+
+/*********************************************/
+#pragma makr - 品牌故事
+//创建/编辑品牌故事
++ (void)postgetbrandstoryeditOrCreateBrandStorytWithmodel:(MEBrandStoryModel *)model SuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+//获取门店品牌故事
++ (void)postgetcommonbrandstorybrandStoryWithSuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure;
+
 
 /*********************************************/
 #pragma makr - 新版本 顾客 图文 店员

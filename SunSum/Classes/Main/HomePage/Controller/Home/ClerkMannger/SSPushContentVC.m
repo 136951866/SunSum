@@ -42,6 +42,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSPushContentCell class]) forIndexPath:indexPath];
+    if(_isNum){
+        _cell.textView.textView.keyboardType = UIKeyboardTypeNumberPad;
+    }
     [_cell setUIWithModel:_model];
     return _cell;
 }

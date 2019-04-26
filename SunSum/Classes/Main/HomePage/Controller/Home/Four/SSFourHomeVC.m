@@ -21,6 +21,8 @@
 #import "SSFourHomeModel.h"
 #import "SSFFourCaseVC.h"
 
+
+#import "MEBrandStoryVC.h"
 @interface SSFourHomeVC ()<UITableViewDelegate,UITableViewDataSource,SSFourHomeHeaderViewDelegate>
 {
     SSFourHomeModel *_homeModel;
@@ -67,8 +69,12 @@
 }
 
 - (void)toAiVC{
-    SSAIHomeVC *vc = [[SSAIHomeVC alloc]init];
+    
+#warning ---
+    MEBrandStoryVC *vc = [[MEBrandStoryVC alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+//    SSAIHomeVC *vc = [[SSAIHomeVC alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)toStoreDiagnosisVC{
