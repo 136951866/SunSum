@@ -9,5 +9,6 @@
 #import "SSBaseVC.h"
 
 @interface SSMyMobileVC : SSBaseVC
+@property (nonatomic, assign) BOOL isSuper;
 
 @end

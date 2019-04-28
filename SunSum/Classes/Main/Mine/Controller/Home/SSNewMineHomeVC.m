@@ -14,6 +14,7 @@
 
 @interface SSNewMineHomeVC ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_arrtype;
+    NSArray *_arrtypeTitle;
 }
 
 @property (nonatomic, strong) UITableView           *tableView;
@@ -38,20 +39,22 @@
     if([SSUserInfoModel isLogin]){
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getUnMeaasge) name:kUnMessage object:nil];
     }
-    NSInteger f = [[[NSUserDefaults standardUserDefaults] objectForKey:kcheckFirstBuy] integerValue];
-    if(f){
-        HDAlertView *alertView = [HDAlertView alertViewWithTitle:@"提示" andMessage:@"您有一次免费预约门店服务的机会"];
-        alertView.isSupportRotating = YES;
-        [alertView addButtonWithTitle:@"取消" type:HDAlertViewButtonTypeDefault handler:^(HDAlertView *alertView) {
-        }];
-        kMeWEAKSELF
-        [alertView addButtonWithTitle:@"确定" type:HDAlertViewButtonTypeDefault handler:^(HDAlertView *alertView) {
-            kMeSTRONGSELF
-            SSProductListVC *productList = [[SSProductListVC alloc]initWithType:SSGoodsTypeNetServiceStyle];
-            [strongSelf.navigationController pushViewController:productList animated:YES];
-        }];
-        [alertView show];
-    }
+#warning --
+    
+//    NSInteger f = [[[NSUserDefaults standardUserDefaults] objectForKey:kcheckFirstBuy] integerValue];
+//    if(f){
+//        HDAlertView *alertView = [HDAlertView alertViewWithTitle:@"提示" andMessage:@"您有一次免费预约门店服务的机会"];
+//        alertView.isSupportRotating = YES;
+//        [alertView addButtonWithTitle:@"取消" type:HDAlertViewButtonTypeDefault handler:^(HDAlertView *alertView) {
+//        }];
+//        kMeWEAKSELF
+//        [alertView addButtonWithTitle:@"确定" type:HDAlertViewButtonTypeDefault handler:^(HDAlertView *alertView) {
+//            kMeSTRONGSELF
+//            SSProductListVC *productList = [[SSProductListVC alloc]initWithType:SSGoodsTypeNetServiceStyle];
+//            [strongSelf.navigationController pushViewController:productList animated:YES];
+//        }];
+//        [alertView show];
+//    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -93,6 +96,7 @@
     kMeWEAKSELF
     [SSPublicNetWorkTool getUserGetUserWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         NSLog(@"%@",kCurrentUser.uid);
+        /*
         kMeSTRONGSELF
         switch (kCurrentUser.user_type) {
             case 1:{
@@ -129,6 +133,60 @@
         strongSelf.tableView.tableHeaderView = strongSelf.headerView;
         [strongSelf.tableView reloadData];
         [strongSelf.tableView.mj_header endRefreshing];
+         */
+        kMeSTRONGSELF
+        switch (kCurrentUser.user_type) {
+            case 1:{
+                //B
+                //                strongSelf->_arrtype = @[@[@(MeMyCentraManagertment),@(MeMyExchange),@(MeMyAppointment),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MePAVistor)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                
+                strongSelf->_arrtype = @[@[@(MeHomeyongjing),@(MeHomeorderall),@(MeHometuandui),@(MeHomeshangji),@(MeHometixian),@(MePAVistor),@(MeHometuigcode)],@[@(MeMyAppointment),@(MeMyExchange),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtypeTitle = @[@"商家管理",@"必备",@"获客"];
+            }
+                break;
+            case 2:{
+                //
+                //                strongSelf->_arrtype = @[@[@(MeMyCentraManagertment),@(MeMyExchange),@(MeMyAppointment),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MePAVistor)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtype = @[@[@(MeHomeyongjing),@(MeHomeorderall),@(MeHometuandui),@(MeHomeshangji),@(MeHometixian),@(MeHomepinpaigli),@(MePAVistor),@(MeHometuigcode)],@[@(MeMyAppointment),@(MeMyExchange),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtypeTitle = @[@"商家管理",@"必备",@"获客"];
+            }
+                break;
+            case 4:{
+                //C
+                //                strongSelf->_arrtype = @[@[@(MeMyDistribution),@(MeMyExchange),@(MeMyAppointment),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MeStoreApply)]];
+                strongSelf->_arrtype = @[@[@(MeHomemeiodu),@(MeHomeCorderall),@(MeHometuandui),@(MeHometuigcode)],@[@(MeMyAppointment),@(MeMyExchange),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MeStoreApply)]];
+                strongSelf->_arrtypeTitle = @[@"中心管理",@"必备"];
+            }
+                break;
+            case 3:{
+                //B
+                //                strongSelf->_arrtype = @[@[@(MeMyCentraManagertment),@(MeMyExchange),@(MeMyAppointment),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MePAVistor),@(MeAILEI)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtype = @[@[@(MeHomeyongjing),@(MeHomeorderall),@(MeHometuandui),@(MeHomeshangji),@(MeHomedianyuan),@(MeHomeyuyue),@(MeHomedata),@(MeHomedianpu),@(MeHometixian),@(MeHomeziti),@(MeHometuigcode)],
+                                         @[@(MeMyAppointment),@(MeMyExchange),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtypeTitle = @[@"商家管理",@"必备",@"获客"];
+            }
+                break;
+            case 5:{
+                //clerk
+                //                                strongSelf->_arrtype = @[@[@(MeMyDistribution),@(MeMyCentraManagertment),@(MeMyExchange),@(MeMyAppointment),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile),@(MePAVistor),@(MeAILEI)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtype = @[@[@(MeHomeyongjing),@(MeHomemeiodu),@(MeHomeCorderall),@(MeHomeorderall),@(MeHometuandui),@(MeHomeshangji),@(MeHomeyuyue),@(MeHometixian),@(Mehomeyongjitongji),@(MePAVistor),@(MeHometuigcode)],
+                                         @[@(MeMyAppointment),@(MeMyExchange),@(MeMyActity),@(MeDynalApply),@(MeMyCustomer),@(MeMyCustomerPhone),@(MeMyAddress),@(MeMyMobile)],@[@(MeMyPoster),@(MeMyArticel),@(MemyData)]];
+                strongSelf->_arrtypeTitle = @[@"商家管理",@"必备",@"获客"];
+                
+            }
+                
+                break;
+            default:{
+                strongSelf->_arrtype = @[];
+                strongSelf->_arrtypeTitle = @[];
+                
+            }
+                break;
+        }
+        [strongSelf.headerView reloadUIWithUserInfo];
+        strongSelf.tableView.tableHeaderView = strongSelf.headerView;
+        [strongSelf.tableView reloadData];
+        [strongSelf.tableView.mj_header endRefreshing];
     } failure:^(id object) {
         kMeSTRONGSELF
         [strongSelf.tableView.mj_header endRefreshing];
@@ -145,7 +203,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SSNewMineHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSNewMineHomeCell class]) forIndexPath:indexPath];
     NSArray *arr = _arrtype[indexPath.row];
-    [cell setUIWithAtrr:arr];
+    NSString *title = _arrtypeTitle[indexPath.row];
+    [cell setUIWithAtrr:arr title:title];
     return cell;
 }
 

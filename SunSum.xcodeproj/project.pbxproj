@@ -273,6 +273,8 @@
 		369130A022363B6E008B1836 /* AAItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691307A22363B6E008B1836 /* AAItemStyle.m */; };
 		369130A122363B6E008B1836 /* AAPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691307B22363B6E008B1836 /* AAPie.m */; };
 		369130A222363B6E008B1836 /* AAChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3691308122363B6E008B1836 /* AAChart.m */; };
+		369D8B102275838E00F24ED8 /* MENewMineCellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 369D8B0E2275838E00F24ED8 /* MENewMineCellHeaderView.m */; };
+		369D8B112275838E00F24ED8 /* MENewMineCellHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369D8B0F2275838E00F24ED8 /* MENewMineCellHeaderView.xib */; };
 		36B0CC29226735FE0097C6D2 /* SSClerkWorkDaliyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC28226735FE0097C6D2 /* SSClerkWorkDaliyModel.m */; };
 		36B0CC2C226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC2B226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.m */; };
 		36B0CC2F22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B0CC2E22673A940097C6D2 /* SSClerkPlanAchieveClerkHeaderModel.m */; };
@@ -1559,6 +1561,9 @@
 		3691307F22363B6E008B1836 /* AAPlotLinesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPlotLinesElement.h; sourceTree = "<group>"; };
 		3691308022363B6E008B1836 /* AAColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAColumn.h; sourceTree = "<group>"; };
 		3691308122363B6E008B1836 /* AAChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAChart.m; sourceTree = "<group>"; };
+		369D8B0D2275838D00F24ED8 /* MENewMineCellHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENewMineCellHeaderView.h; sourceTree = "<group>"; };
+		369D8B0E2275838E00F24ED8 /* MENewMineCellHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MENewMineCellHeaderView.m; sourceTree = "<group>"; };
+		369D8B0F2275838E00F24ED8 /* MENewMineCellHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MENewMineCellHeaderView.xib; sourceTree = "<group>"; };
 		36B0CC27226735FE0097C6D2 /* SSClerkWorkDaliyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkWorkDaliyModel.h; sourceTree = "<group>"; };
 		36B0CC28226735FE0097C6D2 /* SSClerkWorkDaliyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSClerkWorkDaliyModel.m; sourceTree = "<group>"; };
 		36B0CC2A226737EE0097C6D2 /* SSClerkPlanAchieveClerkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSClerkPlanAchieveClerkModel.h; sourceTree = "<group>"; };
@@ -3653,6 +3658,9 @@
 		3673D0DE2248B5AE0007F3C5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				369D8B0D2275838D00F24ED8 /* MENewMineCellHeaderView.h */,
+				369D8B0E2275838E00F24ED8 /* MENewMineCellHeaderView.m */,
+				369D8B0F2275838E00F24ED8 /* MENewMineCellHeaderView.xib */,
 				36F4C0B12256046F005E2713 /* SSPAVistorVC.h */,
 				36F4C0B222560470005E2713 /* SSPAVistorVC.m */,
 				36227605224486630031AA0F /* SSStoreApplyStatusVC.h */,
@@ -6603,6 +6611,7 @@
 				3602A18E21424091004A6E1F /* ZLWKJSPOST.html in Resources */,
 				36D36B69223F695C009F781B /* SSThridProductDetailsSelectSkuCell.xib in Resources */,
 				36459AAF2251AF0E00AB8329 /* SSGoodManngerCell.xib in Resources */,
+				369D8B112275838E00F24ED8 /* MENewMineCellHeaderView.xib in Resources */,
 				36D36B45223F695C009F781B /* SSVisterTodyCell.xib in Resources */,
 				36FB87C022423170000A7547 /* SSBdataTopCell.xib in Resources */,
 				36D36B31223F695C009F781B /* SSGiftMainCell.xib in Resources */,
@@ -7040,6 +7049,7 @@
 				36D368A3223F6880009F781B /* SSLoginVC.m in Sources */,
 				36D36E04223F6A46009F781B /* SSDistrbutionMyTeamCell.m in Sources */,
 				3669257A2264311000BE1F24 /* kSSClerkPlanAchieveListCell.m in Sources */,
+				369D8B102275838E00F24ED8 /* MENewMineCellHeaderView.m in Sources */,
 				36F5E825222F68F1000B0241 /* TInputController.m in Sources */,
 				36D36C5F223F699C009F781B /* SSShopppingCartBottomView.m in Sources */,
 				36D36B4F223F695C009F781B /* SSArticleCell.m in Sources */,

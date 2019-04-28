@@ -113,7 +113,11 @@
 
 - (ZLRefreshTool *)refresh{
     if(!_refresh){
-        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(_type==SSClientCTypeStyle?SSIPcommonUserGetTeam:SSIPcommonUserGetAdminTeam)];
+        NSString *strAPi = SSIPcommonUserGetAdminTeam;
+        if(_type == SSClientTypeClerkStyle || _type==SSClientCTypeStyle){
+            strAPi = SSIPcommonUserGetTeam;
+        }
+        _refresh = [[ZLRefreshTool alloc]initWithContentView:self.tableView url:kGetApiWithUrl(strAPi)];
         _refresh.isGet = YES;
         _refresh.isDataInside = YES;
         _refresh.delegate = self;
