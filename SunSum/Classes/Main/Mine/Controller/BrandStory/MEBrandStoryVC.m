@@ -16,10 +16,12 @@
 #import "ZHMapAroundInfoViewController.h"
 #import "ZHPlaceInfoModel.h"
 #import "MEBrandStoryDetailModel.h"
+#import "YBImageBrowser.h"
 
-@interface MEBrandStoryVC ()<UITableViewDelegate,UITableViewDataSource,MEBrandStoryHeaderViewDelegate,TZImagePickerControllerDelegate>{
+@interface MEBrandStoryVC ()<UITableViewDelegate,UITableViewDataSource,MEBrandStoryHeaderViewDelegate,TZImagePickerControllerDelegate,YBImageBrowserDataSource>{
     MEBrandStoryModel *_model;
     NSString *_token;
+    NSInteger _currentPicIndex;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"品牌故事";
+    _currentPicIndex = 0;
     kMeWEAKSELF
     [SSPublicNetWorkTool postgetcommonbrandstorybrandStoryWithSuccessBlock:^(ZLRequestResponse *responseObject) {
         kMeSTRONGSELF
@@ -362,8 +365,26 @@
         SSBasePlayerVC *vc = [[SSBasePlayerVC alloc]initWithFileUrl:SSLoadAddQiniuImagesWithUrl(model.value)];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (type == MEBrandStoryContentModelPicType){
-       
+        if(kMeUnArr(_model.arrdata).count == 0 || _currentPicIndex>kMeUnArr(_model.arrdata).count){
+            return;
+        }
+        _currentPicIndex = indexPath.row;
+        YBImageBrowser *browser = [YBImageBrowser new];
+        browser.dataSource = self;
+        browser.currentIndex = 0;
+        [browser show];
     }
+}
+
+- (NSUInteger)yb_numberOfCellForImageBrowserView:(YBImageBrowser *)imageBrowser {
+    return 1;
+}
+
+- (id<YBImageBrowserCellDataProtocol>)yb_imageBrowserView:(YBImageBrowserView *)imageBrowserView dataForCellAtIndex:(NSUInteger)index {
+    YBImageBrowseCellData *data = [YBImageBrowseCellData new];
+    MEBrandStoryContentModel *model = [kMeUnArr(_model.arrdata) objectAtIndex:_currentPicIndex];
+    data.url = [NSURL URLWithString:SSLoadAddQiniuImagesWithUrl(kMeUnNilStr(model.value))];
+    return data;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
