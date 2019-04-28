@@ -51,6 +51,7 @@ typedef enum : NSUInteger {
     MeAILEI,
     MeHomedata,
     MeHomedianpu,
+    MeHomedianyuan,
     MeHomeyuyue,
     MeHomejuanyngjing,
     MeHomemeiodu,
