@@ -52,6 +52,7 @@
 #import "SSDistributionTeamVC.h"
 #import "SSDistributionOrderMainVC.h"
 #import "MENewMineCellHeaderView.h"
+#import "MEBrandStoryVC.h"
 
 @interface SSNewMineHomeCell()<UICollectionViewDelegate,UICollectionViewDataSource>{
     NSArray *_arrModel;
@@ -186,7 +187,7 @@
             SSProductShoppingCartVC *vc = [[SSProductShoppingCartVC alloc]init];
             [homeVc.navigationController pushViewController:vc animated:YES];
         }
-        
+            break;
         case MeHomeshangji:{
             SSMyMobileVC *mobile = [[SSMyMobileVC alloc]init];
             mobile.isSuper = YES;
@@ -270,6 +271,12 @@
             [homeVc.navigationController pushViewController:brandVC animated:YES];
         }
             break;
+        case MeBrandStory:{
+            MEBrandStoryVC *brandVC = [[MEBrandStoryVC alloc]init];
+            [homeVc.navigationController pushViewController:brandVC animated:YES];
+        }
+            break;
+            
         default:
             break;
     }

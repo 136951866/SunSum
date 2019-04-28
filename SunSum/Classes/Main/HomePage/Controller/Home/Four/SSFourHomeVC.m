@@ -69,12 +69,8 @@
 }
 
 - (void)toAiVC{
-    
-#warning ---
-    MEBrandStoryVC *vc = [[MEBrandStoryVC alloc]init];
+    SSAIHomeVC *vc = [[SSAIHomeVC alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-//    SSAIHomeVC *vc = [[SSAIHomeVC alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)toStoreDiagnosisVC{

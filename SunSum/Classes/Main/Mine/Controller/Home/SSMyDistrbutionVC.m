@@ -91,7 +91,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = _type==SSClientCTypeStyle?@"我的中心":@"管理中心";
+//    self.title = _type==SSClientCTypeStyle?@"我的中心":@"管理中心";
+    self.title = _type==SSClientCTypeStyle?@"我的美豆":@"我的佣金";
     _levStr = @"";
     _arrData = @[];
     _arrDataStr = @[];

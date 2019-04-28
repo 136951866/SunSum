@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"金额明细";
+//    self.title = @"金额明细";
+    self.title = @"佣金订单";
     [self.view addSubview:self.tableView];
     [self.refresh addRefreshView];
     // Do any additional setup after loading the view.
@@ -92,7 +93,7 @@
         _refresh.delegate = self;
         [_refresh setBlockEditFailVIew:^(ZLFailLoadView *failView) {
             failView.backgroundColor = [UIColor whiteColor];
-            failView.lblOfNodata.text = @"没有金额明细";
+            failView.lblOfNodata.text = @"没有佣金";
         }];
     }
     return _refresh;
