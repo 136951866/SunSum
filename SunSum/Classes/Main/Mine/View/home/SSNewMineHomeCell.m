@@ -53,6 +53,7 @@
 #import "SSDistributionOrderMainVC.h"
 #import "MENewMineCellHeaderView.h"
 #import "MEBrandStoryVC.h"
+#import "SSGoodManngerVC.h"
 
 @interface SSNewMineHomeCell()<UICollectionViewDelegate,UICollectionViewDataSource>{
     NSArray *_arrModel;
@@ -273,6 +274,11 @@
             break;
         case MeBrandStory:{
             MEBrandStoryVC *brandVC = [[MEBrandStoryVC alloc]init];
+            [homeVc.navigationController pushViewController:brandVC animated:YES];
+        }
+            break;
+        case MEGoodMannager:{
+            SSGoodManngerVC *brandVC = [[SSGoodManngerVC alloc]init];
             [homeVc.navigationController pushViewController:brandVC animated:YES];
         }
             break;
