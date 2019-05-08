@@ -118,12 +118,12 @@
     if (self.shareTitle) {
         
     }else{
-        self.shareTitle = @"鲜橙智店";
+        self.shareTitle = @"棒的APP";
     }
     if (self.shareDescriptionBody) {
         
     }else{
-        self.shareDescriptionBody = @"鲜橙智店";
+        self.shareDescriptionBody = @"棒的APP";
     }
     id image;
     if (self.shareImage) {

@@ -11,13 +11,14 @@
 
 #warning -mustNotes 上线一定要注释/海报分享没有用BASEIP
 
-//#define TestVersion
+#define TestVersion
 
 //域名 develop
 #ifdef TestVersion
-#define BASEIP @"https://apitest.sunsumstore.com/api/"
+#define BASEIP @"https://test.bondehome.com/api/"
 #else
-#define BASEIP @"https://apitest.sunsumstore.com/api/"
+#define BASEIP @"https://api.bondehome.com/api/"
+//#define BASEIP @"https://develop.bondehome.com/api/"
 #endif
 
 #define kGetApiWithUrl(url) [BASEIP stringByAppendingString:url]

@@ -25,7 +25,6 @@
 #import "SSClerkStatisticsVC.h"
 //b端model
 #import "SSadminDistributionModel.h"
-#import "SSCouponOrderVC.h"
 #import "SSBStoreMannagerVC.h"
 #import "SSMySelfExtractionOrderVC.h"
 #import "SSBrandManngerVC.h"
@@ -262,8 +261,8 @@
         }
             break;
         case SSMyCouponMoney:{
-            SSCouponOrderVC *couponVC = [[SSCouponOrderVC alloc]init];
-            [self.navigationController pushViewController:couponVC animated:YES];
+//            SSCouponOrderVC *couponVC = [[SSCouponOrderVC alloc]init];
+//            [self.navigationController pushViewController:couponVC animated:YES];
         }
             break;
         case SSMyStoreMannager:{

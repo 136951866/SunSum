@@ -235,8 +235,8 @@ NS_INLINE NSString *kFilePathForVideo(){
 
 //load qiniu image
 #define SSLoadQiniuImagesWithUrl(Url) Url
-#define SSLoadAddQiniuImagesWithUrl(Url) [NSString stringWithFormat:@"http://images.sunsumstore.com/%@",Url]
-//#define SSLoadQiniuImagesWithUrl(Url) ([Url containsString:@"http://images.sunsumstore.com/"])?Url:[NSString stringWithFormat:@"http://images.sunsumstore.com/%@",Url]
+#define SSLoadAddQiniuImagesWithUrl(Url) [NSString stringWithFormat:@"https://images.bondehome.com/%@",Url]
+
 
 
 #pragma mark -

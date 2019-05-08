@@ -8,7 +8,6 @@
 
 #import "SSExchangDetailsBottomView.h"
 #import "SSMidelButton.h"
-#import "SSMemberHomeVC.h"
 #import "SSMineExchangeDetailVC.h"
 
 @interface SSExchangDetailsBottomView()
@@ -49,8 +48,8 @@
     SSShareTool *shareTool = [SSShareTool me_instanceForTarget:self];
     shareTool.sharWebpageUrl = SSIPShare;
 #warning ---
-    shareTool.shareTitle = @"鲜橙智店";
-    shareTool.shareDescriptionBody = @"鲜橙智店";
+    shareTool.shareTitle = @"棒的APP";
+    shareTool.shareDescriptionBody = @"棒的APP";
     shareTool.shareImage = kMeGetAssetImage(@"icon-wgvilogo");
     
     [shareTool shareWebPageToPlatformType:UMSocialPlatformType_WechatSession success:^(id data) {

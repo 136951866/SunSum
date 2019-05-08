@@ -22,7 +22,7 @@
 #import "SSGoodModel.h"
 #import "SSLoginVC.h"
 #import "SSRCConversationVC.h"
-#import "SSGiftVC.h"
+
 typedef NS_ENUM(NSUInteger, kpurchaseViewType) {
     kpurchaseSelectSkuViewType,
     kpurchaseViewBuyType,
@@ -135,8 +135,7 @@ kTDWebViewCellDidFinishLoadNotificationMethod
                     kMeSTRONGSELF
                     kNoticeReloadShopCart
                     if(strongSelf.isGift){
-                        SSGiftVC *vc = (SSGiftVC *)[SSCommonTool getClassWtihClassName:[SSGiftVC class] targetVC:strongSelf];
-                        [strongSelf.navigationController popToViewController:vc animated:YES];
+                   
                     }
                     
                 } failure:^(id object) {

@@ -25,7 +25,7 @@
 #import "SSPosterListVC.h"
 #import "SSArticelVC.h"
 #import "SSVisiterHomeVC.h"
-#import "SSCouponOrderVC.h"
+
 
 #import "SSStoreApplyVC.h"
 #import "SSStoreApplyModel.h"
@@ -34,7 +34,7 @@
 #import "SSPAVistorVC.h"
 #import "SSProductShoppingCartVC.h"
 
-#import "SSCouponOrderVC.h"
+
 #import "SSBStoreMannagerVC.h"
 #import "SSMySelfExtractionOrderVC.h"
 #import "SSBrandManngerVC.h"
@@ -253,8 +253,8 @@
         }
             break;
         case MeHomejuanyngjing:{
-            SSCouponOrderVC *couponVC = [[SSCouponOrderVC alloc]init];
-            [homeVc.navigationController pushViewController:couponVC animated:YES];
+//            SSCouponOrderVC *couponVC = [[SSCouponOrderVC alloc]init];
+//            [homeVc.navigationController pushViewController:couponVC animated:YES];
         }
             break;
         case MeHomedianpu:{

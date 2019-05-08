@@ -18,7 +18,6 @@
 #import "SSShoppingCartMakeOrderAttrModel.h"
 #import "SSPayStatusVC.h"
 #import "SSProductShoppingCartVC.h"
-#import "SSGiftVC.h"
 @interface SSShopCartMakeOrderVC ()<UITableViewDelegate,UITableViewDataSource>
 {
     BOOL _hasAdress;
@@ -133,10 +132,6 @@
         SSPayStatusVC *svc = [[SSPayStatusVC alloc]initWithSucessConfireBlock:^{
             kMeSTRONGSELF
             if(self.isGift){
-                SSGiftVC *vc = (SSGiftVC *)[SSCommonTool getClassWtihClassName:[SSGiftVC class] targetVC:self];
-                if(vc){
-                    [strongSelf.navigationController popToViewController:vc animated:YES];
-                }
             }else{
                 SSProductShoppingCartVC *vc = (SSProductShoppingCartVC *)[SSCommonTool getClassWtihClassName:[SSProductShoppingCartVC class] targetVC:self];
                 if(vc){

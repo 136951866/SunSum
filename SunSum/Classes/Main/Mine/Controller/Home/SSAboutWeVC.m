@@ -24,6 +24,7 @@
     self.title = @"关于我们";
     _consTopMargin.constant = kMeNavBarHeight;
     _lblVersion.text = [NSString stringWithFormat:@"ver%@",kSSAppVersion];
+#warning ---
     // Do any additional setup after loading the view from its nib.
 }
 

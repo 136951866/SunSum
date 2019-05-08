@@ -67,8 +67,8 @@
             shareTool.sharWebpageUrl = SSIPShare;
             NSLog(@"%@",SSIPShare);
 #warning ---
-            shareTool.shareTitle = @"鲜橙智店";
-            shareTool.shareDescriptionBody = @"鲜橙智店";
+            shareTool.shareTitle = @"棒的APP";
+            shareTool.shareDescriptionBody = @"棒的APP";
             shareTool.shareImage = kMeGetAssetImage(@"icon-wgvilogo");
             
             [shareTool shareWebPageToPlatformType:UMSocialPlatformType_WechatSession success:^(id data) {
@@ -85,8 +85,8 @@
         shareTool.sharWebpageUrl = SSIPShare;
         NSLog(@"%@",SSIPShare);
 #warning --
-        shareTool.shareTitle = @"鲜橙智店";
-        shareTool.shareDescriptionBody = @"鲜橙智店";
+        shareTool.shareTitle = @"棒的APP";
+        shareTool.shareDescriptionBody = @"棒的APP";
         shareTool.shareImage = kMeGetAssetImage(@"icon-wgvilogo");
         
         [shareTool shareWebPageToPlatformType:UMSocialPlatformType_WechatSession success:^(id data) {

@@ -10,20 +10,14 @@
 #import "SSThridHomeHeaderView.h"
 #import "SSThridHomeTimeSecionView.h"
 #import "SSRushBuyCell.h"
-#import "SSCommondCouponCell.h"
-#import "SSPinduoduoCoupleModel.h"
-#import "SSCoupleHomeMainGoodGoodsCell.h"
 #import "SSThridHomeNavView.h"
 #import "SSShoppingMallVC.h"
-#import "SSCoupleHomeVC.h"
 #import "SSAdModel.h"
 #import "SSRushBuyView.h"
 #import "SSThridProductDetailsVC.h"
 #import "SSThridHomeModel.h"
-#import "SSPinduoduoCoupleModel.h"
 #import "SSThridHomeRudeTimeModel.h"
 #import "SSThridHomeRudeGoodModel.h"
-#import "SSCoupleMailDetalVC.h"
 #import "SSNetListModel.h"
 #import "SSStoreModel.h"
 #import "SSNewStoreDetailsVC.h"
@@ -142,7 +136,7 @@ const static CGFloat kImgStore = 50;
     dispatch_group_async(group, queue, ^{
         [SSPublicNetWorkTool postGetPinduoduoCommondPoductWithSuccessBlock:^(ZLRequestResponse *responseObject) {
             kMeSTRONGSELF
-            strongSelf->_arrCommonCoupon =[SSPinduoduoCoupleModel mj_objectArrayWithKeyValuesArray:responseObject.data[@"goods_search_response"][@"goods_list"]];
+
             dispatch_semaphore_signal(semaphore);
         } failure:^(id object) {
             dispatch_semaphore_signal(semaphore);
@@ -238,7 +232,7 @@ const static CGFloat kImgStore = 50;
     if(![data isKindOfClass:[NSArray class]]){
         return;
     }
-    [self.refresh.arrData addObjectsFromArray:[SSPinduoduoCoupleModel mj_objectArrayWithKeyValuesArray:data]];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -269,45 +263,10 @@ const static CGFloat kImgStore = 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section==0){
-        if(indexPath.row==0){
-            SSRushBuyCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSRushBuyCell class]) forIndexPath:indexPath];
-            if(kMeUnArr(_arrRudeTime).count){
-                SSThridHomeRudeTimeModel *model = _arrRudeTime[_selectTimeIndex];
-                cell.time = kMeUnNilStr(model.time);
-            }
-            [cell setUIWithArr:_arrRudeBuy];
-            return cell;
-        }else if (indexPath.row==1){
-            SSCommondCouponCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSCommondCouponCell class]) forIndexPath:indexPath];
-            [cell setUIWithArr:_arrCommonCoupon imgUrl:kMeUnNilStr(_homeModel.coupon_background.img)];
-            return cell;
-        }
-    }else if (indexPath.section==1){
-        SSCoupleHomeMainGoodGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SSCoupleHomeMainGoodGoodsCell class]) forIndexPath:indexPath];
-        [cell setPinduoduoUIWithArr:self.refresh.arrData];
-        kMeWEAKSELF
-        cell.selectBlock = ^(NSInteger index) {
-            kMeSTRONGSELF
-            SSPinduoduoCoupleModel *model = strongSelf.refresh.arrData[index];
-            SSCoupleMailDetalVC *vc = [[SSCoupleMailDetalVC alloc]initWithPinduoudoModel:model];
-            [strongSelf.navigationController pushViewController:vc animated:YES];
-        };
-        return cell;
-    }
     return [UITableViewCell new];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section==0){
-        if(indexPath.row==0){
-            return [SSRushBuyCell getCellHeightWithArr:_arrRudeBuy];
-        }else if (indexPath.row==1){
-            return [SSCommondCouponCell getCellHeight];
-        }
-    }else if (indexPath.section==1){
-        return [SSCoupleHomeMainGoodGoodsCell getCellHeightWithArr:self.refresh.arrData];;
-    }
     return 1;
 }
 
@@ -388,8 +347,6 @@ const static CGFloat kImgStore = 50;
     if(!_tableView){
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kMeTabBarHeight) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSRushBuyCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSRushBuyCell class])];
-        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSCommondCouponCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSCommondCouponCell class])];
-        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSCoupleHomeMainGoodGoodsCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SSCoupleHomeMainGoodGoodsCell class])];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SSThridHomeTimeSecionView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:NSStringFromClass([SSThridHomeTimeSecionView class])];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;

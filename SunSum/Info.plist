@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>鲜橙智店</string>
+	<string>棒的</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,17 +27,17 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx1d0d6c9d70256ba2</string>
+				<string>wx1eb21b6f8a855965</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>sunsum</string>
+			<string>bande</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sunsum</string>
+				<string>bande</string>
 			</array>
 		</dict>
 	</array>

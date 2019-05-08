@@ -13,10 +13,8 @@
 #import "SSServiceDetailsVC.h"
 #import "SSMidelButton.h"
 #import "SSProductListVC.h"
-#import "SSCoupleHomeVC.h"
 #import "SSThridRushSpikeVC.h"
 #import "SSFilterVC.h"
-#import "SSJDCoupleHomeVC.h"
 #import "SSStoreModel.h"
 #import "SSStoreDetailModel.h"
 #import "SSNewStoreDetailsVC.h"
@@ -115,8 +113,8 @@ typedef NS_ENUM(NSUInteger, SSThridHomeHeaderViewActiveType) {
     shareTool.sharWebpageUrl = SSIPShare;
     NSLog(@"%@",SSIPShare);
 #warning --
-    shareTool.shareTitle = @"鲜橙智店";
-    shareTool.shareDescriptionBody = @"鲜橙智店";
+    shareTool.shareTitle = @"棒的APP";
+    shareTool.shareDescriptionBody = @"棒的APP";
     shareTool.shareImage = kMeGetAssetImage(@"icon-wgvilogo");
     
     [shareTool shareWebPageToPlatformType:UMSocialPlatformType_WechatSession success:^(id data) {
@@ -286,8 +284,8 @@ typedef NS_ENUM(NSUInteger, SSThridHomeHeaderViewActiveType) {
         _lblStoreDesc.text = kMeUnNilStr(storemodel.intro);
     }else{
         _imgStore.image = [UIImage imageNamed:@"icon-wgvilogo"];
-        _lblStoreName.text = @"鲜橙旗舰店";
-        _lblStoreDesc.text = @"鲜橙旗舰店";
+        _lblStoreName.text = @"棒的旗舰店";
+        _lblStoreDesc.text = @"棒的旗舰店";
     }
     
 }
@@ -310,15 +308,15 @@ typedef NS_ENUM(NSUInteger, SSThridHomeHeaderViewActiveType) {
                 break;
             case SSThridHomeHeaderViewActiveTbcouponType:
             {
-                SSCoupleHomeVC *vc= [[SSCoupleHomeVC alloc]initWithIsTbK:YES];
-                [homeVC.navigationController pushViewController:vc animated:YES];
+//                SSCoupleHomeVC *vc= [[SSCoupleHomeVC alloc]initWithIsTbK:YES];
+//                [homeVC.navigationController pushViewController:vc animated:YES];
                 
             }
                 break;
             case SSThridHomeHeaderViewActivePinduoduoCouponType:
             {
-                SSCoupleHomeVC *vc= [[SSCoupleHomeVC alloc]initWithIsTbK:NO];
-                [homeVC.navigationController pushViewController:vc animated:YES];
+//                SSCoupleHomeVC *vc= [[SSCoupleHomeVC alloc]initWithIsTbK:NO];
+//                [homeVC.navigationController pushViewController:vc animated:YES];
 
             }
                 break;
@@ -332,8 +330,8 @@ typedef NS_ENUM(NSUInteger, SSThridHomeHeaderViewActiveType) {
             {
 //                SSFilterVC *vc= [[SSFilterVC alloc]init];
 //                [homeVC.navigationController pushViewController:vc animated:YES];
-                SSJDCoupleHomeVC *vc = [[SSJDCoupleHomeVC alloc]init];
-                [homeVC.navigationController pushViewController:vc animated:YES];
+//                SSJDCoupleHomeVC *vc = [[SSJDCoupleHomeVC alloc]init];
+//                [homeVC.navigationController pushViewController:vc animated:YES];
             }
                 break;
             default:

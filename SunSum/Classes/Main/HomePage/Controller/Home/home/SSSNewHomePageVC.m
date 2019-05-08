@@ -29,10 +29,8 @@
 #import "SSAdvModel.h"
 #import "SSArticleDetailVC.h"
 #import "SSArticelModel.h"
-#import "SSCoupleMailVC.h"
-#import "SSGiftVC.h"
 #pragma mark - 2.0.5
-#import "SSCoupleHomeVC.h"
+//#import "SSCoupleHomeVC.h"
 //#import "SSCoupleFilterVC.h"
 #import "SSClerkManngerVC.h"
 #import "SSMyDistrbutionVC.h"
@@ -412,11 +410,7 @@
             }
         } failHandler:nil];
     }
-    
- 
-    
-//    SSGiftVC *coupleVC = [[SSGiftVC alloc]init];
-//    [self.navigationController pushViewController:coupleVC animated:YES];
+
 }
 
 - (void)toPosterVC{

@@ -12,7 +12,6 @@
 //#import "SSThridHomeVC.h"
 #import "SSSNewHomePageVC.h"
 #import "SSStoreHomeVC.h"
-#import "SSMemberHomeVC.h"
 #import "SSShoppingCartVC.h"
 //#import "SSMineHomeVC.h"
 #import "SSNewMineHomeVC.h"
@@ -21,7 +20,6 @@
 #import "SSLoginVC.h"
 #import "SSIMageVC.h"
 #import "AppDelegate.h"
-#import "SSMemberHomeVC.h"
 
 //#import "SSSNewHomePageVC.h"
 #import "SSFourHomeVC.h"
@@ -58,7 +56,7 @@
         
         SSFilterGoodVC *store = [[SSFilterGoodVC alloc] initWithcategory_id:@"0" title:@"优选"];
         //    SSIMageVC *store = [[SSIMageVC alloc]initWithType:SSMainStoreStyle];
-        [self addChildVc:store title:@"商城" image:@"store" selectedImage:@"store_s"];
+        [self addChildVc:store title:@"礼品" image:@"store" selectedImage:@"store_s"];
         
         
         SSBynamicHomeVC *dynamic = [[SSBynamicHomeVC alloc] init];
@@ -137,7 +135,7 @@
     childVc.title=title;
     SSNavigationVC *nav = [[SSNavigationVC alloc] initWithRootViewController:childVc];
     if([title isEqualToString:@"首页"]){
-        childVc.title =@"鲜橙智店";
+        childVc.title =@"棒的智店";
         childVc.tabBarItem.title=@"首页";
     }
     if([title isEqualToString:@"任务"]){

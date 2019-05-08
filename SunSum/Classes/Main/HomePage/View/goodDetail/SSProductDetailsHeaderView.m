@@ -65,11 +65,11 @@
     _lblPrice.text = @"";//kMeUnNilStr(model.interval_price);
     _lblIntervalPrice.text = [NSString stringWithFormat:@"¥%@",kMeUnNilStr(model.interval_price)];
 //    _lblSave.text = [NSString stringWithFormat:@"为您节省¥%.2f",[kMeUnNilStr(model.market_price) floatValue]-[kMeUnNilStr(model.money) floatValue]];
-    if(model.product_id == 4){
-        _lblMember.text = @"每人限领一支,分享后可以再购买一支.";
-    }else{
-        _lblMember.text = @"鲜橙智店优选";
-    }
+//    if(model.product_id == 4){
+//        _lblMember.text = @"每人限领一支,分享后可以再购买一支.";
+//    }else{
+        _lblMember.text = @"棒的APP优选";
+//    }
     
 }
 

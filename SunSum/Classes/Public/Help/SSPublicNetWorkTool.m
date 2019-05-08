@@ -927,113 +927,6 @@
 
 /*********************************************/
 
-#pragma makr - taobao
-
-//获取淘宝客Banner
-+ (void)postAgetTbkBannerWithsuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{@"tool":@"1",
-                          };
-    NSString *url = kGetApiWithUrl(SSIPcommonTaobaokeGetgetTbkBanner);
-    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        kMeCallBlock(failure,error);
-    }];
-}
-
-//推广券信息查询
-+ (void)postCoupleTbkCouponGetWithActivity_id:(NSString *)activity_id item_id:(NSString*)item_id successBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{@"activity_id":kMeUnNilStr(activity_id),@"item_id":kMeUnNilStr(item_id)};
-    NSString *url = kGetApiWithUrl(SSIPcommonTaobaokeGetTbkCouponGet);
-    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        kMeCallBlock(failure,error);
-    }];
-}
-
-//通用物料搜索API
-+ (void)postCoupledgMaterialOptionalWithType:(SSCouponSearchType)type successBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{@"type":@(type),@"page":@"1",@"pageSize":@"6"};
-    NSString *url = kGetApiWithUrl(SSIPcommonTaobaokeGetDgMaterialOptional);
-    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        kMeCallBlock(failure,error);
-    }];
-}
-
-+ (void)postShareTaobaokeGetTpwdWithTitle:(NSString *)title url:(NSString*)url logo:(NSString*)logo successBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{@"tool":@"ios",@"text":kMeUnNilStr(title),@"logo":kMeUnNilStr(logo),@"url":kMeUnNilStr(url),@"uid":kMeUnNilStr(kCurrentUser.uid)};
-    NSString *urlApi = kGetApiWithUrl(SSIPcommonTaobaokeGetGetTpwd);
-    MBProgressHUD *HUD = [self commitWithHUD:@"生成口令中"];
-    [THTTPManager postWithParameter:dic strUrl:urlApi success:^(ZLRequestResponse *responseObject) {
-        [HUD hideAnimated:YES];
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        if([error isKindOfClass:[ZLRequestResponse class]]){
-            ZLRequestResponse *res = (ZLRequestResponse*)error;
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
-        }else{
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
-        }
-        kMeCallBlock(failure,error);
-    }];
-}
-//淘口令
-+ (void)postTaobaokeGetTpwdWithTitle:(NSString *)title url:(NSString*)url logo:(NSString*)logo successBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{@"tool":@"ios",@"text":kMeUnNilStr(title),@"logo":kMeUnNilStr(logo),@"url":kMeUnNilStr(url)};
-    NSString *urlApi = kGetApiWithUrl(SSIPcommonTaobaokeGetGetTpwd);
-    MBProgressHUD *HUD = [self commitWithHUD:@"生成口令中"];
-    [THTTPManager postWithParameter:dic strUrl:urlApi success:^(ZLRequestResponse *responseObject) {
-        [HUD hideAnimated:YES];
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        if([error isKindOfClass:[ZLRequestResponse class]]){
-            ZLRequestResponse *res = (ZLRequestResponse*)error;
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
-        }else{
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
-        }
-        kMeCallBlock(failure,error);
-    }];
-}
-//卷详情
-+ (void)postCoupleDetailWithProductrId:(NSString *)productrId successBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    //    NSString *url = [NSString stringWithFormat:@"http://api.dataoke.com/index.php?r=port/index&appkey=58de5a1fe2&v=2&id=%@",kMeUnNilStr(productrId)];
-    //    MBProgressHUD *HUD = [self commitWithHUD:@""];
-    //    [THTTPManager orgialGetWithUrlStr:url parameter:@{} success:^(NSDictionary *dic) {
-    //        [HUD hideAnimated:YES];
-    //        kMeCallBlock(successBlock,dic);
-    //    } failure:^(id object) {
-    //        [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
-    //        kMeCallBlock(failure,object);
-    //    }];
-    NSDictionary *dic = @{@"tool":@"ios",@"num_iids":kMeUnNilStr(productrId)};
-    NSString *url = kGetApiWithUrl(SSIPcommonTaobaokeGetGoodsInfo);
-    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        kMeCallBlock(failure,error);
-    }];
-}
-+ (void)postAddressTaobaokeGetCategoryWithsuccessBlock:(RequestResponse)successBlock failure:(kMeObjBlock)failure{
-    NSDictionary *dic = @{};
-    NSString *url = kGetApiWithUrl(SSIPcommonTaobaokeGetCategory);
-    MBProgressHUD *HUD = [self commitWithHUD:@""];
-    [THTTPManager postWithParameter:dic strUrl:url success:^(ZLRequestResponse *responseObject) {
-        [HUD hideAnimated:YES];
-        kMeCallBlock(successBlock,responseObject);
-    } failure:^(id error) {
-        if([error isKindOfClass:[ZLRequestResponse class]]){
-            ZLRequestResponse *res = (ZLRequestResponse*)error;
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kMeUnNilStr(res.message)];
-        }else{
-            [SSShowViewTool SHOWHUDWITHHUD:HUD test:kApiError];
-        }
-        kMeCallBlock(failure,error);
-    }];
-}
 /*********************************************/
 
 
@@ -1058,7 +951,7 @@
 
 
 /*********************************************/
-#pragma makr - couple
+
 
 /*********************************************/
 

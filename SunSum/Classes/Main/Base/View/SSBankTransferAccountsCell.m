@@ -81,7 +81,7 @@ const static CGFloat kMargin = 14.0f;
 
 - (IBAction)copyCompanyNameAction:(UIButton *)sender {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = @"深圳市鲜橙投资发展有限公司";
+    pasteboard.string = @"深圳棒的网络科技有限公司";
     MBProgressHUD *hub =  [MBProgressHUD showHUDAddedTo:self animated:YES];
     hub.mode = MBProgressHUDModeText;
     hub.detailsLabel.text = @"已复制开户名";

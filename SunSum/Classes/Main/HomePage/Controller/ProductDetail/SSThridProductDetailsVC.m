@@ -19,7 +19,6 @@
 #import "SSGoodDetailModel.h"
 #import "SSMakeOrderVC.h"
 #import "SSShoppingCartAttrModel.h"
-#import "SSGiftVC.h"
 #import "SSGoodModel.h"
 #import "SSProductDetalsBuyedCell.h"
 #import "SSNewProductDetailsSectionView.h"
@@ -181,8 +180,7 @@ kTDWebViewCellDidFinishLoadNotificationMethod
                     kMeSTRONGSELF
                     kNoticeReloadShopCart
                     if(strongSelf.isGift){
-                        SSGiftVC *vc = (SSGiftVC *)[SSCommonTool getClassWtihClassName:[SSGiftVC class] targetVC:strongSelf];
-                        [strongSelf.navigationController popToViewController:vc animated:YES];
+ 
                     }
                     
                 } failure:^(id object) {
