@@ -3653,11 +3653,11 @@
 		36D3688A223F6880009F781B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36D3688E223F6880009F781B /* SSUserPathModel.h */,
 				36D3688B223F6880009F781B /* SSUserPathModel.m */,
+				36D3688F223F6880009F781B /* SSWxAuthModel.h */,
 				36D3688C223F6880009F781B /* SSWxAuthModel.m */,
 				36D3688D223F6880009F781B /* SSUserInfoModel.h */,
-				36D3688E223F6880009F781B /* SSUserPathModel.h */,
-				36D3688F223F6880009F781B /* SSWxAuthModel.h */,
 				36D36890223F6880009F781B /* SSUserInfoModel.m */,
 			);
 			path = Model;
@@ -3666,15 +3666,15 @@
 		36D36891223F6880009F781B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36D36892223F6880009F781B /* SSExitVC.m */,
-				36D36893223F6880009F781B /* SSLoginVC.m */,
-				36D36894223F6880009F781B /* SSWxLoginVC.xib */,
-				36D36895223F6880009F781B /* SSExitVC.xib */,
-				36D36896223F6880009F781B /* SSWxLoginVC.h */,
 				36D36897223F6880009F781B /* SSExitVC.h */,
-				36D36898223F6880009F781B /* SSLoginVC.xib */,
+				36D36892223F6880009F781B /* SSExitVC.m */,
+				36D36895223F6880009F781B /* SSExitVC.xib */,
 				36D36899223F6880009F781B /* SSLoginVC.h */,
+				36D36893223F6880009F781B /* SSLoginVC.m */,
+				36D36898223F6880009F781B /* SSLoginVC.xib */,
+				36D36896223F6880009F781B /* SSWxLoginVC.h */,
 				36D3689A223F6880009F781B /* SSWxLoginVC.m */,
+				36D36894223F6880009F781B /* SSWxLoginVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3683,8 +3683,8 @@
 			isa = PBXGroup;
 			children = (
 				36D3689C223F6880009F781B /* SSAddTelView.h */,
-				36D3689D223F6880009F781B /* SSAddTelView.xib */,
 				36D3689E223F6880009F781B /* SSAddTelView.m */,
+				36D3689D223F6880009F781B /* SSAddTelView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3716,9 +3716,9 @@
 			isa = PBXGroup;
 			children = (
 				36D368BD223F68C3009F781B /* SSThridProductDetailsVC.h */,
-				36D368BE223F68C3009F781B /* SSProductDetailCommentVC.m */,
 				36D368BF223F68C3009F781B /* SSThridProductDetailsVC.m */,
 				36D368C0223F68C3009F781B /* SSProductDetailCommentVC.h */,
+				36D368BE223F68C3009F781B /* SSProductDetailCommentVC.m */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -3726,12 +3726,12 @@
 		36D368C7223F68C3009F781B /* Visit */ = {
 			isa = PBXGroup;
 			children = (
-				36D368C8223F68C3009F781B /* SSVistorPathVC.m */,
-				36D368C9223F68C3009F781B /* SSVisiterHomeVC.m */,
-				36D368CA223F68C3009F781B /* SSVisterDetailVC.m */,
 				36D368CB223F68C3009F781B /* SSVistorPathVC.h */,
+				36D368C8223F68C3009F781B /* SSVistorPathVC.m */,
 				36D368CC223F68C3009F781B /* SSVisiterHomeVC.h */,
+				36D368C9223F68C3009F781B /* SSVisiterHomeVC.m */,
 				36D368CD223F68C3009F781B /* SSVisterDetailVC.h */,
+				36D368CA223F68C3009F781B /* SSVisterDetailVC.m */,
 			);
 			path = Visit;
 			sourceTree = "<group>";
@@ -3740,10 +3740,10 @@
 			isa = PBXGroup;
 			children = (
 				36D368E1223F68C3009F781B /* SSShoppingMallContentVC.h */,
-				36D368E2223F68C3009F781B /* SSShoppingMallVC.h */,
 				36D368E3223F68C3009F781B /* SSShoppingMallContentVC.m */,
-				36D368E4223F68C3009F781B /* SSShoppingMallVC.xib */,
+				36D368E2223F68C3009F781B /* SSShoppingMallVC.h */,
 				36D368E5223F68C3009F781B /* SSShoppingMallVC.m */,
+				36D368E4223F68C3009F781B /* SSShoppingMallVC.xib */,
 			);
 			path = ShoppingMall;
 			sourceTree = "<group>";
@@ -3752,16 +3752,16 @@
 			isa = PBXGroup;
 			children = (
 				36D368E9223F68C3009F781B /* SSArticelVC.h */,
-				36D368EA223F68C3009F781B /* SSArticelSearchDataVC.h */,
-				36D368EB223F68C3009F781B /* SSArticleDetailVC.h */,
-				36D368EC223F68C3009F781B /* SSArticleListVC.h */,
-				36D368ED223F68C3009F781B /* SSArticelSearchVC.m */,
-				36D368EE223F68C3009F781B /* SSArticleDetailVC.xib */,
 				36D368EF223F68C3009F781B /* SSArticelVC.m */,
+				36D368EA223F68C3009F781B /* SSArticelSearchDataVC.h */,
 				36D368F0223F68C3009F781B /* SSArticelSearchDataVC.m */,
-				36D368F1223F68C3009F781B /* SSArticelSearchVC.h */,
+				36D368EC223F68C3009F781B /* SSArticleListVC.h */,
 				36D368F2223F68C3009F781B /* SSArticleListVC.m */,
+				36D368F1223F68C3009F781B /* SSArticelSearchVC.h */,
+				36D368ED223F68C3009F781B /* SSArticelSearchVC.m */,
+				36D368EB223F68C3009F781B /* SSArticleDetailVC.h */,
 				36D368F3223F68C3009F781B /* SSArticleDetailVC.m */,
+				36D368EE223F68C3009F781B /* SSArticleDetailVC.xib */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -3769,21 +3769,21 @@
 		36D368FB223F68C3009F781B /* Poster */ = {
 			isa = PBXGroup;
 			children = (
+				36D36901223F68C3009F781B /* SSMyPosterContentListVC.h */,
+				36D36908223F68C3009F781B /* SSMyPosterContentListVC.m */,
+				36D3690A223F68C3009F781B /* SSPosterMoreListVC.h */,
+				36D36903223F68C3009F781B /* SSPosterMoreListVC.m */,
+				36D36900223F68C3009F781B /* SSPosterMoreListContentVC.h */,
+				36D36907223F68C3009F781B /* SSPosterMoreListContentVC.m */,
+				36D36904223F68C3009F781B /* SSPosterContentListVC.h */,
 				36D368FC223F68C3009F781B /* SSPosterContentListVC.m */,
+				36D36906223F68C3009F781B /* SSCreatePosterVC.h */,
+				36D36902223F68C3009F781B /* SSCreatePosterVC.m */,
 				36D368FD223F68C3009F781B /* SSCreatePosterVC.xib */,
 				36D368FE223F68C3009F781B /* SSPosterActiveVC.h */,
-				36D368FF223F68C3009F781B /* SSPosterListVC.m */,
-				36D36900223F68C3009F781B /* SSPosterMoreListContentVC.h */,
-				36D36901223F68C3009F781B /* SSMyPosterContentListVC.h */,
-				36D36902223F68C3009F781B /* SSCreatePosterVC.m */,
-				36D36903223F68C3009F781B /* SSPosterMoreListVC.m */,
-				36D36904223F68C3009F781B /* SSPosterContentListVC.h */,
 				36D36905223F68C3009F781B /* SSPosterActiveVC.m */,
-				36D36906223F68C3009F781B /* SSCreatePosterVC.h */,
-				36D36907223F68C3009F781B /* SSPosterMoreListContentVC.m */,
-				36D36908223F68C3009F781B /* SSMyPosterContentListVC.m */,
 				36D36909223F68C3009F781B /* SSPosterListVC.h */,
-				36D3690A223F68C3009F781B /* SSPosterMoreListVC.h */,
+				36D368FF223F68C3009F781B /* SSPosterListVC.m */,
 			);
 			path = Poster;
 			sourceTree = "<group>";
@@ -3804,14 +3804,14 @@
 		36D3695A223F690F009F781B /* order */ = {
 			isa = PBXGroup;
 			children = (
+				36D3695F223F690F009F781B /* SSEqualSpaceFlowLayout.h */,
 				36D3695B223F690F009F781B /* SSEqualSpaceFlowLayout.m */,
 				36D3695C223F690F009F781B /* SSMakeOrderAttrModel.h */,
+				36D36960223F690F009F781B /* SSMakeOrderAttrModel.m */,
+				36D36962223F690F009F781B /* SSAddressModel.h */,
 				36D3695D223F690F009F781B /* SSAddressModel.m */,
 				36D3695E223F690F009F781B /* SSAddAddressAttrModel.h */,
-				36D3695F223F690F009F781B /* SSEqualSpaceFlowLayout.h */,
-				36D36960223F690F009F781B /* SSMakeOrderAttrModel.m */,
 				36D36961223F690F009F781B /* SSAddAddressAttrModel.m */,
-				36D36962223F690F009F781B /* SSAddressModel.h */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -3830,14 +3830,14 @@
 		36D36967223F690F009F781B /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
+				36D3696D223F690F009F781B /* SSThridHomeRudeGoodModel.h */,
 				36D36968223F690F009F781B /* SSThridHomeRudeGoodModel.m */,
+				36D3696C223F690F009F781B /* SSGoodsCommentModel.h */,
 				36D36969223F690F009F781B /* SSGoodsCommentModel.m */,
 				36D3696A223F690F009F781B /* SSThridHomeRudeTimeModel.h */,
-				36D3696B223F690F009F781B /* SSThridHomeModel.m */,
-				36D3696C223F690F009F781B /* SSGoodsCommentModel.h */,
-				36D3696D223F690F009F781B /* SSThridHomeRudeGoodModel.h */,
-				36D3696E223F690F009F781B /* SSThridHomeModel.h */,
 				36D3696F223F690F009F781B /* SSThridHomeRudeTimeModel.m */,
+				36D3696E223F690F009F781B /* SSThridHomeModel.h */,
+				36D3696B223F690F009F781B /* SSThridHomeModel.m */,
 			);
 			path = Thrid;
 			sourceTree = "<group>";
@@ -3845,14 +3845,14 @@
 		36D36985223F690F009F781B /* Visit */ = {
 			isa = PBXGroup;
 			children = (
-				36D36986223F690F009F781B /* SSVistorCountModel.m */,
-				36D36987223F690F009F781B /* SSSpreadUserModel.m */,
-				36D36988223F690F009F781B /* SSVistorUserModel.h */,
-				36D36989223F690F009F781B /* SSVistorUserPathModel.h */,
 				36D3698A223F690F009F781B /* SSVistorCountModel.h */,
+				36D36986223F690F009F781B /* SSVistorCountModel.m */,
 				36D3698B223F690F009F781B /* SSSpreadUserModel.h */,
-				36D3698C223F690F009F781B /* SSVistorUserModel.m */,
+				36D36987223F690F009F781B /* SSSpreadUserModel.m */,
+				36D36989223F690F009F781B /* SSVistorUserPathModel.h */,
 				36D3698D223F690F009F781B /* SSVistorUserPathModel.m */,
+				36D36988223F690F009F781B /* SSVistorUserModel.h */,
+				36D3698C223F690F009F781B /* SSVistorUserModel.m */,
 			);
 			path = Visit;
 			sourceTree = "<group>";
@@ -3860,14 +3860,14 @@
 		36D3698E223F690F009F781B /* Articel */ = {
 			isa = PBXGroup;
 			children = (
+				36D36993223F690F009F781B /* SSArticelCategoryModel.h */,
 				36D3698F223F690F009F781B /* SSArticelCategoryModel.m */,
+				36D36995223F690F009F781B /* SSArticelDetailModel.h */,
 				36D36990223F690F009F781B /* SSArticelDetailModel.m */,
 				36D36991223F690F009F781B /* SSArticelModel.h */,
-				36D36992223F690F009F781B /* SSCountArticleModel.m */,
-				36D36993223F690F009F781B /* SSArticelCategoryModel.h */,
 				36D36994223F690F009F781B /* SSArticelModel.m */,
-				36D36995223F690F009F781B /* SSArticelDetailModel.h */,
 				36D36996223F690F009F781B /* SSCountArticleModel.h */,
+				36D36992223F690F009F781B /* SSCountArticleModel.m */,
 			);
 			path = Articel;
 			sourceTree = "<group>";
@@ -3885,8 +3885,8 @@
 			isa = PBXGroup;
 			children = (
 				36D3699B223F690F009F781B /* SSPosterModel.h */,
-				36D3699C223F690F009F781B /* SSActivePosterModel.h */,
 				36D3699D223F690F009F781B /* SSPosterModel.m */,
+				36D3699C223F690F009F781B /* SSActivePosterModel.h */,
 				36D3699E223F690F009F781B /* SSActivePosterModel.m */,
 			);
 			path = Poster;
@@ -3896,19 +3896,19 @@
 			isa = PBXGroup;
 			children = (
 				36D36A0E223F695A009F781B /* SSMakeOrderCell.h */,
-				36D36A0F223F695A009F781B /* SSMakeOrderHeaderCell.h */,
-				36D36A10223F695A009F781B /* SSMyAddressCell.xib */,
-				36D36A11223F695A009F781B /* SSMakeOrderSelectAddressView.h */,
-				36D36A12223F695A009F781B /* SSMyAddressCell.m */,
-				36D36A13223F695A009F781B /* SSMessageTextField.m */,
-				36D36A14223F695A009F781B /* SSMakeOrderSelectAddressView.xib */,
-				36D36A15223F695A009F781B /* SSMakeOrderSelectAddressView.m */,
-				36D36A16223F695A009F781B /* SSMakeOrderHeaderCell.xib */,
-				36D36A17223F695A009F781B /* SSMakeOrderHeaderCell.m */,
 				36D36A18223F695A009F781B /* SSMakeOrderCell.m */,
-				36D36A19223F695A009F781B /* SSMessageTextField.h */,
+				36D36A10223F695A009F781B /* SSMyAddressCell.xib */,
+				36D36A0F223F695A009F781B /* SSMakeOrderHeaderCell.h */,
+				36D36A17223F695A009F781B /* SSMakeOrderHeaderCell.m */,
+				36D36A16223F695A009F781B /* SSMakeOrderHeaderCell.xib */,
+				36D36A11223F695A009F781B /* SSMakeOrderSelectAddressView.h */,
+				36D36A15223F695A009F781B /* SSMakeOrderSelectAddressView.m */,
+				36D36A14223F695A009F781B /* SSMakeOrderSelectAddressView.xib */,
 				36D36A1A223F695A009F781B /* SSMyAddressCell.h */,
+				36D36A12223F695A009F781B /* SSMyAddressCell.m */,
 				36D36A1B223F695A009F781B /* SSMakeOrderCell.xib */,
+				36D36A19223F695A009F781B /* SSMessageTextField.h */,
+				36D36A13223F695A009F781B /* SSMessageTextField.m */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -3928,25 +3928,25 @@
 		36D36A1F223F695B009F781B /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
-				36D36A20223F695B009F781B /* SSThridNavView.xib */,
-				36D36A21223F695B009F781B /* SSThridHomeHeaderView.m */,
-				36D36A23223F695B009F781B /* SSThridNavView.m */,
-				36D36A24223F695B009F781B /* SSRushBuyContentCell.h */,
-				36D36A25223F695B009F781B /* SSThridHomeTimeSecionContentCell.h */,
-				36D36A26223F695B009F781B /* SSThridHomeTimeSecionView.h */,
-				36D36A27223F695B009F781B /* SSThridHomeNavView.h */,
-				36D36A28223F695B009F781B /* SSRushBuyCell.m */,
-				36D36A2A223F695B009F781B /* SSThridHomeHeaderView.xib */,
-				36D36A2D223F695B009F781B /* SSRushBuyContentCell.xib */,
-				36D36A2E223F695B009F781B /* SSThridHomeHeaderView.h */,
-				36D36A2F223F695B009F781B /* SSThridHomeTimeSecionView.xib */,
-				36D36A30223F695B009F781B /* SSThridHomeTimeSecionView.m */,
-				36D36A31223F695B009F781B /* SSThridHomeTimeSecionContentCell.m */,
-				36D36A32223F695B009F781B /* SSRushBuyContentCell.m */,
 				36D36A33223F695B009F781B /* SSThridNavView.h */,
-				36D36A34223F695B009F781B /* SSRushBuyCell.h */,
+				36D36A23223F695B009F781B /* SSThridNavView.m */,
+				36D36A20223F695B009F781B /* SSThridNavView.xib */,
+				36D36A2E223F695B009F781B /* SSThridHomeHeaderView.h */,
+				36D36A21223F695B009F781B /* SSThridHomeHeaderView.m */,
+				36D36A2A223F695B009F781B /* SSThridHomeHeaderView.xib */,
+				36D36A24223F695B009F781B /* SSRushBuyContentCell.h */,
+				36D36A32223F695B009F781B /* SSRushBuyContentCell.m */,
+				36D36A2D223F695B009F781B /* SSRushBuyContentCell.xib */,
+				36D36A25223F695B009F781B /* SSThridHomeTimeSecionContentCell.h */,
+				36D36A31223F695B009F781B /* SSThridHomeTimeSecionContentCell.m */,
 				36D36A35223F695B009F781B /* SSThridHomeTimeSecionContentCell.xib */,
+				36D36A27223F695B009F781B /* SSThridHomeNavView.h */,
 				36D36A36223F695B009F781B /* SSThridHomeNavView.m */,
+				36D36A26223F695B009F781B /* SSThridHomeTimeSecionView.h */,
+				36D36A30223F695B009F781B /* SSThridHomeTimeSecionView.m */,
+				36D36A2F223F695B009F781B /* SSThridHomeTimeSecionView.xib */,
+				36D36A34223F695B009F781B /* SSRushBuyCell.h */,
+				36D36A28223F695B009F781B /* SSRushBuyCell.m */,
 				36D36A39223F695B009F781B /* SSRushBuyCell.xib */,
 			);
 			path = Thrid;
@@ -3955,12 +3955,12 @@
 		36D36A42223F695B009F781B /* Second */ = {
 			isa = PBXGroup;
 			children = (
-				36D36A43223F695B009F781B /* SSSNewHomeActiveCommondCell.m */,
+				36D36A48223F695B009F781B /* SSSNewHomePageView.h */,
 				36D36A44223F695B009F781B /* SSSNewHomePageView.m */,
 				36D36A45223F695B009F781B /* SSSNewHomePageView.xib */,
-				36D36A46223F695B009F781B /* SSSNewHomeActiveCommondCell.xib */,
 				36D36A47223F695B009F781B /* SSSNewHomeActiveCommondCell.h */,
-				36D36A48223F695B009F781B /* SSSNewHomePageView.h */,
+				36D36A43223F695B009F781B /* SSSNewHomeActiveCommondCell.m */,
+				36D36A46223F695B009F781B /* SSSNewHomeActiveCommondCell.xib */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -3968,30 +3968,30 @@
 		36D36A7E223F695B009F781B /* Visit */ = {
 			isa = PBXGroup;
 			children = (
-				36D36A7F223F695B009F781B /* SSVistorPathMainCell.xib */,
-				36D36A80223F695B009F781B /* SSVisterSectionView.xib */,
-				36D36A81223F695B009F781B /* SSVistorPathMainCell.m */,
-				36D36A82223F695B009F781B /* SSVisitHomeHeaderView.m */,
-				36D36A83223F695B009F781B /* SSVisterSectionView.h */,
-				36D36A84223F695B009F781B /* SSVisterDetailCell.h */,
-				36D36A85223F695B009F781B /* SSVistorVisterCell.m */,
-				36D36A86223F695B009F781B /* SSVisterTodySectionView.h */,
-				36D36A87223F695B009F781B /* SSVisterTodyCell.m */,
-				36D36A88223F695B009F781B /* SSVistorPathCell.h */,
-				36D36A89223F695B009F781B /* SSVisterTodySectionView.xib */,
-				36D36A8A223F695B009F781B /* SSVisterDetailCell.xib */,
-				36D36A8B223F695B009F781B /* SSVisitHomeHeaderView.xib */,
-				36D36A8C223F695B009F781B /* SSVisitHomeHeaderView.h */,
 				36D36A8D223F695B009F781B /* SSVistorPathMainCell.h */,
-				36D36A8E223F695B009F781B /* SSVisterTodySectionView.m */,
-				36D36A8F223F695B009F781B /* SSVisterDetailCell.m */,
-				36D36A90223F695B009F781B /* SSVistorVisterCell.h */,
+				36D36A81223F695B009F781B /* SSVistorPathMainCell.m */,
+				36D36A7F223F695B009F781B /* SSVistorPathMainCell.xib */,
+				36D36A83223F695B009F781B /* SSVisterSectionView.h */,
 				36D36A91223F695B009F781B /* SSVisterSectionView.m */,
-				36D36A92223F695B009F781B /* SSVistorPathCell.m */,
-				36D36A93223F695B009F781B /* SSVistorVisterCell.xib */,
+				36D36A80223F695B009F781B /* SSVisterSectionView.xib */,
+				36D36A8C223F695B009F781B /* SSVisitHomeHeaderView.h */,
+				36D36A82223F695B009F781B /* SSVisitHomeHeaderView.m */,
+				36D36A8B223F695B009F781B /* SSVisitHomeHeaderView.xib */,
+				36D36A86223F695B009F781B /* SSVisterTodySectionView.h */,
+				36D36A8E223F695B009F781B /* SSVisterTodySectionView.m */,
+				36D36A89223F695B009F781B /* SSVisterTodySectionView.xib */,
+				36D36A84223F695B009F781B /* SSVisterDetailCell.h */,
+				36D36A8F223F695B009F781B /* SSVisterDetailCell.m */,
+				36D36A8A223F695B009F781B /* SSVisterDetailCell.xib */,
 				36D36A94223F695B009F781B /* SSVisterTodyCell.h */,
-				36D36A95223F695B009F781B /* SSVistorPathCell.xib */,
+				36D36A87223F695B009F781B /* SSVisterTodyCell.m */,
 				36D36A96223F695B009F781B /* SSVisterTodyCell.xib */,
+				36D36A88223F695B009F781B /* SSVistorPathCell.h */,
+				36D36A92223F695B009F781B /* SSVistorPathCell.m */,
+				36D36A95223F695B009F781B /* SSVistorPathCell.xib */,
+				36D36A90223F695B009F781B /* SSVistorVisterCell.h */,
+				36D36A85223F695B009F781B /* SSVistorVisterCell.m */,
+				36D36A93223F695B009F781B /* SSVistorVisterCell.xib */,
 			);
 			path = Visit;
 			sourceTree = "<group>";
@@ -3999,17 +3999,17 @@
 		36D36A97223F695B009F781B /* Attribute */ = {
 			isa = PBXGroup;
 			children = (
+				36D36A9E223F695B009F781B /* SSSkuBuyContentCell.h */,
 				36D36A98223F695B009F781B /* SSSkuBuyContentCell.m */,
+				36D36A9C223F695B009F781B /* SSSkuBuyContentCell.xib */,
+				36D36A9B223F695B009F781B /* SSSkuBuyView.h */,
+				36D36AA1223F695B009F781B /* SSSkuBuyView.m */,
+				36D36A9D223F695B009F781B /* SSSkuBuyCell.h */,
+				36D36AA2223F695B009F781B /* SSSkuBuyCell.m */,
 				36D36A99223F695B009F781B /* SSSkuBuyCell.xib */,
 				36D36A9A223F695B009F781B /* SSSkuByReusableView.h */,
-				36D36A9B223F695B009F781B /* SSSkuBuyView.h */,
-				36D36A9C223F695B009F781B /* SSSkuBuyContentCell.xib */,
-				36D36A9D223F695B009F781B /* SSSkuBuyCell.h */,
-				36D36A9E223F695B009F781B /* SSSkuBuyContentCell.h */,
-				36D36A9F223F695B009F781B /* SSSkuByReusableView.xib */,
 				36D36AA0223F695B009F781B /* SSSkuByReusableView.m */,
-				36D36AA1223F695B009F781B /* SSSkuBuyView.m */,
-				36D36AA2223F695B009F781B /* SSSkuBuyCell.m */,
+				36D36A9F223F695B009F781B /* SSSkuByReusableView.xib */,
 			);
 			path = Attribute;
 			sourceTree = "<group>";
@@ -4017,12 +4017,12 @@
 		36D36AA3223F695B009F781B /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				36D36AA4223F695B009F781B /* SSArticleCell.h */,
-				36D36AA5223F695B009F781B /* SSWebTitleCell.xib */,
 				36D36AA6223F695B009F781B /* SSWebTitleCell.h */,
-				36D36AA7223F695B009F781B /* SSArticleCell.xib */,
-				36D36AA8223F695B009F781B /* SSArticleCell.m */,
 				36D36AA9223F695B009F781B /* SSWebTitleCell.m */,
+				36D36AA5223F695B009F781B /* SSWebTitleCell.xib */,
+				36D36AA4223F695B009F781B /* SSArticleCell.h */,
+				36D36AA8223F695B009F781B /* SSArticleCell.m */,
+				36D36AA7223F695B009F781B /* SSArticleCell.xib */,
 				36EE699A22715D7D00B10983 /* SSArticleAdCell.h */,
 				36EE699B22715D7D00B10983 /* SSArticleAdCell.m */,
 				36EE699C22715D7D00B10983 /* SSArticleAdCell.xib */,
@@ -4033,11 +4033,11 @@
 		36D36AAA223F695B009F781B /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				36D36AAE223F695B009F781B /* SSFilterGoodView.h */,
 				36D36AAB223F695B009F781B /* SSFilterGoodView.m */,
+				36D36AAF223F695B009F781B /* SSFilterMainCell.h */,
 				36D36AAC223F695B009F781B /* SSFilterMainCell.m */,
 				36D36AAD223F695B009F781B /* SSFilterMainCell.xib */,
-				36D36AAE223F695B009F781B /* SSFilterGoodView.h */,
-				36D36AAF223F695B009F781B /* SSFilterMainCell.h */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -4045,15 +4045,15 @@
 		36D36AB0223F695B009F781B /* Poster */ = {
 			isa = PBXGroup;
 			children = (
-				36D36AB1223F695B009F781B /* SSPosterContentListContentCell.m */,
-				36D36AB2223F695B009F781B /* SSPosterContentListCell.h */,
-				36D36AB3223F695B009F781B /* SSMyPosterContentCell.m */,
-				36D36AB4223F695B009F781B /* SSMyPosterContentCell.xib */,
-				36D36AB5223F695B009F781B /* SSPosterContentListCell.xib */,
-				36D36AB6223F695B009F781B /* SSPosterContentListCell.m */,
 				36D36AB7223F695B009F781B /* SSPosterContentListContentCell.h */,
+				36D36AB1223F695B009F781B /* SSPosterContentListContentCell.m */,
 				36D36AB8223F695B009F781B /* SSPosterContentListContentCell.xib */,
 				36D36AB9223F695B009F781B /* SSMyPosterContentCell.h */,
+				36D36AB3223F695B009F781B /* SSMyPosterContentCell.m */,
+				36D36AB4223F695B009F781B /* SSMyPosterContentCell.xib */,
+				36D36AB2223F695B009F781B /* SSPosterContentListCell.h */,
+				36D36AB6223F695B009F781B /* SSPosterContentListCell.m */,
+				36D36AB5223F695B009F781B /* SSPosterContentListCell.xib */,
 			);
 			path = Poster;
 			sourceTree = "<group>";
@@ -4062,8 +4062,8 @@
 			isa = PBXGroup;
 			children = (
 				36D36ABB223F695C009F781B /* SSShoppingMallCell.h */,
-				36D36ABC223F695C009F781B /* SSShoppingMallCell.xib */,
 				36D36ABD223F695C009F781B /* SSShoppingMallCell.m */,
+				36D36ABC223F695C009F781B /* SSShoppingMallCell.xib */,
 			);
 			path = ShoppingMall;
 			sourceTree = "<group>";
@@ -4072,27 +4072,27 @@
 			isa = PBXGroup;
 			children = (
 				36D36ABF223F695C009F781B /* Thrid */,
-				36D36ADB223F695C009F781B /* SSProductDetalsBuyedContentCell.xib */,
-				36D36ADC223F695C009F781B /* SSProductDetailsSectionView.m */,
-				36D36ADD223F695C009F781B /* SSNewProductDetailsHeaderView.h */,
-				36D36ADE223F695C009F781B /* SSNewProductDetailsSectionView.h */,
-				36D36ADF223F695C009F781B /* SSProductDetailsHeaderView.h */,
-				36D36AE0223F695C009F781B /* SSProductDetalsBuyedContentCell.m */,
-				36D36AE1223F695C009F781B /* SSProductDetailsBottomView.m */,
-				36D36AE2223F695C009F781B /* SSProductDetalsBuyedCell.m */,
-				36D36AE3223F695C009F781B /* SSNewProductDetailsHeaderView.xib */,
-				36D36AE4223F695C009F781B /* SSProductDetalsBuyedCell.xib */,
-				36D36AE5223F695C009F781B /* SSProductDetailsSectionView.xib */,
-				36D36AE6223F695C009F781B /* SSProductDetailsBottomView.xib */,
-				36D36AE7223F695C009F781B /* SSNewProductDetailsHeaderView.m */,
-				36D36AE8223F695C009F781B /* SSProductDetailsSectionView.h */,
 				36D36AE9223F695C009F781B /* SSProductDetalsBuyedContentCell.h */,
+				36D36AE0223F695C009F781B /* SSProductDetalsBuyedContentCell.m */,
+				36D36ADB223F695C009F781B /* SSProductDetalsBuyedContentCell.xib */,
+				36D36AE8223F695C009F781B /* SSProductDetailsSectionView.h */,
+				36D36ADC223F695C009F781B /* SSProductDetailsSectionView.m */,
+				36D36AE5223F695C009F781B /* SSProductDetailsSectionView.xib */,
+				36D36ADD223F695C009F781B /* SSNewProductDetailsHeaderView.h */,
+				36D36AE7223F695C009F781B /* SSNewProductDetailsHeaderView.m */,
+				36D36AE3223F695C009F781B /* SSNewProductDetailsHeaderView.xib */,
+				36D36ADE223F695C009F781B /* SSNewProductDetailsSectionView.h */,
+				36D36AEC223F695C009F781B /* SSNewProductDetailsSectionView.m */,
+				36D36AEE223F695C009F781B /* SSNewProductDetailsSectionView.xib */,
+				36D36AED223F695C009F781B /* SSProductDetalsBuyedCell.h */,
+				36D36AE2223F695C009F781B /* SSProductDetalsBuyedCell.m */,
+				36D36AE4223F695C009F781B /* SSProductDetalsBuyedCell.xib */,
+				36D36ADF223F695C009F781B /* SSProductDetailsHeaderView.h */,
 				36D36AEA223F695C009F781B /* SSProductDetailsHeaderView.m */,
 				36D36AEB223F695C009F781B /* SSProductDetailsHeaderView.xib */,
-				36D36AEC223F695C009F781B /* SSNewProductDetailsSectionView.m */,
-				36D36AED223F695C009F781B /* SSProductDetalsBuyedCell.h */,
-				36D36AEE223F695C009F781B /* SSNewProductDetailsSectionView.xib */,
 				36D36AEF223F695C009F781B /* SSProductDetailsBottomView.h */,
+				36D36AE1223F695C009F781B /* SSProductDetailsBottomView.m */,
+				36D36AE6223F695C009F781B /* SSProductDetailsBottomView.xib */,
 			);
 			path = goodDetail;
 			sourceTree = "<group>";
@@ -4101,32 +4101,32 @@
 			isa = PBXGroup;
 			children = (
 				36D36AC0223F695C009F781B /* SSThridProductCommentHeaderView.h */,
-				36D36AC1223F695C009F781B /* SSThridProductDetailsCommentCell.xib */,
-				36D36AC2223F695C009F781B /* SSProductDetailCommentCell.h */,
-				36D36AC3223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.xib */,
-				36D36AC4223F695C009F781B /* SSThridProductDetailsCommentContontCell.xib */,
-				36D36AC5223F695C009F781B /* SSThridProductDetailsHeaderView.xib */,
-				36D36AC6223F695C009F781B /* SSThridProductDetailsRushCell.m */,
-				36D36AC7223F695C009F781B /* SSThridProductDetailsHeaderView.h */,
-				36D36AC8223F695C009F781B /* SSThridProductDetailsCommentContontCell.h */,
-				36D36AC9223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.m */,
-				36D36ACA223F695C009F781B /* SSThridProductDetailsSelectSkuCell.h */,
-				36D36ACB223F695C009F781B /* SSThridProductDetailsCommentCell.h */,
-				36D36ACC223F695C009F781B /* SSThridProductDetailsTipCell.m */,
-				36D36ACD223F695C009F781B /* SSProductDetailCommentCell.m */,
 				36D36ACE223F695C009F781B /* SSThridProductCommentHeaderView.m */,
 				36D36ACF223F695C009F781B /* SSThridProductCommentHeaderView.xib */,
+				36D36ACB223F695C009F781B /* SSThridProductDetailsCommentCell.h */,
+				36D36AD7223F695C009F781B /* SSThridProductDetailsCommentCell.m */,
+				36D36AC1223F695C009F781B /* SSThridProductDetailsCommentCell.xib */,
+				36D36AC2223F695C009F781B /* SSProductDetailCommentCell.h */,
+				36D36ACD223F695C009F781B /* SSProductDetailCommentCell.m */,
+				36D36AD9223F695C009F781B /* SSProductDetailCommentCell.xib */,
+				36D36AD8223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.h */,
+				36D36AC9223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.m */,
+				36D36AC3223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.xib */,
+				36D36AC8223F695C009F781B /* SSThridProductDetailsCommentContontCell.h */,
+				36D36ADA223F695C009F781B /* SSThridProductDetailsCommentContontCell.m */,
+				36D36AC4223F695C009F781B /* SSThridProductDetailsCommentContontCell.xib */,
+				36D36AC7223F695C009F781B /* SSThridProductDetailsHeaderView.h */,
 				36D36AD0223F695C009F781B /* SSThridProductDetailsHeaderView.m */,
+				36D36AC5223F695C009F781B /* SSThridProductDetailsHeaderView.xib */,
 				36D36AD1223F695C009F781B /* SSThridProductDetailsRushCell.h */,
-				36D36AD2223F695C009F781B /* SSThridProductDetailsTipCell.xib */,
+				36D36AC6223F695C009F781B /* SSThridProductDetailsRushCell.m */,
 				36D36AD3223F695C009F781B /* SSThridProductDetailsRushCell.xib */,
+				36D36ACA223F695C009F781B /* SSThridProductDetailsSelectSkuCell.h */,
+				36D36AD6223F695C009F781B /* SSThridProductDetailsSelectSkuCell.m */,
 				36D36AD4223F695C009F781B /* SSThridProductDetailsSelectSkuCell.xib */,
 				36D36AD5223F695C009F781B /* SSThridProductDetailsTipCell.h */,
-				36D36AD6223F695C009F781B /* SSThridProductDetailsSelectSkuCell.m */,
-				36D36AD7223F695C009F781B /* SSThridProductDetailsCommentCell.m */,
-				36D36AD8223F695C009F781B /* SSThridNoticeProductDetailsHeaderView.h */,
-				36D36AD9223F695C009F781B /* SSProductDetailCommentCell.xib */,
-				36D36ADA223F695C009F781B /* SSThridProductDetailsCommentContontCell.m */,
+				36D36ACC223F695C009F781B /* SSThridProductDetailsTipCell.m */,
+				36D36AD2223F695C009F781B /* SSThridProductDetailsTipCell.xib */,
 			);
 			path = Thrid;
 			sourceTree = "<group>";
@@ -4144,21 +4144,21 @@
 		36D36B7D223F6973009F781B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36D36B86223F6973009F781B /* SSStoreHomeVC.h */,
 				36D36B7E223F6973009F781B /* SSStoreHomeVC.m */,
 				36D36B7F223F6973009F781B /* SSAppointmentInfoVC.h */,
-				36D36B80223F6973009F781B /* SSServiceDetailsVC.h */,
-				36D36B81223F6973009F781B /* SSNewStoreDetailsVC.h */,
-				36D36B82223F6973009F781B /* SSStoreSearchVC.h */,
-				36D36B83223F6973009F781B /* SSAppointmentSelectStoreVC.h */,
-				36D36B84223F6973009F781B /* SSAppointmentMakeOrderVC.m */,
 				36D36B85223F6973009F781B /* SSAppointmentInfoVC.m */,
-				36D36B86223F6973009F781B /* SSStoreHomeVC.h */,
-				36D36B87223F6973009F781B /* SSStoreSearchVC.m */,
-				36D36B88223F6973009F781B /* SSNewStoreDetailsVC.m */,
+				36D36B80223F6973009F781B /* SSServiceDetailsVC.h */,
 				36D36B89223F6973009F781B /* SSServiceDetailsVC.m */,
-				36D36B8A223F6973009F781B /* SSAppointmentSelectStoreVC.m */,
+				36D36B81223F6973009F781B /* SSNewStoreDetailsVC.h */,
+				36D36B88223F6973009F781B /* SSNewStoreDetailsVC.m */,
+				36D36B82223F6973009F781B /* SSStoreSearchVC.h */,
+				36D36B87223F6973009F781B /* SSStoreSearchVC.m */,
 				36D36B8B223F6973009F781B /* SSStoreSearchVC.xib */,
+				36D36B83223F6973009F781B /* SSAppointmentSelectStoreVC.h */,
+				36D36B8A223F6973009F781B /* SSAppointmentSelectStoreVC.m */,
 				36D36B8C223F6973009F781B /* SSAppointmentMakeOrderVC.h */,
+				36D36B84223F6973009F781B /* SSAppointmentMakeOrderVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -4167,11 +4167,11 @@
 			isa = PBXGroup;
 			children = (
 				36D36B8E223F6973009F781B /* SSServiceDetailsModel.h */,
-				36D36B8F223F6973009F781B /* SSStoreDetailModel.h */,
-				36D36B90223F6973009F781B /* SSAppointAttrModel.h */,
 				36D36B91223F6973009F781B /* SSServiceDetailsModel.m */,
-				36D36B92223F6973009F781B /* SSAppointAttrModel.m */,
+				36D36B8F223F6973009F781B /* SSStoreDetailModel.h */,
 				36D36B93223F6973009F781B /* SSStoreDetailModel.m */,
+				36D36B90223F6973009F781B /* SSAppointAttrModel.h */,
+				36D36B92223F6973009F781B /* SSAppointAttrModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4191,11 +4191,11 @@
 			isa = PBXGroup;
 			children = (
 				36D36B96223F6973009F781B /* SSAppointOrderMainCell.h */,
+				36D36B99223F6973009F781B /* SSAppointOrderMainCell.m */,
+				36D36B9B223F6973009F781B /* SSAppointOrderMainCell.xib */,
+				36D36B9A223F6973009F781B /* SSOrderSelectStoreCell.h */,
 				36D36B97223F6973009F781B /* SSOrderSelectStoreCell.m */,
 				36D36B98223F6973009F781B /* SSOrderSelectStoreCell.xib */,
-				36D36B99223F6973009F781B /* SSAppointOrderMainCell.m */,
-				36D36B9A223F6973009F781B /* SSOrderSelectStoreCell.h */,
-				36D36B9B223F6973009F781B /* SSAppointOrderMainCell.xib */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -4203,24 +4203,24 @@
 		36D36B9C223F6973009F781B /* home */ = {
 			isa = PBXGroup;
 			children = (
+				36D36BA8223F6973009F781B /* SSStoreHomeCell.h */,
 				36D36B9D223F6973009F781B /* SSStoreHomeCell.m */,
 				36D36B9E223F6973009F781B /* SSStoreHomeCell.xib */,
+				36D36BA1223F6973009F781B /* SSStoreSelectCityView.h */,
+				36D36BAA223F6973009F781B /* SSStoreSelectCityView.m */,
 				36D36B9F223F6973009F781B /* SSStoreSelectCityView.xib */,
 				36D36BA0223F6973009F781B /* SSStoreDetailHeaderView.h */,
-				36D36BA1223F6973009F781B /* SSStoreSelectCityView.h */,
-				36D36BA2223F6973009F781B /* SSStoreDetailHeaderView.xib */,
-				36D36BA3223F6973009F781B /* SSStoreHomeIntroduceCell.m */,
-				36D36BA4223F6973009F781B /* SSStoreDetailCell.h */,
-				36D36BA5223F6973009F781B /* SSNewStoreHomeCell.xib */,
-				36D36BA6223F6973009F781B /* SSNewStoreHomeCell.m */,
-				36D36BA7223F6973009F781B /* SSStoreHomeIntroduceCell.xib */,
-				36D36BA8223F6973009F781B /* SSStoreHomeCell.h */,
-				36D36BA9223F6973009F781B /* SSStoreHomeIntroduceCell.h */,
-				36D36BAA223F6973009F781B /* SSStoreSelectCityView.m */,
 				36D36BAB223F6973009F781B /* SSStoreDetailHeaderView.m */,
-				36D36BAC223F6973009F781B /* SSNewStoreHomeCell.h */,
-				36D36BAD223F6973009F781B /* SSStoreDetailCell.xib */,
+				36D36BA2223F6973009F781B /* SSStoreDetailHeaderView.xib */,
+				36D36BA9223F6973009F781B /* SSStoreHomeIntroduceCell.h */,
+				36D36BA3223F6973009F781B /* SSStoreHomeIntroduceCell.m */,
+				36D36BA7223F6973009F781B /* SSStoreHomeIntroduceCell.xib */,
+				36D36BA4223F6973009F781B /* SSStoreDetailCell.h */,
 				36D36BAE223F6973009F781B /* SSStoreDetailCell.m */,
+				36D36BAD223F6973009F781B /* SSStoreDetailCell.xib */,
+				36D36BAC223F6973009F781B /* SSNewStoreHomeCell.h */,
+				36D36BA6223F6973009F781B /* SSNewStoreHomeCell.m */,
+				36D36BA5223F6973009F781B /* SSNewStoreHomeCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -4228,21 +4228,21 @@
 		36D36BAF223F6973009F781B /* appointment */ = {
 			isa = PBXGroup;
 			children = (
+				36D36BB9223F6973009F781B /* SSAppointmentDateMainCell.h */,
 				36D36BB0223F6973009F781B /* SSAppointmentDateMainCell.m */,
+				36D36BBA223F6973009F781B /* SSAppointmentDateMainCell.xib */,
+				36D36BB5223F6973009F781B /* SSAppointmentDateCell.h */,
+				36D36BBE223F6973009F781B /* SSAppointmentDateCell.m */,
 				36D36BB1223F6973009F781B /* SSAppointmentDateCell.xib */,
 				36D36BB2223F6973009F781B /* SSAppointmentTimeCell.h */,
-				36D36BB3223F6973009F781B /* SSAppointmentStoreCell.m */,
+				36D36BB8223F6973009F781B /* SSAppointmentTimeCell.m */,
 				36D36BB4223F6973009F781B /* SSAppointmentTimeCell.xib */,
-				36D36BB5223F6973009F781B /* SSAppointmentDateCell.h */,
+				36D36BBC223F6973009F781B /* SSAppointmentStoreCell.h */,
+				36D36BB3223F6973009F781B /* SSAppointmentStoreCell.m */,
+				36D36BBB223F6973009F781B /* SSAppointmentStoreCell.xib */,
+				36D36BBD223F6973009F781B /* SSAppointmentTimeMainCell.h */,
 				36D36BB6223F6973009F781B /* SSAppointmentTimeMainCell.m */,
 				36D36BB7223F6973009F781B /* SSAppointmentTimeMainCell.xib */,
-				36D36BB8223F6973009F781B /* SSAppointmentTimeCell.m */,
-				36D36BB9223F6973009F781B /* SSAppointmentDateMainCell.h */,
-				36D36BBA223F6973009F781B /* SSAppointmentDateMainCell.xib */,
-				36D36BBB223F6973009F781B /* SSAppointmentStoreCell.xib */,
-				36D36BBC223F6973009F781B /* SSAppointmentStoreCell.h */,
-				36D36BBD223F6973009F781B /* SSAppointmentTimeMainCell.h */,
-				36D36BBE223F6973009F781B /* SSAppointmentDateCell.m */,
 			);
 			path = appointment;
 			sourceTree = "<group>";
@@ -4250,15 +4250,15 @@
 		36D36BBF223F6973009F781B /* serviceDetai */ = {
 			isa = PBXGroup;
 			children = (
-				36D36BC0223F6973009F781B /* SSServiceDetailsHeaderView.xib */,
-				36D36BC1223F6973009F781B /* SSServiceDetailTelAddressCell.m */,
-				36D36BC2223F6973009F781B /* SSServiceDetailsHeaderView.m */,
-				36D36BC3223F6973009F781B /* SSServiceDetailsBottomView.h */,
-				36D36BC4223F6973009F781B /* SSServiceDetailsBottomView.xib */,
-				36D36BC5223F6973009F781B /* SSServiceDetailTelAddressCell.xib */,
 				36D36BC6223F6973009F781B /* SSServiceDetailsHeaderView.h */,
+				36D36BC2223F6973009F781B /* SSServiceDetailsHeaderView.m */,
+				36D36BC0223F6973009F781B /* SSServiceDetailsHeaderView.xib */,
 				36D36BC7223F6973009F781B /* SSServiceDetailTelAddressCell.h */,
+				36D36BC1223F6973009F781B /* SSServiceDetailTelAddressCell.m */,
+				36D36BC5223F6973009F781B /* SSServiceDetailTelAddressCell.xib */,
+				36D36BC3223F6973009F781B /* SSServiceDetailsBottomView.h */,
 				36D36BC8223F6973009F781B /* SSServiceDetailsBottomView.m */,
+				36D36BC4223F6973009F781B /* SSServiceDetailsBottomView.xib */,
 			);
 			path = serviceDetai;
 			sourceTree = "<group>";
@@ -4276,11 +4276,11 @@
 		36D36BF5223F6980009F781B /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				36D36BF6223F6980009F781B /* SSBynamicPublishVC.m */,
-				36D36BF7223F6980009F781B /* SSBynamicHomeVC.m */,
-				36D36BF8223F6980009F781B /* SSBynamicPublishVC.xib */,
 				36D36BF9223F6980009F781B /* SSBynamicPublishVC.h */,
+				36D36BF6223F6980009F781B /* SSBynamicPublishVC.m */,
+				36D36BF8223F6980009F781B /* SSBynamicPublishVC.xib */,
 				36D36BFA223F6980009F781B /* SSBynamicHomeVC.h */,
+				36D36BF7223F6980009F781B /* SSBynamicHomeVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -4289,9 +4289,9 @@
 			isa = PBXGroup;
 			children = (
 				36D36BFC223F6980009F781B /* SSBynamicPublishGridModel.h */,
-				36D36BFD223F6980009F781B /* SSBynamicHomeModel.m */,
 				36D36BFE223F6980009F781B /* SSBynamicPublishGridModel.m */,
 				36D36BFF223F6980009F781B /* SSBynamicHomeModel.h */,
+				36D36BFD223F6980009F781B /* SSBynamicHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4299,21 +4299,21 @@
 		36D36C00223F6980009F781B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36D36C01223F6980009F781B /* SSBynamicCommentView.m */,
-				36D36C02223F6980009F781B /* SSBynamicCommentCell.m */,
-				36D36C03223F6980009F781B /* SSBynamicPublishGridView.m */,
-				36D36C04223F6980009F781B /* SSBynamicMainCell.m */,
-				36D36C05223F6980009F781B /* SSBynamicLikeCell.h */,
-				36D36C06223F6980009F781B /* SSBynamicCommentCell.xib */,
-				36D36C07223F6980009F781B /* SSBynamicLikeCell.xib */,
-				36D36C08223F6980009F781B /* SSBynamicPublishGridContentView.m */,
 				36D36C09223F6980009F781B /* SSBynamicCommentView.h */,
-				36D36C0A223F6980009F781B /* SSBynamicPublishGridView.h */,
+				36D36C01223F6980009F781B /* SSBynamicCommentView.m */,
 				36D36C0B223F6980009F781B /* SSBynamicCommentCell.h */,
-				36D36C0C223F6980009F781B /* SSBynamicLikeCell.m */,
+				36D36C02223F6980009F781B /* SSBynamicCommentCell.m */,
+				36D36C06223F6980009F781B /* SSBynamicCommentCell.xib */,
+				36D36C0A223F6980009F781B /* SSBynamicPublishGridView.h */,
+				36D36C03223F6980009F781B /* SSBynamicPublishGridView.m */,
 				36D36C0D223F6980009F781B /* SSBynamicMainCell.h */,
+				36D36C04223F6980009F781B /* SSBynamicMainCell.m */,
 				36D36C0E223F6980009F781B /* SSBynamicMainCell.xib */,
+				36D36C05223F6980009F781B /* SSBynamicLikeCell.h */,
+				36D36C0C223F6980009F781B /* SSBynamicLikeCell.m */,
+				36D36C07223F6980009F781B /* SSBynamicLikeCell.xib */,
 				36D36C0F223F6980009F781B /* SSBynamicPublishGridContentView.h */,
+				36D36C08223F6980009F781B /* SSBynamicPublishGridContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4331,18 +4331,18 @@
 		36D36C38223F699C009F781B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36D36C40223F699C009F781B /* SSShoppingCartGoodsVC.h */,
 				36D36C39223F699C009F781B /* SSShoppingCartGoodsVC.m */,
 				36D36C3A223F699C009F781B /* SSProductShoppingCartVC.h */,
-				36D36C3B223F699C009F781B /* SSDistrbutionCell.m */,
-				36D36C3C223F699C009F781B /* SSShoppingCartVC.m */,
-				36D36C3D223F699C009F781B /* SSShopCartMakeOrderVC.m */,
-				36D36C3E223F699C009F781B /* SSDistrbutionCell.xib */,
-				36D36C3F223F699C009F781B /* SSShopCartMakeOrderVC.xib */,
-				36D36C40223F699C009F781B /* SSShoppingCartGoodsVC.h */,
-				36D36C41223F699C009F781B /* SSShopCartMakeOrderVC.h */,
-				36D36C42223F699C009F781B /* SSShoppingCartVC.h */,
-				36D36C43223F699C009F781B /* SSDistrbutionCell.h */,
 				36D36C44223F699C009F781B /* SSProductShoppingCartVC.m */,
+				36D36C42223F699C009F781B /* SSShoppingCartVC.h */,
+				36D36C3C223F699C009F781B /* SSShoppingCartVC.m */,
+				36D36C43223F699C009F781B /* SSDistrbutionCell.h */,
+				36D36C3B223F699C009F781B /* SSDistrbutionCell.m */,
+				36D36C3E223F699C009F781B /* SSDistrbutionCell.xib */,
+				36D36C41223F699C009F781B /* SSShopCartMakeOrderVC.h */,
+				36D36C3D223F699C009F781B /* SSShopCartMakeOrderVC.m */,
+				36D36C3F223F699C009F781B /* SSShopCartMakeOrderVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -4350,12 +4350,12 @@
 		36D36C45223F699C009F781B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36D36C49223F699C009F781B /* SSShoppingCartModel.h */,
 				36D36C46223F699C009F781B /* SSShoppingCartModel.m */,
+				36D36C4B223F699C009F781B /* SSShoppingCartAttrModel.h */,
 				36D36C47223F699C009F781B /* SSShoppingCartAttrModel.m */,
 				36D36C48223F699C009F781B /* SSShoppingCartMakeOrderAttrModel.h */,
-				36D36C49223F699C009F781B /* SSShoppingCartModel.h */,
 				36D36C4A223F699C009F781B /* SSShoppingCartMakeOrderAttrModel.m */,
-				36D36C4B223F699C009F781B /* SSShoppingCartAttrModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4363,12 +4363,12 @@
 		36D36C4C223F699C009F781B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36D36C4D223F699C009F781B /* SSShopppingCartBottomView.h */,
-				36D36C4E223F699C009F781B /* SSShoppingCartCell.xib */,
+				36D36C52223F699C009F781B /* SSShoppingCartCell.h */,
 				36D36C4F223F699C009F781B /* SSShoppingCartCell.m */,
+				36D36C4E223F699C009F781B /* SSShoppingCartCell.xib */,
+				36D36C4D223F699C009F781B /* SSShopppingCartBottomView.h */,
 				36D36C50223F699C009F781B /* SSShopppingCartBottomView.m */,
 				36D36C51223F699C009F781B /* SSShopppingCartBottomView.xib */,
-				36D36C52223F699C009F781B /* SSShoppingCartCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4393,16 +4393,16 @@
 		36D36C62223F69B7009F781B /* order */ = {
 			isa = PBXGroup;
 			children = (
+				36D36C69223F69B7009F781B /* SSOrderDetailModel.h */,
 				36D36C63223F69B7009F781B /* SSOrderDetailModel.m */,
+				36D36C68223F69B7009F781B /* SSPayModel.h */,
 				36D36C64223F69B7009F781B /* SSPayModel.m */,
+				36D36C6A223F69B7009F781B /* SSOrderModel.h */,
 				36D36C65223F69B7009F781B /* SSOrderModel.m */,
+				36D36C6C223F69B7009F781B /* SSLogistModel.h */,
 				36D36C66223F69B7009F781B /* SSLogistModel.m */,
 				36D36C67223F69B7009F781B /* SSBDataDealModel.h */,
-				36D36C68223F69B7009F781B /* SSPayModel.h */,
-				36D36C69223F69B7009F781B /* SSOrderDetailModel.h */,
-				36D36C6A223F69B7009F781B /* SSOrderModel.h */,
 				36D36C6B223F69B7009F781B /* SSBDataDealModel.m */,
-				36D36C6C223F69B7009F781B /* SSLogistModel.h */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -4410,15 +4410,15 @@
 		36D36C6D223F69B7009F781B /* home */ = {
 			isa = PBXGroup;
 			children = (
-				36D36C6E223F69B7009F781B /* SSBStoreMannagerCell.xib */,
-				36D36C6F223F69B7009F781B /* SSMineActiveModel.h */,
-				36D36C70223F69B7009F781B /* SSBStoreMannagerCell.m */,
-				36D36C71223F69B7009F781B /* SSBStoreMannagerInfoModel.m */,
-				36D36C72223F69B7009F781B /* SSWithdrawalParamModel.m */,
-				36D36C73223F69B7009F781B /* SSMineActiveModel.m */,
 				36D36C74223F69B7009F781B /* SSBStoreMannagerCell.h */,
-				36D36C75223F69B7009F781B /* SSWithdrawalParamModel.h */,
+				36D36C70223F69B7009F781B /* SSBStoreMannagerCell.m */,
+				36D36C6E223F69B7009F781B /* SSBStoreMannagerCell.xib */,
 				36D36C76223F69B7009F781B /* SSBStoreMannagerInfoModel.h */,
+				36D36C71223F69B7009F781B /* SSBStoreMannagerInfoModel.m */,
+				36D36C75223F69B7009F781B /* SSWithdrawalParamModel.h */,
+				36D36C72223F69B7009F781B /* SSWithdrawalParamModel.m */,
+				36D36C6F223F69B7009F781B /* SSMineActiveModel.h */,
+				36D36C73223F69B7009F781B /* SSMineActiveModel.m */,
 				3673D0E52248BD240007F3C5 /* SSDynamicGoodApplyModel.h */,
 				3673D0E62248BD240007F3C5 /* SSDynamicGoodApplyModel.m */,
 			);
@@ -4429,9 +4429,9 @@
 			isa = PBXGroup;
 			children = (
 				36D36C78223F69B7009F781B /* SSAppointmentModel.h */,
-				36D36C79223F69B7009F781B /* SSAppointDetailModel.h */,
-				36D36C7A223F69B7009F781B /* SSAppointDetailModel.m */,
 				36D36C7B223F69B7009F781B /* SSAppointmentModel.m */,
+				36D36C7A223F69B7009F781B /* SSAppointDetailModel.m */,
+				36D36C79223F69B7009F781B /* SSAppointDetailModel.h */,
 			);
 			path = appointment;
 			sourceTree = "<group>";
@@ -4439,16 +4439,16 @@
 		36D36C7C223F69B7009F781B /* brand */ = {
 			isa = PBXGroup;
 			children = (
+				36D36C82223F69B7009F781B /* SSBrandManngerAllModel.h */,
 				36D36C7D223F69B7009F781B /* SSBrandManngerAllModel.m */,
 				36D36C7E223F69B7009F781B /* SSBrandAbilityAnalysisDataModel.h */,
-				36D36C7F223F69B7009F781B /* SSBrandAbilityAnalysisModel.h */,
+				36D36C83223F69B7009F781B /* SSBrandAbilityAnalysisDataModel.m */,
+				36D36C86223F69B7009F781B /* SSBrandAISortModel.h */,
 				36D36C80223F69B7009F781B /* SSBrandAISortModel.m */,
 				36D36C81223F69B7009F781B /* SSBrandAbilityVisterModel.h */,
-				36D36C82223F69B7009F781B /* SSBrandManngerAllModel.h */,
-				36D36C83223F69B7009F781B /* SSBrandAbilityAnalysisDataModel.m */,
-				36D36C84223F69B7009F781B /* SSBrandAbilityAnalysisModel.m */,
 				36D36C85223F69B7009F781B /* SSBrandAbilityVisterModel.m */,
-				36D36C86223F69B7009F781B /* SSBrandAISortModel.h */,
+				36D36C7F223F69B7009F781B /* SSBrandAbilityAnalysisModel.h */,
+				36D36C84223F69B7009F781B /* SSBrandAbilityAnalysisModel.m */,
 			);
 			path = brand;
 			sourceTree = "<group>";
@@ -4461,16 +4461,16 @@
 				362275FF2244864D0031AA0F /* SSStoreApplyParModel.h */,
 				362275FE2244864D0031AA0F /* SSStoreApplyParModel.m */,
 				36D36C88223F69B7009F781B /* SSDistributionTeamModel.h */,
+				36D36C91223F69B7009F781B /* SSDistributionTeamModel.m */,
+				36D36C90223F69B7009F781B /* SSMoneyDetailedModel.h */,
 				36D36C89223F69B7009F781B /* SSMoneyDetailedModel.m */,
+				36D36C8F223F69B7009F781B /* SSBStoreMannagerEditModel.h */,
 				36D36C8A223F69B7009F781B /* SSBStoreMannagerEditModel.m */,
 				36D36C8B223F69B7009F781B /* SSBStoreMannagerModel.h */,
+				36D36C8E223F69B7009F781B /* SSBStoreMannagerModel.m */,
+				36D36C92223F69B7009F781B /* SSDistributionCentreModel.h */,
 				36D36C8C223F69B7009F781B /* SSDistributionCentreModel.m */,
 				36D36C8D223F69B7009F781B /* SSDistrbutionOrderModel.h */,
-				36D36C8E223F69B7009F781B /* SSBStoreMannagerModel.m */,
-				36D36C8F223F69B7009F781B /* SSBStoreMannagerEditModel.h */,
-				36D36C90223F69B7009F781B /* SSMoneyDetailedModel.h */,
-				36D36C91223F69B7009F781B /* SSDistributionTeamModel.m */,
-				36D36C92223F69B7009F781B /* SSDistributionCentreModel.h */,
 				36D36C93223F69B7009F781B /* SSDistrbutionOrderModel.m */,
 			);
 			path = distribution;
@@ -4479,12 +4479,12 @@
 		36D36C9B223F69B7009F781B /* case */ = {
 			isa = PBXGroup;
 			children = (
+				36D36C9F223F69B7009F781B /* SSMyBrokerageModel.h */,
 				36D36C9C223F69B7009F781B /* SSMyBrokerageModel.m */,
 				36D36C9D223F69B7009F781B /* SSGetCaseMainModel.h */,
-				36D36C9E223F69B7009F781B /* SSGetCaseModel.m */,
-				36D36C9F223F69B7009F781B /* SSMyBrokerageModel.h */,
-				36D36CA0223F69B7009F781B /* SSGetCaseModel.h */,
 				36D36CA1223F69B7009F781B /* SSGetCaseMainModel.m */,
+				36D36CA0223F69B7009F781B /* SSGetCaseModel.h */,
+				36D36C9E223F69B7009F781B /* SSGetCaseModel.m */,
 			);
 			path = case;
 			sourceTree = "<group>";
@@ -4492,10 +4492,10 @@
 		36D36CA2223F69B7009F781B /* clerk */ = {
 			isa = PBXGroup;
 			children = (
-				36D36CA3223F69B7009F781B /* SSClerksSortModel.m */,
-				36D36CA4223F69B7009F781B /* SSClerkModel.m */,
 				36D36CA5223F69B7009F781B /* SSClerksSortModel.h */,
+				36D36CA3223F69B7009F781B /* SSClerksSortModel.m */,
 				36D36CA6223F69B7009F781B /* SSClerkModel.h */,
+				36D36CA4223F69B7009F781B /* SSClerkModel.m */,
 			);
 			path = clerk;
 			sourceTree = "<group>";
@@ -4503,12 +4503,12 @@
 		36D36CC6223F6A0A009F781B /* case */ = {
 			isa = PBXGroup;
 			children = (
-				36D36CC7223F6A0A009F781B /* SSGetCaseContentVC.m */,
-				36D36CC8223F6A0A009F781B /* SSGetCaseMainVC.m */,
-				36D36CC9223F6A0A009F781B /* SSGetCaseMainSVC.h */,
 				36D36CCA223F6A0A009F781B /* SSGetCaseContentVC.h */,
-				36D36CCB223F6A0A009F781B /* SSGetCaseMainVC.h */,
+				36D36CC7223F6A0A009F781B /* SSGetCaseContentVC.m */,
+				36D36CC9223F6A0A009F781B /* SSGetCaseMainSVC.h */,
 				36D36CCC223F6A0A009F781B /* SSGetCaseMainSVC.m */,
+				36D36CCB223F6A0A009F781B /* SSGetCaseMainVC.h */,
+				36D36CC8223F6A0A009F781B /* SSGetCaseMainVC.m */,
 			);
 			path = case;
 			sourceTree = "<group>";
@@ -4517,21 +4517,21 @@
 			isa = PBXGroup;
 			children = (
 				36D36CCE223F6A0A009F781B /* SSWithdrawalVC.h */,
+				36D36CD6223F6A0A009F781B /* SSWithdrawalVC.m */,
+				36D36CD9223F6A0A009F781B /* SSClerkManngerVC.h */,
 				36D36CCF223F6A0A009F781B /* SSClerkManngerVC.m */,
+				36D36CDA223F6A0A009F781B /* SSClerkManngerVC.xib */,
+				36D36CD8223F6A0A009F781B /* SSAddClerksVC.h */,
 				36D36CD0223F6A0A009F781B /* SSAddClerksVC.m */,
+				36D36CD4223F6A0A009F781B /* SSAddClerksVC.xib */,
+				36D36CD7223F6A0A009F781B /* SSClerksSortVC.h */,
 				36D36CD1223F6A0A009F781B /* SSClerksSortVC.m */,
 				36D36CD2223F6A0A009F781B /* SSClerkSearchDataVC.h */,
-				36D36CD3223F6A0A009F781B /* SSClerkSearchVC.h */,
-				36D36CD4223F6A0A009F781B /* SSAddClerksVC.xib */,
-				36D36CD5223F6A0A009F781B /* SSClerkStatisticsVC.h */,
-				36D36CD6223F6A0A009F781B /* SSWithdrawalVC.m */,
-				36D36CD7223F6A0A009F781B /* SSClerksSortVC.h */,
-				36D36CD8223F6A0A009F781B /* SSAddClerksVC.h */,
-				36D36CD9223F6A0A009F781B /* SSClerkManngerVC.h */,
-				36D36CDA223F6A0A009F781B /* SSClerkManngerVC.xib */,
-				36D36CDB223F6A0A009F781B /* SSClerkStatisticsVC.m */,
-				36D36CDC223F6A0A009F781B /* SSClerkSearchVC.m */,
 				36D36CDD223F6A0A009F781B /* SSClerkSearchDataVC.m */,
+				36D36CD3223F6A0A009F781B /* SSClerkSearchVC.h */,
+				36D36CDC223F6A0A009F781B /* SSClerkSearchVC.m */,
+				36D36CD5223F6A0A009F781B /* SSClerkStatisticsVC.h */,
+				36D36CDB223F6A0A009F781B /* SSClerkStatisticsVC.m */,
 			);
 			path = clerk;
 			sourceTree = "<group>";
@@ -4539,24 +4539,24 @@
 		36D36CDE223F6A0A009F781B /* brand */ = {
 			isa = PBXGroup;
 			children = (
-				36D36CDF223F6A0B009F781B /* SSBrandManngerVC.m */,
-				36D36CE0223F6A0B009F781B /* SSBrandManngerAllContentVC.m */,
+				36D36CE9223F6A0B009F781B /* SSBrandAbilityDataVC.h */,
 				36D36CE1223F6A0B009F781B /* SSBrandAbilityDataVC.m */,
-				36D36CE2223F6A0B009F781B /* SSBrandAbilityManngerVC.xib */,
+				36D36CED223F6A0B009F781B /* SSBrandMangerSortVC.h */,
 				36D36CE3223F6A0B009F781B /* SSBrandMangerSortVC.m */,
+				36D36CE8223F6A0B009F781B /* SSBrandManngerVC.h */,
+				36D36CDF223F6A0B009F781B /* SSBrandManngerVC.m */,
+				36D36CEB223F6A0B009F781B /* SSBrandManngerVC.xib */,
+				36D36CE6223F6A0B009F781B /* SSBrandAbilityVisterVC.h */,
+				36D36CEF223F6A0B009F781B /* SSBrandAbilityVisterVC.m */,
+				36D36CEA223F6A0B009F781B /* SSBrandManngerAllContentVC.h */,
+				36D36CE0223F6A0B009F781B /* SSBrandManngerAllContentVC.m */,
+				36D36CEC223F6A0B009F781B /* SSBrandAbilityAnalysisVC.h */,
 				36D36CE4223F6A0B009F781B /* SSBrandAbilityAnalysisVC.m */,
 				36D36CE5223F6A0B009F781B /* SSBrandAbilityManngerVC.h */,
-				36D36CE6223F6A0B009F781B /* SSBrandAbilityVisterVC.h */,
-				36D36CE7223F6A0B009F781B /* SSBrandAISortVC.h */,
-				36D36CE8223F6A0B009F781B /* SSBrandManngerVC.h */,
-				36D36CE9223F6A0B009F781B /* SSBrandAbilityDataVC.h */,
-				36D36CEA223F6A0B009F781B /* SSBrandManngerAllContentVC.h */,
-				36D36CEB223F6A0B009F781B /* SSBrandManngerVC.xib */,
-				36D36CEC223F6A0B009F781B /* SSBrandAbilityAnalysisVC.h */,
-				36D36CED223F6A0B009F781B /* SSBrandMangerSortVC.h */,
-				36D36CEE223F6A0B009F781B /* SSBrandAISortVC.m */,
-				36D36CEF223F6A0B009F781B /* SSBrandAbilityVisterVC.m */,
 				36D36CF0223F6A0B009F781B /* SSBrandAbilityManngerVC.m */,
+				36D36CE2223F6A0B009F781B /* SSBrandAbilityManngerVC.xib */,
+				36D36CE7223F6A0B009F781B /* SSBrandAISortVC.h */,
+				36D36CEE223F6A0B009F781B /* SSBrandAISortVC.m */,
 			);
 			path = brand;
 			sourceTree = "<group>";
@@ -4564,28 +4564,28 @@
 		36D36E6B223F7736009F781B /* order */ = {
 			isa = PBXGroup;
 			children = (
+				36D36E7A223F7736009F781B /* SSOrderDetailView.h */,
+				36D36E71223F7736009F781B /* SSOrderDetailView.m */,
+				36D36E81223F7736009F781B /* SSOrderDetailView.xib */,
 				36D36E6C223F7736009F781B /* SSMyOrderDetailCell.h */,
+				36D36E78223F7736009F781B /* SSMyOrderDetailCell.m */,
+				36D36E7D223F7736009F781B /* SSMyOrderDetailCell.xib */,
+				36D36E7C223F7736009F781B /* SSLogisticsHeaderView.h */,
+				36D36E6F223F7736009F781B /* SSLogisticsHeaderView.m */,
 				36D36E6D223F7736009F781B /* SSLogisticsHeaderView.xib */,
 				36D36E6E223F7736009F781B /* SSOrderExpressDetailCell.h */,
-				36D36E6F223F7736009F781B /* SSLogisticsHeaderView.m */,
+				36D36E7E223F7736009F781B /* SSOrderExpressDetailCell.m */,
+				36D36E76223F7736009F781B /* SSOrderExpressDetailCell.xib */,
+				36D36E7B223F7736009F781B /* SSOrderDetailContentCell.h */,
 				36D36E70223F7736009F781B /* SSOrderDetailContentCell.m */,
-				36D36E71223F7736009F781B /* SSOrderDetailView.m */,
 				36D36E72223F7736009F781B /* SSOrderDetailContentCell.xib */,
 				36D36E73223F7736009F781B /* SSMyChildOrderContentCell.h */,
-				36D36E74223F7736009F781B /* SSLogisticsCell.m */,
-				36D36E75223F7736009F781B /* SSOrderCell.h */,
-				36D36E76223F7736009F781B /* SSOrderExpressDetailCell.xib */,
-				36D36E77223F7736009F781B /* SSLogisticsCell.xib */,
-				36D36E78223F7736009F781B /* SSMyOrderDetailCell.m */,
-				36D36E79223F7736009F781B /* SSMyChildOrderContentCell.xib */,
-				36D36E7A223F7736009F781B /* SSOrderDetailView.h */,
-				36D36E7B223F7736009F781B /* SSOrderDetailContentCell.h */,
-				36D36E7C223F7736009F781B /* SSLogisticsHeaderView.h */,
-				36D36E7D223F7736009F781B /* SSMyOrderDetailCell.xib */,
-				36D36E7E223F7736009F781B /* SSOrderExpressDetailCell.m */,
-				36D36E7F223F7736009F781B /* SSLogisticsCell.h */,
 				36D36E80223F7736009F781B /* SSMyChildOrderContentCell.m */,
-				36D36E81223F7736009F781B /* SSOrderDetailView.xib */,
+				36D36E79223F7736009F781B /* SSMyChildOrderContentCell.xib */,
+				36D36E7F223F7736009F781B /* SSLogisticsCell.h */,
+				36D36E74223F7736009F781B /* SSLogisticsCell.m */,
+				36D36E77223F7736009F781B /* SSLogisticsCell.xib */,
+				36D36E75223F7736009F781B /* SSOrderCell.h */,
 				36D36E82223F7736009F781B /* SSOrderCell.m */,
 				36D36E83223F7736009F781B /* SSOrderCell.xib */,
 			);
@@ -4596,14 +4596,14 @@
 			isa = PBXGroup;
 			children = (
 				36D36E85223F7736009F781B /* SSGetCaseMainCell.h */,
-				36D36E86223F7736009F781B /* SSGetCaseMainCell.xib */,
-				36D36E87223F7736009F781B /* SSGetCaseCell.h */,
-				36D36E88223F7736009F781B /* SSGetCaseContentCell.h */,
 				36D36E89223F7736009F781B /* SSGetCaseMainCell.m */,
+				36D36E86223F7736009F781B /* SSGetCaseMainCell.xib */,
+				36D36E88223F7736009F781B /* SSGetCaseContentCell.h */,
+				36D36E8D223F7736009F781B /* SSGetCaseContentCell.m */,
 				36D36E8A223F7736009F781B /* SSGetCaseContentCell.xib */,
+				36D36E87223F7736009F781B /* SSGetCaseCell.h */,
 				36D36E8B223F7736009F781B /* SSGetCaseCell.m */,
 				36D36E8C223F7736009F781B /* SSGetCaseCell.xib */,
-				36D36E8D223F7736009F781B /* SSGetCaseContentCell.m */,
 			);
 			path = case;
 			sourceTree = "<group>";
@@ -4611,18 +4611,18 @@
 		36D36E98223F7736009F781B /* exchange */ = {
 			isa = PBXGroup;
 			children = (
+				36D36EA0223F7736009F781B /* SSMineExchangeRudeCell.h */,
+				36D36E9C223F7736009F781B /* SSMineExchangeRudeCell.m */,
 				36D36E99223F7736009F781B /* SSMineExchangeRudeCell.xib */,
+				36D36E9F223F7736009F781B /* SSMineExchangeCell.h */,
 				36D36E9A223F7736009F781B /* SSMineExchangeCell.m */,
 				36D36E9B223F7736009F781B /* SSMineExchangeCell.xib */,
-				36D36E9C223F7736009F781B /* SSMineExchangeRudeCell.m */,
-				36D36E9D223F7736009F781B /* SSMineExchangeRudeSectionView.h */,
+				36D36EA4223F7736009F781B /* SSExchangDetailsBottomView.h */,
 				36D36E9E223F7736009F781B /* SSExchangDetailsBottomView.m */,
-				36D36E9F223F7736009F781B /* SSMineExchangeCell.h */,
-				36D36EA0223F7736009F781B /* SSMineExchangeRudeCell.h */,
 				36D36EA1223F7736009F781B /* SSExchangDetailsBottomView.xib */,
+				36D36E9D223F7736009F781B /* SSMineExchangeRudeSectionView.h */,
 				36D36EA2223F7736009F781B /* SSMineExchangeRudeSectionView.m */,
 				36D36EA3223F7736009F781B /* SSMineExchangeRudeSectionView.xib */,
-				36D36EA4223F7736009F781B /* SSExchangDetailsBottomView.h */,
 			);
 			path = exchange;
 			sourceTree = "<group>";
@@ -4630,19 +4630,19 @@
 		36D36EA5223F7737009F781B /* mannger */ = {
 			isa = PBXGroup;
 			children = (
-				36D36EA6223F7737009F781B /* SSBDataDealStoreAchievementView.m */,
-				36D36EA7223F7737009F781B /* SSBDataDealStoreCustomerView.h */,
-				36D36EA8223F7737009F781B /* SSBDataDealStructContentView.m */,
-				36D36EA9223F7737009F781B /* SSBDataDealStoreAchievementView.xib */,
-				36D36EAA223F7737009F781B /* SSBDataDealStructView.m */,
-				36D36EAB223F7737009F781B /* SSBNewDataDealView.m */,
-				36D36EAC223F7737009F781B /* SSBDataDealStoreCustomerView.xib */,
 				36D36EAD223F7737009F781B /* SSBDataDealStoreAchievementView.h */,
-				36D36EAE223F7737009F781B /* SSBDataDealStructContentView.h */,
-				36D36EAF223F7737009F781B /* SSBNewDataDealView.xib */,
+				36D36EA6223F7737009F781B /* SSBDataDealStoreAchievementView.m */,
+				36D36EA9223F7737009F781B /* SSBDataDealStoreAchievementView.xib */,
+				36D36EA7223F7737009F781B /* SSBDataDealStoreCustomerView.h */,
 				36D36EB0223F7737009F781B /* SSBDataDealStoreCustomerView.m */,
-				36D36EB1223F7737009F781B /* SSBNewDataDealView.h */,
+				36D36EAC223F7737009F781B /* SSBDataDealStoreCustomerView.xib */,
+				36D36EAE223F7737009F781B /* SSBDataDealStructContentView.h */,
+				36D36EA8223F7737009F781B /* SSBDataDealStructContentView.m */,
 				36D36EB2223F7737009F781B /* SSBDataDealStructView.h */,
+				36D36EAA223F7737009F781B /* SSBDataDealStructView.m */,
+				36D36EB1223F7737009F781B /* SSBNewDataDealView.h */,
+				36D36EAB223F7737009F781B /* SSBNewDataDealView.m */,
+				36D36EAF223F7737009F781B /* SSBNewDataDealView.xib */,
 			);
 			path = mannger;
 			sourceTree = "<group>";
@@ -4650,12 +4650,12 @@
 		36D36EB3223F7737009F781B /* appointment */ = {
 			isa = PBXGroup;
 			children = (
-				36D36EB4223F7737009F781B /* SSMyAppointmentCell.xib */,
-				36D36EB5223F7737009F781B /* SSMyAppointmentCell.m */,
-				36D36EB6223F7737009F781B /* SSAppointmentDetailBootomView.h */,
-				36D36EB7223F7737009F781B /* SSAppointmentDetailBootomView.xib */,
-				36D36EB8223F7737009F781B /* SSAppointmentDetailBootomView.m */,
 				36D36EB9223F7737009F781B /* SSMyAppointmentCell.h */,
+				36D36EB5223F7737009F781B /* SSMyAppointmentCell.m */,
+				36D36EB4223F7737009F781B /* SSMyAppointmentCell.xib */,
+				36D36EB6223F7737009F781B /* SSAppointmentDetailBootomView.h */,
+				36D36EB8223F7737009F781B /* SSAppointmentDetailBootomView.m */,
+				36D36EB7223F7737009F781B /* SSAppointmentDetailBootomView.xib */,
 			);
 			path = appointment;
 			sourceTree = "<group>";
@@ -4663,25 +4663,25 @@
 		36D36EBA223F7737009F781B /* clerk */ = {
 			isa = PBXGroup;
 			children = (
+				36D36EC4223F7737009F781B /* SSClerkStatisticHeaderView.h */,
 				36D36EBB223F7737009F781B /* SSClerkStatisticHeaderView.m */,
+				36D36EC5223F7737009F781B /* SSClerkStatisticHeaderView.xib */,
+				36D36EC3223F7737009F781B /* SSClerkCell.h */,
 				36D36EBC223F7737009F781B /* SSClerkCell.m */,
-				36D36EBD223F7737009F781B /* SSClerksSortCell.xib */,
+				36D36ECA223F7737009F781B /* SSClerkCell.xib */,
+				36D36EC6223F7737009F781B /* SSAddClerkCell.h */,
 				36D36EBE223F7737009F781B /* SSAddClerkCell.m */,
+				36D36ECD223F7737009F781B /* SSAddClerkCell.xib */,
+				36D36EC8223F7737009F781B /* SSWithdrawalTextField.h */,
 				36D36EBF223F7737009F781B /* SSWithdrawalTextField.m */,
+				36D36EC7223F7737009F781B /* SSWithdrawalView.h */,
 				36D36EC0223F7737009F781B /* SSWithdrawalView.m */,
+				36D36ECC223F7737009F781B /* SSWithdrawalView.xib */,
+				36D36ECB223F7737009F781B /* SSFilterClerkView.h */,
 				36D36EC1223F7737009F781B /* SSFilterClerkView.m */,
 				36D36EC2223F7737009F781B /* SSClerksSortCell.h */,
-				36D36EC3223F7737009F781B /* SSClerkCell.h */,
-				36D36EC4223F7737009F781B /* SSClerkStatisticHeaderView.h */,
-				36D36EC5223F7737009F781B /* SSClerkStatisticHeaderView.xib */,
-				36D36EC6223F7737009F781B /* SSAddClerkCell.h */,
-				36D36EC7223F7737009F781B /* SSWithdrawalView.h */,
-				36D36EC8223F7737009F781B /* SSWithdrawalTextField.h */,
 				36D36EC9223F7737009F781B /* SSClerksSortCell.m */,
-				36D36ECA223F7737009F781B /* SSClerkCell.xib */,
-				36D36ECB223F7737009F781B /* SSFilterClerkView.h */,
-				36D36ECC223F7737009F781B /* SSWithdrawalView.xib */,
-				36D36ECD223F7737009F781B /* SSAddClerkCell.xib */,
+				36D36EBD223F7737009F781B /* SSClerksSortCell.xib */,
 			);
 			path = clerk;
 			sourceTree = "<group>";
@@ -4689,29 +4689,29 @@
 		36D36ECE223F7737009F781B /* brand */ = {
 			isa = PBXGroup;
 			children = (
+				36D36EDA223F7737009F781B /* SSBrandAreasplineCell.h */,
 				36D36ECF223F7737009F781B /* SSBrandAreasplineCell.m */,
-				36D36ED0223F7737009F781B /* SSBrandTriangleCell.h */,
-				36D36ED1223F7737009F781B /* SSBrandPieCell.m */,
 				36D36ED2223F7737009F781B /* SSBrandAreasplineCell.xib */,
-				36D36ED3223F7737009F781B /* SSBrandAllDataCell.h */,
-				36D36ED4223F7737009F781B /* SSBrandAbilityVisterCell.m */,
-				36D36ED5223F7737009F781B /* SSPolarChartMixedCell.h */,
+				36D36ED0223F7737009F781B /* SSBrandTriangleCell.h */,
+				36D36EDE223F7737009F781B /* SSBrandTriangleCell.m */,
+				36D36EE0223F7737009F781B /* SSBrandTriangleCell.xib */,
+				36D36EDD223F7737009F781B /* SSBrandPieCell.h */,
+				36D36ED1223F7737009F781B /* SSBrandPieCell.m */,
+				36D36EDB223F7737009F781B /* SSBrandPieCell.xib */,
+				36D36EE1223F7737009F781B /* SSBrandAiCell.h */,
 				36D36ED6223F7737009F781B /* SSBrandAiCell.m */,
-				36D36ED7223F7737009F781B /* SSPolarChartMixedCell.xib */,
+				36D36EDC223F7737009F781B /* SSBrandAiCell.xib */,
+				36D36EE5223F7737009F781B /* SSBrandAbilityAnalysisCell.h */,
 				36D36ED8223F7737009F781B /* SSBrandAbilityAnalysisCell.m */,
 				36D36ED9223F7737009F781B /* SSBrandAbilityAnalysisCell.xib */,
-				36D36EDA223F7737009F781B /* SSBrandAreasplineCell.h */,
-				36D36EDB223F7737009F781B /* SSBrandPieCell.xib */,
-				36D36EDC223F7737009F781B /* SSBrandAiCell.xib */,
-				36D36EDD223F7737009F781B /* SSBrandPieCell.h */,
-				36D36EDE223F7737009F781B /* SSBrandTriangleCell.m */,
-				36D36EDF223F7737009F781B /* SSBrandAbilityVisterCell.xib */,
-				36D36EE0223F7737009F781B /* SSBrandTriangleCell.xib */,
-				36D36EE1223F7737009F781B /* SSBrandAiCell.h */,
+				36D36ED5223F7737009F781B /* SSPolarChartMixedCell.h */,
 				36D36EE2223F7737009F781B /* SSPolarChartMixedCell.m */,
+				36D36ED7223F7737009F781B /* SSPolarChartMixedCell.xib */,
 				36D36EE3223F7737009F781B /* SSBrandAbilityVisterCell.h */,
+				36D36ED4223F7737009F781B /* SSBrandAbilityVisterCell.m */,
+				36D36EDF223F7737009F781B /* SSBrandAbilityVisterCell.xib */,
+				36D36ED3223F7737009F781B /* SSBrandAllDataCell.h */,
 				36D36EE4223F7737009F781B /* SSBrandAllDataCell.m */,
-				36D36EE5223F7737009F781B /* SSBrandAbilityAnalysisCell.h */,
 				36D36EE6223F7737009F781B /* SSBrandAllDataCell.xib */,
 			);
 			path = brand;
@@ -5115,18 +5115,18 @@
 		36ED6BCA225F956300552F13 /* AI */ = {
 			isa = PBXGroup;
 			children = (
+				36ED6BD1225F956300552F13 /* SSAiCustomerTagModel.h */,
 				36ED6BCB225F956300552F13 /* SSAiCustomerTagModel.m */,
+				36ED6BD4225F956300552F13 /* SSAiCustomerDataModel.h */,
 				36ED6BCC225F956300552F13 /* SSAiCustomerDataModel.m */,
 				36ED6BCD225F956300552F13 /* SSAIDataHomeTimeModel.h */,
+				36ED6BD3225F956300552F13 /* SSAIDataHomeTimeModel.m */,
+				36ED6BD2225F956300552F13 /* SSAICustomerHomeModel.h */,
 				36ED6BCE225F956300552F13 /* SSAICustomerHomeModel.m */,
 				36ED6BCF225F956300552F13 /* SSAiCustomerDetailModel.h */,
-				36ED6BD0225F956300552F13 /* SSAIDataHomeActiveModel.m */,
-				36ED6BD1225F956300552F13 /* SSAiCustomerTagModel.h */,
-				36ED6BD2225F956300552F13 /* SSAICustomerHomeModel.h */,
-				36ED6BD3225F956300552F13 /* SSAIDataHomeTimeModel.m */,
-				36ED6BD4225F956300552F13 /* SSAiCustomerDataModel.h */,
-				36ED6BD5225F956300552F13 /* SSAIDataHomeActiveModel.h */,
 				36ED6BD6225F956300552F13 /* SSAiCustomerDetailModel.m */,
+				36ED6BD5225F956300552F13 /* SSAIDataHomeActiveModel.h */,
+				36ED6BD0225F956300552F13 /* SSAIDataHomeActiveModel.m */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -5134,33 +5134,33 @@
 		36ED6BDD225F957200552F13 /* AI */ = {
 			isa = PBXGroup;
 			children = (
-				36ED6BDE225F957200552F13 /* SSAiTagCell.xib */,
-				36ED6BDF225F957200552F13 /* SSAICustomerHomeCell.m */,
-				36ED6BE0225F957200552F13 /* SSAiTagCollectionReusableView.h */,
-				36ED6BE1225F957200552F13 /* SSAICustomerHomeCell.xib */,
 				36ED6BE2225F957200552F13 /* SSAiTagCell.h */,
+				36ED6BED225F957200552F13 /* SSAiTagCell.m */,
+				36ED6BDE225F957200552F13 /* SSAiTagCell.xib */,
+				36ED6BEC225F957200552F13 /* SSAICustomerHomeCell.h */,
+				36ED6BDF225F957200552F13 /* SSAICustomerHomeCell.m */,
+				36ED6BE1225F957200552F13 /* SSAICustomerHomeCell.xib */,
+				36ED6BF3225F957200552F13 /* SSAIDataHomeActiveHomeCell.h */,
 				36ED6BE3225F957200552F13 /* SSAIDataHomeActiveHomeCell.m */,
 				36ED6BE4225F957200552F13 /* SSAIDataHomeActiveHomeCell.xib */,
 				36ED6BE5225F957200552F13 /* SSAIDataHomeTimeCell.h */,
-				36ED6BE6225F957200552F13 /* SSAICustomerHomeHeaderSearchView.h */,
+				36ED6BF2225F957200552F13 /* SSAIDataHomeTimeCell.m */,
 				36ED6BE7225F957200552F13 /* SSAIDataHomeTimeCell.xib */,
-				36ED6BE8225F957200552F13 /* SSAIDataHomeActiveHomeView.xib */,
-				36ED6BE9225F957200552F13 /* SSAiCustomerDataView.m */,
+				36ED6BE6225F957200552F13 /* SSAICustomerHomeHeaderSearchView.h */,
+				36ED6BF1225F957200552F13 /* SSAICustomerHomeHeaderSearchView.m */,
+				36ED6BF0225F957200552F13 /* SSAICustomerHomeHeaderSearchView.xib */,
+				36ED6BF5225F957200552F13 /* SSAIDataHomeActiveHomeView.h */,
 				36ED6BEA225F957200552F13 /* SSAIDataHomeActiveHomeView.m */,
-				36ED6BEB225F957200552F13 /* SSAiCustomerDetailCell.h */,
-				36ED6BEC225F957200552F13 /* SSAICustomerHomeCell.h */,
-				36ED6BED225F957200552F13 /* SSAiTagCell.m */,
+				36ED6BE8225F957200552F13 /* SSAIDataHomeActiveHomeView.xib */,
+				36ED6BF7225F957200552F13 /* SSAiCustomerDataView.h */,
+				36ED6BE9225F957200552F13 /* SSAiCustomerDataView.m */,
+				36ED6BF8225F957200552F13 /* SSAiCustomerDataView.xib */,
+				36ED6BE0225F957200552F13 /* SSAiTagCollectionReusableView.h */,
 				36ED6BEE225F957200552F13 /* SSAiTagCollectionReusableView.m */,
 				36ED6BEF225F957200552F13 /* SSAiTagCollectionReusableView.xib */,
-				36ED6BF0225F957200552F13 /* SSAICustomerHomeHeaderSearchView.xib */,
-				36ED6BF1225F957200552F13 /* SSAICustomerHomeHeaderSearchView.m */,
-				36ED6BF2225F957200552F13 /* SSAIDataHomeTimeCell.m */,
-				36ED6BF3225F957200552F13 /* SSAIDataHomeActiveHomeCell.h */,
+				36ED6BEB225F957200552F13 /* SSAiCustomerDetailCell.h */,
 				36ED6BF4225F957200552F13 /* SSAiCustomerDetailCell.m */,
-				36ED6BF5225F957200552F13 /* SSAIDataHomeActiveHomeView.h */,
 				36ED6BF6225F957200552F13 /* SSAiCustomerDetailCell.xib */,
-				36ED6BF7225F957200552F13 /* SSAiCustomerDataView.h */,
-				36ED6BF8225F957200552F13 /* SSAiCustomerDataView.xib */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -5168,30 +5168,30 @@
 		36ED6C0B225F957F00552F13 /* AI */ = {
 			isa = PBXGroup;
 			children = (
+				36ED6C1A225F957F00552F13 /* SSAiCustomerDetailVC.h */,
 				36ED6C0C225F957F00552F13 /* SSAiCustomerDetailVC.m */,
+				36ED6C19225F957F00552F13 /* SSAICustomerSearchDataVC.h */,
 				36ED6C0D225F957F00552F13 /* SSAICustomerSearchDataVC.m */,
+				36ED6C18225F957F00552F13 /* SSAiCustomerDataVC.h */,
 				36ED6C0E225F957F00552F13 /* SSAiCustomerDataVC.m */,
 				36ED6C0F225F957F00552F13 /* SSAiCustomerTagVC.h */,
-				36ED6C10225F957F00552F13 /* SSAIDataHomeTimeVC.m */,
-				36ED6C11225F957F00552F13 /* SSAICustomerSearchVC.h */,
-				36ED6C12225F957F00552F13 /* SSAICustomerHomeContentVC.m */,
-				36ED6C13225F957F00552F13 /* SSAIDataHomePeopleVC.h */,
-				36ED6C14225F957F00552F13 /* SSAIDataHomeActiveVC.h */,
-				36ED6C15225F957F00552F13 /* SSAICustomerHomeVC.h */,
-				36ED6C16225F957F00552F13 /* SSAIDataHomeVC.m */,
-				36ED6C17225F957F00552F13 /* SSAIHomeVC.m */,
-				36ED6C18225F957F00552F13 /* SSAiCustomerDataVC.h */,
-				36ED6C19225F957F00552F13 /* SSAICustomerSearchDataVC.h */,
-				36ED6C1A225F957F00552F13 /* SSAiCustomerDetailVC.h */,
-				36ED6C1B225F957F00552F13 /* SSAICustomerSearchVC.m */,
 				36ED6C1C225F957F00552F13 /* SSAiCustomerTagVC.m */,
 				36ED6C1D225F957F00552F13 /* SSAIDataHomeTimeVC.h */,
-				36ED6C1E225F957F00552F13 /* SSAICustomerHomeVC.m */,
-				36ED6C1F225F957F00552F13 /* SSAIDataHomeActiveVC.m */,
-				36ED6C20225F957F00552F13 /* SSAIDataHomePeopleVC.m */,
+				36ED6C10225F957F00552F13 /* SSAIDataHomeTimeVC.m */,
+				36ED6C11225F957F00552F13 /* SSAICustomerSearchVC.h */,
+				36ED6C1B225F957F00552F13 /* SSAICustomerSearchVC.m */,
 				36ED6C21225F957F00552F13 /* SSAICustomerHomeContentVC.h */,
-				36ED6C22225F957F00552F13 /* SSAIHomeVC.h */,
+				36ED6C12225F957F00552F13 /* SSAICustomerHomeContentVC.m */,
+				36ED6C13225F957F00552F13 /* SSAIDataHomePeopleVC.h */,
+				36ED6C20225F957F00552F13 /* SSAIDataHomePeopleVC.m */,
+				36ED6C14225F957F00552F13 /* SSAIDataHomeActiveVC.h */,
+				36ED6C1F225F957F00552F13 /* SSAIDataHomeActiveVC.m */,
+				36ED6C15225F957F00552F13 /* SSAICustomerHomeVC.h */,
+				36ED6C1E225F957F00552F13 /* SSAICustomerHomeVC.m */,
 				36ED6C23225F957F00552F13 /* SSAIDataHomeVC.h */,
+				36ED6C16225F957F00552F13 /* SSAIDataHomeVC.m */,
+				36ED6C17225F957F00552F13 /* SSAIHomeVC.m */,
+				36ED6C22225F957F00552F13 /* SSAIHomeVC.h */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -5489,53 +5489,53 @@
 		36F8D9A92261E0D000105D3A /* home */ = {
 			isa = PBXGroup;
 			children = (
+				36D36A59223F695B009F781B /* SSActiveCell.h */,
 				36D36A1D223F695B009F781B /* SSActiveCell.m */,
+				36D36A68223F695B009F781B /* SSActiveCell.xib */,
 				36D36A1E223F695B009F781B /* SSNoticeCell.h */,
+				36D36A57223F695B009F781B /* SSNoticeCell.m */,
+				36D36A51223F695B009F781B /* SSNoticeCell.xib */,
+				36D36A6C223F695B009F781B /* SSNewHomeMainCell.h */,
+				36D36A4D223F695B009F781B /* SSNewHomeMainCell.m */,
 				36D36A3A223F695B009F781B /* SSNewHomeMainCell.xib */,
-				36D36A3B223F695B009F781B /* SSHomeHeaderMenuView.h */,
+				36D36A41223F695B009F781B /* SSProductCell.h */,
+				36D36A5F223F695B009F781B /* SSProductCell.m */,
 				36D36A3C223F695B009F781B /* SSProductCell.xib */,
+				36D36A65223F695B009F781B /* SSNewBaoQiangCell.h */,
+				36D36A53223F695B009F781B /* SSNewBaoQiangCell.m */,
+				36D36A5D223F695B009F781B /* SSNewBaoQiangCell.xib */,
+				36D36A5A223F695B009F781B /* SSHomeMiaoDongCell.h */,
 				36D36A3D223F695B009F781B /* SSHomeMiaoDongCell.m */,
+				36D36A4B223F695B009F781B /* SSHomeMiaoDongCell.xib */,
+				36D36A3B223F695B009F781B /* SSHomeHeaderMenuView.h */,
+				36D36A56223F695B009F781B /* SSHomeHeaderMenuView.m */,
+				36D36A58223F695B009F781B /* SSHomeHeaderMenuView.xib */,
 				36D36A3E223F695B009F781B /* SSHomePageHeaderView.h */,
+				36D36A62223F695B009F781B /* SSHomePageHeaderView.m */,
+				36D36A60223F695B009F781B /* SSadminDistributionModel.h */,
 				36D36A3F223F695B009F781B /* SSadminDistributionModel.m */,
 				36D36A40223F695B009F781B /* SSNewHomeCell.h */,
-				36D36A41223F695B009F781B /* SSProductCell.h */,
-				36D36A49223F695B009F781B /* SSNewActiveCell.m */,
-				36D36A4A223F695B009F781B /* SSHomeSearchView.m */,
-				36D36A4B223F695B009F781B /* SSHomeMiaoDongCell.xib */,
-				36D36A4C223F695B009F781B /* SSBaoQiangCell.xib */,
-				36D36A4D223F695B009F781B /* SSNewHomeMainCell.m */,
-				36D36A4E223F695B009F781B /* SSHomeMainCell.h */,
-				36D36A4F223F695B009F781B /* SSRushBuyView.m */,
-				36D36A50223F695B009F781B /* SSBaoQiangCell.h */,
-				36D36A51223F695B009F781B /* SSNoticeCell.xib */,
-				36D36A52223F695B009F781B /* SSNewHomePageHeaderView.m */,
-				36D36A53223F695B009F781B /* SSNewBaoQiangCell.m */,
-				36D36A54223F695B009F781B /* SSSearchHistoryView.m */,
-				36D36A55223F695B009F781B /* SSNewActiveCell.xib */,
-				36D36A56223F695B009F781B /* SSHomeHeaderMenuView.m */,
-				36D36A57223F695B009F781B /* SSNoticeCell.m */,
-				36D36A58223F695B009F781B /* SSHomeHeaderMenuView.xib */,
-				36D36A59223F695B009F781B /* SSActiveCell.h */,
-				36D36A5A223F695B009F781B /* SSHomeMiaoDongCell.h */,
-				36D36A5B223F695B009F781B /* SSHomeMainCell.xib */,
-				36D36A5C223F695B009F781B /* SSNewActiveCell.h */,
-				36D36A5D223F695B009F781B /* SSNewBaoQiangCell.xib */,
 				36D36A5E223F695B009F781B /* SSNewHomeCell.m */,
-				36D36A5F223F695B009F781B /* SSProductCell.m */,
-				36D36A60223F695B009F781B /* SSadminDistributionModel.h */,
-				36D36A61223F695B009F781B /* SSHomeSearchView.xib */,
-				36D36A62223F695B009F781B /* SSHomePageHeaderView.m */,
-				36D36A63223F695B009F781B /* SSSearchHistoryView.h */,
-				36D36A64223F695B009F781B /* SSNewHomePageHeaderView.h */,
-				36D36A65223F695B009F781B /* SSNewBaoQiangCell.h */,
-				36D36A66223F695B009F781B /* SSBaoQiangCell.m */,
-				36D36A67223F695B009F781B /* SSNewHomePageHeaderView.xib */,
-				36D36A68223F695B009F781B /* SSActiveCell.xib */,
-				36D36A69223F695B009F781B /* SSRushBuyView.h */,
 				36D36A6A223F695B009F781B /* SSNewHomeCell.xib */,
-				36D36A6B223F695B009F781B /* SSHomeMainCell.m */,
-				36D36A6C223F695B009F781B /* SSNewHomeMainCell.h */,
+				36D36A5C223F695B009F781B /* SSNewActiveCell.h */,
+				36D36A49223F695B009F781B /* SSNewActiveCell.m */,
+				36D36A55223F695B009F781B /* SSNewActiveCell.xib */,
 				36D36A6D223F695B009F781B /* SSHomeSearchView.h */,
+				36D36A4A223F695B009F781B /* SSHomeSearchView.m */,
+				36D36A61223F695B009F781B /* SSHomeSearchView.xib */,
+				36D36A4E223F695B009F781B /* SSHomeMainCell.h */,
+				36D36A6B223F695B009F781B /* SSHomeMainCell.m */,
+				36D36A5B223F695B009F781B /* SSHomeMainCell.xib */,
+				36D36A50223F695B009F781B /* SSBaoQiangCell.h */,
+				36D36A66223F695B009F781B /* SSBaoQiangCell.m */,
+				36D36A4C223F695B009F781B /* SSBaoQiangCell.xib */,
+				36D36A69223F695B009F781B /* SSRushBuyView.h */,
+				36D36A4F223F695B009F781B /* SSRushBuyView.m */,
+				36D36A63223F695B009F781B /* SSSearchHistoryView.h */,
+				36D36A54223F695B009F781B /* SSSearchHistoryView.m */,
+				36D36A64223F695B009F781B /* SSNewHomePageHeaderView.h */,
+				36D36A52223F695B009F781B /* SSNewHomePageHeaderView.m */,
+				36D36A67223F695B009F781B /* SSNewHomePageHeaderView.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -5544,49 +5544,49 @@
 			isa = PBXGroup;
 			children = (
 				36D368AB223F68C3009F781B /* SSNoticeVC.h */,
-				36D368AC223F68C3009F781B /* SSHomePageVC.h */,
-				36D368B2223F68C3009F781B /* SSNewHomePage.h */,
-				36D368B3223F68C3009F781B /* SSSecondHomePageVC.xib */,
-				36D368B4223F68C3009F781B /* SSActiveVC.h */,
-				36D368B5223F68C3009F781B /* SSVActiveListVC.h */,
-				36D368B6223F68C3009F781B /* SSProductSearchVC.xib */,
-				36D368B7223F68C3009F781B /* SSProductSearchVC.m */,
-				36D368B8223F68C3009F781B /* SSNoticeTypeVC.h */,
-				36D368B9223F68C3009F781B /* SSProductListVC.h */,
-				36D368BA223F68C3009F781B /* SSMakeOrderVC.m */,
-				36D368BB223F68C3009F781B /* SSProductDetailsVC.h */,
-				36D368C1223F68C3009F781B /* SSSNewHomeActiveVC.h */,
-				36D368C2223F68C3009F781B /* SSSNewHomePageVC.h */,
-				36D368C3223F68C3009F781B /* SSNewAddressVC.m */,
-				36D368C4223F68C3009F781B /* SSGoodsAttributeVC.m */,
-				36D368C5223F68C3009F781B /* SSFilterGoodVC.m */,
-				36D368C6223F68C3009F781B /* SSFilterVC.h */,
-				36D368CE223F68C3009F781B /* SSSelectAddressVC.m */,
-				36D368CF223F68C3009F781B /* SSSecondHomePageVC.m */,
-				36D368D5223F68C3009F781B /* SSNewHomePage.m */,
-				36D368D6223F68C3009F781B /* SSHomePageVC.m */,
 				36D368D7223F68C3009F781B /* SSNoticeVC.m */,
-				36D368D8223F68C3009F781B /* SSNewAddressVC.xib */,
-				36D368D9223F68C3009F781B /* SSMakeOrderVC.h */,
-				36D368DA223F68C3009F781B /* SSProductListVC.m */,
-				36D368DB223F68C3009F781B /* SSNoticeTypeVC.m */,
-				36D368DC223F68C3009F781B /* SSProductSearchVC.h */,
-				36D368DD223F68C3009F781B /* SSActiveVC.m */,
-				36D368DE223F68C3009F781B /* SSVActiveListVC.m */,
+				36D368AC223F68C3009F781B /* SSHomePageVC.h */,
+				36D368D6223F68C3009F781B /* SSHomePageVC.m */,
+				36D368C2223F68C3009F781B /* SSSNewHomePageVC.h */,
 				36D368DF223F68C3009F781B /* SSSNewHomePageVC.m */,
-				36D368E6223F68C3009F781B /* SSNewAddressVC.h */,
-				36D368E7223F68C3009F781B /* SSMakeOrderVC.xib */,
-				36D368F4223F68C3009F781B /* SSSNewHomeActiveVC.m */,
-				36D368F5223F68C3009F781B /* SSProductDetailsVC.m */,
 				36D368F6223F68C3009F781B /* SSSecondHomePageVC.h */,
+				36D368CF223F68C3009F781B /* SSSecondHomePageVC.m */,
+				36D368B3223F68C3009F781B /* SSSecondHomePageVC.xib */,
+				36D368B2223F68C3009F781B /* SSNewHomePage.h */,
+				36D368D5223F68C3009F781B /* SSNewHomePage.m */,
+				36D368B4223F68C3009F781B /* SSActiveVC.h */,
+				36D368DD223F68C3009F781B /* SSActiveVC.m */,
+				36D368B5223F68C3009F781B /* SSVActiveListVC.h */,
+				36D368DE223F68C3009F781B /* SSVActiveListVC.m */,
+				36D368DC223F68C3009F781B /* SSProductSearchVC.h */,
+				36D368B7223F68C3009F781B /* SSProductSearchVC.m */,
+				36D368B6223F68C3009F781B /* SSProductSearchVC.xib */,
+				36D368B8223F68C3009F781B /* SSNoticeTypeVC.h */,
+				36D368DB223F68C3009F781B /* SSNoticeTypeVC.m */,
+				36D368B9223F68C3009F781B /* SSProductListVC.h */,
+				36D368DA223F68C3009F781B /* SSProductListVC.m */,
+				36D368D9223F68C3009F781B /* SSMakeOrderVC.h */,
+				36D368BA223F68C3009F781B /* SSMakeOrderVC.m */,
+				36D368E7223F68C3009F781B /* SSMakeOrderVC.xib */,
+				36D368BB223F68C3009F781B /* SSProductDetailsVC.h */,
+				36D368F5223F68C3009F781B /* SSProductDetailsVC.m */,
+				36D368C1223F68C3009F781B /* SSSNewHomeActiveVC.h */,
+				36D368F4223F68C3009F781B /* SSSNewHomeActiveVC.m */,
 				36D368F7223F68C3009F781B /* SSSelectAddressVC.h */,
+				36D368CE223F68C3009F781B /* SSSelectAddressVC.m */,
+				36D368E6223F68C3009F781B /* SSNewAddressVC.h */,
+				36D368C3223F68C3009F781B /* SSNewAddressVC.m */,
+				36D368D8223F68C3009F781B /* SSNewAddressVC.xib */,
+				36D368C6223F68C3009F781B /* SSFilterVC.h */,
 				36D368F8223F68C3009F781B /* SSFilterVC.m */,
 				36D368F9223F68C3009F781B /* SSFilterGoodVC.h */,
+				36D368C5223F68C3009F781B /* SSFilterGoodVC.m */,
 				36D368FA223F68C3009F781B /* SSGoodsAttributeVC.h */,
+				36D368C4223F68C3009F781B /* SSGoodsAttributeVC.m */,
 				36D368AE223F68C3009F781B /* SSThridHomeVC.h */,
-				36D368AF223F68C3009F781B /* SSThridRushSpikeVC.m */,
 				36D368B0223F68C3009F781B /* SSThridHomeVC.m */,
 				36D368B1223F68C3009F781B /* SSThridRushSpikeVC.h */,
+				36D368AF223F68C3009F781B /* SSThridRushSpikeVC.m */,
 				362A7E47226C609F006BDC5A /* SSNotFollowContentVC.h */,
 				362A7E48226C609F006BDC5A /* SSNotFollowContentVC.m */,
 				362A7E4A226C6100006BDC5A /* SSNotFollowVC.h */,
@@ -5598,30 +5598,30 @@
 		36F8D9AB2261E1AE00105D3A /* home */ = {
 			isa = PBXGroup;
 			children = (
-				36D36970223F690F009F781B /* SSNoticeModel.h */,
 				36D36971223F690F009F781B /* SSNewHomeViewModel.h */,
-				36D36972223F690F009F781B /* SSPriceAndStockModel.h */,
-				36D36973223F690F009F781B /* SSSNewHomeStyle.m */,
-				36D36974223F690F009F781B /* SSAdModel.h */,
-				36D36975223F690F009F781B /* SSSActivityContentModel.h */,
-				36D36976223F690F009F781B /* SSSActivityModel.h */,
-				36D36977223F690F009F781B /* SSGoodDetailModel.m */,
-				36D36978223F690F009F781B /* SSGoodModel.h */,
 				36D36979223F690F009F781B /* SSNewHomeViewModel.m */,
+				36D36972223F690F009F781B /* SSPriceAndStockModel.h */,
 				36D3697A223F690F009F781B /* SSPriceAndStockModel.m */,
-				36D3697B223F690F009F781B /* SSNoticeModel.m */,
-				36D3697C223F690F009F781B /* SSHomeGoodModel.m */,
-				36D3697D223F690F009F781B /* SSAdvModel.m */,
-				36D3697E223F690F009F781B /* SSGoodSpecModel.m */,
-				36D3697F223F690F009F781B /* SSAdModel.m */,
 				36D36980223F690F009F781B /* SSSNewHomeStyle.h */,
-				36D36981223F690F009F781B /* SSGoodDetailModel.h */,
-				36D36982223F690F009F781B /* SSSActivityModel.m */,
+				36D36973223F690F009F781B /* SSSNewHomeStyle.m */,
+				36D36975223F690F009F781B /* SSSActivityContentModel.h */,
 				36D36983223F690F009F781B /* SSSActivityContentModel.m */,
-				36D36984223F690F009F781B /* SSGoodModel.m */,
-				36D36964223F690F009F781B /* SSGoodSpecModel.h */,
-				36D36965223F690F009F781B /* SSAdvModel.h */,
+				36D36976223F690F009F781B /* SSSActivityModel.h */,
+				36D36982223F690F009F781B /* SSSActivityModel.m */,
+				36D36981223F690F009F781B /* SSGoodDetailModel.h */,
+				36D36977223F690F009F781B /* SSGoodDetailModel.m */,
+				36D36970223F690F009F781B /* SSNoticeModel.h */,
+				36D3697B223F690F009F781B /* SSNoticeModel.m */,
 				36D36966223F690F009F781B /* SSHomeGoodModel.h */,
+				36D3697C223F690F009F781B /* SSHomeGoodModel.m */,
+				36D36965223F690F009F781B /* SSAdvModel.h */,
+				36D3697D223F690F009F781B /* SSAdvModel.m */,
+				36D36964223F690F009F781B /* SSGoodSpecModel.h */,
+				36D3697E223F690F009F781B /* SSGoodSpecModel.m */,
+				36D36974223F690F009F781B /* SSAdModel.h */,
+				36D3697F223F690F009F781B /* SSAdModel.m */,
+				36D36978223F690F009F781B /* SSGoodModel.h */,
+				36D36984223F690F009F781B /* SSGoodModel.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
